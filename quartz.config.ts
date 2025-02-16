@@ -8,24 +8,25 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴 Quartz 4.0",
+    pageTitle: "🦊 Jonathan's FoxNotes",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
-    analytics: {
-      provider: "plausible",
-    },
+    // analytics: {
+    //   provider: "plausible",
+    // },
+    analytics: null,
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    baseUrl: "jdwh08.github.io/foxnote-quartzsite",
+    ignorePatterns: ["^PRIVATE", "_ObsidianTemplates", ".obsidian", ".trash"],
     defaultDateType: "created",
     generateSocialImages: false,
     theme: {
       fontOrigin: "googleFonts",
-      cdnCaching: true,
+      cdnCaching: false,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
+        header: "Newsreader",
+        body: "IBM Plex Sans",
         code: "IBM Plex Mono",
       },
       colors: {
@@ -41,15 +42,15 @@ const config: QuartzConfig = {
           textHighlight: "#fff23688",
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+          light: "#1c2636",  // page background
+          lightgray: "#9bb8d7",  // borders and links
+          gray: "#c6acb3",  // graph links, heavy borders
+          darkgray: "#f0eef9",  // body text
+          dark: "#9b6a6c",  // header
+          secondary: "#dbcdd6",  // link colour, current node
+          tertiary: "#bc8a89",  // hover, visited nodes
+          highlight: "rgba(219, 205, 214, 0.15)",  // dbcdd6 // text highlights
+          textHighlight: "#dbcdd6",  // highlight background
         },
       },
     },
