@@ -1,0 +1,185 @@
+{
+  "main": {
+    "id": "8c3e48a0e307ad8a",
+    "type": "split",
+    "children": [
+      {
+        "id": "2315b6be2b623a24",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "91268d33f284cc00",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Statistics/Statistical Learning.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b6292237b9ecd506",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "572be09cccff18da",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "5a4957d3c1373a02",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "f0e399194e0aada2",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      },
+      {
+        "id": "29c0a4f956a2353f",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "d5f96d8cbea49386",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "21926f4c9e9e53d8",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "Statistics/Statistical Learning.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "a617feecbfe94b8e",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "Statistics/Statistical Learning.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "bdb0e2b50be45c70",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "Statistics/Statistical Learning.md"
+          }
+        }
+      },
+      {
+        "id": "4f8c934e36e35765",
+        "type": "leaf",
+        "state": {
+          "type": "calendar",
+          "state": {}
+        }
+      },
+      {
+        "id": "57fa472c7143ff27",
+        "type": "leaf",
+        "state": {
+          "type": "advanced-tables-toolbar",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 4
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-kanban:Create new board": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "templater-obsidian:Templater": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "periodic-notes:Open today": false
+    }
+  },
+  "active": "91268d33f284cc00",
+  "lastOpenFiles": [
+    "Statistics/Inference (stats).md",
+    "Statistics/Statistical Learning.md",
+    "Statistics/Multinomial Test.md",
+    "Statistics/Prediction (stats).md",
+    "2025-01-23.md",
+    "Finance/Options/Options Delta.md",
+    "Delta Hedging.md",
+    "Finance/Options/Options Charm.md",
+    "Finance/Options/Options Vanna.md",
+    "Finance/Volatility/Vol Todo Lists.md",
+    "Statistical Arbitrage.md",
+    "Finance/Volatility/VIXF Potential Indicators.md",
+    "TODOs/Big To Do List.md",
+    "At-Home Weights Exercises.md",
+    "Education/Meta-Learning.md",
+    "Cross Entropy.md",
+    "NLP Packages in Python Comparison.md",
+    "Loss function.md",
+    "Binomial Deviance Loss Function.md",
+    "Vector Span.md",
+    "Matrix Column Space.md",
+    "Vector Space.md",
+    "vector add.md",
+    "Linear Transformation.md",
+    "Linear Combination.md",
+    "Multinomial Test.md"
+  ]
+}

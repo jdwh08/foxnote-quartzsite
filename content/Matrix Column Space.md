@@ -1,0 +1,24 @@
+---
+aliases: 
+tags:
+  - math/linear_algebra
+edited: 2025-02-15T16:15
+created: 2024-03-29T21:03
+---
+### Definition:
+All possible vectors which result from [[Linear Combination]]s of the columns of the matrix (i.e., the [[Vector Span]].
+
+**Geometric Interpretation, 3B1B**
+Recall that a matrix $A, dim(A)=\mathbb{R}^{m \times n}$ represents a [[Linear Transformation]] of vectors from $\mathbb{R}^m$ to $\mathbb{R}^n$.
+The set of all possible outputs of the linear transformation, $A\vec{v}$, is the same thing as the column space. The columns of the matrix represent the new position of the [[Basis]] vectors.
+
+**Strang Interpretation**
+The number of 
+
+---
+### Notes:
+Notes
+
+---
+### Examples:
+Examples
