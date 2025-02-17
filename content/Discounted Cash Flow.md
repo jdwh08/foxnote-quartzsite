@@ -1,9 +1,10 @@
 ---
-aliases: 
+aliases:
+  - Dividend Discount Model
 tags:
   - finance
   - ds/ml/ML4T
-edited: 2025-02-16T11:36
+edited: 2025-02-17T14:27
 created: 2024-03-19T22:06
 ---
 # Definition:

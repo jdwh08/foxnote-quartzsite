@@ -3,7 +3,7 @@ aliases:
 tags:
   - ds/ml
   - todo
-edited: 2025-02-15T16:31
+edited: 2025-02-17T10:20
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -11,7 +11,7 @@ created: 2024-03-19T22:06
 
 ---
 # Notes:
-We need a different [[Loss function]] than used in classification.
+We need a different [[Loss Function]] than used in classification.
 Typically, for [[Linear Regression]], we use [[Quadratic Loss]]
 
 

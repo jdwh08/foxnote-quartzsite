@@ -3,11 +3,11 @@ aliases:
 tags:
   - stats
   - ds
-edited: 2025-02-15T16:38
+edited: 2025-02-17T10:20
 created: 2024-03-19T22:06
 ---
 # Definition:
-A process which attempts to analytically minimize some [[Loss function]] using repeated guess-and-check.
+A process which attempts to analytically minimize some [[Loss Function]] using repeated guess-and-check.
 
 ---
 # Notes:
@@ -54,7 +54,7 @@ Potential ways to defeat minimizers:
 Easiest functions:
 1. Convex: A line segment between any two points on the curve is always above the graph.
 
-We then need to find some [[Loss function]] for the topic (e.g., L1 / L2). 
+We then need to find some [[Loss Function]] for the topic (e.g., L1 / L2). 
 ```python
 # Generate initial guess for line:
 # slope 0, intercept mean of values

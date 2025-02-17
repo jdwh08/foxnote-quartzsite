@@ -1,9 +1,10 @@
 ---
-aliases: 
+aliases:
+  - Overfit
 tags:
   - ds
   - ds/ml
-edited: 2025-02-16T16:02
+edited: 2025-02-17T10:16
 created: 2024-03-19T22:06
 ---
 # Definition:

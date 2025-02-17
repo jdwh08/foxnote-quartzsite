@@ -4,7 +4,7 @@ aliases:
 tags:
   - ds/ml
   - stats
-edited: 2025-02-15T16:31
+edited: 2025-02-17T10:20
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -17,7 +17,7 @@ Notes
 ---
 # Examples:
 
-We set the negative log probability to be our [[Loss function]], thus creating [[Log Likelihood]].
+We set the negative log probability to be our [[Loss Function]], thus creating [[Log Likelihood]].
 $$l(y, f(x, \theta)) = -log(p(y\ 
 |\ f(x, \theta)))$$
 We then get the negative log likelihood:
