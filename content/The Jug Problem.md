@@ -2,7 +2,7 @@
 aliases: 
 tags:
   - math/discrete_math/number_theory
-edited: 2025-02-15T16:15
+edited: 2025-02-16T21:07
 created: 2024-01-05T21:10
 ---
 ### Definition:
@@ -21,7 +21,7 @@ Lemma 1: Note that that the jug problem forms [[Linear Combination]]s of the jug
                 - $j_{1} + j_{2}$ if first jug is empty
                 -  $j_{1} + j_{2} - a$ if first jug is full
                 -  $j_{1} + j_{2} - b$ if second jug is full. 
-            - All are linear combos, thus TRUE.
+            - All are [[Linear Combination]], thus TRUE.
 - In other words, we can solve the jug problems using the [[Greatest Common Divisor]]!
 
 Corollary: You can't make 4 from 3+6. Jug amounts are always $3*x_{1} + 6*x_{2}$ which is a multiple of 3.

@@ -3,10 +3,12 @@ aliases:
 tags:
   - ds/ml/ML4T
   - finance
-edited: 2025-02-15T16:28
+edited: 2025-02-16T11:50
 created: 2024-03-19T22:06
 ---
 # Notes:
+People who invest in [[Portfolio (Finance)]] professionally.
+
 **Types of Funds**
 
 | Exchange Traded Fund***       | Mutual Fund                                           | Hedge Fund                         |
