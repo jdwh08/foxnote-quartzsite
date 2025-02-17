@@ -4,7 +4,7 @@ aliases:
 tags:
   - ds/ml
   - ds/ml/trees
-edited: 2025-02-16T20:59
+edited: 2025-02-17T09:57
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -23,10 +23,7 @@ Typically used with [[Decision Trees]].
 Helps reduce [[Variance (estimator)]] and [[Overfitting]]. 
 - Each model can overfit on a subset of the data.
 - Aggregating them together helps to smooth this out.
-- We can estimate the variance with **Out of Bag error**:
-	- On average, each tree bag will use $2/3$ of the data. Thus, we can look at the data out of bag.
-	- Average the predictions for the $1/3 * B$ trees where the data is out of bag.
-	- This is analogous to [[Train Test Split]], so the out-of-bag data is a valid proxy for the test data.
+- We can estimate the variance with [[Out of Bag Cross Validation]].
 
 Typically, bag size should be $\sim60\%$ of the overall data size.
 

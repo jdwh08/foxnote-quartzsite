@@ -3,7 +3,7 @@ aliases:
 tags:
   - finance
   - ds/ml/ML4T
-edited: 2025-02-15T16:28
+edited: 2025-02-17T14:29
 created: 2024-03-19T22:06
 ---
 # Notes:
@@ -59,8 +59,8 @@ plt.show()
 Scatterplot shows returns of multiple assets on the same day.
 - Most scatters are linear and positively [[Correlation (Pearson)|correlated]].
 - We can run a [[Linear Regression|OLS]] on this (ret_XOM ~ ret_SPY).
-	- [[Beta Finance]] is this slope (every 1% increase in market results in a x% increase in XOM)
-	- [[Alpha Finance]] is the Y-Intercept (returns unrelatedish to broad market return). We want high alpha.
+	- [[Beta (Finance)]] is this slope (every 1% increase in market results in a x% increase in XOM)
+	- [[Alpha (Finance)]] is the Y-Intercept (returns unrelatedish to broad market return). We want high alpha.
 
 ```python
 ret # daily returns of SPY, XOM, GLD

@@ -2,11 +2,11 @@
 aliases: 
 tags:
   - ds/ml/trees
-edited: 2025-02-16T20:52
+edited: 2025-02-17T10:33
 created: 2024-09-17T20:53
 ---
 ### Definition:
-Using the features $X$, comes up with a series of `if-then` rules which best segment the target variable $y$. 
+Using the features $X$, comes up with a series of `if-then` rules which best segment the target variable $y$. Store these as a [[Tree]] structure.
 
 [[Nonparametric Statistics|Nonparametric]] [[Supervised Machine Learning]] technique for both [[Regression]] and [[Classification]] tasks.
 
@@ -76,14 +76,14 @@ Thus, our training algorithm needs to be very sparse or good at [[Decision Trees
 
 ##### For [[Regression]]
 - [[Information Gain]] doesn't work as well because it's not a classification problem.
-- Instead, we need a different [[Loss function]] that works for continuous data, like [[Mean Squared Error]] or [[Residual Sum of Squares]].
+- Instead, we need a different [[Loss Function]] that works for continuous data, like [[Mean Squared Error]] or [[Residual Sum of Squares]].
 - Our output is now the [[Expected Value]] of each [[Leaf Node]].
 
 ##### Stop Conditions
 - If we have no noise ([[Statistical Learning|Irreducible Error]]) then we can stop at perfect sorting. But this doesn't generalize [[Overfitting]].
 	- This happens when we build long gangly trees.
 	- We can fix overfitting by [[Decision Trees Pruning|pruning]] leaves (e.g., delete the child nodes if [[Information Gain]] is too small), growing leaves breadthwise, etc.
-- In the real world, we'd want to stop once our validation data set [[Loss function]] does well.
+- In the real world, we'd want to stop once our validation data set [[Loss Function]] does well.
 
 ----
 #### Implementation

@@ -4,7 +4,7 @@ tags:
   - econ
   - todo
   - ds/ml/loss_function
-edited: 2025-02-16T20:27
+edited: 2025-02-17T09:12
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -14,6 +14,12 @@ A measure of statistical dispersion for inequality.
 # Notes:
 
 #### Calculation
+
+##### For [[Machine Learning]]:
+This is slightly simplified from the economics calculations:
+$$G=1 - \sum_{i}^{|C|} p(c_i)^2$$
+where $|C|$ is the total categories, $p(c_i)$ is the probability of being in category $c_i$.
+
 ##### Lorenz Curve
 Calculated as the area under the Lorenz curve divided by the total area for "equality"
 

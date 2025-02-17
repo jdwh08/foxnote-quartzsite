@@ -2,7 +2,7 @@
 aliases: 
 tags:
   - ds/ml/nn
-edited: 2025-02-15T16:35
+edited: 2025-02-17T10:20
 created: 2024-04-11T18:34
 ---
 ### Definition:
@@ -15,7 +15,7 @@ Definition
 1. Suppose we want to find some relationship between $x$ and $y$. 
 	1. Assume this must be smooth and a polynomial of degree 5, i.e., $y(x) = k_0 + k_1 x + k_2 x^2 + k_3 x^3 + k_4 x^4 + k_5 x^5$.
 	2. We want to find the values $k_0 ... k_5$ that finds the "best" curve.
-	3. To get the best curve, we need to define some measurement of quality as the [[Loss function]]. A classical one is [[Least Squares]] with square error.
+	3. To get the best curve, we need to define some measurement of quality as the [[Loss Function]]. A classical one is [[Least Squares]] with square error.
 	4. For our case, loss is a function of the parameters $k_0 ... k_5$. $\mathcal{L}(k_0...k_5)$. We can get the best values of $k$ by minimizing the loss function.
 2. Let's build a machine that goes from values $k_0 ... k_5$ to function $\hat{y}(x)$ to loss $\mathcal{L}$.
 	1. Randomize the initial weights of $k_0...k_5$.
