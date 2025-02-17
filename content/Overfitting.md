@@ -3,7 +3,7 @@ aliases:
 tags:
   - ds
   - ds/ml
-edited: 2025-02-15T16:31
+edited: 2025-02-16T16:02
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -19,7 +19,7 @@ To combat this, we need to get out of sample performance, e.g., via [[Train Test
 
 ---
 # Notes:
-Notes
+![[Overfitting.excalidraw.svg]]
 
 ---
 # Examples:

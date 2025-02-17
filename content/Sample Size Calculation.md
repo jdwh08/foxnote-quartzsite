@@ -3,7 +3,7 @@ aliases:
 tags:
   - stats
   - stats/hypothesis_tests
-edited: 2025-02-15T16:20
+edited: 2025-02-16T17:18
 created: 2024-04-23T18:34
 ---
 ### Definition:
@@ -16,7 +16,7 @@ Start with power: probability of rejecting the null hypothesis given the null hy
 More sample size increases power, because it shrinks the [[Variance]] of the sampling distribution.
 
 We want to pick the sample size such that it gives sufficient power, however there is not a linear relationship between power and sample size.
-[[Two Sample T-test]]: $n=(z_{\alpha/2}+z_{\beta})^2 * \frac{\sigma_1^2 + \sigma_2^2}{(\mu_1 - \mu_2)^2}$
+[[Two Sample T-Test]]: $n=(z_{\alpha/2}+z_{\beta})^2 * \frac{\sigma_1^2 + \sigma_2^2}{(\mu_1 - \mu_2)^2}$
 
 Instead of using the formula, we can exploit [[Monte Carlo Simulation]] simulations.
 1. Generate data. For this example with two sample detest, we use two [[Normal Distribution]]. Parameters of normal distributions determine whether null or alternate hypothesis is true. (For power, we use alt.)
