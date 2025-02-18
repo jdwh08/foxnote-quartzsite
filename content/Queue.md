@@ -2,13 +2,15 @@
 aliases: 
 tags:
   - cs/dsa/queue
-edited: 2025-02-15T20:20
+edited: 2025-02-17T19:42
 created: 2024-03-19T22:06
 ---
 # Definition:
 A specific type of [[Linked List]], with the property "LAST IN, FIRST OUT".
 
-![[PCA.excalidraw.svg]]
+![[Queue.svg]]
+
+The opposite of a [[Stack]].
 
 ---
 # Notes:
@@ -51,6 +53,7 @@ export default class Queue<T> {
 		this.tail.next = node;
 		this.tail = node;
 	}
+
 	dequeue(): T | undefined {
 		if (!this.head) {
 			return undefined;
@@ -70,6 +73,7 @@ export default class Queue<T> {
 		head.next = undefined;
 		return head.value;
 	}
+
 	peek(): T | undefined {
 		return this.head?.value;  // val or null
 	}

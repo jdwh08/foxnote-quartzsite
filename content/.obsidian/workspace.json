@@ -4,41 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "2869d2359f540586",
+        "id": "fef262dba653df11",
         "type": "tabs",
         "children": [
           {
-            "id": "696686965e5e4650",
+            "id": "8d9e3f09dbc8798b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Capital Asset Pricing Model.md",
+                "file": "Recursion.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Capital Asset Pricing Model"
-            }
-          },
-          {
-            "id": "cc4946c43c8ecde1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Efficient Markets Hypothesis.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Efficient Markets Hypothesis"
+              "title": "Recursion"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -70,7 +54,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "CAPM",
+                "query": "tag:cs/dsa/arraylist",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -91,8 +75,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -112,7 +95,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Efficient Markets Hypothesis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Efficient Markets Hypothesis"
+              "title": "Backlinks"
             }
           },
           {
@@ -188,13 +170,23 @@
               "icon": "spreadsheet",
               "title": "Advanced Tables"
             }
+          },
+          {
+            "id": "04d700deb133378e",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -208,49 +200,49 @@
       "obsidian-excalidraw-plugin:New drawing": false,
       "obsidian-kanban:Create new board": false,
       "templater-obsidian:Templater": false,
-      "periodic-notes:Open today": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "periodic-notes:Open today": false
     }
   },
-  "active": "cc4946c43c8ecde1",
+  "active": "97119f2e116f6f8f",
   "lastOpenFiles": [
+    "Ring Buffer.md",
+    "Recursion.md",
+    "ArrayList.md",
+    "_Media/Excalidraw/RingBuffer.excalidraw.md",
+    "_Media/Excalidraw/RingBuffer.excalidraw.png",
+    "_Media/Excalidraw/RingBuffer.excalidraw.svg",
+    "_Media/Excalidraw/ArrayList.excalidraw.md",
+    "_Media/Excalidraw/ArrayList.excalidraw.svg",
+    "Array vs Linked List.md",
+    "Linked List.md",
+    "Queue.md",
+    "_Media/Excalidraw/Stack.excalidraw.md",
+    "Stack.md",
+    "_Media/Excalidraw/Stack.excalidraw.svg",
+    "Principal Component Analysis (PCA).md",
+    "_Media/Excalidraw/Queue.md",
+    "Ridge Regularization.md",
+    "Lasso Regularization.md",
+    "_Media/Excalidraw/Lasso_Regularization.excalidraw.md",
+    "_Media/Excalidraw/Lasso_Regularization.excalidraw.svg",
+    "_Media/Excalidraw/Ridge_Regularization.excalidraw.md",
+    "Logistic Regression.md",
+    "Loss Function.md",
+    "_Media/Excalidraw/Ridge_Regularization.excalidraw.svg",
     "Capital Asset Pricing Model.md",
+    "Root Mean Squared Error.md",
     "Efficient Markets Hypothesis.md",
-    "Beta (Finance).md",
-    "Alpha (Finance).md",
-    "Discounted Cash Flow.md",
-    "Company Valuation.md",
-    "Gradient Boosting.md",
-    "Bayesian Additive Regression Trees.md",
-    "Perturbation.md",
-    "Ba.md",
+    "Norm.md",
+    "L1 Norm.md",
+    "L2 Norm.md",
+    "Triangle Inequality.md",
+    "Regularization.md",
     "_Media/Excalidraw/Boosting_Classification_PseudoResid.excaldraw.svg",
-    "_Media/Excalidraw/Boosting_Classification_PseudoResid.excaldraw.md",
-    "_Media/Excalidraw/Drawing 2024-09-17 19.57.45.excalidraw.md",
-    "_Media/Excalidraw/Drawing 2024-04-11 18.44.11.excalidraw.md",
-    "_Media/Excalidraw/Drawing 2024-03-20 15.40.38.excalidraw.md",
-    "Decision Trees.md",
-    "Overfitting.md",
-    "Boosting (Machine Learning).md",
-    "Random Forests.md",
-    "Out of Bag Cross Validation.md",
-    "Bootstrap Aggregating.md",
-    "Classification Error Rate.md",
-    "2025-02-17.md",
-    "AdaBoost.md",
-    "Random Tree.md",
-    "Ensemble (Machine Learning).md",
-    "_Media/Excalidraw/Adaboost_Amount_of_Say.excalidraw.md",
     "_Media/Excalidraw/Adaboost_Amount_of_Say.excalidraw.svg",
     "_Media/Excalidraw/Bias-Variance.excalidraw.svg",
     "_Media/Excalidraw/Overfitting.excalidraw.svg",
     "Untitled.canvas",
-    "_Media/Excalidraw/Bayes_Tree_Diagram.excalidraw.svg",
-    "_Media/Excalidraw/UMAP_Dimension.excalidraw.svg",
-    "_Media/Excalidraw/Tree_XOR.svg",
-    "_Media/Excalidraw/State_Machine_99Counter.excalidraw.svg",
-    "_Media/Excalidraw/Random_LinAlg_Cov.excalidraw.svg",
-    "_Media/Excalidraw/Queue.svg",
     "_quartzsite",
     "_Media",
     "_Calendar/2025/02",

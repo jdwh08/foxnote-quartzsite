@@ -2,7 +2,8 @@
 aliases: 
 tags:
   - cs/dsa/linked_list
-edited: 2025-02-15T20:07
+  - todo
+edited: 2025-02-17T20:28
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -55,11 +56,52 @@ Time/Space Finale: [[Big O]]
 **IN OTHER WORDS, IF YOU'RE TRAVERSING WITH A LINKEDLIST, YOU'RE PROBABLY NOT USING THE RIGHT DATA STRUCTURE!**
 
 Other notes:
-- Linked Lists are technically a [[Tree]]
+- Linked Lists are technically a [[Tree]] or "acyclic graph".
 
 ---
 # Examples:
-Examples
+```typescript
+type Node<T> = {
+	value: T,
+	prev?: Node<T>,
+	next?: Node<T>,
+}
+
+export default class DoublyLinkedList<T> {
+	public length: number;
+	private head: Node<T>;
+	private tail: Node<T>;
+
+	constructor() {
+		this.length = 0;
+	}
+	prepend(item: T): void {
+		// pre-append to head
+		item.next = this.head
+		this.head.prev = item
+		this.head = item
+	}
+	insertAt(item: T, idx: number): void {
+		
+	}
+	append(item: T): void {
+		
+	}
+	remove(item: T): T | undefined {
+		
+	}
+	get(idx: number): T | undefined {
+		let curr = this.head;
+		for (let i = 0; i < idx && curr; ++i) {
+			curr = curr.next; // walk
+		}
+		return curr?.value;
+	}
+	removeAt(idx: number): T | undefined {
+		
+	}
+}
+```
 
 ----
 # Source:
