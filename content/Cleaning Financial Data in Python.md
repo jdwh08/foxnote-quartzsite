@@ -5,7 +5,7 @@ tags:
   - ds/data_processing
   - ds
   - ds/ml/ML4T
-edited: 2025-02-15T16:34
+edited: 2025-02-22T15:53
 created: 2024-03-19T22:06
 ---
 # Notes:
@@ -36,7 +36,13 @@ df = df.ffill(axis=0)
 # Fill backward
 df = df.bfill(axis=0)
 ```
+#### Stock Splits
+Sometimes companies will choose to split or merge stocks, e.g., 2 for 1 means each old share is now worth two new shares.
+We must adjust prices for this splitting by halving the prices prior to this point. 
 
+#### Dividends
+When companies pay out a portion of their earnings to investors. 
+This makes the price go down by the same amount. This must be adjusted. E.g., if IBM pays a 0.55% dividend we adjust all prior prices by 0.55% down as well. 
 
 ---
 # Examples:

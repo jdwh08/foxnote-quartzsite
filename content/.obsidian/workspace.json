@@ -4,22 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "fef262dba653df11",
+        "id": "e9f9a126001cb1c6",
         "type": "tabs",
         "children": [
           {
-            "id": "8d9e3f09dbc8798b",
+            "id": "67a25d0124e9d38d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Recursion.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Recursion"
+              "title": "New tab"
             }
           }
         ]
@@ -54,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:cs/dsa/arraylist",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -75,7 +70,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -157,8 +153,8 @@
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           },
           {
@@ -167,26 +163,17 @@
             "state": {
               "type": "advanced-tables-toolbar",
               "state": {},
-              "icon": "spreadsheet",
-              "title": "Advanced Tables"
-            }
-          },
-          {
-            "id": "04d700deb133378e",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -200,48 +187,48 @@
       "obsidian-excalidraw-plugin:New drawing": false,
       "obsidian-kanban:Create new board": false,
       "templater-obsidian:Templater": false,
-      "obsidian-git:Open Git source control": false,
+      "janitor:Janitor: scan vault": false,
       "periodic-notes:Open today": false
     }
   },
-  "active": "97119f2e116f6f8f",
+  "active": "67a25d0124e9d38d",
   "lastOpenFiles": [
-    "Ring Buffer.md",
+    "Cleaning Financial Data in Python.md",
+    "Efficient Markets Hypothesis.md",
+    "Capital Asset Pricing Model.md",
+    "Book Value.md",
+    "Discounted Cash Flow.md",
+    "Time Value of Money.md",
+    "Deep Learning.md",
+    "Residual Connections.md",
+    "Foundation Models.md",
+    "The Bitter Lesson (Machine Learning).md",
+    "Backpropagation.md",
+    "Perceptron.md",
+    "_Media/Excalidraw/Artificial Neural Network.excalidraw.md",
+    "Artificial Neural Network.md",
+    "_Media/Excalidraw/Artificial Neural Network.excalidraw.png",
+    "Overfitting.md",
+    "Regularization.md",
+    "Ridge Regularization.md",
+    "Hyperparameter.md",
+    "Root Mean Squared Error.md",
+    "Error Function.md",
+    "_Media/{57419EDF-1364-4990-8D9B-E7A84950EAE8}.png",
+    "Company Valuation.md",
+    "Sharpe Ratio.md",
+    "Linked List.md",
     "Recursion.md",
+    "Ring Buffer.md",
     "ArrayList.md",
-    "_Media/Excalidraw/RingBuffer.excalidraw.md",
     "_Media/Excalidraw/RingBuffer.excalidraw.png",
     "_Media/Excalidraw/RingBuffer.excalidraw.svg",
-    "_Media/Excalidraw/ArrayList.excalidraw.md",
     "_Media/Excalidraw/ArrayList.excalidraw.svg",
-    "Array vs Linked List.md",
-    "Linked List.md",
-    "Queue.md",
-    "_Media/Excalidraw/Stack.excalidraw.md",
-    "Stack.md",
     "_Media/Excalidraw/Stack.excalidraw.svg",
-    "Principal Component Analysis (PCA).md",
-    "_Media/Excalidraw/Queue.md",
-    "Ridge Regularization.md",
-    "Lasso Regularization.md",
-    "_Media/Excalidraw/Lasso_Regularization.excalidraw.md",
     "_Media/Excalidraw/Lasso_Regularization.excalidraw.svg",
-    "_Media/Excalidraw/Ridge_Regularization.excalidraw.md",
-    "Logistic Regression.md",
-    "Loss Function.md",
     "_Media/Excalidraw/Ridge_Regularization.excalidraw.svg",
-    "Capital Asset Pricing Model.md",
-    "Root Mean Squared Error.md",
-    "Efficient Markets Hypothesis.md",
-    "Norm.md",
-    "L1 Norm.md",
-    "L2 Norm.md",
-    "Triangle Inequality.md",
-    "Regularization.md",
     "_Media/Excalidraw/Boosting_Classification_PseudoResid.excaldraw.svg",
     "_Media/Excalidraw/Adaboost_Amount_of_Say.excalidraw.svg",
-    "_Media/Excalidraw/Bias-Variance.excalidraw.svg",
-    "_Media/Excalidraw/Overfitting.excalidraw.svg",
     "Untitled.canvas",
     "_quartzsite",
     "_Media",

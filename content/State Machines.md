@@ -17,7 +17,7 @@ A state machine is a tool to model and analyze systems.
 ### Examples
 ##### A state graph of a counter bounded by 99: 
 
-![[State_Machine_99Counter.excalidraw.svg]]
+![[State_Machine_99Counter.excalidraw.png.svg]]
 
 Here's a state machine that counts to 99, and then overflows afterwards. Overflow has a self-loop (so it will keep overflowing).
     -   Start state is 0.

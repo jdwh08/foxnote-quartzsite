@@ -25,6 +25,6 @@ Suppose a job applicant is invited for an interview.
 - Probability successful if not nervous $P(S|N^c)=0.9$
 Thus, the probability the interview is successful is $P(S\cap N) + P(S \cap N^c) = P(N)P(S|N)+P(N^c)P(S|N^c)$ $=0.7*0.2 + 0.3 * 0.9 = 0.41$
 
-![[Bayes_Tree_Diagram.excalidraw.svg]]
+![[Bayes_Tree_Diagram.excalidraw.png.svg]]
 
 Probability that the applicant is nervous given they are successful: $P(N|S) = \frac{P(N\cap S)}{P(N)} = \frac{0.7*0.2}{0.7*0.2+0.3*0.9} = 0.34$ 

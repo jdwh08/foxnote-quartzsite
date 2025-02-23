@@ -15,7 +15,7 @@ Has effect of making parameters sparse, i.e., $\beta=0$.
 ---
 # Notes:
 Our absolute value penalty term increases the cost for parameters which are large.
-![[Lasso_Regularization.excalidraw.svg]]
+![[Lasso_Regularization.excalidraw.png.svg]]
 
 Unlike [[Ridge Regularization]], lasso tends to set 
 This is because our [[Loss Function]] penalty has large kink corners where our parameters are zero. This tends to make the optimal solutions corner solutions.

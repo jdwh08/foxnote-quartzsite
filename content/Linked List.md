@@ -3,11 +3,12 @@ aliases:
 tags:
   - cs/dsa/linked_list
   - todo
-edited: 2025-02-17T20:28
+edited: 2025-02-17T21:51
 created: 2024-03-19T22:06
 ---
 # Definition:
-![[LinkedList]]
+
+![[LinkedList.svg]]
 
 A storage type based around nodes which hold attributes and links to other nodes.
 Getting data requires traversing through the links.

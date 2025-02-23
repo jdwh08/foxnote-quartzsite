@@ -1,12 +1,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/AdaBoost</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Alpha-(Finance)</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Anti-Symmetric-Matrix</loc>
     <lastmod>2024-03-30T03:29:00.000Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Anti-Symmetric-Relation</loc>
     <lastmod>2024-03-30T03:24:00.000Z</lastmod>
   </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Arbitrage-Pricing-Theory</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Array-vs-Linked-List</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Array</loc>
     <lastmod>2025-01-06T02:16:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/ArrayList</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Backpropagation</loc>
     <lastmod>2024-04-11T23:34:00.000Z</lastmod>
@@ -20,8 +35,20 @@
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Bayes'-Rule</loc>
     <lastmod>2024-03-03T01:54:00.000Z</lastmod>
   </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Bayesian-Additive-Regression-Trees</loc>
+    <lastmod>2025-02-17T14:49:00.000Z</lastmod>
+  </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Bernoulli-Trials-and-Random-Variables</loc>
     <lastmod>2024-03-03T23:11:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Beta-(Finance)</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Bias-(estimator)</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Bias-Variance-Trade-Off</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Big-O</loc>
     <lastmod>2024-07-18T00:36:00.000Z</lastmod>
@@ -38,6 +65,12 @@
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Binomial-Test</loc>
     <lastmod>2024-03-30T00:12:00.000Z</lastmod>
   </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Book-Value</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Boosting-(Machine-Learning)</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Boosting</loc>
     <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
@@ -50,8 +83,14 @@
     <loc>https://jdwh08.github.io/foxnote-quartzsite/BubbleSort</loc>
     <lastmod>2025-01-06T04:13:00.000Z</lastmod>
   </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Capital-Asset-Pricing-Model</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Central-Limit-Theorem-(Lindeberg-Levy)</loc>
     <lastmod>2024-03-23T18:03:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Classification-Error-Rate</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Classification</loc>
     <lastmod>2025-01-07T00:53:00.000Z</lastmod>
@@ -59,8 +98,14 @@
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Cleaning-Financial-Data-in-Python</loc>
     <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Company-Valuation</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Conditional-Probability</loc>
     <lastmod>2024-03-03T01:32:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Confidence-Interval</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Congruence</loc>
     <lastmod>2024-01-08T02:09:00.000Z</lastmod>
@@ -89,10 +134,16 @@
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Cumulative-Distribution-Function</loc>
     <lastmod>2024-03-04T00:06:00.000Z</lastmod>
   </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Decision-Trees-Pruning</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Decision-Trees</loc>
     <lastmod>2024-09-18T01:53:00.000Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Dirac-Delta-Distribution</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Discounted-Cash-Flow</loc>
     <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Discrete-Math</loc>
@@ -103,6 +154,9 @@
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Divisibility</loc>
     <lastmod>2024-01-06T02:53:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Efficient-Markets-Hypothesis</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Eigenvectors-and-Eigenvalues</loc>
     <lastmod>2024-03-30T01:39:00.000Z</lastmod>
@@ -134,6 +188,9 @@
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Exponential-Distribution</loc>
     <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/F-Test</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Fast-and-Slow-Pointers</loc>
     <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
@@ -151,6 +208,12 @@
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Geometric-Distribution</loc>
     <lastmod>2024-03-03T17:38:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Gini-Index</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Gradient-Boosting</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Gradient-Descent</loc>
     <lastmod>2024-04-05T03:45:00.000Z</lastmod>
@@ -176,10 +239,16 @@
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Independent-Events</loc>
     <lastmod>2024-03-03T01:32:00.000Z</lastmod>
   </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Independent-and-Identically-Distributed</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Inference-(stats)</loc>
     <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Information-Gain</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Intrinsic-Company-Value</loc>
     <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Invariant</loc>
@@ -209,6 +278,12 @@
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Kurtosis</loc>
     <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/L1-Norm</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/L2-Norm</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/LEETCODE---Two-Crystal-Ball</loc>
     <lastmod>2025-01-06T03:32:00.000Z</lastmod>
   </url><url>
@@ -216,6 +291,9 @@
     <lastmod>2024-03-30T01:34:00.000Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Laplace-Distribution</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Lasso-Regularization</loc>
     <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Latent-Dirichet-Allocation</loc>
@@ -262,6 +340,9 @@
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Marginal-Probability</loc>
     <lastmod>2024-03-07T02:30:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Market-Cap</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Matrix-Column-Space</loc>
     <lastmod>2024-03-30T02:03:00.000Z</lastmod>
@@ -314,6 +395,12 @@
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Naive-Bayes</loc>
     <lastmod>2024-04-05T04:15:00.000Z</lastmod>
   </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Nonparametric-Statistics</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Norm</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Normal-Distribution</loc>
     <lastmod>2024-03-05T02:57:00.000Z</lastmod>
   </url><url>
@@ -328,6 +415,9 @@
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Objective-and-Subjective-Probability</loc>
     <lastmod>2024-03-03T01:11:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/One-Sample-T-Test</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Optimizers</loc>
     <lastmod>2024-03-20T03:06:00.000Z</lastmod>
@@ -368,13 +458,25 @@
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Order-Book</loc>
     <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Out-of-Bag-Cross-Validation</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Outliers</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Overfitting</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/P-Value</loc>
     <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Parametric-vs-Nonparametric</loc>
     <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Plotting-Daily-Returns</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Portfolio-(Finance)</loc>
     <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Portfolio-Level-Statistics</loc>
@@ -387,6 +489,9 @@
     <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Prediction-(stats)</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Prediction-Interval</loc>
     <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Principal-Component-Analysis-(PCA)</loc>
@@ -440,6 +545,12 @@
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Quotient-and-Remainder</loc>
     <lastmod>2024-01-06T03:05:00.000Z</lastmod>
   </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/R-Squared</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Random-Forests</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Random-Tree</loc>
     <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
@@ -449,7 +560,13 @@
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Randomized-Linear-Algebra</loc>
     <lastmod>2024-04-09T00:33:00.000Z</lastmod>
   </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Recursion</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Regression</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Regularization</loc>
     <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Reinforcement-Learning-from-Human-Feedback</loc>
@@ -458,7 +575,25 @@
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Relatively-Prime</loc>
     <lastmod>2024-01-10T01:53:00.000Z</lastmod>
   </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Residual-Standard-Error</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Residual-Sum-of-Squares</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Residuals</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Ridge-Regularization</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Ring-Buffer</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Root-Mean-Squared-Error</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Sample-Mean</loc>
     <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Sample-Size-Calculation</loc>
@@ -497,8 +632,14 @@
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Sorted-Array</loc>
     <lastmod>2025-01-06T04:14:00.000Z</lastmod>
   </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Stack</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Standard-Deviation</loc>
     <lastmod>2024-03-03T18:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Standard-Error</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Stanford-Transformers-Mixture-of-Experts</loc>
     <lastmod>2024-04-25T23:32:00.000Z</lastmod>
@@ -516,6 +657,9 @@
     <lastmod>2024-06-18T10:56:00.000Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Statistical-Learning</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Studentized-Residuals</loc>
     <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Study-Tips-for-OMSCS</loc>
@@ -551,7 +695,13 @@
     <loc>https://jdwh08.github.io/foxnote-quartzsite/The-Pulverizer</loc>
     <lastmod>2024-01-06T03:41:00.000Z</lastmod>
   </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Total-Sum-of-Squares</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Train-Test-Split</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Triangle-Inequality</loc>
     <lastmod>2024-03-20T03:06:00.000Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Triplet-Loss-Function</loc>
@@ -563,7 +713,7 @@
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Turing-Code-v2</loc>
     <lastmod>2024-01-10T00:14:00.000Z</lastmod>
   </url><url>
-    <loc>https://jdwh08.github.io/foxnote-quartzsite/Two-Sample-T-test</loc>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Two-Sample-T-Test</loc>
     <lastmod>2024-04-23T23:45:00.000Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Uncertainty-(Supervised-ML)</loc>
@@ -599,6 +749,9 @@
     <loc>https://jdwh08.github.io/foxnote-quartzsite/VOLI-Index</loc>
     <lastmod>2024-01-07T02:22:00.000Z</lastmod>
   </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/Variance-(estimator)</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Variance</loc>
     <lastmod>2024-03-03T17:38:00.000Z</lastmod>
   </url><url>
@@ -611,35 +764,68 @@
     <loc>https://jdwh08.github.io/foxnote-quartzsite/Vol-Todo-Lists</loc>
     <lastmod>2024-01-02T00:02:00.000Z</lastmod>
   </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/_Calendar/2025/01/2025-01-30</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/_Calendar/2025/02/2025-02-03</loc>
+    <lastmod>2024-03-20T03:06:00.000Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/_Media/Excalidraw/Adaboost_Amount_of_Say.excalidraw</loc>
+    <lastmod>2025-02-17T15:19:41.897Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/_Media/Excalidraw/ArrayList.excalidraw</loc>
+    <lastmod>2025-02-18T02:30:16.413Z</lastmod>
+  </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/_Media/Excalidraw/Bayes_Tree_Diagram.excalidraw</loc>
-    <lastmod>2025-02-16T00:18:32.372Z</lastmod>
+    <lastmod>2025-02-16T02:33:29.214Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/_Media/Excalidraw/Bias-Variance.excalidraw</loc>
+    <lastmod>2025-02-16T22:21:09.760Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/_Media/Excalidraw/Boosting_Classification_PseudoResid.excaldraw</loc>
+    <lastmod>2025-02-17T16:51:42.017Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/_Media/Excalidraw/Lasso_Regularization.excalidraw</loc>
+    <lastmod>2025-02-17T22:04:25.615Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/_Media/Excalidraw/LinkedList</loc>
-    <lastmod>2025-02-16T00:18:32.391Z</lastmod>
+    <lastmod>2025-02-16T02:33:29.230Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/_Media/Excalidraw/Normal_Distribution_Z.excalidraw</loc>
-    <lastmod>2025-02-16T00:18:32.403Z</lastmod>
+    <lastmod>2025-02-16T02:33:29.230Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/_Media/Excalidraw/Overfitting.excalidraw</loc>
+    <lastmod>2025-02-16T21:59:07.624Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/_Media/Excalidraw/PCA.excalidraw</loc>
-    <lastmod>2025-02-16T00:18:32.403Z</lastmod>
+    <lastmod>2025-02-16T02:33:29.246Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/_Media/Excalidraw/Queue</loc>
-    <lastmod>2025-02-16T00:18:32.391Z</lastmod>
+    <lastmod>2025-02-16T02:33:29.246Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/_Media/Excalidraw/Random_LinAlg_Cov.excalidraw</loc>
-    <lastmod>2025-02-16T00:18:32.403Z</lastmod>
+    <lastmod>2025-02-16T02:33:29.262Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/_Media/Excalidraw/Ridge_Regularization.excalidraw</loc>
+    <lastmod>2025-02-17T21:40:24.797Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/_Media/Excalidraw/RingBuffer.excalidraw</loc>
+    <lastmod>2025-02-18T02:50:54.436Z</lastmod>
+  </url><url>
+    <loc>https://jdwh08.github.io/foxnote-quartzsite/_Media/Excalidraw/Stack.excalidraw</loc>
+    <lastmod>2025-02-18T01:43:06.708Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/_Media/Excalidraw/State_Machine_99Counter.excalidraw</loc>
-    <lastmod>2025-02-16T00:18:32.403Z</lastmod>
+    <lastmod>2025-02-16T02:33:29.262Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/_Media/Excalidraw/Tree_XOR</loc>
-    <lastmod>2025-02-16T00:18:32.401Z</lastmod>
+    <lastmod>2025-02-16T02:33:29.278Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/_Media/Excalidraw/UMAP_Dimension.excalidraw!400x100-percent</loc>
-    <lastmod>2025-02-16T00:18:32.421Z</lastmod>
+    <lastmod>2025-02-16T02:33:29.284Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/_Media/Excalidraw/UMAP_Dimension.excalidraw</loc>
-    <lastmod>2025-02-16T00:18:32.421Z</lastmod>
+    <lastmod>2025-02-16T02:33:29.286Z</lastmod>
   </url><url>
     <loc>https://jdwh08.github.io/foxnote-quartzsite/</loc>
     <lastmod>2025-02-15T21:32:00.000Z</lastmod>

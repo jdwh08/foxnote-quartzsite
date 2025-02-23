@@ -3,13 +3,15 @@ aliases:
 tags:
   - finance
   - ds/ml/ML4T
-edited: 2025-02-16T11:38
+edited: 2025-02-22T15:45
 created: 2024-03-19T22:06
 ---
 # Definition:
 [[Company Valuation]] based on the assets that it holds.
 
 Total assets minus "intangible assets" (things difficult to value like IP) and liabilities.
+
+We typically discount asset value by 30-50% to handle a true "worse case" for liquidation.
 
 ---
 # Notes:

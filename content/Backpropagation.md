@@ -2,7 +2,7 @@
 aliases: 
 tags:
   - ds/ml/nn
-edited: 2025-02-17T10:20
+edited: 2025-02-22T15:15
 created: 2024-04-11T18:34
 ---
 ### Definition:
@@ -56,7 +56,7 @@ Definition
 
 ---
 ### Notes:
-Learning representations by back-propagating errors (Rumelhart et al 1986): [[Multilayer Perceptrons]] can learn effectively using backprop.
+Learning representations by back-propagating errors (Rumelhart et al 1986): [[Perceptron#Multi-Layered Perceptron (MLP)|Multilayer Perceptrons]] can learn effectively using backprop.
 
 ---
 ### Examples:
@@ -65,3 +65,5 @@ Examples
 ---
 ### Sources:
 Backprop from scratch is built on https://www.youtube.com/watch?v=SmZmBKc7Lrs.
+
+ (Rumelhart, Hinton, and Williams, 1986)
