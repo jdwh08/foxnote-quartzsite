@@ -9,7 +9,7 @@ created: 2024-03-19T22:06
 # Definition:
 We combine the properties of indexing from [[Array]] and the ability to add/remove values from [[Linked List]].
 
-![[ArrayList.excalidraw.svg]]
+![[ArrayList.excalidraw.png.svg]]
 
 We have an [[Array]] as the backing data structure, and save the current `length` and backing array's `capacity` as variables.
 

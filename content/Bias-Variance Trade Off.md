@@ -17,7 +17,7 @@ To get a good MSE, we need both low (squared) bias and low variance.
 - Thus, there is often a tradeoff that occurs between bias and variance. This drives [[Overfitting]].
 - The best theoretically would be the variance of the [[Statistical Learning|Irreducible Error]].
 
-![[Bias-Variance.excalidraw.svg]]
+![[Bias-Variance.excalidraw.png.svg]]
 
 ---
 # Notes:

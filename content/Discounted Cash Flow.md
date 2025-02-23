@@ -4,18 +4,21 @@ aliases:
 tags:
   - finance
   - ds/ml/ML4T
-edited: 2025-02-17T14:27
+edited: 2025-02-22T15:44
 created: 2024-03-19T22:06
 ---
 # Definition:
 A model of valuation based on intrinsic cash flows.
 
-We use **discounting** for interest rates:
+We use [[Time Value of Money|Discounting]] for interest rates:
 $$PV = FV/(1+r)^i$$
 
 ---
 # Notes:
-When applied to [[Intrinsic Company Value]], we treat these cash payments as dividends (and maybe buybacks). 
+When applied to [[Intrinsic Company Value]], we treat these dividends to create the **Dividend Discount Model**. This is a lot closer to being "real".
+
+We could also apply this on the [[Cash Flow]] that the company is generating to create **Discounted Cash Flow**. These are harder to predict.
+- E.g., growth business cash flows / earnings are expected to increase, but by how much? It matters a lot.
 
 When applied to bonds, we use the coupon payments.
 

@@ -6478,34 +6478,34 @@ var config = {
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688"
+          light: "#f4e9e1",
+          lightgray: "#89b2c5",
+          gray: "#876f5a",
+          darkgray: "#2a2521",
+          dark: "#e96322",
+          secondary: "#f29d35",
+          tertiary: "#1c2539",
+          highlight: "rgba(137, 178, 197, 0.20)",
+          textHighlight: "rgba(233, 99, 34, 0.20)"
         },
         darkMode: {
-          light: "#1c2636",
-          // page background
-          lightgray: "#9bb8d7",
+          light: "#181f2a",
+          // "#1c2539", // page background
+          lightgray: "#876f5a",
           // borders and links
-          gray: "#c6acb3",
+          gray: "#f29d35",
           // graph links, heavy borders
-          darkgray: "#f0eef9",
+          darkgray: "#f4e9e1",
           // body text
-          dark: "#9b6a6c",
+          dark: "#e96322",
           // header
-          secondary: "#dbcdd6",
+          secondary: "#f29d35",
           // link colour, current node
-          tertiary: "#bc8a89",
+          tertiary: "#e96322",
           // hover, visited nodes
-          highlight: "rgba(219, 205, 214, 0.15)",
-          // dbcdd6 // text highlights
-          textHighlight: "#dbcdd6"
+          highlight: "rgba(137, 178, 197, 0.20)",
+          // 89b2c5 // text highlights
+          textHighlight: "#89b2c5"
           // highlight background
         }
       }

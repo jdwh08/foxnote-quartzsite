@@ -43,7 +43,7 @@ $$||A\tilde{x}-b||_2\approx |||Ax^*-b||_2$$
 To solve the [[Least Squares]] problem, we at some point need to determine the [[Covariance Matrix]] of $A$.
 Now suppose we consider $SA$, where we use $S$ to sample using properly scaled random [[Normal Distribution]]s, with $d$ rows, and the same number of columns as $A$ has rows.
 
-![[Random_LinAlg_Cov.excalidraw.svg|100%x]]
+![[Random_LinAlg_Cov.excalidraw.png.svg|100%x]]
 
 - This is still true if we attach $b$ or $Sb$ on the right side of the matrix (like $[A|b]$) to make an [[Augmented Matrix]]. Thus, everything that drives the simulated solution still works.
 - Uh technically this isn't quite right, and we're actually approximating "relative differences" as opposed to absolute differences? 
