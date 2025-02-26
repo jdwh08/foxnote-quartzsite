@@ -6486,7 +6486,7 @@ var config = {
           secondary: "#f29d35",
           tertiary: "#1c2539",
           highlight: "rgba(137, 178, 197, 0.20)",
-          textHighlight: "rgba(233, 99, 34, 0.20)"
+          textHighlight: "#89b2c5"
         },
         darkMode: {
           light: "#181f2a",

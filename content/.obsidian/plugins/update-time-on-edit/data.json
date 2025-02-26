@@ -185,7 +185,7 @@
     "Portfolio Optimizer.md": "efc3bf7f4655c90c0e649bb34afe9dcbd7398fbbc506eca08aa4856f69ec7d0c",
     "Backtesting.md": "59f9c2845f09a9b6778e47350c1ca742ecf2858e9b24d7affdb3bba4fac2d42b",
     "Basic Time Series Statistics.md": "d515f39fec10a1afaab433fb6b2351325f3c98e3a44143d4b34485e8e39bfb53",
-    "Cleaning Financial Data in Python.md": "76a9f7f4cdd42f370daf8a2a872c9ba37437c45ba91c6ce8aaca48bff46dee8c",
+    "Cleaning Financial Data in Python.md": "54a49431591d8ab20112486c494c8e8693deb06205e18d2de3073e416842b38d",
     "Machine Learning at Hedge Funds.md": "1e5683ea02bd95cccbaf9b47843a3529c1d622a1f98458509b82a5cfcad5a1c0",
     "Manipulating Financial Data in Python.md": "0e549f46879ee2270e03d1a2768ecdf6822cf14ab0c235dbeff43b74deea7fdd",
     "NumPy Basics.md": "f785f3ec0f3e9db7140420253c15e1beb7ddc8a92252c57a7e9343acdfe43861",
@@ -269,7 +269,7 @@
     "Bayesian Additive Regression Trees.md": "4f627a289a4c0ff7f0882a830c7dc50bc9fdf335e75b7a17ec8ecc426cc780d9",
     "Alpha (Finance).md": "9a0927776fab0488ac8f231159fe7eab9c7a16738245b21ca47d7b458aeca796",
     "Beta (Finance).md": "bc30e8701d83d304adba0474a0b04ebc378a54ae63a05bcec391dc545bb0f7df",
-    "Efficient Markets Hypothesis.md": "ecb9135a02093b7ef02931665fd66c7ef5493e8307fd5ede0b23d75d0e6a2865",
+    "Efficient Markets Hypothesis.md": "ed86f22f715ef7a7dce4b4aa68ce6b5e6ade86e772a11095cc2d1dc7cc381828",
     "Regularization.md": "eb7142545cac9f666bb0f43ca19b0900b4f084f24d7d8030174453ea9dab229c",
     "Ridge Regularization.md": "e2860b2b8047cfdf8655ed2ebe07c177e84566183037bcad27d732c4048b7c92",
     "L2 Norm.md": "136a2661883d3ce6e878bffa01a73ae9aecd80093cd4c623ca04a71d1d2f0e9e",
@@ -290,6 +290,13 @@
     "Deep Learning.md": "88053a2909cfa7a3e7e82a4030d409458d9537b020052a29c6a64968e635f705",
     "Foundation Models.md": "e69ee7f1fbc8823ddf50a7999b6b1907793c3b9492c050c6255e4dd98dd9a5b6",
     "Residual Connections.md": "71bbeac6fe1cdd355f57c071fb1a59207b7e149c46540167437d663e31cd094b",
-    "Time Value of Money.md": "959e2ebc0b18ba076a985981c48bdfc9317d042742df8e4d9178393a889b3395"
+    "Time Value of Money.md": "959e2ebc0b18ba076a985981c48bdfc9317d042742df8e4d9178393a889b3395",
+    "CAPM Hedging.md": "cc6f8d506f96252c5187af297142153fac87da9571af2f30c137e647c6c881c6",
+    "Technical Analysis.md": "3a5228bea1872aa876e4d02fc216b6ec21f2b4fc9a59498a7b1a8c644c93ee68",
+    "Fundamental Analysis (finance).md": "a4394da1f5491a590db7344909e42b49cfc6b6116a6db39b65bdafd58e29d5e8",
+    "Momentum (technical analysis).md": "8dd6eb3dc8754206b84d8a47ca7080c9da02bc45500084595944e1e97c1771a1",
+    "Simple Moving Average (technical analysis).md": "845d8b46cb899be90f07b8761913dd25744e96d31edfb340f08015ca1c70c190",
+    "Bollinger Bands.md": "ad596ad73e979db4222188132b6f3ccced1f4db9651c9e01963f52c783826ced",
+    "Finance Data.md": "d86860a7e7ecd1a98f0e46c3e5fdb55e647b70587710ed3b955ba13beaaac6bd"
   }
 }

@@ -4,17 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "e9f9a126001cb1c6",
+        "id": "6d240d945881cbfd",
         "type": "tabs",
         "children": [
           {
-            "id": "67a25d0124e9d38d",
+            "id": "6e046b0ef1411e32",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Efficient Markets Hypothesis.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Efficient Markets Hypothesis"
             }
           }
         ]
@@ -49,7 +54,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "EFficient Markets Hypo",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -191,10 +196,19 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "67a25d0124e9d38d",
+  "active": "6e046b0ef1411e32",
   "lastOpenFiles": [
+    "Finance Data.md",
     "Cleaning Financial Data in Python.md",
+    "Technical Analysis.md",
+    "Bollinger Bands.md",
+    "Simple Moving Average (technical analysis).md",
     "Efficient Markets Hypothesis.md",
+    "Technical Analysis (finance).md",
+    "Momentum (technical analysis).md",
+    "Fundamental Analysis (finance).md",
+    "Company Valuation.md",
+    "CAPM Hedging.md",
     "Capital Asset Pricing Model.md",
     "Book Value.md",
     "Discounted Cash Flow.md",
@@ -211,16 +225,7 @@
     "Overfitting.md",
     "Regularization.md",
     "Ridge Regularization.md",
-    "Hyperparameter.md",
-    "Root Mean Squared Error.md",
-    "Error Function.md",
     "_Media/{57419EDF-1364-4990-8D9B-E7A84950EAE8}.png",
-    "Company Valuation.md",
-    "Sharpe Ratio.md",
-    "Linked List.md",
-    "Recursion.md",
-    "Ring Buffer.md",
-    "ArrayList.md",
     "_Media/Excalidraw/RingBuffer.excalidraw.png",
     "_Media/Excalidraw/RingBuffer.excalidraw.svg",
     "_Media/Excalidraw/ArrayList.excalidraw.svg",
