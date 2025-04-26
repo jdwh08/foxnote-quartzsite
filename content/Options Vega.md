@@ -2,11 +2,11 @@
 aliases: 
 tags:
   - finance/options
-edited: 2025-02-15T15:54
+edited: 2025-04-26T10:57
 created: 2024-01-07T13:59
 ---
 ### Definition:
-Change in price of option due to a 1% change in implied volatility of the underlying.
+Change in price of [[Options (finance)]] due to a 1% change in implied volatility of the underlying.
 
 ---
 ### Notes:

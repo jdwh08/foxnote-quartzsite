@@ -4,11 +4,12 @@ aliases:
   - Theta Decay
 tags:
   - finance/options
-edited: 2025-02-15T15:54
+edited: 2025-04-26T10:57
 created: 2024-01-07T13:54
 ---
 ### Definition:
-Change in price of option with change in time / approaching expiration.
+Change in price of [[Options (finance)]] with change in time / approaching expiration.
+
 **Theta Decay** because options lose value as they approach expiration, hence decay.
 
 ---

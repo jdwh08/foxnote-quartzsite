@@ -2,11 +2,11 @@
 aliases: 
 tags:
   - finance/options
-edited: 2025-02-15T15:54
+edited: 2025-04-26T10:56
 created: 2024-01-07T13:39
 ---
 ### Definition:
-Change in price of option given change in underlying.
+Change in price of [[Options (finance)]] given change in underlying.
 
 ---
 ### Notes:
