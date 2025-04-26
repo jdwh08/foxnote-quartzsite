@@ -6,9 +6,11 @@ tags:
   - stats/probability
   - readings
   - todo
-edited: 2025-02-15T16:12
+edited: 2025-04-26T10:56
 created: 2024-01-01T17:51
 ---
+[[Options (finance)]]
+
 https://www.morganstanley.com/content/dam/msdotcom/en/assets/pdfs/Options_Probabilities_Exhibit_Link.pdf -- basic infographic for butterfly based method
 
 https://quantdare.com/finding-the-probability-distribution-implied-in-option-prices/
