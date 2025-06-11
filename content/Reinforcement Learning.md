@@ -2,11 +2,14 @@
 aliases: 
 tags:
   - ds/ml/rl
-edited: 2025-03-16T11:23
+edited: 2025-05-14T20:37
 created: 2024-03-19T22:06
 ---
 # Definition:
-Solving a problem by giving an agent at some state possible choices and rewards for each choice. Agent then learns the optimal choices at each state, called a **policy**.
+A type of [[Machine Learning]] which solves a problem via giving an **agent** at some environmental **state** possible **choices** and **rewards** for choices.
+- Reward(s) are NOT necessarily immediate. 
+
+Agent then learns the optimal choices at each state, called a **policy**.
 
 ---
 # Notes:

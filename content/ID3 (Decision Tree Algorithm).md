@@ -3,7 +3,7 @@ aliases:
 tags:
   - ds/ml/trees
   - ds
-edited: 2025-02-15T16:36
+edited: 2025-06-03T16:16
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -71,33 +71,50 @@ def get_best_split:
 	# FOR THIS PROJECT, WE USE CORRELATION. This works well enough.
 	# Gini index is an alternative.
 ```
+
 ---
 # Notes:
 
-**Best Attribute:**
+#### Best Attribute:
 - Many different success metrics are available for this.
 - Typical one is the feature that maximizes [[Information Gain]] (i.e., makes the labels as least random as possible after the split)
+	- [[Information Gain]] has an [[ML Algorithm Bias]] towards features with high cardinality, i.e., if feature is 1-1 with target then we can perfectly predict.
 
-**Limitations**
-- Inductive Bias
-	- Restriction Bias: we aren't going to be able to represent stuff outside the space of [[Decision Trees]] (e.g., polynomial functions)
+#### Limitations
+- [[ML Algorithm Bias]]
+	- **Restriction Bias**: we aren't going to be able to represent stuff outside the space of [[Decision Trees]] (e.g., polynomial functions)
 	- **Preference Bias:**
 		- ID3 prefers better models over worse ones (gosh, we'd hope.)
 		- ID3 is going to prefer good splits near the top of the tree.
 		- ID3 is going to prefer shorter trees. We split them well near the top (and quickly), so we don't end up with longer trees with subpoptimal splits
 
 
-**Handling Continuous Features**
+#### Handling Continuous Features
 - We can't look at each potential value because $\mathbb{R}$ is our space.
 - We can't only look at training set because this doesn't generalize.
 - Thus, we convert continuous features into binary ones using a comparison.
 	- We would decide these splits based on the values in the training set (e.g., split on median...)
 - We could split on different values for continuous variables. (Age < 20, Age < 30, ...)
+- More formally, we can sort the values and look at places where the target variable "switches" from FALSE to TRUE, and then use a metric like [[Information Gain]] to see which "switch" is the best boundary (Fayyad 1991). 
 
+#### Handling Missing Values
+- Set it to the most common value in the node.
+- Create a probability by looking at the feature values within the node, e.g., the average of a 0/1 column.
 
-**Output**
+#### Output
 - Voting-based method for 0/1 classification
 - Mean for regression
+
+#### Pruning Rules
+To avoid [[Overfitting]], we can conduct "pruning" of the trees.
+1. **Reduced Error Pruning**: look at subtrees. Remove the subtree starting from its root node, and replace it with the most common answer. Keep this pruning if it doesn't hurt the test-set performance.
+2. **Rule Post Pruning**: 
+	1. Build the decision tree on the training dataset with overfitting.
+	2. Treat each "path" down the decision tree as a combined rule:
+		1. E.g., is_sunny AND age > 30 AND has_car THEN true
+		2. Look at each of the nodes down that path, e.g., remove is_sunny, and see if it doesn't hurt accuracy. 
+			1. We can do this either on the test set OR
+			2. C4.5 Algorithm **rule of thumb**: assume the training accuracy is [[Binomial]], and take the lower bound of a 95% [[Confidence Interval]] as the test accuracy.
 
 ---
 # Examples:
@@ -133,3 +150,5 @@ Finally,
 ----
 # Source:
 GaTech Machine Learning Decision Trees
+
+Mitchell 1997

@@ -5,7 +5,7 @@ tags:
   - finance
   - ds
   - ds/ml
-edited: 2025-02-15T16:31
+edited: 2025-06-09T20:36
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -86,7 +86,7 @@ Harish??? Consumer Banking
 		- Digital-first means that loan reviews are increasingly hard.
 		- We instead need customer-level risk profiles.
 	- [[Regression]] used for predicting default and portfolio shape.
-	- Also used for [[Optimizers]] for balance sheet etc.
+	- Also used for [[Optimizer]] for balance sheet etc.
 - **Your problems and tools will probably go away 5 years in the future, but your thought process and decisions will be useful for a long time on a lot of other problems.** 
 - **Once you have articulated a problem, the techniques used to solve the problems are foundational.**
 

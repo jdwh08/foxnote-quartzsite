@@ -1,9 +1,10 @@
 ---
 aliases:
   - Euclidean Norm
+  - Euclidean Distance
 tags:
   - math/linear_algebra
-edited: 2025-02-17T15:32
+edited: 2025-06-03T16:13
 created: 2024-03-19T22:06
 ---
 # Definition:

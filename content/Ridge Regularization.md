@@ -3,7 +3,7 @@ aliases:
 tags:
   - stats
   - ds/ml/regularization
-edited: 2025-02-22T14:31
+edited: 2025-06-08T11:01
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -17,6 +17,8 @@ Our squared penalty term increases the cost for parameters which are large.
 
 Unlike [[Lasso Regularization]], ridge tends to shrink parameters but not set them to zero.
 This is because our [[Loss Function]] penalty is still smooth, so there is no kink where a parameter has value 0.
+
+**Better for handling [[Multicollinearity]] than because it pushes both betas down.**
 
 ---
 # Examples:

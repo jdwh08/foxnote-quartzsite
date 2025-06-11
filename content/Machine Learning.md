@@ -2,7 +2,7 @@
 aliases: 
 tags:
   - ds/ml
-edited: 2025-02-15T16:31
+edited: 2025-05-14T20:31
 created: 2025-01-06T17:40
 ---
 ### Definition:
@@ -12,7 +12,7 @@ A computer program that
 
 ---
 ### Notes:
-Notes
+Can be either [[Supervised Machine Learning]] or [[Unsupervised Machine Learning]].
 
 ---
 ### Examples:

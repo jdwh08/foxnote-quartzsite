@@ -4,7 +4,7 @@ aliases:
 tags:
   - ds
   - ds/ml
-edited: 2025-02-22T14:30
+edited: 2025-05-21T21:00
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -29,7 +29,7 @@ To combat this, we can do a couple things:
 
 ---
 # Examples:
-- For linear polynomial models, [[Runge Spikes]]
+- For [[Linear Regression|Polynomial Regression]], [[Runge Spikes]] are a fun ph
 
 ----
 # Source:

@@ -2,11 +2,12 @@
 aliases:
   - Ordinary Least Squares
   - OLS
+  - Polynomial Regression
 tags:
   - math/linear_algebra
   - ds/ml/linreg
   - todo/breakup
-edited: 2025-02-16T19:45
+edited: 2025-05-21T21:00
 created: 2024-09-17T19:59
 ---
 # Definition:
@@ -23,8 +24,33 @@ A type of [[Regression]], which estimate $y$ from $x_1 ... x_n$ using $\beta_0 .
 - $\beta_i = \frac{Cov(x_i, y_i)}{Var(X_i)}$ ([[Covariance]] divided by [[Variance]])
 - (or in matrix form: $\beta = (X^T X)^{-1} X^T Y$)
 
-### From the Maximum Likelihood:
+##### From the Maximum Likelihood:
 Based on [[Uncertainty (Supervised ML)]], we see that for regression maximizing the log likelihood will minimize the squared error.
+
+##### Calculus
+Constant Value Derivation shows we minimize [[Residual Sum of Squares|Sum of Squared Residuals]] when using the expected value.:
+$$f(x)=c; E[c]=\sum_{i=1}^n (y_i-c)^2; \frac{\partial E}{\partial c}=\sum_{i=1}^n 2(y_i-c)\times-1 =0; y_i=c$$
+
+Suppose we want to do regression of the form $c_0 + c_1 x + c_2 x + c_3 x + ... = y$.
+We can convert this into matrices:
+$$\begin{bmatrix}
+1 & x_0 & x_0^2 & ... \\
+1 & x_1 & x_1^2 & ... \\
+1 & x_2 & x_2^2 & ... \\
+\end{bmatrix}
+\begin{bmatrix}
+c_0 \\ c_1 \\ c_2 \\
+\end{bmatrix}
+\approx
+\begin{bmatrix}
+y_0 \\ y_1 \\ y_2
+\end{bmatrix}
+\rightarrow
+\textbf{X} \beta \approx \textbf{y}
+\rightarrow \textbf{X'} \textbf{X} \beta = \textbf{X'} \textbf{y}
+\rightarrow \beta = (X' X)^{-1} X' Y
+$$
+where $(X'X)^{-1} X'Y$ is the [[Matrix Pseudoinverse]], aka "standard over-constrained" [[Least Squares]] answer.
 
 ---
 #### Feature Engineering:

@@ -2,7 +2,7 @@
 aliases: 
 tags:
   - ds/ml/nn
-edited: 2025-04-26T13:03
+edited: 2025-05-25T19:07
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -22,4 +22,5 @@ Notes
 
 ----
 # Source:
-Source
+
+[Navigating Neural Networks: Exploring State-of-the-Art Activation Functions – OMSCS 7641: Machine Learning](https://sites.gatech.edu/omscs7641/2024/01/31/navigating-neural-networks-exploring-state-of-the-art-activation-functions/)

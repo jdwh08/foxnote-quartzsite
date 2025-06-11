@@ -2,7 +2,7 @@
 aliases: 
 tags:
   - stats/probability
-edited: 2025-02-15T16:12
+edited: 2025-06-08T15:49
 created: 2024-03-02T19:32
 ---
 ### Definition:
