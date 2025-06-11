@@ -1,9 +1,10 @@
 ---
 aliases:
   - Dynamic Array
+  - list
 tags:
   - cs/dsa/arraylist
-edited: 2025-02-17T21:23
+edited: 2025-06-03T15:52
 created: 2024-03-19T22:06
 ---
 # Definition:

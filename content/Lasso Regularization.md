@@ -4,7 +4,7 @@ aliases:
 tags:
   - stats
   - ds/ml/regularization
-edited: 2025-02-17T16:12
+edited: 2025-06-08T11:01
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -17,8 +17,10 @@ Has effect of making parameters sparse, i.e., $\beta=0$.
 Our absolute value penalty term increases the cost for parameters which are large.
 ![[Lasso_Regularization.excalidraw.png.svg]]
 
-Unlike [[Ridge Regularization]], lasso tends to set 
+Unlike [[Ridge Regularization]], lasso tends to set values to zero.
 This is because our [[Loss Function]] penalty has large kink corners where our parameters are zero. This tends to make the optimal solutions corner solutions.
+
+For [[Multicollinearity]], will set one of the $\beta$ to be zero.
 
 ---
 # Examples:

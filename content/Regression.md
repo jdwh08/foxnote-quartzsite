@@ -3,11 +3,13 @@ aliases:
 tags:
   - ds/ml
   - todo
-edited: 2025-02-17T10:20
+edited: 2025-05-21T19:48
 created: 2024-03-19T22:06
 ---
 # Definition:
-[[Machine Learning]] problem where we need to predict a real value $y \in \mathbb{R}$ based on a set of inputs.
+[[Machine Learning]] problem where we need to predict a continuous value $y \in \mathbb{R}$ based on a set of inputs.
+
+(Predicting discrete values is [[Classification]].)
 
 ---
 # Notes:

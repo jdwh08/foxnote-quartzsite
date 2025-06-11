@@ -2,12 +2,13 @@
 aliases: 
 tags:
   - ds/ml
-edited: 2025-02-17T10:20
+edited: 2025-05-14T20:46
 created: 2025-01-06T18:53
 ---
 ### Definition:
 A type of [[Supervised Machine Learning|Supervised Machine Learning]] where the output space is a set of CLASSES (mutually exclusive)
 - $\mathcal{Y} = \{1, 2, ..., C\}$ 
+- $\mathcal{Y}={\text{True}, \text{False}}$
 
 ---
 ### Examples:

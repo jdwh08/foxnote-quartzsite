@@ -4,7 +4,7 @@ tags:
   - finance
   - ds/ml/ML4T
   - cs
-edited: 2025-02-15T16:28
+edited: 2025-06-09T20:36
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -13,7 +13,7 @@ created: 2024-03-19T22:06
 
 ![[{19F28DE4-4563-46FD-9B7E-E03104F1EA95}.webp]]
 - ML used to determine the target portfolio?
-- [[Optimizers]] used to balance risk and rewards.
+- [[Optimizer]] used to balance risk and rewards.
 	- Volatility
 	- Correlation between stocks
 	- Historical data

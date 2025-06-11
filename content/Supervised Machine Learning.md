@@ -2,14 +2,14 @@
 aliases: 
 tags:
   - ds/ml
-edited: 2025-02-15T16:31
+edited: 2025-05-14T20:30
 created: 2024-04-04T22:33
 ---
 # Definition:
 
 Learn a mapping from inputs to outputs.
 
-- Mapping $f$
+- Mapping $f$ (a function)
 - Inputs $x \in \mathcal{X}$ are features
 	- Often fixed dimension of numbers $\mathcal{X} = \mathbb{R}^D$ (reals of some dimension D)
 - Outputs $y \in \mathcal{Y}$ are labels
@@ -19,8 +19,15 @@ Learn a mapping from inputs to outputs.
 
 ---
 # Notes:
-Most common form of [[Machine Learning]]
+Most common form of [[Machine Learning]].
 
+
+#### Assumptions
+We make the following assumption:
+1. Well behaved function
+2. Representative data
+3. Which is able to be generalized
+	1. We are using induction (specific examples to general rule)
 
 ---
 # Examples:

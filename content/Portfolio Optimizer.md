@@ -3,13 +3,13 @@ aliases:
 tags:
   - ds/ml/ML4T
   - finance
-edited: 2025-02-16T11:50
+edited: 2025-06-09T20:36
 created: 2024-03-19T22:06
 ---
 # Definition:
 Given a [[Portfolio (Finance)]] and a time period, determine the optimal allocations to maximize some reward function. Reward can be max return, min volatility, Sharpe ratio, etc.
 
-More formally, we frame this as an [[Optimizers]].
+More formally, we frame this as an [[Optimizer]].
 - Function $f(x)$ is minimizing negative Sharpe Ratio
 - $x$ is the weights (which we also need an initial guess for)
 - **Ranges** of weights be between 0-1 (we assume no leverage); this limits search area and makes it faster.

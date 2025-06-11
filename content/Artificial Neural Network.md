@@ -3,7 +3,7 @@ aliases:
   - Neural Network
 tags:
   - ds/ml/nn
-edited: 2025-04-26T13:12
+edited: 2025-06-08T09:16
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -11,18 +11,43 @@ A ML model which consists of "neurons" that take in various inputs as a weighted
 
 ![[Artificial Neural Network.excalidraw.png.png]]
 
+Very loosely inspired by biological brains, though not quite the same. 
+
 ---
 # Notes:
+
+#### Structure
 Formally, we can calculate this as
 $$a=\sum_i^{M}w_ix_i$$
 where a is our pre-activation, and then apply
 $$y=f(a)$$
 where $f(a)$ is our [[Activation Function]].
 
-
 Scaling this up, we can say the neural network has the form
 $$f(X) = \beta_0 + \sum_{k=1}^K \beta_k g(w_{k0} + \sum_{j=1}^p w_{kj} X_j)$$
 where we see our $g$ as activation functions and our $\beta$s as per-neuron weights.
+
+#### What is it Good For?
+- Complex input data (vision, sound, language, ...)
+- Noisy data
+- Long training times are okay. Inference is fast.
+- Interpretability doesn't matter very much
+
+#### [[ML Algorithm Bias]]
+- **Restriction Bias**: If complex enough, almost nothing. 
+	- A **linear** set of inputs where we learn planes for each neuron. The combination of neurons then have non-linear functions allowing representation of almost any function.
+	- Can represent any continuous or arbitrary function if given enough nodes and layers. E.g., see [[Perceptron#Perceptron Function Representation]].
+	- Practically speaking, each architecture does have a set number of neurons and layers.
+	- Avoid [[Overfitting]] using network size, [[Train Test Split|Cross Validation]], etc. so that we can stop training once our weights become large and overfit.
+- **Preference Bias**: 
+	- We generally don't want [[Overfitting]]
+	- In neural networks, complex overfitting models tend to have more neurons, layers, and crucially **large weights**.
+	- Thus, well-trained ANNs prefer "low complexity": if we have the same value(s), prefer the less complex solution.
+
+#### [[Perceptron]]
+The simplest example of an Artificial Neural Network: the activation function is a simple threshold (or at most a [[Sigmoid Function]]).
+
+Can be trained with the perceptron rule, but more robustly [[Gradient Descent]] with [[Backpropagation]].
 
 ---
 # Examples:
@@ -44,5 +69,6 @@ where we see our $g$ as activation functions and our $\beta$s as per-neuron weig
 # Source:
 Bishop Deep Learning
 ISL Python
+GAT ML
 
 Invented by McCulloch and Pitts, 1943

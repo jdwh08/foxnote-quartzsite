@@ -2,25 +2,62 @@
 aliases: 
 tags:
   - ds/ml/nn
-edited: 2025-02-22T15:15
+edited: 2025-06-08T11:00
 created: 2024-04-11T18:34
 ---
 ### Definition:
-Definition
-
+A method of learning the weights of a multi-layer [[Artificial Neural Network|Neural Network]]. 
 
 ----
-### Backprop from Scratch:
+#### Assumptions
+1. Network has a fixed structure, a [[Directed Graph]] (can have cycles).
+	1. Most common are acyclic feed forward though.
+2. Learning is the same as optimizing the weights for each edge.
 
+#### Pseudocode
+```pseudocode
+Start with ANN with n_i inputs, n_h hidden, and n_o outputs.
+Initialize all weights to be small random.
+
+WHILE 
+	- FOR data (x, y)
+		- FORWARD PASS: Send input data x through network.
+		- Compute outputs for every neuron
+
+		- BACKWARD PASS: Calculate error term d
+		- Output d = o*(1-o)*(y-o)
+			- o is output of output layer
+			- Note that o*(1-o) is from sigmoid derivative
+		- Hidden d = h*(1-h)*(sum(w*d)) [sum over inputs]
+			- h is output of hidden layer
+			- w is weight, how "responsible" hidden is
+			- d is deltas from future layer
+
+		- NUDGE: Get nudge amount as
+			- learning rate * d * x
+		- UPDATE: Add nudge to existing weight for update
+```
+
+This is similar to the methods in [[Gradient Descent]].  However, the update $\delta$ calculates the contribution of the error from all the neurons in the next layer, instead of using $y-wx$ or $y-\hat{y}$ like in [[Perceptron#Training a Perceptron|Perceptron Rule]].
+
+We have some danger in [[Overfitting]] if we just minimize training error.
+
+#### [[ML Algorithm Bias]]
+- Our **representation bias** is all possible combinations of the weights.
+	- Continuous and differentiable
+- Our **preference bias** generally is to interpolate smoothly between data points.
+	- Hidden layers in a multi-layer perceptron often help determine useful intermediate representations to better learn the data.
+
+#### Backprop from Scratch:
 1. Suppose we want to find some relationship between $x$ and $y$. 
 	1. Assume this must be smooth and a polynomial of degree 5, i.e., $y(x) = k_0 + k_1 x + k_2 x^2 + k_3 x^3 + k_4 x^4 + k_5 x^5$.
 	2. We want to find the values $k_0 ... k_5$ that finds the "best" curve.
-	3. To get the best curve, we need to define some measurement of quality as the [[Loss Function]]. A classical one is [[Least Squares]] with square error.
+	3. To get the best curve, we need to define some measurement of quality as the [[Loss Function]]. A classical one is [[Mean Squared Error]].
 	4. For our case, loss is a function of the parameters $k_0 ... k_5$. $\mathcal{L}(k_0...k_5)$. We can get the best values of $k$ by minimizing the loss function.
 2. Let's build a machine that goes from values $k_0 ... k_5$ to function $\hat{y}(x)$ to loss $\mathcal{L}$.
 	1. Randomize the initial weights of $k_0...k_5$.
 	2. Nudge the weight $k_1$ in a direction and see what happens to loss. If loss decreases, keep it; otherwise, change a different $k$ value.
-	3. This approach is called **Random Perturbation** (perturbation: minor change in a system), because we are setting values of $k$ blindly.
+	3. This approach is called **Random [[Perturbation]]** (perturbation: minor change in a system), because we are setting values of $k$ blindly.
 	4. If the system is a complete Black Box, then this is the best we can do. However, we can do better for [[Differentiable Functions]].
 3. Let's do better than random perturbation by using differentiability.
 	1. Ideally, we'd like to know in what direction, and how much, to change each value of $k_0 ... k_5$, in order to reduce the loss.
@@ -54,16 +91,29 @@ Definition
 	3. **NUDGE $K$!**
 	4. **REPEAT!**
 
+#### Modifications
+###### Momentum
+We could make update based partially on the prior update size:
+$$\Delta w_{@t}= \eta \delta x + \alpha w_{@t-1}$$
+(adding the $\alpha w$ momentum term) allowing us to keep moving past local optima and speed convergence.
+
+###### Editing the Loss Function
+- To avoid overfitting, we can penalize the weights $w$ similar to in [[Ridge Regularization]].
+- We could also consider higher order optimization, e.g., for the gradient.
+- We can use alternative loss functions like minimizing [[Cross Entropy]].
+
 ---
 ### Notes:
 Learning representations by back-propagating errors (Rumelhart et al 1986): [[Perceptron#Multi-Layered Perceptron (MLP)|Multilayer Perceptrons]] can learn effectively using backprop.
 
 ---
 ### Examples:
-Examples
+
+#todo 
 
 ---
 ### Sources:
 Backprop from scratch is built on https://www.youtube.com/watch?v=SmZmBKc7Lrs.
 
  (Rumelhart, Hinton, and Williams, 1986)
+ Mitchell 1997
