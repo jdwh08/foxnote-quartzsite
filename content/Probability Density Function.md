@@ -4,21 +4,22 @@ aliases:
 tags:
   - stats/probability
   - stats/distributions
-edited: 2025-02-15T16:14
+edited: 2025-06-12T18:35
 created: 2024-03-03T17:48
 ---
-### Definition:
-X is a continuous [[Random Variable]] IFF $\exists$ a function $f: \mathbb{R} \rightarrow [0,\infty)$ such that
-1. $P(a\leq X \leq b) = \int_{a}^{b} f(x)dx \ \forall \ a,b \text{ where} -\infty \leq a \leq b \leq \infty$
-2. $f(x)\geq 0 \ \forall \  x \in \mathbb{R}$
+# Definition:
 
-This function is the Probability Density Function.
-
-Note that from the definition of [[Probability]],
-- $p(x) \ge 0$ and $\text{sum/int } p(x) = 1$
+The function which gets the [[Probability]] of some specific value $x$ in a [[Probability Distribution]].
 
 ---
-### Notes:
+# Notes:
+
+### Definition
+
+The function which gets the [[Probability]] of a [[Random Variable]] being in some tiny band in a [[Probability Distribution]]. 
+
+$$p(x) = \underset{\epsilon \rightarrow0}{\lim \frac{1}{\epsilon}} P(x_0 \le x \le x_0 + \epsilon)$$
+
 **Properties of the PDF:**
 1. It must always be nonnegative for all X.
 2. The total area under the curve must be one since $\int_{-\infty}^{\infty}f(x)dx = P(-\infty < X < \infty) = 1$
@@ -41,7 +42,7 @@ Theory
 - The density function must be **piecewise continuous**. If it's discontinuous at some countable number of points, it's okay, because the probability of a single point does not matter.
 
 ---
-### Examples:
+# Examples:
 Suppose the lifetime of a battery has this PDF:
 - 0 if $x<0$
 - $ce^{-2x}$ if $x>0$
@@ -50,3 +51,7 @@ $\int_{-\infty}^{\infty} f(x)dx = \int_{-\infty}^{\infty} ce^{-2x}dx = -\frac{c}
 
 The probability the battery lasts from 0.5 to 1 days is:
 $P(0.5 < X < 1) = \int_{0.5}^1 f(x)dx = \int_{0.5}^{1}2e^{-2x}dx = -e^{-2x}|_{x=0.5}^{x=1}=e^{-1}-e^{-2}$
+
+---
+# Source:
+Mitchell 1997

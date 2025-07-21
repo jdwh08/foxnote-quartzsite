@@ -1,13 +1,14 @@
 ---
 aliases: 
 tags:
-  - cs
   - cs/dsa
-edited: 2025-02-15T16:23
+  - cs/leetcode
+edited: 2025-07-12T21:59
 created: 2024-05-21T20:37
 ---
 ### Definition:
 
+Standardized toy problems to test knowledge of [[Data Structures and Algorithms]].
 
 ---
 ### Notes:

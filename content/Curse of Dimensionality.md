@@ -2,12 +2,12 @@
 aliases: 
 tags:
   - ds/ml
-edited: 2025-06-03T16:25
+edited: 2025-06-11T20:58
 created: 2024-03-19T22:06
 ---
 # Definition:
 
-As the number of features grows, the amount of data needed to correctly learn from it grows exponentially.
+As the number of features grows, the amount of data needed to correctly learn from it grows exponentially $\sim 2^n$.
 
 ---
 # Notes:

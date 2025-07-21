@@ -2,8 +2,7 @@
 aliases: 
 tags:
   - cs/dsa/linked_list
-  - todo
-edited: 2025-02-17T21:51
+edited: 2025-07-20T22:05
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -70,36 +69,142 @@ type Node<T> = {
 
 export default class DoublyLinkedList<T> {
 	public length: number;
-	private head: Node<T>;
-	private tail: Node<T>;
+	private head?: Node<T>;
+	private tail?: Node<T>;
 
 	constructor() {
 		this.length = 0;
+		this.head = undefined;  // style, not needed
+		this.tail = undefined;
 	}
+
+	private debug() {
+		let curr = this.head;
+		let output = "";
+		for (let i = 0; curr & i < this.length; ++i) {
+			output += `${i} => ${curr.value} `;
+			curr = curr.next;
+		}
+	}
+
 	prepend(item: T): void {
+		const node = {value: item} as Node<T>;
+		this.length++;
+
+		// empty
+		if (!this.head) {
+			this.head = this.tail = node;
+			return;
+		}
+
 		// pre-append to head
-		item.next = this.head
-		this.head.prev = item
-		this.head = item
-	}
-	insertAt(item: T, idx: number): void {
-		
+		// attach new node first!
+		node.next = this.head;
+		this.head.prev = node;
+		this.head = node;
 	}
 	append(item: T): void {
-		
-	}
-	remove(item: T): T | undefined {
-		
-	}
-	get(idx: number): T | undefined {
-		let curr = this.head;
-		for (let i = 0; i < idx && curr; ++i) {
-			curr = curr.next; // walk
+		const node = {value: item} as Node<T>;
+		this.length++;
+
+		// empty
+		if (!this.tail) {
+			this.head = this.tail = node;
+			return;
 		}
-		return curr?.value;
+
+		node.prev = this.tail;
+		this.tail.next = node;
+		this.tail = node;
+	}
+	insertAt(item: T, idx: number): void {
+		// special cases
+		if (idx > this.length) {
+			throw new Error("DLL shorter than index.")
+		} else if (idx == this.length) {
+			this.append(item);
+			return;
+		} else if (idx == 0) {
+			this.prepend(item);
+			return;
+		}
+
+		this.length++;
+		const node = {value: item} as Node<T>;
+		const curr = this.getAt(idx) as Node<T>;
+
+		// swap
+		// attach new node
+		node.next = curr;
+		node.prev = curr.prev;
+		// fix old links
+		if (node.prev) {
+			node.prev.next = node;
+		}
+	}
+
+	get(idx: number): T | undefined {
+		return this.getAt(idx)?.value;
+	}
+	private getAt(idx: number): Node<T> | undefined {
+		// gets the NODE instead of the value like get
+		// useful for searching like stuff.
+		let curr = this.head;
+		// traverse
+		for (let i = 0; curr && i < idx; ++i) {
+			curr = curr.next
+		}
+		return curr;
+	}
+
+	remove(item: T): T | undefined {
+		// Find the item, then remove it.
+		// Perf is terrible unless a shadow hashmap?
+
+		let curr = this.head;
+		for (let i = 0; curr && curr.value && i < this.length; ++i) {
+			if (curr.value === item) {
+				break;
+			}
+		}
+		if (!curr) {
+			// it never existed!
+			return undefined;
+		}
+		return this.removeNode(curr);
 	}
 	removeAt(idx: number): T | undefined {
-		
+		const node = this.getAt(idx);
+
+		if (!node) {
+			// It never exists!
+			return undefined;
+		}
+		return this.removeNode(curr);
+	}
+	private removeNode(node: Node<T>): T | undefined {
+		this.length--;
+		if (this.length === 0) {
+			const out = this.head?.value;
+			this.head = this.tail = undefined;
+			return out;
+		}
+		if (node.prev) {
+			// jump over curr
+			node.prev.next = node.next;
+		}
+		if (node.next) {
+			// jump over curr
+			node.next.prev = node.prev;
+		}
+		if (node === this.head) {
+			this.head = node.next;
+		}
+		if (node === this.tail) {
+			this.tail = node.prev;
+		}
+		node.prev = node.next = undefined;
+		return node.value?;
 	}
 }
 ```

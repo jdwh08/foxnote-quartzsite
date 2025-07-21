@@ -4,22 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "a73d1dfbf42944d9",
+        "id": "ac7a748d81432e72",
         "type": "tabs",
         "children": [
           {
-            "id": "93864405b817a81c",
+            "id": "63c68b591dcdc69b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Exponential Distribution.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Exponential Distribution"
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -37,11 +30,8 @@
         "state": {
           "type": "file-explorer",
           "state": {
-            "sortOrder": "alphabetical",
-            "autoReveal": false
-          },
-          "icon": "lucide-folder-closed",
-          "title": "Files"
+            "sortOrder": "alphabetical"
+          }
         }
       },
       {
@@ -50,15 +40,13 @@
         "state": {
           "type": "search",
           "state": {
-            "query": "",
+            "query": "Perceptron rule",
             "matchingCase": false,
             "explainSearch": false,
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical"
-          },
-          "icon": "lucide-search",
-          "title": "Search"
+          }
         }
       },
       {
@@ -69,9 +57,7 @@
           "state": {
             "sortOrder": "frequency",
             "useHierarchy": true
-          },
-          "icon": "lucide-tags",
-          "title": "Tags"
+          }
         }
       },
       {
@@ -79,13 +65,11 @@
         "type": "leaf",
         "state": {
           "type": "bookmarks",
-          "state": {},
-          "icon": "lucide-bookmark",
-          "title": "Bookmarks"
+          "state": {}
         }
       }
     ],
-    "currentTab": 0
+    "currentTab": 1
   },
   "right": {
     "id": "e0141a6eb89a91b9",
@@ -104,9 +88,7 @@
             "searchQuery": "",
             "backlinkCollapsed": false,
             "unlinkedCollapsed": true
-          },
-          "icon": "links-coming-in",
-          "title": "Backlinks"
+          }
         }
       },
       {
@@ -117,9 +99,7 @@
           "state": {
             "linksCollapsed": false,
             "unlinkedCollapsed": true
-          },
-          "icon": "links-going-out",
-          "title": "Outgoing links"
+          }
         }
       },
       {
@@ -127,9 +107,7 @@
         "type": "leaf",
         "state": {
           "type": "outline",
-          "state": {},
-          "icon": "lucide-list",
-          "title": "Outline"
+          "state": {}
         }
       },
       {
@@ -137,9 +115,7 @@
         "type": "leaf",
         "state": {
           "type": "calendar",
-          "state": {},
-          "icon": "calendar-with-checkmark",
-          "title": "Calendar"
+          "state": {}
         }
       }
     ],
@@ -147,7 +123,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-git:Open Git source control": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -157,12 +132,19 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "obsidian-kanban:Create new board": false,
+      "periodic-notes:Open today": false,
       "templater-obsidian:Templater": false,
-      "periodic-notes:Open today": false
+      "janitor:Janitor: scan vault": false
     }
   },
-  "active": "93864405b817a81c",
+  "active": "63c68b591dcdc69b",
   "lastOpenFiles": [
+    "Perceptron.md",
+    "Principal Component Analysis.md",
+    "Singular Value Decomposition (SVD).md",
+    "Feature Selection.md",
+    "Backward Selection.md",
+    "Exponential Distribution.md",
     "Monte Carlo Simulation.md",
     "Number Theory.md",
     "Lavafox/Untitled.canvas",

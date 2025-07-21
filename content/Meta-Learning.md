@@ -1,8 +1,9 @@
 ---
 aliases:
   - metalearning
-tags: []
-edited: 2025-02-15T16:34
+tags:
+  - "#metalearning"
+edited: 2025-07-20T22:05
 created: 2023-12-31T23:02
 ---
 ## Marty Lobdell’s “Study Less Study Smart”:

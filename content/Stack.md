@@ -2,7 +2,7 @@
 aliases: 
 tags:
   - cs/dsa/stack
-edited: 2025-02-17T20:02
+edited: 2025-07-20T22:15
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -15,15 +15,11 @@ Note that we only add and remove from the HEAD now!
 ---
 # Notes:
 - Especially useful for [[Recursion]], where we think about a "stack trace" of function calling.
-- Useful for [[The Stack (memory)]].
 
 **By constraining the LinkedList**, we get really good performance in terms of [[Big O]].
 - PUSH: Add to head is O(1)!
 - POP: Pop from head is O(1)!
 - PEAK: `head.val` is O(1)!
-
----
-# Examples:
 
 ```typescript
 type Node<T> = {
@@ -73,6 +69,18 @@ export default class Stack<T> {
 	}
 }
 ```
+
+NOTE: in Python, we would use deque.
+
+---
+# Examples:
+
+In Computer Systems:
+- Useful for [[The Stack (memory)]].
+- [[Stack Trace]] of prior function calls.
+
+In [[Leetcode]]:
+- 
 
 ----
 # Source:

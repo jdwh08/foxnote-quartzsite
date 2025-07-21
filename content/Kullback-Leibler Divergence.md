@@ -5,7 +5,8 @@ aliases:
 tags:
   - stats/probability
   - information_theory
-edited: 2025-02-15T16:31
+  - ds/ml/loss_function
+edited: 2025-06-28T10:20
 created: 2024-03-20T15:40
 ---
 ### Definition:
@@ -15,12 +16,15 @@ $D_{KL}(p(x)||q(x)) = \sum\limits_{x \in X} p(x) ln(\frac{p(x)}{q(x)})$.
 
 When probability in $p$ is big but $q$ is small, then there is a large divergence. When probability in $p$ is small but $q$ is big, there is a smaller divergence.
 
-Can be thought of as the "relative entropy", as opposed to the [[Cross Entropy]].
+Can be thought of as the "relative [[Entropy (information theory)]]", as opposed to the [[Cross Entropy]].
+
+Can be used as an evaluation metric between some other distribution and our empirical data distribution we sampled.
 
 ---
 ### Notes:
-Information Theory Interpretations:
+[[Information Theory]] Interpretations:
 - "Extra information bits required to encode $p(x)$ when starting from $q(x)$". "Information lost when using $q(x)$ to approximate $p(x)$".
+- Note that [[Mutual Information]] is a special case where we are measuring the difference in information between the [[Joint Probability]] and the two individual probabilities multiplied together.
 
 - Not a true measure of distance because it is... 
 	- Not symmetric!
