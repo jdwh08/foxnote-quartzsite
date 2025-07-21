@@ -3,12 +3,12 @@ aliases:
   - EM Algorithm
 tags:
   - stats
-  - ds
-edited: 2025-02-15T16:27
+  - ds/ml
+edited: 2025-06-14T11:11
 created: 2024-03-19T22:06
 ---
 # Definition:
-A process for jointly estimating some missing data AND distribution parameters by maximizing expectation.
+A process for jointly estimating some data AND hidden distribution parameters by maximizing expectation.
 
 Intuition Process:
 1. Make initial parameter estimates
@@ -19,17 +19,7 @@ Intuition Process:
 ---
 # Notes:
 
-#### Pros and Cons:
-- Unlike [[Gradient Descent]], which  can also be used to solve similar problems, EM doesn't require us to calculate derivatives (which might be hard).
-- EM may converge slower than other approaches.
-
-
-### Cases to Use:
-- Finding missing data and missing parameters
-- [[Gaussian Mixture Models]] for [[Clustering]]
-	- We have k classes, AND we don't really know the parameters for the distributions that generate the classes, AND we don't know what data goes in each class.
-
-#### Maths
+### Algorithm
 - Suppose we have some probability of missing value $p(x|\mu) \sim N(\mu, 1)$.
 - We get the [[Likelihood]] $\mathcal{L}([x, 1, 2] | \mu)$
 	- Then use the [[Log Likelihood]] approach by taking the log to make it easier (sums).
@@ -46,16 +36,29 @@ Intuition Process:
 	- $\mu_1 = \underset{\mu}{\arg\max} E[\mathcal{L} | \mu]$
 	- I.e., our new estimate for $\mu$ is the value that maximizes that weighted likelihood.
 
-#### Convergence
-Why is this **guaranteed to converge?**
-- Flavour: Show that after E-M step, our likelihood is strictly better, and that the likelihood has some defined maximum.
+### Convergence
+Why is this **guaranteed to essentially converge?**
+- Our likelihood is strictly better after each expectation step and maximization step
+- The likelihood has some defined maximum.
+
+#### Pros and Cons:
+- Unlike [[Gradient Descent]], which can also be used to solve similar problems, EM doesn't require us to calculate derivatives (which might be hard).
+	- Can work with any distribution so long as we can do it!
+	- Expectation is usually probabilistic stuff and computationally intensive, while Maximization is typically just counting and max.
+- EM may converge slower than other approaches.
+- EM can get stuck in [[Local Optima]]
+
+### Cases to Use:
+- Finding missing data and missing parameters
+- [[Soft Clustering|Gaussian Mixture Models]] for [[Clustering]]
+	- We have k classes, AND we don't really know the parameters for the distributions that generate the classes, AND we don't know what data goes in each class.
 
 ---
 # Examples:
 
 **Case 1: Missing Data**
-Suppose we have data \[1,2, x\] $\sim N(1,1)$ [[Normal Distribution]]. What is our best guess for x?
-- Based on the Normal distribution, the value with the highest probability is **1**, the mean.
+Suppose we have data $[1,2, x]$ $\sim N(1,1)$ [[Normal Distribution]]. What is our best guess for x?
+- Based on the Normal distribution, the value with the highest probability is **1**, the distribution's mean.
 
 **Case 2: Missing Parameter**
 Suppose we have data $[1,2,0] \sim N(\mu, 1)$. What is our best guess for $\mu$? 

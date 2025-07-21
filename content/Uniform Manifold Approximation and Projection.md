@@ -4,11 +4,11 @@ aliases:
 tags:
   - ds
   - ds/dimension_reduction
-edited: 2025-02-15T20:25
+edited: 2025-06-12T20:05
 created: 2024-03-26T22:42
 ---
 ### Definition:
-Dimension reduction for data that is non-linear, as opposed to [[Principal Component Analysis (PCA)]].
+Dimension reduction for data that is non-linear, as opposed to [[Principal Component Analysis]].
 
 ---
 ### High Level Overview:

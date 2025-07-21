@@ -2,12 +2,12 @@
 aliases: 
 tags:
   - ds/ml
-edited: 2025-05-14T20:30
+edited: 2025-06-11T19:01
 created: 2024-04-04T22:33
 ---
 # Definition:
 
-Learn a mapping from inputs to outputs.
+Learn a function mapping from inputs to outputs.
 
 - Mapping $f$ (a function)
 - Inputs $x \in \mathcal{X}$ are features

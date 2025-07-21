@@ -3,12 +3,12 @@ aliases:
 tags:
   - cs/dsa/array
   - cs/dsa/search
-edited: 2025-02-15T16:24
+edited: 2025-07-20T22:16
 created: 2025-01-05T21:10
 ---
 ### Definition:
 
-Take advantage of **sorted** property of a [[Sorted Array]] to search faster.
+Take advantage of **sortedness** in [[Sorted Array]] to search faster using [[Divide and Conquer]].
 
 ```psuedocode
 search(arr, needle, lo, hi):

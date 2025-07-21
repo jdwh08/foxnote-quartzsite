@@ -2,11 +2,12 @@
 aliases: 
 tags:
   - cs/dsa/sort
-edited: 2025-02-15T16:24
+edited: 2025-07-12T22:00
 created: 2025-01-05T22:13
 ---
 ### Definition:
-Quite literally the most intuitive, simplest sorting algorithm.
+
+Quite literally the most intuitive, simplest [[Sorting Algorithm]].
 
 For each index $i$, consider the next index $i+1$. If $arr[i] < arr[i+1]$, swap the two.
 A single pass through BubbleSort ensures that the largest item is at the end. 

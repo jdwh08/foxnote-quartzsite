@@ -1,11 +1,1 @@
-{
-  "templater-obsidian:_ObsidianTemplates/_BasicNote.md": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "N"
-    }
-  ]
-}
+{}
