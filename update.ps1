@@ -1,2 +1,2 @@
-exporter.ps1
+.\exporter.ps1
 npx quartz sync

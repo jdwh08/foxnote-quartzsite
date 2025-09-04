@@ -1,8 +1,9 @@
 ---
-aliases: 
+aliases:
 tags:
   - stats
-edited: 2025-01-23T21:30
+  - econ/econometrics
+edited: 2025-08-28T21:42
 created: 2024-03-19T22:06
 ---
 # Definition:

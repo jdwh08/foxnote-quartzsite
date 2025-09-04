@@ -1,8 +1,9 @@
 ---
-aliases: 
+aliases:
+  - RNN
 tags:
   - ds/ml/nn/rnn
-edited: 2025-04-26T14:13
+edited: 2025-09-03T21:09
 created: 2024-03-19T22:06
 ---
 # Definition:

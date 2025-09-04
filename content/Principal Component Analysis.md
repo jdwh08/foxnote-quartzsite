@@ -4,7 +4,8 @@ aliases:
 tags:
   - math/linear_algebra
   - ds/ml/featureeng
-edited: 2025-06-15T16:46
+  - ds/dimension_reduction
+edited: 2025-08-26T21:40
 created: 2024-03-26T21:39
 ---
 ### Definition:
@@ -17,7 +18,7 @@ Perform [[Feature Selection]] by creating new "components" which do a good job e
 
 PCA is the "bedrock dimensionality reduction technique" for dimensionality reduction / [[Feature Selection]].
 
-Uses the [[Singular Value Decomposition (SVD)]] to do [[Feature Selection]] linearly. Because it uses SVD, it creates a whole new [[Basis]] coordinate system for the data, where the axes capture the most variation.
+Uses the [[Singular Value Decomposition]] to do [[Feature Selection]] linearly. Because it uses SVD, it creates a whole new [[Basis]] coordinate system for the data, where the axes capture the most variation.
 
 ### Algorithm
 
@@ -41,7 +42,7 @@ $$X = \begin{bmatrix}
 We assume that $X$ is drawn from some underlying statistical distribution (typically [[Normal Distribution]] with zero mean). **This is how PCA and SVD differ.**
 - Finds a line through the origin that best fits the data (like [[Linear Regression|OLS]]). This is analogous to finding the line that maximizes distance from the [[Vector Projection]] onto the line.
 	- To keep the most information possible, we want to be sure to use a vector $u$ whose variance is large so it captures more variation in the higher-dimensional space.
-	- $Proj_{u_1}(x_i) = u_1^T x_i u$, where $u_1^T x_i$ is the [[Dot Product]] written out as [[Matrix Multiplication]], and $u$ is the vector that controls the direction.
+	- $Proj_{u_1}(x_i) = u_1^T x_i u$, where $u_1^T x_i$ is the [[Dot Product]] written out as [[Matrix Product]], and $u$ is the vector that controls the direction.
 
 ![[PCA.excalidraw.png.svg|600x100%]]
 

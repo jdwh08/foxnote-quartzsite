@@ -2,7 +2,7 @@
 aliases: 
 tags:
   - ds/ml/svm
-edited: 2025-06-01T18:00
+edited: 2025-07-26T14:09
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -12,7 +12,7 @@ Especially useful in [[Support Vector Machines]], where we can create linear sep
 
 ---
 # Notes:
-Notes
+Kernels don't actually compute what the points would be in higher dimensional space, but rather what the distance would be, which is cheaper.
 
 #### Common Choices For [[Support Vector Machines]]:
 We can apply a non-linear transformation to all the data points. 
@@ -25,9 +25,10 @@ We can apply a non-linear transformation to all the data points.
 	- $k(x,y) = \tanh(\alpha x' y + \theta)$
 - Radial Basis Function (RBF) Kernel: $f(x) = ?(\infty \text{dim})? \rightarrow k(x, x')=e^{-\gamma * ||x-x'||^2}$
 	- This one needs infinite dimensions
+	- It's basically like a [[Normal Distribution]] around each point.
 
 #### Mercer Condition
-For the math to be guaranteed to work, the kernel must act like a [[Distance Measure]]. In practice, you can probably get away with this.
+For the math to be guaranteed to work, the kernel must act like a [[Distance Measure]], i.e., a [[Symmetric Matrix]] which is [[Positive Semidefinite Matrix]]. In practice, you can probably get away with this.
 
 ---
 # Examples:

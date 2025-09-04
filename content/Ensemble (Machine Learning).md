@@ -2,7 +2,7 @@
 aliases: []
 tags:
   - ds/ml
-edited: 2025-02-17T09:46
+edited: 2025-07-26T14:15
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -19,7 +19,7 @@ Ensembles provide multiple benefits:
 # Examples:
 E.g., we have a [[K-Nearest Neighbours|KNN]], [[Linear Regression]], and [[Decision Trees]] combined together all to predict a value for [[Regression]].
 
-We use [[Bootstrap Aggregating]] or [[Boosting (Machine Learning)]]
+We use [[Bootstrap Aggregating]] or [[Boosting]]
 
 ----
 # Source:

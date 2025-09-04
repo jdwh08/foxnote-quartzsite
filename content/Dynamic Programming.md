@@ -1,8 +1,8 @@
 ---
-aliases: 
+aliases:
 tags:
   - cs/dsa/dp
-edited: 2025-07-19T20:14
+edited: 2025-09-01T17:33
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -192,7 +192,7 @@ def knapsack_push(n: int, T: int, knapsack: list[int]) -> bool:
 ```
 
 ## Coin Change
-
+- See [[Leetcode 322 Coin Change]]
 
 ## Other Examples
 - [[Reinforcement Learning]], particularly [[Policy Iteration]] and [[Value Iteration]].

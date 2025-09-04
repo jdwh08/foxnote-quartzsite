@@ -3,7 +3,7 @@ aliases:
   - Neural Network
 tags:
   - ds/ml/nn
-edited: 2025-06-08T09:16
+edited: 2025-09-03T19:36
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -16,7 +16,7 @@ Very loosely inspired by biological brains, though not quite the same.
 ---
 # Notes:
 
-#### Structure
+### Formal Definition of Neurons
 Formally, we can calculate this as
 $$a=\sum_i^{M}w_ix_i$$
 where a is our pre-activation, and then apply
@@ -27,13 +27,13 @@ Scaling this up, we can say the neural network has the form
 $$f(X) = \beta_0 + \sum_{k=1}^K \beta_k g(w_{k0} + \sum_{j=1}^p w_{kj} X_j)$$
 where we see our $g$ as activation functions and our $\beta$s as per-neuron weights.
 
-#### What is it Good For?
+### What is it Good For?
 - Complex input data (vision, sound, language, ...)
 - Noisy data
 - Long training times are okay. Inference is fast.
 - Interpretability doesn't matter very much
 
-#### [[ML Algorithm Bias]]
+### [[ML Algorithm Bias]]
 - **Restriction Bias**: If complex enough, almost nothing. 
 	- A **linear** set of inputs where we learn planes for each neuron. The combination of neurons then have non-linear functions allowing representation of almost any function.
 	- Can represent any continuous or arbitrary function if given enough nodes and layers. E.g., see [[Perceptron#Perceptron Function Representation]].
@@ -44,10 +44,27 @@ where we see our $g$ as activation functions and our $\beta$s as per-neuron weig
 	- In neural networks, complex overfitting models tend to have more neurons, layers, and crucially **large weights**.
 	- Thus, well-trained ANNs prefer "low complexity": if we have the same value(s), prefer the less complex solution.
 
+
+### Structures for Neural Networks
 #### [[Perceptron]]
 The simplest example of an Artificial Neural Network: the activation function is a simple threshold (or at most a [[Sigmoid Function]]).
 
 Can be trained with the perceptron rule, but more robustly [[Gradient Descent]] with [[Backpropagation]].
+
+#### [[Multilayer Perceptron]]
+An extension of perceptrons into multiple layers.
+
+#### [[Deep Learning]]
+
+##### [[Convolutional Neural Network]]
+
+##### [[Recurrent Neural Network]]
+
+
+### Training Mechanisms for Neural Networks
+
+- [[Gradient Descent]] and [[Stochastic Gradient Descent]] for optimizing weights for functions which have gradients
+- [[Genetic Algorithm]] for optimizing structures / architectures of Neural Networks? E.g., [[Weight Agnostic Neural Network]] which has weights fixed and updates structure alone.
 
 ---
 # Examples:
@@ -69,6 +86,7 @@ Can be trained with the perceptron rule, but more robustly [[Gradient Descent]] 
 # Source:
 Bishop Deep Learning
 ISL Python
-GAT ML
+GaTech ML
+GaTech DL
 
 Invented by McCulloch and Pitts, 1943

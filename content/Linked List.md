@@ -2,7 +2,7 @@
 aliases: 
 tags:
   - cs/dsa/linked_list
-edited: 2025-07-20T22:05
+edited: 2025-08-01T18:07
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -15,10 +15,11 @@ Getting data requires traversing through the links.
 ---
 # Notes:
 
-**Variants**
+### Variants
 - Single linked list: only has a next attribute
 - Double linked list: has previous and next
 
+### Comparison to ArrayList
 Recall the issues with [[Array]]:
 1. Deleting is hard (clean)
 2. Inserting is hard (overwrite)
@@ -36,6 +37,7 @@ LinkedLists are easier for this:
 	4. Delete C. `C.prev = C.next = Null`
 	5. These are using .next and .perv. Not based on $n$. Constant operation. These are $O(1)$ constant time!
 
+### Properties
 Linked Lists are BAD for traversal:
 	We have access to HEAD and TAIL if doubly. These are easy. Everything else must be accessed by going through all the links.
 ```python
@@ -57,6 +59,9 @@ Time/Space Finale: [[Big O]]
 
 Other notes:
 - Linked Lists are technically a [[Tree]] or "acyclic graph".
+
+### Prebuilt in Python
+- Use a `deque()` for a doubly linked list.
 
 ---
 # Examples:

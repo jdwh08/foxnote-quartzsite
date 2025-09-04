@@ -1,18 +1,13 @@
 ---
-aliases: 
+aliases:
 tags:
   - math/calculus
   - math/linear_algebra
-edited: 2025-06-13T20:32
+edited: 2025-08-29T17:30
 created: 2024-04-28T20:33
 ---
 ### Definition:
 A matrix that stores the [[Partial Derivative]] of a set of functions that goes from $\mathbb{R}^n \rightarrow \mathbb{R}^m$.
-
-Often confused with [[Gradient]], which is a special case with one function going from  $\mathbb{R}^n \rightarrow \mathbb{R}^1$.
-
----
-### Notes:
 
 $$J(x) = \begin{bmatrix} 
 \frac{\partial f_1}{\partial x_1} & \frac{\partial f_1}{\partial x_2} & ... & \frac{\partial f_1}{\partial x_n} \\
@@ -20,6 +15,19 @@ $$J(x) = \begin{bmatrix}
 \vdots & \vdots & \ddots & \vdots \\
 \frac{\partial f_m}{\partial x_1} & \frac{\partial f_m}{\partial x_2} & ... & \frac{\partial f_m}{\partial x_n} \\
 \end{bmatrix}$$
+---
+### Notes:
+
+Often confused with [[Gradient]], which is a special case with one function going from  $\mathbb{R}^n \rightarrow \mathbb{R}^1$.
+- Think about the Jacobian as having a Gradient in each row for each function.
+
+$$J(x) = \begin{bmatrix} \nabla f_1(x) \\ \nabla f_2(x) \\ \vdots\end{bmatrix}$$
+
+### Handling Elemental Operators
+Things like $\max(x_1, x_2)$ or $x_1 + x_2$ or $x_1 x_2$.
+
+This is basically 
+
 
 ---
 ### Examples:

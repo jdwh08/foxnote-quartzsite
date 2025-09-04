@@ -7,7 +7,7 @@ tags:
   - math/linear_algebra
   - ds/ml/linreg
   - todo/breakup
-edited: 2025-05-21T21:00
+edited: 2025-08-28T21:35
 created: 2024-09-17T19:59
 ---
 # Definition:
@@ -23,6 +23,7 @@ A type of [[Regression]], which estimate $y$ from $x_1 ... x_n$ using $\beta_0 .
 ##### Closed Form Solution:
 - $\beta_i = \frac{Cov(x_i, y_i)}{Var(X_i)}$ ([[Covariance]] divided by [[Variance]])
 - (or in matrix form: $\beta = (X^T X)^{-1} X^T Y$)
+	- Note that these equations for $\beta$s from $x$ and $y$ are the **Normal Equations**
 
 ##### From the Maximum Likelihood:
 Based on [[Uncertainty (Supervised ML)]], we see that for regression maximizing the log likelihood will minimize the squared error.

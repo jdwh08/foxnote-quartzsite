@@ -1,8 +1,8 @@
 ---
-aliases: 
+aliases:
 tags:
   - cs/dsa/sort
-edited: 2025-07-20T22:04
+edited: 2025-08-27T15:35
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -28,7 +28,7 @@ A [[Sorting Algorithm]] which takes advantage of [[Divide and Conquer]] to sort 
 | 4 (swap) | 7             | 6   | 8 (swap) | 5             |
 | 4        | 5 (pivotswap) | 6   | 8        | 7 (pivotswap) |
 
-- Runtime: [[Big O]] of $O(n \log n)$, memory of $O(1)$ since we do it in place.
+- Runtime: [[Big O]] of $O(n \log n)$, memory of $O(1)$ per partition pass since we do it in place, but due to [[Recursion]] [[The Stack (memory)|stack]] it is $O(\log n)$ extra memory.
 
 ```typescript
 // Pick pivot. Move all smol values to before the pivot.
@@ -80,4 +80,4 @@ Examples
 
 ----
 # Source:
-The Last DS Course You'll Need
+The Last Algorithms Course

@@ -1,18 +1,26 @@
 ---
-aliases: 
+aliases:
 tags:
   - ds/ml/nn
-edited: 2025-06-08T11:00
+edited: 2025-09-03T20:13
 created: 2024-04-11T18:34
 ---
-### Definition:
+# Definition:
 A method of learning the weights of a multi-layer [[Artificial Neural Network|Neural Network]]. 
 
+Learning representations by back-propagating errors. (Rumelhart et al 1986)
+[[Perceptron#Multi-Layered Perceptron (MLP)|Multilayer Perceptrons]] can learn effectively using backprop.
+
 ----
+# Notes
 #### Assumptions
-1. Network has a fixed structure, a [[Directed Graph]] (can have cycles).
-	1. Most common are acyclic feed forward though.
+1. Network has a fixed structure, a directed [[Graph]] (can have cycles).
+	1. Most common are [[Directed Acyclic Graph]] though.
 2. Learning is the same as optimizing the weights for each edge.
+
+$$f(x_1, x_2) = \ln(x_1) + x_1 x_2 - \sin(x_2)$$
+
+![[Backprop NN Graph.excalidraw.png.png]]
 
 #### Pseudocode
 ```pseudocode
@@ -38,7 +46,7 @@ WHILE
 		- UPDATE: Add nudge to existing weight for update
 ```
 
-This is similar to the methods in [[Gradient Descent]].  However, the update $\delta$ calculates the contribution of the error from all the neurons in the next layer, instead of using $y-wx$ or $y-\hat{y}$ like in [[Perceptron#Training a Perceptron|Perceptron Rule]].
+This is similar to the methods in [[Gradient Descent]]. However, the update $\delta$ calculates the contribution of the error from all the neurons in the next layer, instead of using $y-wx$ or $y-\hat{y}$ like in [[Perceptron#Training a Perceptron|Perceptron Rule]].
 
 We have some danger in [[Overfitting]] if we just minimize training error.
 
@@ -58,7 +66,7 @@ We have some danger in [[Overfitting]] if we just minimize training error.
 	1. Randomize the initial weights of $k_0...k_5$.
 	2. Nudge the weight $k_1$ in a direction and see what happens to loss. If loss decreases, keep it; otherwise, change a different $k$ value.
 	3. This approach is called **Random [[Perturbation]]** (perturbation: minor change in a system), because we are setting values of $k$ blindly.
-	4. If the system is a complete Black Box, then this is the best we can do. However, we can do better for [[Differentiable Functions]].
+	4. If the system is a complete Black Box, then this is the best we can do. However, we can do better for [[Differentiable Function]].
 3. Let's do better than random perturbation by using differentiability.
 	1. Ideally, we'd like to know in what direction, and how much, to change each value of $k_0 ... k_5$, in order to reduce the loss.
 	2. Let's start by freezing everything but $k_1$. This new loss function is $\mathcal{L}(k_1)$ which is one-dimensional. We can now get the loss at the current value of $k_1$, and take a [[Partial Derivative]]. 
@@ -91,7 +99,12 @@ We have some danger in [[Overfitting]] if we just minimize training error.
 	3. **NUDGE $K$!**
 	4. **REPEAT!**
 
-#### Modifications
+#### Why No Local Optima Issues?
+- For small number of parameters, we can sometimes follow the gradient until we reach a local optima, and get stuck there.
+- As our model size gets larger, e.g., [[Deep Learning]], we increasingly find that points are [[Saddle Points]]
+- **FOR US TO GET STUCK IN LOCAL MINIMA, WE NEED EVERY SINGLE PARAMETER TO BE IN A LOCAL MINIMA.** Otherwise, we'll be able to move the other weights to escape.
+
+#### Modifications and Improvements to Backprop
 ###### Momentum
 We could make update based partially on the prior update size:
 $$\Delta w_{@t}= \eta \delta x + \alpha w_{@t-1}$$
@@ -102,18 +115,47 @@ $$\Delta w_{@t}= \eta \delta x + \alpha w_{@t-1}$$
 - We could also consider higher order optimization, e.g., for the gradient.
 - We can use alternative loss functions like minimizing [[Cross Entropy]].
 
----
-### Notes:
-Learning representations by back-propagating errors (Rumelhart et al 1986): [[Perceptron#Multi-Layered Perceptron (MLP)|Multilayer Perceptrons]] can learn effectively using backprop.
+#### Computation with [[Automatic Differentiation]]
+1. Input is our data and parameters
+2. Output is our final loss
+3. Scheduling is a [[Topological Sort]] over the [[Directed Acyclic Graph|DAG]] representation of the functions.
+
+Practical Effects:
+**The flow of gradients is vital to making backprop work!**
+If the gradient flow cannot be computed, or is too small, then learning doesn't happen well.
+
+- Sum: distributes the gradient backwards to all summed values. (Negative if subtraction).
+- Product: multiplies gradient by the value of the other term. $d/dx(\delta wx) \rightarrow \delta w$
+- Max/Min: selects only one path (max, min) to flow down.
 
 ---
-### Examples:
+# Examples:
 
-#todo 
+#### [[Logistic Regression]]
+- Input: $x \in \mathbb{R}^n$
+- Output: $y \in \{-1,1\}^n$
+- Parameters: $w \in \mathbb{R}^n$
+- Model Form: $\hat{y} = p(y=1 | x) = \frac{1}{1+e^{-w^T x}}$ ([[Sigmoid Function]])
+- Loss: [[Cross Entropy]] with [[Ridge Regularization]]: $-\log(\hat{y}) + \frac{1}{2} \lambda ||w||_2^2$
+
+Our compute graph is: $w^T x \rightarrow_u \sigma(u) \rightarrow_p -\log(p) \rightarrow_L$
+
+We can take [[Partial Derivative]]:
+- $\frac{\partial L}{\partial p} = -1/p$
+- $\frac{\partial p}{\partial u} = \sigma(u)(1-\sigma(u))$ 
+- $\frac{\partial u}{\partial w} = x$
+Finally, we can combine:
+- $\frac{\partial L}{\partial u} = -1/p * \sigma(u)(1-\sigma(u))$
+- $\frac{\partial L}{\partial w} = -1/p * \sigma(u)(1-\sigma(u))*x$
+	- $-\frac{1}{\sigma(w^T x)} * \sigma(w^T x)(1-\sigma(w^T x)) * x$
+	- $-(1-\sigma(w^T x))x$
+
+NOTE: this is easy relatively speaking because the [[Logistic Function]] goes from $\mathbb{R}^N \rightarrow \mathbb{R}^1$, so everything afterwards is just a scalar. No matrix multiplication.
 
 ---
 ### Sources:
-Backprop from scratch is built on https://www.youtube.com/watch?v=SmZmBKc7Lrs.
-
- (Rumelhart, Hinton, and Williams, 1986)
- Mitchell 1997
+- [Backpropagation from Scratch](https://www.youtube.com/watch?v=SmZmBKc7Lrs)
+- (Rumelhart, Hinton, and Williams, 1986)
+- Mitchell 1997
+- [Why don't we get stuck in local optima?](https://www.youtube.com/watch?v=NrO20Jb-hy0) 
+- GaTech DL

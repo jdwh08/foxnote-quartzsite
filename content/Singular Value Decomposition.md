@@ -1,15 +1,22 @@
 ---
-aliases: 
+aliases:
+  - SVD
 tags:
   - math/linear_algebra
-edited: 2025-02-15T16:15
+edited: 2025-08-28T19:32
 created: 2024-03-26T21:43
 ---
 ### Definition:
-Dimensionality reduction tool for data science.
+A type of [[Matrix Decomposition]] which breaks matrices down into $U \Sigma V^T$
+- $U, V^T$ are [[Orthogonal Matrices]]
+- $\Sigma$ is a [[Diagonal Matrix]] of values.
+
+A more general form of the [[Eigenvalue Decomposition]] for non-square matrices.
 
 ---
-### Math:
+# Notes:
+
+### Formal Definition
 Starting with a $n*m$ matrix $X$:
 $$\begin{bmatrix}
 | & | & ... & |\\
@@ -41,29 +48,34 @@ $$V^T = \begin{bmatrix}
 
 $U$ is the Left Singular Vectors, $V$ is the Right Singular Vectors, and $\sigma$'s are the Singular Values.
 
-Columns of U have the same length as the Columns of X. "[[Eigenvectors and Eigenvalues|Eigenvectors]]" which are hierarchically arranged in order of importance of explaining the variance. Can be used to create a [[Basis]] for the data matrix $X$ / $\mathbb{R}^n$ space.
+##### Properties of the Formal Definition
+Columns of U have the same length as the Columns of X."[[Eigenvectors and Eigenvalues|Eigenvectors]]" which are hierarchically arranged in order of importance of explaining the variance. Can be used to create a [[Basis]] for the data matrix $X$ / $\mathbb{R}^n$ space.
 - NOTE: Since our initial data matrix $X$ only has dimensions $m,n$, there can't be more than $min(m,n)$ [[Linear Dependence|Linearly Independent]] columns; thus, only the first $n$ rows matter.
 
 $U, V$ are [[Orthogonal Matrices]], i.e., $U^T U = U U^T = \mathbb{I}$.
 $\Sigma$ is diagonal and hierarchically ordered, so $\sigma_1 \geq \sigma_2 \geq ...$ 
 
-**Reducing Dimension #1: The Economy SVD**
+
+### Dimension Reduction
+##### The Economy SVD
 How do we reduce matrices using SVD when $n >>> m$ or $m >>> n$, e.g., big difference between numbers in features/columns vs samples/measurements?
 - Since $\Sigma$ is diagonal, notice how $\sigma_k$ only affects $u_k$ and no other column vectors? Thus, the first column is relatively more important in describing the information. 
 - Also notice how $u_k \sigma_k$ only gets multiplied by the $v_k^T$ row? I.e., the matrix multiplication becomes $\sigma_1 u_1 v_1^t + ... + \sigma_m u_m v_m^t + 0 + ... + 0$
-	- **NOTE:** These are [[Matrix Outer Products]], i.e., column x row instead of traditional [[Matrix Multiplication]] of row x column. This results in a fuckload of linearly dependent columns, all of [[Matrix Rank]] 1.
+	- **NOTE:** These are [[Matrix Outer Products]], i.e., column x row instead of traditional [[Matrix Product]] of row x column. This results in a fuckload of linearly dependent columns, all of [[Matrix Rank]] 1.
 	- We can therefore rewrite SVD into a sum of rank one matrices!
 - Finally, remember how because of the linearly independent columns, there are extra rows in $\Sigma$ which don't matter (and are thus 0)?
 - We can simplify the $U \Sigma V^T$ into $\hat{U} \hat{\Sigma} V^T$ by chopping off all those 0s without losing any information!
 
-**Eckhart-Young Theorem, 1936**
-- We can also truncate the information to rank $R$ (i.e., $\sigma_1 u_1 v_1^t + ... + \sigma_r u_r v_r^t$) and throw away the additional information which is very marginal. This gives the best matrix approximation with rank r is this procedure $\hat{X}_r = \tilde{U}\tilde{\Sigma}\tilde{V^T}$
-- Formally, $\underset{\tilde{X}\ s.t.\ rank(\tilde{X})=r}{\arg\min} ||X - \tilde{X}|||_{Frobenius Norm}$ is the above. Wow.
-- Okay, but notice that if we throw away information that $U,V$ are no longer square and thus are not [[Orthogonal Matrices]] anymore. 
+##### Eckhart-Young Theorem
+- We can also truncate the information to [[Matrix Rank]] $R$ (i.e., $\sigma_1 u_1 v_1^t + ... + \sigma_r u_r v_r^t$) and throw away the additional information which is very marginal. 
+	- Note: This is starting to throw away information as opposed to Economy SVD which only threw away zeros.
+- Procedure gives the best matrix approximation with rank $r$: $\hat{X}_r = \tilde{U}\tilde{\Sigma}\tilde{V^T}$
+- Formally, this minimizes the [[Frobenius Norm]]: $\underset{\tilde{X}\ s.t.\ rank(\tilde{X})=r}{\arg\min} ||X - \tilde{X}|||_{Frobenius}$
+- Notice that if we throw away information that $U,V$ are no longer square and thus are not [[Orthogonal Matrices]] anymore. 
 	- $\tilde{U}^T\tilde{U} = \mathbb{I}_{r\times r}$, since we do the standard matrix multiplication dot product and everything is still orthogonal and good.
 	- However, $\tilde{U}\tilde{U}^T$ is no longer an identity matrix because it's a big square thing.
 
-**Correlation Interpretation**
+### [[Correlation (Pearson)|Correlation]] Interpretation
 Consider $X^T X$. Because we assume that $X$ is a matrix where each column represents an element and each row represents a feature, we assume that features >>> observations, or $n >>> m$, i.e., it is tall and skinny. Thus, $X^T X$ is $m*n \times n*m \rightarrow m\times m$ matrix, which is smaller. 
 The first column is multiplied out as $$\begin{bmatrix} 
 x_1^T x_1 \\
@@ -93,24 +105,31 @@ And this repeats for all columns until you reach $x_m^T x_m$, where each one of 
 4. Basically unique. (Though you can construct two with different signs.)
 
 ---
-### Notes:
+# Notes:
 "Data-driven generalization of the [[Fourier Transform]]": FFT approximates functions with sine/cosine, which is super useful to map a system into an easier coordinate. However, this basis doesn't work in all cases. SVD allows us to *tailor* a [[Coordinate System]] for the specific process.
 
-**Why is SVD used?**
+### Usage
 - Simple and interpretable [[Linear Algebra]].
-
----
-### Examples:
 
 What can SVD do?
 - Solve $Ax=b$ problems for non-square A matrices (e.g., linear regression)
-- Get the basis for [[Singular Value Decomposition (SVD)]] 
+- Get the basis for [[Singular Value Decomposition]] 
 - Identify the key correlations in your data
 
 Models
 - Google's [[PageRank]] algorithm
 - Netflix/Facebook [[Recommender System]].
 
+---
+# Examples:
+
+### Worked Example
+
+
 --------
-### Sources:
-Steven L Brunton's lectures at UWash.
+# Sources:
+Steven L Brunton Lectures @ UWash
+1. [Overview](https://www.youtube.com/watch?v=gXbThCXjZFM&list=PLMrJAkhIeNNSVjnsviglFoY2nXildDCcv&index=1&pp=iAQB)
+2. [Maths](https://www.youtube.com/watch?v=nbBvuuNVfco&list=PLMrJAkhIeNNSVjnsviglFoY2nXildDCcv&index=2&pp=iAQB)
+3. [As Matrix Approximation](https://www.youtube.com/watch?v=xy3QyyhiuY4&list=PLMrJAkhIeNNSVjnsviglFoY2nXildDCcv&index=3&pp=iAQB)
+4. [Correlation Interpretation](https://www.youtube.com/watch?v=WmDnaoY2Ivs&list=PLMrJAkhIeNNSVjnsviglFoY2nXildDCcv&index=4&pp=iAQB)

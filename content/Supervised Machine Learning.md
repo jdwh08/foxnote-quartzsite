@@ -1,8 +1,8 @@
 ---
-aliases: 
+aliases:
 tags:
   - ds/ml
-edited: 2025-06-11T19:01
+edited: 2025-08-24T18:49
 created: 2024-04-04T22:33
 ---
 # Definition:
@@ -21,7 +21,6 @@ Learn a function mapping from inputs to outputs.
 # Notes:
 Most common form of [[Machine Learning]].
 
-
 #### Assumptions
 We make the following assumption:
 1. Well behaved function
@@ -29,6 +28,12 @@ We make the following assumption:
 3. Which is able to be generalized
 	1. We are using induction (specific examples to general rule)
 
+### Types:
+#### Tasks:
+- [[Classification]]
+- [[Regression]]
+#### Models:
+- [[Parametric vs Nonparametric]]
+
 ---
 # Examples:
-[[Classification]]

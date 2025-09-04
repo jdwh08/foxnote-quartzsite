@@ -2,9 +2,8 @@
 aliases:
   - Metropolis-Hastings
 tags:
-  - ds/ml/nn
   - cs/dsa/optimizers
-edited: 2025-06-09T21:28
+edited: 2025-07-30T17:16
 created: 2024-03-19T22:06
 ---
 # Definition:

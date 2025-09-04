@@ -2,11 +2,11 @@
 aliases: 
 tags:
   - ds/ml/bayesian
-edited: 2025-06-12T19:29
+edited: 2025-07-27T14:41
 created: 2024-03-19T22:06
 ---
 # Definition:
-A [[Machine Learning]] model which estimates things using a [[Graphs]] structure and [[Bayes' Rule]].
+A [[Machine Learning]] model which estimates things using a [[Graph]] structure and [[Bayes' Rule]].
 
 ---
 # Notes:

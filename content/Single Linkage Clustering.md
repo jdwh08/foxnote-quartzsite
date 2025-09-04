@@ -2,7 +2,7 @@
 aliases: 
 tags:
   - ds/ml/cluster
-edited: 2025-06-11T21:02
+edited: 2025-07-27T14:41
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -27,7 +27,7 @@ We can also draw this as a [[Tree]] where we gradually merge everything into bec
 
 #### Properties
 1. Deterministic
-2. If distances measure edge lengths in a [[Graphs]] structure, this is equivalent to a [[Minimum Spanning Tree]]
+2. If distances measure edge lengths in a [[Graph]] structure, this is equivalent to a [[Minimum Spanning Tree]]
 3. Running time is [[Big O]] $O(n^3)$
 	1. $n*(n-1)$ for each search; we repeat this $n-k$ times
 	2. $k$ the number of final clusters does NOT matter

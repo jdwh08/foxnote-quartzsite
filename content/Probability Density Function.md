@@ -1,10 +1,10 @@
 ---
 aliases:
-  - stats_pdf
+  - PDF
 tags:
   - stats/probability
   - stats/distributions
-edited: 2025-06-12T18:35
+edited: 2025-07-26T12:08
 created: 2024-03-03T17:48
 ---
 # Definition:

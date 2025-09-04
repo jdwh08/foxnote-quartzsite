@@ -1,9 +1,9 @@
 ---
-aliases: 
+aliases:
 tags:
   - math/linear_algebra
   - cs
-edited: 2025-02-15T20:25
+edited: 2025-08-26T21:40
 created: 2024-04-08T19:33
 ---
 ### Definition:
@@ -33,7 +33,7 @@ Now suppose we can accept some small error $\epsilon$. Instead of solving this i
 
 *How do we get to this? Sketch-And-Solve method (there are others)*
 1. Sample a random matrix $S$. Solve the least squares method, but we do some sampling so $A\rightarrow SA, b \rightarrow Sb$.
-2. We design $SA$ to have many fewer rows than $A$. (This might be analogous to stripping off the extra rows in an "Economy" [[Singular Value Decomposition (SVD)]].) This creates a "sketch" of the problem.
+2. We design $SA$ to have many fewer rows than $A$. (This might be analogous to stripping off the extra rows in an "Economy" [[Singular Value Decomposition]].) This creates a "sketch" of the problem.
 3. The sketch and solve problem has the following property with high probability:
 $$x^*=\arg\min||Ax-b||_2,\ \tilde{x}=\arg\min||SAx-Sb||_2$$
 $$||A\tilde{x}-b||_2\approx |||Ax^*-b||_2$$
@@ -54,7 +54,7 @@ Now suppose we consider $SA$, where we use $S$ to sample using properly scaled r
 
 ---
 
-A published paper showed that [[Singular Value Decomposition (SVD)]] decomposition can be sped up almost 120x in pure R. This is because NLA is mostly sparse.
+A published paper showed that [[Singular Value Decomposition]] decomposition can be sped up almost 120x in pure R. This is because NLA is mostly sparse.
 
 [[CholeskyQR]] with Randomization & Pivoting for Tall Matrices (CQRRPT) is incredibly impressive for Cholesky QRs. 
 - Given some very tall matrix $A$, we want to decompose it into $A=QRP$, such that $Q$ is an [[Orthogonal Matrices]], $R$ is an [[Upper Triangular Matrix]], and $P$ is a [[Permutation Matrix]].
