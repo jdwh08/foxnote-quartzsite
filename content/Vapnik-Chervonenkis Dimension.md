@@ -5,7 +5,7 @@ aliases:
 tags:
   - cs/theory
   - ds/ml/theory
-edited: 2025-06-06T03:08
+edited: 2025-08-28T21:51
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -23,6 +23,9 @@ Start with a small set of dimension 1, keep moving upward.
 It's typically the same as the number of parameters.
 
 If VC dimension is finite, then it satisfies [[Haussler's Theorem]] extension and thus the ML model is [[Probably Approximately Correct Learning|PAC Learnable]].
+$$m \ge \frac{1}{\epsilon} \left(8 * VC(H)*\log_2(13/\epsilon) + 4 \log_2(2/\delta) \right)$$
+
+A rule of thumb is that our number of training examples $m$ should ideally be at least $10 * VC(H)$.
 
 The VC dimension of finite space is $\log_2 |H|$. We start with VC as the dimension; this implies $2^d$ possible labelling options (True/False)^d, and each labelling needs a model concept to fit.
 - Thus, $d \le \log_2 |H|$
@@ -54,6 +57,9 @@ Suppose $X \in \mathbb{R}^2$, and $H =$ Points are in some convex polygon.
 - You can exclude any set of points by skipping over them which still makes convex poly
 - We reach the true circle as the number of points connected $\rightarrow \infty$, and this is still valid
 - Thus, the VC-Dimension is $\infty$
+
+Suppose we have a [[K-Nearest Neighbours|KNN]] learner, where $k=1$.
+- Note this is [[Parametric vs Nonparametric|Nonparametric]]. 
 
 ----
 # Source:

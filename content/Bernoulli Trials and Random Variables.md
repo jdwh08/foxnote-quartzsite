@@ -1,8 +1,9 @@
 ---
-aliases: 
+aliases:
+  - Bernoulli Distribution
 tags:
-  - stats
-edited: 2025-02-15T15:45
+  - stats/distributions
+edited: 2025-08-29T16:48
 created: 2024-03-03T17:11
 ---
 ### Definition:

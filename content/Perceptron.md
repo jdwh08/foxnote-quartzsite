@@ -1,10 +1,9 @@
 ---
 aliases:
   - Feed Forward Neural Network
-  - Multilayer Perceptrons
 tags:
   - ds/ml/nn
-edited: 2025-06-09T20:36
+edited: 2025-09-03T19:32
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -36,7 +35,7 @@ In a **Perceptron** (oldest ANN), the activation function is some threshold whic
 ![[Perceptron_XOR.excalidraw.png.png]]
 
 - Any bounded [[Continuous Function]] can be represented with arbitrarily small error by stitching together neurons representing each piece within one hidden layer. (Cybenko 1989, Hornik et al 1989)
-- Any Arbitrary Function can be represented with at least two hidden layers (Cybenko 1989); this is the **Universal Approximation Theorem**.
+- Any Arbitrary Function can be represented with at least two hidden layers (Cybenko 1989); this is the [[Universal Approximation Theorem]]**.
 	- Any function can be approximated as a [[Linear Combination]] of many small local functions which are 0 except for some small region
 	- Each "neuron" learns an approximate representation of that small area.
 	- We "stitch them" together to form a piecewise linear-ish approximation.
@@ -50,7 +49,7 @@ In a **Perceptron** (oldest ANN), the activation function is some threshold whic
 #### Multi-Layered Perceptron (MLP)
 We can now add additional **Hidden Nodes** in the middle going between inputs and outputs, creating a Multi-layered perceptron.
 - We can also add "background assumptions" via a bias, e.g., designing network structures so that connections don't exist between irrelevant things. This violates [[The Bitter Lesson (Machine Learning)]].
-- In the 1990s, we found that really only the final two layers would learn useful values (except [[Convolutional Neural Networks]])
+- In the 1990s, we found that really only the final two layers would learn useful values (except [[Convolutional Neural Network]])
 - Hand-crafted pre-processing needed to transform inputs into a more easy-to-learn space. #ds/ml/featureeng 
 - Further evolves into [[Deep Learning]].
 

@@ -1,8 +1,8 @@
 ---
-aliases: 
+aliases:
 tags:
   - cs/dsa/optimizers
-edited: 2025-07-19T20:11
+edited: 2025-08-30T16:55
 created: 2024-03-19T22:06
 ---
 # Definition:

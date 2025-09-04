@@ -3,7 +3,7 @@ aliases:
   - Lottery Ticket Hypothesis
 tags:
   - ds/ml/nn
-edited: 2025-04-26T15:37
+edited: 2025-08-24T18:55
 created: 2024-03-19T22:06
 ---
 # Question:
@@ -32,7 +32,7 @@ If you continue to train the neural network beyond the point where there is clea
 3. [[Stochastic Gradient Descent]] likes picking "smooth" options.
 4. This only can work if the training data has high signal-to-noise; otherwise, [[Regularization]] and not having perfect training error is almost certainly better.
 
-### The Lottery Ticket Hypothesis (for [[Convolutional Neural Networks|CNN]])
+### The Lottery Ticket Hypothesis (for [[Convolutional Neural Network|CNN]])
 1. Consider a large [[Artificial Neural Network|Neural Network]]. Randomize the initial states.
 2. Each subset of the large neural network can be thought of as a small neural network with random starting weights. (i.e., a "lottery ticket").
 	1. As neural networks increase, the number of sub-networks increase exponentially

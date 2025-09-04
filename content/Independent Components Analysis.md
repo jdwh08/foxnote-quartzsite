@@ -3,7 +3,8 @@ aliases:
   - ICA
 tags:
   - ds/ml/featureeng
-edited: 2025-06-19T21:21
+  - ds/dimension_reduction
+edited: 2025-07-26T12:07
 created: 2024-03-19T22:06
 ---
 # Definition:

@@ -2,7 +2,7 @@
 aliases: 
 tags:
   - ds/ml/rl
-edited: 2025-07-19T20:14
+edited: 2025-07-26T16:07
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -32,7 +32,7 @@ This allows us to directly estimate the [[Bellman Equation]]s for [[Markov Decis
 #### Convergence Requirements
 Our update rule will converge to the true $Q(s,a)$ if...
 1. We visit $s, a$ infinite times 
-2. Our learning rate $\alpha$ has properties $\sum_t{a_t}=\infty,\ \sum_t{\alpha_t^2} < \infty$, e.g., $\alpha = 1/t$.
+2. Our learning rate $\alpha$ decays over time: $\sum_t{a_t}=\infty,\ \sum_t{\alpha_t^2} < \infty$, e.g., $\alpha = 1/t$.
 3. Our world is real, i.e., next states $S' \sim T(sas')$ and rewards are $r \sim R(s)$
 
 Then, theoretically guaranteed to *eventually* find the best policy!

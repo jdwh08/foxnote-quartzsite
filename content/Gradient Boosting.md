@@ -2,11 +2,11 @@
 aliases: 
 tags:
   - ds/ml
-edited: 2025-02-17T11:02
+edited: 2025-07-26T14:15
 created: 2024-03-19T22:06
 ---
 # Definition:
-A type of [[Boosting (Machine Learning)]] which *directly* predicts the [[Residuals]] or errors from prior models for its boosting.
+A type of [[Boosting]] which *directly* predicts the [[Residuals]] or errors from prior models for its boosting.
 
 ---
 # Notes:

@@ -1,12 +1,13 @@
 ---
-aliases: 
+aliases:
 tags:
   - math/linear_algebra
-edited: 2025-02-15T16:15
+edited: 2025-08-21T18:27
 created: 2024-03-23T12:26
 ---
 ### Definition:
-A square matrix which has no or infinitely many solutions. This means that it does not have an inverse.
+A [[Square Matrix]] which has no or infinitely many solutions. 
+This means that it does not have a [[Matrix Inverse]].
 
 **Geometric Interpretation, 3B1B**
 Recall that a square matrix $A, dim(A)=\mathbb{R}^{n \times n}$ represents a linear transformation of vectors from $\mathbb{R}^n$ to $\mathbb{R}^n$. 

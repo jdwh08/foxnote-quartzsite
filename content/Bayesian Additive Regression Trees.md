@@ -3,11 +3,11 @@ aliases:
 tags:
   - ds/ml/trees
   - stats/probability/bayesian
-edited: 2025-02-17T14:23
+edited: 2025-07-26T14:15
 created: 2025-02-17T08:49
 ---
 # Definition:
-Variant of [[Bootstrap Aggregating|Bagging]] and  [[Boosting (Machine Learning)]] for [[Decision Trees|trees]] where boosting occurs via making small changes to pre-existing trees in order to better fit [[Residuals]].
+Variant of [[Bootstrap Aggregating|Bagging]] and  [[Boosting]] for [[Decision Trees|trees]] where boosting occurs via making small changes to pre-existing trees in order to better fit [[Residuals]].
 
 ---
 # Notes:

@@ -1,10 +1,10 @@
 ---
-aliases: 
+aliases:
 tags:
   - "#ds/ml"
   - ds/ml/nn/transformers
   - readings
-edited: 2025-04-26T15:24
+edited: 2025-08-24T18:55
 created: 2024-04-11T18:33
 ---
 ### Notes:
@@ -181,7 +181,7 @@ TL;DR: computational scaling is the driving force behind computation. Imposing a
 - Multimodality and structure?
 	- Might become a bottleneck. Transformers have done a good job.
 - Causal vs Bi-Directional attention?
-- He doesn't like that invariance structure / [[Convolutional Neural Networks|CNN]]s as it is "extra structure". It's not problematic that machines learn different from humans. Will probably be better.
+- He doesn't like that invariance structure / [[Convolutional Neural Network|CNN]]s as it is "extra structure". It's not problematic that machines learn different from humans. Will probably be better.
 - Architecture?
 	- He has a huge bias against architecture research, arguing that it is not the bottleneck. Did a survey a while back trying different  transformer architectures and not finding anything significant back then.
 	- Learning objective for supervised and even self-supervised. MLE assumes there is only one correct target! Is that really the right thing? Likes RLHF with rewards models as a less-structured way to scale, though RLHF isn't really structured, it shows we can train a deep model.

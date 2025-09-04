@@ -2,7 +2,7 @@
 aliases: 
 tags:
   - cs/dsa/recursion
-edited: 2025-05-15T21:03
+edited: 2025-07-27T14:41
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -40,7 +40,7 @@ Note that recursion creates a [[Stack]] of the functions that were called, and i
 Now that we finally know the returned value, we can trace all the values back: $foo_1 = 1 \rightarrow foo_2 = 2 + foo_1, ... \rightarrow foo_5 = 5  + foo_4$
 
 #### Recursion Steps
-These are particularly useful for future [[Data Structures and Algorithms]], especially with [[Tree]] and [[Graphs]].
+These are particularly useful for future [[Data Structures and Algorithms]], especially with [[Tree]] and [[Graph]].
 
 1. PRE STEP: Setup before calling function (e.g. checking)
 2. RECURSE: Function call itself

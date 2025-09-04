@@ -3,8 +3,8 @@ aliases:
   - Dynamic Array
   - list
 tags:
-  - cs/dsa/arraylist
-edited: 2025-06-03T15:52
+  - cs/dsa/array
+edited: 2025-08-13T21:35
 created: 2024-03-19T22:06
 ---
 # Definition:

@@ -3,7 +3,7 @@ aliases:
   - SVM
 tags:
   - ds/ml/svm
-edited: 2025-06-07T12:49
+edited: 2025-08-24T19:15
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -38,17 +38,28 @@ We maximize the margin using with $w$ subject to classifying the points correctl
 How do we write this condition for classifying points? In binary, this is easy:
 $$\hat{y}_i (w' x_i + b) \ge 1\ \forall\ i$$
 
+### Loss Function
+For a multiclass SVM, our loss function of "maximizing the margin" essentially becomes:
+
+$$L_i = \sum_{j \neq y_i} 
+	\begin{cases}
+	0 & \text{if } f(x_i) \ge f(x_j) + 1\\
+	f(x_j) - f(x_i) + 1 & \text{if better score than label}
+	\end{cases}
+$$
+also known as the [[Hinge Loss]]
+
 #### Derivation
 $$\max_w \frac{2}{||w||} + \lambda_i \left[\hat{y}_i (w' x_i + b) \ge 1\right]\ \forall\ i$$
 This is actually kinda hard; so instead we try to solve this problem instead:
 $$\min_w \frac{1}{2} w'w - \sum_i \lambda_i \left[\hat{y}_i (w' x_i + b) - 1\right]$$
-because [[Matrix Norm]] is always positive; it's the reciprocal in the top; and squaring is monotonic.
+because [[Matrix Norm]] is always positive; it's the reciprocal in the top; and squaring is monotonic. We can thus flip this from max to min and put the $||w|| \sim w'w$
 - This turns it into a [[Quadratic Programming]] problem, which is much easier and has known techniques to solve! But... we have to convert it once again to be in the standard form for this. Uh oh.
 $$L(w, b, \lambda) = \frac{1}{2} w'w - \sum_i \lambda_i \left[\hat{y}_i (w' x_i + b) - 1\right]$$
 $$\frac{\partial L}{\partial w} = w - \sum_i \lambda_i y_i x_i = 0$$
 $$\frac{\partial L}{\partial b} = -\sum_i \lambda_i y_i =0$$
-- Under the [[KKT Conditions]]. (Remember [[Lagrangians]] from Econ? :P)
-- Stuff these back into the original [[Lagrangian]] problem
+- Under the [[KKT Conditions]]. (Remember [[Lagrange Multipliers]] from Econ? :P)
+- Stuff these back into the original [[Lagrange Multipliers]] problem
 $$L(w,b,\lambda)=\frac{1}{2} w'w - \sum \lambda ywx - b \sum \lambda y + \sum \lambda$$
 - Simplify! This is doing the [[Vector Dual]] version of the problem. 
 $$\max w(\lambda) = \sum_i\lambda_i -1/2 \sum_{ij} \lambda_i\ \lambda_j\ y_i\ y_j\ x_i' x_j * K(x_i, x_j)$$

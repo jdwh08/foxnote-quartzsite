@@ -5,7 +5,7 @@ tags:
   - cs/leetcode
   - cs/dsa/array
   - cs/dsa/search
-edited: 2025-02-15T16:37
+edited: 2025-07-30T19:24
 created: 2025-01-05T21:32
 ---
 ### Question:
@@ -78,6 +78,3 @@ Questions:
 1. Why not something like $\sqrt[3]{n}$?
 	Uh... primagen doesn't answer, but I think this is because this balances the jumps with the increments.
 
----
-### Examples:
-Examples

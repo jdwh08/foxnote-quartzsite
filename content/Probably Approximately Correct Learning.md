@@ -4,13 +4,13 @@ aliases:
 tags:
   - ds/ml/theory
   - cs/theory
-edited: 2025-06-08T11:08
+edited: 2025-07-24T22:45
 created: 2024-03-19T22:06
 ---
 # Definition:
 
 Can we guarantee that our [[Machine Learning]] algorithm differs in [[Probability]] from the true [[Data Generating Process]]...
-- Approximately? I.e., probability by some amount $\epsilon$ 
+- Approximately? I.e., probability by some amount $\epsilon$
 - Probably? I.e., most of the time $1-\delta$
 
 ---

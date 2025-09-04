@@ -1,14 +1,16 @@
 ---
-aliases: 
+aliases:
 tags:
   - stats
   - ds/ml/regularization
-edited: 2025-06-08T11:01
+edited: 2025-09-03T19:31
 created: 2024-03-19T22:06
 ---
 # Definition:
 Add an [[L2 Norm]] penalty term as [[Regularization]] in order to dissuade complex models and [[Overfitting]].
 
+$$J(w) = L(w) + \lambda w^T w$$
+where $L(w)$ is the original [[Loss Function]] and $\lambda$ controls the penalty size on $w$ weights.
 
 ---
 # Notes:

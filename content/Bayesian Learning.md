@@ -1,10 +1,10 @@
 ---
-aliases: 
+aliases:
 tags:
   - cs/theory
   - ds/ml/theory
   - ds/ml/bayesian
-edited: 2025-06-12T18:57
+edited: 2025-08-30T16:55
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -58,8 +58,9 @@ $$= \underset{h \in H}{\arg\max} \sum_{i=1}^m -\frac{1}{2}(\frac{d-\mu}{\sigma})
 ### Predicting Probabilities with Cross Entropy
 Suppose we have some binary classification and we want to learn the probability that $f(x)=1$. We also assume [[Independent Events]] for our hypothesis.
 
-$$P(D|h) = \Pi_{i}^m P(x_i, d_i |h) \rightarrow \Pi_{i=1}^m h(x_i)^{d_i}(1-h(x))^{1-d_i}$$
-where we hope that our hypothesis $h(x)=1$ if $d=1$ and vice versa.
+$$P(D|h) = \Pi_{i}^m P(x_i, d_i |h) \rightarrow \Pi_{i=1}^m h(x_i)^{d_i}(1-h(x_i))^{1-d_i}$$
+We can group together all of the elements $i$ which have the same $x$ value.
+Ideally our hypothesis $h(x)=1$ if $d=1$ and vice versa.
 Taking the [[Maximum Likelihood Estimation|MLE]] forces us to do 
 $$\arg\max \sum d_i \ln(h(x)) + (1-d_i) \ln(1-h(x))$$
 which is the justification for [[Cross Entropy]]!

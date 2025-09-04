@@ -1,10 +1,10 @@
 ---
-aliases: 
+aliases:
 tags:
   - information_theory
   - stats
   - ds/ml/loss_function
-edited: 2025-06-28T09:57
+edited: 2025-08-30T16:55
 created: 2024-03-20T15:20
 ---
 # Definition:

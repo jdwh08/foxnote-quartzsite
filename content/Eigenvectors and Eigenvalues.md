@@ -1,12 +1,14 @@
 ---
-aliases: 
+aliases:
 tags:
   - "#math/linear_algebra"
-edited: 2025-02-15T16:36
+edited: 2025-08-26T21:55
 created: 2024-03-29T20:39
 ---
 ### Definition:
-Given a square matrix $A$, consider **$A\vec{x} = \lambda \vec{x}$.**  $\vec{x}$ are the **EIGENVECTORS** which maintain their same direction, only they are also $\lambda$ are the **EIGENVALUES** which multiply $\vec{x}$.
+Given a [[Square Matrix]] $A$, consider **$A\vec{x} = \lambda \vec{x}$.** 
+$\vec{x}$ are the **EIGENVECTORS** which maintain their same direction after the transformation.
+$\lambda$ are the **EIGENVALUES** which multiply $\vec{x}$.
 
 #### **Geometric Interpretation, 3B1B**
 Recall that a square matrix $A, dim(A)=\mathbb{R}^{n \times n}$ represents a linear transformation of vectors from $\mathbb{R}^n$ to $\mathbb{R}^n$. 
@@ -15,11 +17,14 @@ Recall that a square matrix $A, dim(A)=\mathbb{R}^{n \times n}$ represents a lin
 
 ---
 ### Notes:
-##### **Strang Fun Facts**
+
+##### **Strang's Fun Facts**
 Square matrixes multiply vectors, and we are interested in vectors that keep their same direction.
 
 Obviously, $\vec{x} \neq \vec{0}$ because this is always true for the zero vector. Finally, $\lambda \in \mathbb{R}$.
-- When $\lambda = 0$, we are finding $A\vec{x}=\vec{0}$, which is equivalent to the [[Matrix Null Space]]. Thus, if $A$ is a [[Singular Matrix]]
+- When $\lambda = 0$, we are finding $A\vec{x}=\vec{0}$, which is equivalent to the [[Matrix Null Space]]. 
+- We NEED to have something other than the $\vec{0}$ in the Null Space for this!
+- Thus, if $A$ is a [[Singular Matrix]] the transformation allows values into the Null Space.
 
 A [[Projection Matrix]] in 3-d have eigenvectors which are in the plane, and the one vector which is perfectly perpendicular.
 

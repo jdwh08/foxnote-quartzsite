@@ -4,11 +4,11 @@ aliases:
 tags:
   - ds/ml
   - stats
-edited: 2025-02-16T16:40
+edited: 2025-08-29T17:07
 created: 2024-03-19T22:06
 ---
 # Definition:
-A measure of how different an estimator's [[Expected Value]] is compared to the true value of the parameter.
+A measure of how different a [[Point Estimator]]'s [[Expected Value]] is compared to the true value of the parameter.
 
 $$Bias_{\theta}[\hat{\theta}]=E_{x|\theta}[\hat{\theta}] - \theta= E_{x|\theta}[\hat{\theta} - \theta] $$
 
@@ -22,10 +22,24 @@ A component of the [[Bias-Variance Trade Off]], along with [[Variance (estimator
 
 Bias generally happens when our approximation makes strong simplifying assumptions (e.g., [[Linear Regression]] for a non-linear problem).
 
+Compare this to [[Consistency (estimator)]] which is for asymptotic behaviour.
+
 ---
 # Examples:
+
+[[Bernoulli Trials and Random Variables|Bernoulli Distribution]] with the [[Sample Mean]]:
+- $p(x,p)=p^x (1-p)^{1-x}$
+- We substitute the sample mean:
+	- $bias = E[1/n \sum x] - p$
+	- $1/n \sum E[x] - p$
+	- But we know that the expected value is $p$ by definition of the distribution, thus $p-p=0$ i.e., unbiased.
+
 The sample [[Variance]] without Bessel's $n-1$ correction:
-#todo
+- Suppose we have a [[Normal Distribution]] and we use the [[Sample Variance]]: $1/n \sum (x - \bar{x})^2$
+- $E[1/n \sum (x - \bar{x})^2] - \sigma^2 = E[1/n \sum ((x - \mu - (\bar{x} - \mu))^2] - \sigma^2$
+- $E[1/n \sum ]$
+- $=\sigma^2 - 1/m \sigma^2 - \sigma^2 = -1/m \sigma^2$
+Thus this is BIASED! (our sample variance underestimates due to us also using the sample mean).
 
 ----
 # Source:
