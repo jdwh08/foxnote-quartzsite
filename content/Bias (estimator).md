@@ -4,7 +4,7 @@ aliases:
 tags:
   - ds/ml
   - stats
-edited: 2025-08-29T17:07
+edited: 2025-09-22T18:43
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -27,7 +27,7 @@ Compare this to [[Consistency (estimator)]] which is for asymptotic behaviour.
 ---
 # Examples:
 
-[[Bernoulli Trials and Random Variables|Bernoulli Distribution]] with the [[Sample Mean]]:
+[[Bernoulli Trial|Bernoulli Distribution]] with the [[Sample Mean]]:
 - $p(x,p)=p^x (1-p)^{1-x}$
 - We substitute the sample mean:
 	- $bias = E[1/n \sum x] - p$

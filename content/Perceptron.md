@@ -3,7 +3,7 @@ aliases:
   - Feed Forward Neural Network
 tags:
   - ds/ml/nn
-edited: 2025-09-03T19:32
+edited: 2025-09-28T22:54
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -40,7 +40,7 @@ In a **Perceptron** (oldest ANN), the activation function is some threshold whic
 	- Each "neuron" learns an approximate representation of that small area.
 	- We "stitch them" together to form a piecewise linear-ish approximation.
 
-#### [[ML Algorithm Bias]] of the Perceptron.
+#### [[Model Bias]] of the Perceptron.
 - Same as [[Artificial Neural Network#Algorithm Bias]].
 
 #### Limitations:

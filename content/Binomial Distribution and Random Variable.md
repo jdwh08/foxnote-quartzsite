@@ -2,11 +2,11 @@
 aliases: 
 tags:
   - stats/distributions
-edited: 2025-02-15T16:12
+edited: 2025-09-22T18:43
 created: 2024-03-03T17:02
 ---
 ### Definition:
- Suppose we have a [[Bernoulli Trials and Random Variables|Bernoulli Trial]] with success probability $p$. Define X as the number of successes in $n$ of these independent Bernoulli Trials. 
+ Suppose we have a [[Bernoulli Trial|Bernoulli Trial]] with success probability $p$. Define X as the number of successes in $n$ of these independent Bernoulli Trials. 
 $X \sim Bin(n,p)$ and is a Binomial [[Random Variable]].
 
 The [[Probability Mass Function]] is $p(k) = P(X=k) = \binom{n}{k} p^k(1-p)^{n-k}$ 

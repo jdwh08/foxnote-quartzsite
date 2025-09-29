@@ -1,9 +1,9 @@
 ---
-aliases:
+aliases: 
 tags:
   - stats
   - ds/ml/regularization
-edited: 2025-09-03T22:09
+edited: 2025-09-14T12:35
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -27,21 +27,22 @@ $$\tilde{L}(\theta; X; y) = L(\theta; X; y) + \lambda \Omega(\theta)$$
 	- I.e., our stuff is sparse. Good for [[Feature Selection]].
 - [[Ridge Regularization]]: $+\lambda w^T w \rightarrow \nabla + \lambda w$
 	- Effectively "shrinks" our weights $w$ along the [[Eigenvectors and Eigenvalues|eigenvectors]] of the [[Hessian]] of the [[Gradient]] $J=L$ here if using quadratic approximation $L=J=J(w*)+1/2(w-w*)^T H(w-w*)$ (this is basically [[Newton-Raphson]])
-- [[Elastic Net Regularization]]
+- [[Elastic Net Regularization]]: $+ \lambda_1 ||w||_1 +\lambda_2 w^T w$
 
 NOTE: we typically do not penalize the bias / y-intercept terms. 
 - These generally are generally learned accurately
-- Penalizing bias creates huge [[Bias (estimator)]] and underfitting.
+- Penalizing bias creates huge [[Bias (estimator)]] and Underfitting.
 
 ##### [[Matrix Pseudoinverse|Moore-Penrose Pseudoinverse]] Perspective
 - If we have less data than parameters, one solution is to constrain the parameters so they are learnable.
 - This is basically the same approach as in Moore-Penrose, with $A^T A + \alpha I$ where $\alpha I$ roughly corresponds to the regularization.
 
-##### Alternative: Explicit Weight Caps
+##### Alternative: Explicit Weight Caps / Max Norm
 Instead of using some penalty term, we might set the bounds directly at some $k$, and then use [[Constrained Optimization]].
 - Constrain the [[Norm]] of the weights of the columns (i.e., across neurons in a layer).
 - We can think of optimizing these just like in Econ [[Budget Constraint]] with [[Lagrange Multipliers]] and [[KKT Conditions]].
 - $\mathcal{L} = J(\theta, X, y) + \lambda (\Omega(\theta)-k)$
+- OR alternatively.... we can always forcibly round weights down...
 
 ### Early Stopping
 Often if the model is complicated enough, further training will start to increase loss on validation set. To fix this, we can stop training once val loss gets higher.
@@ -55,10 +56,14 @@ Note that this is essentially regularizing because we limit the possible values 
 - If errors have some variance $v$ and covariance $c$ then averaging a bunch of ensembles gives $(1/k) v + ((k-1)/k) c$.
 - Independent errors (e.g., if covariance 0) reduce the overall error rate by having them partially "cancel out"
 
-### Dropout
+### [[Dropout Regularization]]
+Sometimes we might have features which are *strongly associated* with our goal, but might not generalize very well. 
+- To solve this, we can use some [[Random Sampling]] to pick features.
+- E.g., for [[Artificial Neural Network|Neural Network]], have some probability $p$ for setting node activation to zero.
+	- During test time
+- Similar to sampling features in [[Random Forests]]
 
-
-### Synthetic Data
+### [[Synthetic Data]]
 Generate synthetic data and use that to augment our learner in [[Classification]] problems.
 - Transform the data while ensuring it has the same output type. E.g., add noise, do limited transformations, etc.
 - Especially useful for object detection, speech, etc.

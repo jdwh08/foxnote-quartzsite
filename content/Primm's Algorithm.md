@@ -1,9 +1,9 @@
 ---
-aliases: 
+aliases:
 tags:
   - cs/dsa/graph/mst/primm
   - cs/dsa/greedy
-edited: 2025-08-16T10:31
+edited: 2025-09-27T20:51
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -67,7 +67,7 @@ def primmst(start_node: int) -> tuple[list[tuple[float, int, int]], float]:
 - If we use an adjacency list instead, we can get $O(E \log V)$ time (but may not be faster).
 
 ### Eager Version
-We can improve on the lazy version by removing processing of edges which lead to already-connected nodes.
+We can improve on the [[Lazy Algorithm]] version by removing processing of edges which lead to already-connected nodes.
 
 For any MST, each node has exactly ONE edge going out of the node (except start node).
 Instead of adding edges to the [[Heap]], we update the neighbour's cheapest edge instead.

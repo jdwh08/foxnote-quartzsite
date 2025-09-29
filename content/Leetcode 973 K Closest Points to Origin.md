@@ -3,7 +3,7 @@ aliases:
 tags:
   - cs/leetcode/medium
   - cs/dsa/heap
-edited: 2025-08-04T20:25
+edited: 2025-09-24T17:05
 created: 2025-07-23T18:42:00
 ---
 # Problem:
@@ -34,14 +34,32 @@ TL;DR -- when building the [[Heap]], we can use the first value as the "key" for
 # Attempts:
 
 ##### Attempt 1
+... can't we just do this as a [[Heap|Min Heap]]?
 
+**Boundary** [[Big O]]
+- Lower: We need at least $O(k)$ to get values.
+- Upper: 10^4 implies at least linearish time. Sorting would be $O(n \log n)$.
+
+A min heap certainly would work, being $O(n) + O(k \log n)$ for the values.
+
+##### Attempt 2
+We can actually do it differently...
+1. Note that we only need to store $k$ values in the heap at most.
+2. We can use the heap as our backing data structure and thus not need to add even more memory.
+3. Change it to be a MAX HEAP and pop out all of the values which are too large
+4. The resulting values must be the minimums. 
+
+This would be $O(n \log k)$. Eh... maybe worse. Runtime says so.
+
+###### Alternatives:
+1. [[Quickselect]] apparently works, but I can't remember that algo for the life of me.
+2. [[Divide and Conquer]] by proxy would be $O(n)$ time? 
 
 ---
 # Solution:
 
 ```python
 class Solution:
-
     def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
         # simplest solution would be to make a sorted array of distances
         # with indices.
@@ -70,6 +88,21 @@ class Solution:
             i+=1
 
         return output
+```
+
+```python
+        maxheap: list[tuple[float, int, int]] = []
+        heaplen = 0
+
+        for (x,y) in points:
+            dist = x*x + y*y
+            heapq.heappush(maxheap, (-dist, x, y))
+            heaplen += 1
+            
+            if heaplen > k:
+                heapq.heappop(maxheap)  # remove largest values.
+
+        return [(x, y) for (_, x, y) in maxheap]
 ```
 
 ----

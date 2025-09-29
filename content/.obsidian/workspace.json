@@ -4,81 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "a5913432a13e7510",
+        "id": "06ac6293da979d9f",
         "type": "tabs",
         "children": [
           {
-            "id": "eb057beca47f8ab0",
+            "id": "d4fb6f26467eba5f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Regularization.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Regularization"
-            }
-          },
-          {
-            "id": "eaaf4ac45e780918",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          },
-          {
-            "id": "df2c1cd83207ee58",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cramer Rao Lower Bound.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
               "icon": "lucide-file",
-              "title": "Cramer Rao Lower Bound"
-            }
-          },
-          {
-            "id": "214b023346283809",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Fisher Information Matrix.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Fisher Information Matrix"
-            }
-          },
-          {
-            "id": "230fd38bc597cc2d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Point Estimator.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Point Estimator"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "322 Coin",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -135,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 219.5
+    "width": 272.5110321044922
   },
   "right": {
     "id": "e406f02a1f1aa204",
@@ -198,13 +137,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Uniform Manifold Approximation and Projection.md",
+                "file": "Mean Squared Error.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Uniform Manifold Approximation and Projection"
+              "title": "Outline of Mean Squared Error"
             }
           },
           {
@@ -213,8 +152,8 @@
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin no longer active"
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
             }
           },
           {
@@ -226,66 +165,84 @@
               "icon": "spreadsheet",
               "title": "Advanced Tables"
             }
+          },
+          {
+            "id": "fd10547e627be368",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "SpacedRepIcon",
+              "title": "Notes Review Queue"
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 302.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "daily-notes:Open today's daily note": false,
+      "daily-notes:Open today's daily note": true,
+      "darlal-switcher-plus:Open in Headings Mode": false,
+      "darlal-switcher-plus:Open Symbols for the active editor": false,
+      "switcher:Open quick switcher": true,
+      "templates:Insert template": true,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "canvas:Create new canvas": true,
+      "graph:Open graph view": true,
       "bases:Create new base": false,
-      "switcher:Open quick switcher": false,
-      "templates:Insert template": false,
-      "graph:Open graph view": false,
+      "obsidian-kanban:Create new board": false,
       "command-palette:Open command palette": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
-      "canvas:Create new canvas": false,
-      "obsidian-kanban:Create new board": false,
       "templater-obsidian:Templater": false,
       "janitor:Janitor: scan vault": false,
+      "obsidian-spaced-repetition:Review flashcards": false,
       "periodic-notes:Open today": false
     }
   },
-  "active": "eaaf4ac45e780918",
+  "active": "d4fb6f26467eba5f",
   "lastOpenFiles": [
-    "Bollinger Bands.md",
-    "Maximum Likelihood Estimation.md",
-    "Options Vol, Regimes, & Edge.md",
-    "Convergence Almost Surely.md",
-    "Cramer Rao Lower Bound.md",
-    "Fisher Information Matrix.md",
-    "Mean Squared Error.md",
-    "Point Estimator.md",
-    "Consistency (estimator).md",
-    "Regularization.md",
-    "Recurrent Neural Network.md",
-    "Deep Learning.md",
-    "Universal Approximation Theorem.md",
-    "Artificial Neural Network.md",
-    "Ridge Regularization.md",
-    "Sigmoid Function.md",
-    "Radial Basis Function.md",
-    "ReLU.md",
-    "Softmax.md",
-    "Differentiable Function.md",
-    "Bayesian Learning.md",
+    "^PRIVATE/Open World Adventure Habit.md",
+    "^PRIVATE/Rules for Talking with Minjue.md",
+    "^PRIVATE/At-Home Weights Exercises.md",
+    "^PRIVATE/Addiction Coping Mechanisms.md",
+    "_Calendar/2025/09/2025-09-02.md",
+    "Adagrad Optimizer.md",
+    "Transfer Learning.md",
+    "Model Generalization.md",
+    "Model Bias.md",
+    "Statistical Learning.md",
+    "Overfitting.md",
+    "Data Generating Process.md",
+    "Computational Learning Theory.md",
+    "ResNet.md",
+    "Convolutional Neural Network.md",
+    "Matrix Calculus.md",
+    "VGGNet.md",
+    "AlexNet.md",
+    "Cross Correlation.md",
+    "Leetcode 1899 Merge Triplets to Form Target.md",
+    "ETA System Design.md",
+    "Leetcode 134 Gas Station.md",
+    "Leetcode 846 Hand of Straights.md",
+    "_Media/Excalidraw/ETA System Design Uber 2022.md",
+    "_Media/Excalidraw/ETA System Design Uber 2022.png",
     "Mean Absolute Error.md",
-    "Multilayer Perceptron.md",
-    "Perceptron.md",
-    "No Free Lunch Theorem.md",
-    "!!!ML System Design.md",
+    "system-design_1.excalidrawlib",
+    "system-design_0.excalidrawlib",
+    "system-design.excalidrawlib",
+    "index.md",
+    "_Adv",
+    "Readings",
+    "Fleeting",
+    "Untitled.base",
     "_Calendar/2025/09",
     "_Calendar/2025",
     "_Media/Excalidraw/Backprop NN Graph.excalidraw.png",
     "~syncthing~!!!Poisson Process.md.tmp",
-    "~syncthing~Z-Test.md.tmp",
-    "~syncthing~Chi Square Test.md.tmp",
-    "~syncthing~Leetcode.md.tmp",
-    "~syncthing~!!!Sampling.md.tmp",
     "_Media/Excalidraw/Dijkstras Algorithm.excalidraw.png",
     "_Media/Excalidraw/Graph Example.excalidraw.png",
     "_Media/Excalidraw/Trie.excalidraw.png",
@@ -296,10 +253,6 @@
     "_Media/Excalidraw/Imbalanced Binary Tree.excalidraw.png",
     "_Media/Excalidraw/Tree Traversal.excalidraw.png",
     "_Media/Excalidraw/Queue.excalidraw.svg",
-    "_Media/Excalidraw/Portfolio Efficient Frontier.excalidraw.png",
-    "_Calendar/2025/07",
-    "_quartzsite",
-    "_Media",
     "_ObsidianTemplates/Eisenhower.canvas"
   ]
 }

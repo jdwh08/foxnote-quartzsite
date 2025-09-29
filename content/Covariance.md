@@ -3,7 +3,7 @@ aliases:
   - Cov
 tags:
   - stats/probability
-edited: 2025-02-15T16:26
+edited: 2025-09-10T22:25
 created: 2024-03-23T12:50
 ---
 ### Definition:
@@ -30,7 +30,7 @@ For a normalized and scaled variation, see [[Correlation (Pearson)]].
 - $cov(x,y)< 0$ means there is a negative linear relationship, i.e., more X less Y.
 
 **Independence Relationship**
-- If the two random variables are [[Independent Events|Independent]], then $E(XY)=E(X)E(Y)$ so $cov(x,y)=0$. 
+- If the two random variables are [[Independent|Independent]], then $E(XY)=E(X)E(Y)$ so $cov(x,y)=0$. 
 - But 0 covariance does not mean independence, since it only captures no *linear* relationships. You could have a *quadratic* relationship, for example.
 
 ---

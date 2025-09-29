@@ -1,16 +1,17 @@
 ---
 aliases:
 tags:
-  - ds/ml
-edited: 2025-08-30T16:55
+  - todo
+  - ds/ml/linreg/logistic
+edited: 2025-09-27T19:42
 created: 2024-04-04T22:31
 ---
-### Definition:
-A [[Supervised Machine Learning]] algorithm. Uses [[Sigmoid Function]] as the "squash function" for a [[Linear Regression]], so that the output is guaranteed to be from $[0,1]$.
+# Definition:
+A [[Supervised Machine Learning]] algorithm. Uses [[Sigmoid Function]] as the [[Squash Function]] for a [[Linear Regression]], so that the output is guaranteed to be from $[0,1]$.
 
 ---
-### Notes:
-#todo: derivation and math
+# Notes:
+
 
 ---
 ### Examples:

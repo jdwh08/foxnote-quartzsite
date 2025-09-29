@@ -7,7 +7,7 @@ tags:
   - math/linear_algebra
   - ds/ml/linreg
   - todo/breakup
-edited: 2025-08-28T21:35
+edited: 2025-09-10T22:25
 created: 2024-09-17T19:59
 ---
 # Definition:
@@ -91,7 +91,7 @@ The number of possible [[Combinations]] for $p$ features is $2^p$. This can be *
 	2. This implies that $Cov(\epsilon, X) = 0$ since [[Covariance]] definition as $E[XY] - E[X]E[Y]$
 5. **[[Homoskedasticity]]**: Errors $\epsilon$ are constant across predictor values $X$.
 	1. We don't need this assumption to have the estimators $\hat{\beta}$ be [[Bias (estimator)|Unbiased (estimator)]]; however, the errors $Var(\hat{\beta})$ will be underestimates.
-6. **Independence of Errors**: Errors $\epsilon$ are [[Independent Events|independent]] from one another between $i=1,...,n$, so $E[\epsilon_i \epsilon_j | X] = 0\ \forall\ i \neq j$
+6. **Independence of Errors**: Errors $\epsilon$ are [[Independent|independent]] from one another between $i=1,...,n$, so $E[\epsilon_i \epsilon_j | X] = 0\ \forall\ i \neq j$
 	1. We can also write the above two criteria as $Var(\epsilon | X) = \sigma^2 I_n$
 	2. We can achieve this with [[Independent and Identically Distributed|IID]] observations of features and target variables.
 7. (Optional): **Standard [[Normal Distribution|Normal]] Errors**: $\epsilon | X \sim \mathcal{N}(0, \sigma^2 I_n)$.

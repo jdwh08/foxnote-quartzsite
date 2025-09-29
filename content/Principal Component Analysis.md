@@ -5,18 +5,21 @@ tags:
   - math/linear_algebra
   - ds/ml/featureeng
   - ds/dimension_reduction
-edited: 2025-08-26T21:40
+edited: 2025-09-26T13:41
 created: 2024-03-26T21:39
 ---
 ### Definition:
+A type of [[Unsupervised Machine Learning]] [[Dimension Reduction]] which learns new [[Basis]] vectors for the input data. 
 
-Perform [[Feature Selection]] by creating new "components" which do a good job explaining [[Variance]] as a [[Linear Combination]]. Also reduces noise if they are low-importance [[Orthogonal Vectors]]. 
+Data can then be a [[Linear Combination]] of the new basis vectors. We can remove basis vectors which don't contribute much to do [[Dimension Reduction]] while doing as good as possible on being able to linearly reconstruct the input data.
+
+Good basis vectors explain most of the [[Variance]]. Bad basis vectors might just be noise.
 
 ---
 
 # Notes
 
-PCA is the "bedrock dimensionality reduction technique" for dimensionality reduction / [[Feature Selection]].
+PCA is the "bedrock dimensionality reduction technique" for [[Dimension Reduction]] / [[Feature Selection]].
 
 Uses the [[Singular Value Decomposition]] to do [[Feature Selection]] linearly. Because it uses SVD, it creates a whole new [[Basis]] coordinate system for the data, where the axes capture the most variation.
 
@@ -78,13 +81,13 @@ $$\bar{X} = \begin{bmatrix}
 3. You can't have more PCs then the dimension of your data (since it's getting basis vectors)
 
 ### Alternatives
-- [[Independent Components Analysis]] looks for sources of the [[Data Generating Process]] which are  [[Independent Events|independent]] instead of maximizing [[Covariance]] and ability to reconstruct data.
+- [[Independent Components Analysis]] looks for sources of the [[Data Generating Process]] which are  [[Independent|independent]] instead of maximizing [[Covariance]] and ability to reconstruct data.
 - [[Random Component Analysis]] is cheap and fast and maybe acceptable.
 - [[t-SNE]] is a nonlinear method designed to represent local behaviour instead of global.
 - [[Uniform Manifold Approximation and Projection|UMAP]] is another alternative dimensionality reduction technique which is non-linear.
 
 #### Comparison to [[Independent Components Analysis]]:
-1. Features are  [[Orthogonal Vectors]] instead of being [[Independent Events|independent]].
+1. Features are  [[Orthogonal Vectors]] instead of being [[Independent|independent]].
 2. Features maximize [[Variance]] along the components instead of [[Mutual Information]].
 	1. If the data is [[Normal Distribution]], then these two are the same.
 3. Features have ordering based on eigenvalues

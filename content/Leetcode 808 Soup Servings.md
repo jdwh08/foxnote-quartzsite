@@ -3,7 +3,7 @@ aliases:
 tags:
   - cs/leetcode/medium
   - cs/dsa/dp
-edited: 2025-08-07T21:37
+edited: 2025-09-23T15:56
 created: 2025-07-23T18:42:00
 ---
 # Problem:
@@ -151,4 +151,3 @@ class Solution:
 ----
 # Source:
 https://leetcode.com/problems/soup-servings/description
-	

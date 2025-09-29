@@ -1,8 +1,8 @@
 ---
-aliases: 
+aliases:
 tags:
   - math/discrete_math/number_theory
-edited: 2025-02-15T16:15
+edited: 2025-09-27T19:46
 created: 2024-01-09T19:45
 ---
 ### Definition:
@@ -11,12 +11,12 @@ If $p$ is prime and $k = \{ 1,\ldots,p - 1\}$ then $k^{p - 1} \equiv 1(mod\ p)$
 
 ---
 ### Proof:
-Since $p$ is prime, all the possible numbers in $k$ are relatively prime to p.
-Thus, the number of primes in the set for k is the exact same thing as [[Euler's Totient Function]]. 
+Since $p$ is [[Prime Number]], all the possible numbers in $k$ are relatively prime to p.
+The number of primes in the set for k is the exact same thing as [[Euler's Totient Function]]. 
 -   Thus, $k^{p - 1} \equiv 1(mod\ p)$.
 
 ---
 ### Examples:
 
 Consider $k*k^{p - 2} = k^{p - 1} \equiv 1(mod\ p)$. 
-This means that $k$ and $k^{p - 2}$ are multiplicative inverses by definition!
+This means that $k$ and $k^{p - 2}$ are [[Multiplicative Inverse (Modular Arithmetic)]] by definition!

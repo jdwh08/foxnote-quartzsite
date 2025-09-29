@@ -1,9 +1,9 @@
 ---
-aliases:
+aliases: 
 tags:
   - math
   - ds/ml/nn/activation
-edited: 2025-09-03T20:23
+edited: 2025-09-22T18:43
 created: 2024-04-04T22:50
 ---
 # Definition:
@@ -30,7 +30,7 @@ Also used for some tasks which prevent things like [[ReLU]] from working well:
 - [[Recurrent Neural Network]]
 
 ### [[Bayesian Learning]] [[Maximum Likelihood Estimation|MLE]] Perspective
-Suppose I have some [[Bernoulli Trials and Random Variables|Bernoulli Distribution]] and we predict $P(y=1|X)$. 
+Suppose I have some [[Bernoulli Trial|Bernoulli Distribution]] and we predict $P(y=1|X)$. 
 1. We can start by calculating the weighted sum $z = w^T x$. This might not be summing to 1.
 2. We can normalize this.
 	1. If $\log \tilde{P}(y) = yz$, then $\tilde{P}(y) = e^{yz}$, and when we normalize by dividing by sum we get $P(y) = \frac{e^{yz}}{\sum e^{yz}}$, which apparently is $\sigma(z(2y-1))$.
@@ -40,7 +40,7 @@ Suppose I have some [[Bernoulli Trials and Random Variables|Bernoulli Distributi
 	2. This makes it better than the [[Mean Squared Error]] approach which can saturate more.
 
 ### Issues
-1. Gradient is generally saturated (high enough OR low enough $z$ input)
+1. Gradient is generally saturated (at high enough OR low enough $z$ input). Thus, in [[Deep Learning]] our [[Gradient Descent]] steps will be tiny. "Vanishing Gradients" when going backwards, "Exploding Gradients" when going forwards.
 
 ### Alternatives
 - [[Hyperbolic Tangent]] is just sigmoid ranging from -1 to 1: $\tanh(z) = 2\sigma(2z)-1$. It also has derivative of 1 near 0, so it approximates linear.

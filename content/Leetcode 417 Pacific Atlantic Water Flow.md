@@ -4,7 +4,7 @@ tags:
   - cs/leetcode/medium
   - cs/dsa/graph
   - todo
-edited: 2025-08-11T23:01
+edited: 2025-09-14T18:13
 created: 2025-07-23T18:42:00
 ---
 # Problem:
@@ -59,9 +59,9 @@ I guess this is multi-source DFS?
 Can't we build an array where we track cells which go to both pacific and Atlantic? I.e., the bottom left / top right corner? From there, we propagate outwards like with Multi-Source BFS. Only allow cells which are at least the same height for water to flow down.
 
 ##### Attempt 2
-No you silly, there are points which can take different paths to the pacific and atlantic. They don't have to go the same final square.
+No you silly, there are points which can take different paths to the pacific and Atlantic. They don't have to go the same final square.
 
-We then have to go from EVERY SINGLE BORDER cell to pacific and atlantic respectively.
+We then have to go from EVERY SINGLE BORDER cell to pacific and Atlantic respectively.
 
 This means we need some way to keep track of the values. Perhaps we do PACIFIC and then ATLANTIC, and keep track of the cell using a cell state? We replace the height value with some state indicator.
 

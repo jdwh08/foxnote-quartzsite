@@ -2,7 +2,7 @@
 aliases: 
 tags:
   - information_theory
-edited: 2025-06-28T10:03
+edited: 2025-09-10T22:25
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -12,7 +12,7 @@ $$H(x,y)= -\sum p(x,y) \log p(x,y)$$
 
 Like [[Joint Probability]] but applied to [[Entropy (information theory)]]
 
-Note that if [[Independent Events|independent]], then $H(x,y) = H(x) + H(y)$.
+Note that if [[Independent|independent]], then $H(x,y) = H(x) + H(y)$.
 
 ---
 # Notes:

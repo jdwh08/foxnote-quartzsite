@@ -3,7 +3,7 @@ aliases:
 tags:
   - ds
   - information_theory
-edited: 2025-02-17T10:20
+edited: 2025-09-23T16:16
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -15,7 +15,7 @@ $$\text{Gain}(s,a)=\text{Entropy}(s) - \sum_{v}^{V}\frac{|s_v|}{s}*\text{Entropy
 
 ---
 # Notes:
-Used as a [[Loss Function]] for finding features for training [[Decision Trees]], e.g., the [[ID3 (Decision Tree Algorithm)]]
+Used as a [[Loss Function]] for finding features for training [[Decision Trees]], e.g., the [[ID3]]
 
 ---
 # Examples:

@@ -4,7 +4,7 @@ aliases:
 tags:
   - cs/dsa
   - ds/ml/
-edited: 2025-06-11T21:19
+edited: 2025-09-28T22:54
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -40,7 +40,7 @@ Hill climbing is not too expensive to run some constant $c$ times.
 1. Memory  -- keep track of points you've visited already
 2. Do faster random restarts
 
-### [[ML Algorithm Bias]]
+### [[Model Bias]]
 1. We assume that function reward improvement is smooth in some local area, i.e., there aren't some sudden random spikes at one point.
 2. We hope that the area of points which gets "sucked into" the global optima, i.e., the "attraction zone" is large.
 

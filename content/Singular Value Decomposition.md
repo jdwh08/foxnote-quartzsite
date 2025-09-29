@@ -3,7 +3,7 @@ aliases:
   - SVD
 tags:
   - math/linear_algebra
-edited: 2025-08-28T19:32
+edited: 2025-09-21T21:35
 created: 2024-03-26T21:43
 ---
 ### Definition:
@@ -128,7 +128,7 @@ Models
 
 --------
 # Sources:
-Steven L Brunton Lectures @ UWash
+Brunton Lectures @ UWash
 1. [Overview](https://www.youtube.com/watch?v=gXbThCXjZFM&list=PLMrJAkhIeNNSVjnsviglFoY2nXildDCcv&index=1&pp=iAQB)
 2. [Maths](https://www.youtube.com/watch?v=nbBvuuNVfco&list=PLMrJAkhIeNNSVjnsviglFoY2nXildDCcv&index=2&pp=iAQB)
 3. [As Matrix Approximation](https://www.youtube.com/watch?v=xy3QyyhiuY4&list=PLMrJAkhIeNNSVjnsviglFoY2nXildDCcv&index=3&pp=iAQB)

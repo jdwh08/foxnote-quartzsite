@@ -2,7 +2,7 @@
 aliases: 
 tags:
   - ds/ml/trees
-edited: 2025-02-17T10:33
+edited: 2025-09-23T16:16
 created: 2024-09-17T20:53
 ---
 ### Definition:
@@ -69,7 +69,7 @@ Thus, our training algorithm needs to be very sparse or good at [[Decision Trees
 - We could split on different values for continuous variables. (Age < 20, Age < 30, ...)
 
 ##### For Classification
-- Look at [[ID3 (Decision Tree Algorithm)]] by JR Quinlan for this example algorithm.
+- Look at [[ID3]] by JR Quinlan for this example algorithm.
 - How do we split? The intuitive is [[Classification Error Rate]]: equal to the fraction of observations in the region $R_m$ which are not the same as the most common class. $E=1 - \underset{k}{\max}(\hat{p}_{mk})$. This **doesn't work!!!** it's not sensitive enough.
 - We could also use the [[Gini Index]] (err, kinda the gini): $\sum_i \hat{p}_{mk}(1 - \hat{p}_{mk}) = 1-\sum_{c} (p_c)^2$ where $c$ is the classes.
 - ID3 uses [[Information Gain]] on [[Entropy (information theory)]] to decide splits which are valuable or not.

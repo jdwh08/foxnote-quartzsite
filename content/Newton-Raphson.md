@@ -1,9 +1,9 @@
 ---
-aliases: 
+aliases:
 tags:
   - cs/dsa/optimizers
   - math/calculus
-edited: 2025-06-13T20:39
+edited: 2025-09-06T14:39
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -31,7 +31,8 @@ where $J^{-1}$ is the [[Jacobian]] and $f(x)$ is the original function.
 #### As an [[Optimizer]]
 We want to find where the [[Gradient]] is zero, i.e., our function $f(x) = \nabla$. Thus,
 
-$$\hat{x}_{t+1}=x_t-H^{-1}(x_t) \nabla f(x_t)$$
+$$f(x) \approx f(x_0) + (x-x_0)^T\nabla_x + 1/2 (x-x_0)^T H (x-x_0)$$
+$$\hat{x}=x_0-H^{-1}_{@x_0} \nabla_{@x_0}$$
 Where $H^{-1}$ is the [[Matrix Inverse]] of the [[Hessian]] and $\nabla$ is the [[Gradient]].
 
 ### Issues

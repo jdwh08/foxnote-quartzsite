@@ -1,8 +1,9 @@
 ---
 aliases:
+  - DP
 tags:
   - cs/dsa/dp
-edited: 2025-09-01T17:33
+edited: 2025-09-27T18:41
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -16,11 +17,12 @@ A [[Data Structures and Algorithms]] method which solves problems by using the a
 2. Each state has transitions to other states.
 3. The action at each state relies on very little information, e.g., only information we pass from the prior state in transition.
 	1. No other "side effects"!
-4. This is basically the [[Markov Property]].
+	2. This is basically the [[Markov Property]].
+4. We repeatedly encounter the same states again and again.
 
 **Other ways to think about it:**
 Can we draw a [[Directed Graph]] that represents the problem entirely?
-If states are 2D, can we start to the bottom right value from the top left?
+If states are 2D, can we start from one value and move our way to reach a different value?
 
 Think about it kinda like a [[Markov Decision Process]], hence why DP is also relevant for [[Bellman Equation]] with [[Reinforcement Learning]].
 
@@ -31,6 +33,51 @@ Think about it kinda like a [[Markov Decision Process]], hence why DP is also re
 3. Big O for time is then $n\_states \times cache\_complexity$
 4. Big O for space depends on your cache implementation.
 
+### Problem Solving Process
+What has seemed most intuitive to me is doing the following:
+1. Identify the Recurrence Relation. State, Action, Transition, kept values, etc.
+2. Build out the memo (dict, array) and DP function.
+3. Once we get the recursive top-down solution working, transition to bottom-up.
+
+#### Recognizing Dynamic Programming
+1. Walk through with a little bit of brute force.
+2. Check for states, actions, transitions, etc.
+	1. If we see states getting repeated, it's probably DP.
+	2. Otherwise, we can probably do DFS/BFS/Greedy
+3. Determine the *minimum size subproblem*
+4. Think about what the possible subproblems are.
+	1. "If I had the answer to X, Y; then I could easily solve Z"
+
+#### Recurrence Relation
+1. States: What variable(s) uniquely define each problem?
+	1. **index** within an array (e.g., [[Knapsack Problem]])
+	2. **current value** (e.g., [[Leetcode 416 Partition Equal Subset Sum]])
+
+2. Actions: Often given in the problem.
+	1. Take/Skip for [[Knapsack Problem]] in 1D DP
+		1. `for choice in choices: take; get best of takes` is alternative
+	2. Movement between indices in 1D DP
+
+3. Transitions:
+	1. Increasing/decreasing values
+	2. Increasing/decreasing indexes
+
+4. Rewards:
+	1. Identify what is the goal. Max? Min? Number of Ways? Reachability?
+#### Flattening State
+I tend to gravitate towards too many variables for states. This sometimes results in out-of-memory errors compared to more efficient solutions.
+
+How do we determine whether state-defining variables must be kept?
+1. Do they interact with other state-defining variables?
+	1. E.g., defining an interval, defining the coordinates in a grid, getting position relative to some other variable, etc.
+2. If we drop this variable, would we still be able to uniquely identify our state, assuming that we knew all prior states up to this point?
+3. Does this serve more like a bookkeeping variable, e.g., `idx` which we loop through? **These are good candidates to drop.**
+
+```
+DP can collapse a variable if the transitions for that variables don't affect or are used with any of the other variables.
+```
+
+### Converting from Recursive to Iterative.
 
 ---
 # Examples:

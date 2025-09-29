@@ -5,7 +5,7 @@ aliases:
   - Min Heap
 tags:
   - cs/dsa/heap
-edited: 2025-08-15T21:55
+edited: 2025-09-27T21:30
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -128,6 +128,7 @@ export default class MinHeap {
 [[Big O]] for Insert and Heap:
 - Worst case is going through the entire tree height.
 - Tree height is at worst $h=\log_2(n)$ because it's self-balancing full tree.
+- Cost of heap-ify an array is **linear** $O(n)$.
 
 Average Case is $O(1)$ for everything except popping the top value.
 

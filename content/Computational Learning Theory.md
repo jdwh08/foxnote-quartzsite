@@ -1,9 +1,9 @@
 ---
-aliases: 
+aliases:
 tags:
   - cs/theory
-  - ds/ml/theory
-edited: 2025-06-06T02:34
+  - ds/ml/theory/clt
+edited: 2025-09-28T22:46
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -98,4 +98,4 @@ Examples
 
 ----
 # Source:
-Source
+GaTech ML

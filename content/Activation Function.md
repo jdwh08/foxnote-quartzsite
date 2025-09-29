@@ -2,7 +2,7 @@
 aliases: 
 tags:
   - ds/ml/nn
-edited: 2025-05-25T19:07
+edited: 2025-09-10T21:57
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -15,9 +15,16 @@ Notes
 ---
 # Examples:
 
-- [[Sigmoid Function]]: old school method
-- [[ReLU]]: piecewise: $f(x)=x$ if $x>0$ else $0$
-	- Faster to compute and store. Our bias / intercept term $w_{k0}$ handles where the "kink" occurs.
+- [[Sigmoid Function]]: old school method with smooth transitions from 0-1 around $x=0$
+	- [[Hyperbolic Tangent]]: from -1 to 1
+
+- [[ReLU]]: piecewise: $f(x)=x$ if $x>0$ else $0$. Faster to compute and store. Our bias / intercept term $w_{k0}$ handles where the "kink" occurs.
+	- [[Leaky ReLU]]
+	- [[GeLU]]
+	- [[Maxout]]
+
+
+
 - [[Softmax]]: convert output into multiclass probabilities.
 
 ----

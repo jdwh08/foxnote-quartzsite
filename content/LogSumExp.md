@@ -2,17 +2,16 @@
 aliases:
 tags:
   - math
-edited: 2025-09-03T20:13
+edited: 2025-09-27T19:42
 created: 2024-03-19T22:06
 ---
 # Definition:
-A smooth, differentiable version of the $\max$ function. 
+A smooth, [[Differentiable Function|differentiable]] version of the $\max$ function. 
+
+$$LSP = \log \left( \sum_{i=0}^{n} e^{x_i} \right)$$
 
 ---
 # Notes:
-
-### Definition
-$$LSP = \log \left( \sum_{i=0}^{n} e^{x_i} \right)$$
 
 ### Properties
 1. It is a [[Differentiable Function]] everywhere in $\mathbb{R}^{n}$. We can see that the [[Partial Derivative]] exists for all input $x_i$ and they are [[Continuous Function]]s.

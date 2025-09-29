@@ -1,9 +1,9 @@
 ---
-aliases: 
+aliases:
 tags:
   - cs/dsa/graph/mst/kruskal
   - cs/dsa/greedy
-edited: 2025-08-15T21:27
+edited: 2025-09-04T14:32
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -30,7 +30,7 @@ minheap: list[tuple[int, int, int]] = []
 for i in range(len(edges)):
 	for j in range(i+1, len(edges)):
 		# get distance
-		manhattandist = dist(i, j)
+		dist = dist(i, j)
 		# add to graph
 		graph[i].add(j)
 		graph[j].add(i)

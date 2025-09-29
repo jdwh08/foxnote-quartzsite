@@ -4,7 +4,7 @@ aliases:
 tags:
   - ds/ml/featureeng
   - ds/dimension_reduction
-edited: 2025-07-26T12:07
+edited: 2025-09-10T22:25
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -17,7 +17,7 @@ A type of feature engineering which uses [[Mutual Information]] to do [[Feature 
 # Notes:
 
 ### Algorithm
-1. Assume there are "hidden variables" that are the true [[Data Generating Process]]; these are [[Independent Events|Independent]] and features are [[Linear Combination]]s of them.
+1. Assume there are "hidden variables" that are the true [[Data Generating Process]]; these are [[Independent|Independent]] and features are [[Linear Combination]]s of them.
 	1. Recall that by the [[Central Limit Theorem (Lindeberg-Levy)|CLT]] the [[Convolution]] of [[Random Variable]] tends to become [[Normal Distribution]]. **Thus, we want to find the base hidden variables that are as non-normal as possible.**
 	2. NOTE: **Hidden variables must not follow [[Normal Distribution]]**!
 	3. Remember that the [[Convolution]] of [[Normal Distribution]]s is [[Normal Distribution]]. This means that we can't identify which hidden variable is which.
@@ -35,7 +35,7 @@ Is the practical algorithm used for independent components analysis.
 2. Transform the data so that components have zero [[Correlation (Pearson)|Correlation]] and equal [[Variance]], e.g., with [[Eigenvalue Decomposition]].
 
 ### Comparison to [[Principal Component Analysis|PCA]]:
-1. Features are no longer [[Orthogonal Vectors]]; instead, they are [[Independent Events]].
+1. Features are no longer [[Orthogonal Vectors]]; instead, they are [[Independent]].
 2. Features maximize [[Mutual Information]] (or non-Normal-ness) instead of [[Variance]] along the components.
 	1. If the data is [[Normal Distribution]], then these two are the same.
 	2. You can think of summing these in [[Linear Combination]] as sums of independent things, which become normal thanks to the [[Central Limit Theorem (Lindeberg-Levy)|Central Limit Theorem]].

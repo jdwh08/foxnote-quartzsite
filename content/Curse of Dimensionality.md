@@ -2,7 +2,7 @@
 aliases:
 tags:
   - ds/ml
-edited: 2025-08-28T20:14
+edited: 2025-09-28T22:54
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -18,7 +18,7 @@ As our dimension increases, the density of the points decreases exponentially.
 Imagine the number of points needed for the same density coverage. 
 We go from $\mathbb{R}^1 \rightarrow \mathbb{R}^2 \rightarrow ...$ hence exponential.
 
-### [[ML Algorithm Bias]]
+### [[Model Bias]]
 To handle this in [[Machine Learning]], we need to make some assumptions. This causes us to choose some representations over others...
 
 1. **Smoothness** / **Local Consistency**: Within some small region $\epsilon$, the target probably shouldn't change too much. E.g., $f(x) \approx f(x+\epsilon)$.

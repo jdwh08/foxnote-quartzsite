@@ -1,8 +1,8 @@
 ---
-aliases:
+aliases: 
 tags:
   - stats/hypothesis_tests
-edited: 2025-08-26T21:22
+edited: 2025-09-21T21:27
 created: 2024-04-23T18:34
 ---
 # Definition:
@@ -18,6 +18,8 @@ You have limitations on how much data can be collected.
 - We want to pick the sample size such that it gives sufficient power, however there is not a linear relationship between power and sample size.
 
 #### Formulas
+- Generic Normal Approximation with $\alpha$ critical value and $\beta$ [[Statistical Power]]
+$$n \sim (Z_{1-\alpha/2} + Z_{1-\beta})^2$$
 - [[Two Sample T-Test]]: 
 $$n=(z_{\alpha/2}+z_{\beta})^2 * \frac{\sigma_1^2 + \sigma_2^2}{(\mu_1 - \mu_2)^2}$$
 

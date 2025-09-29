@@ -1,10 +1,10 @@
 ---
-aliases:
+aliases: 
 tags:
   - cs/theory
   - ds/ml/theory
   - ds/ml/bayesian
-edited: 2025-08-30T16:55
+edited: 2025-09-10T22:25
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -56,7 +56,7 @@ $$= \underset{h \in H}{\arg\max} \sum_{i=1}^m -\frac{1}{2}(\frac{d-\mu}{\sigma})
 - Bayesian justification for all the MSE stuff. Doesn't work for other noise
 
 ### Predicting Probabilities with Cross Entropy
-Suppose we have some binary classification and we want to learn the probability that $f(x)=1$. We also assume [[Independent Events]] for our hypothesis.
+Suppose we have some binary classification and we want to learn the probability that $f(x)=1$. We also assume [[Independent]] for our hypothesis.
 
 $$P(D|h) = \Pi_{i}^m P(x_i, d_i |h) \rightarrow \Pi_{i=1}^m h(x_i)^{d_i}(1-h(x_i))^{1-d_i}$$
 We can group together all of the elements $i$ which have the same $x$ value.

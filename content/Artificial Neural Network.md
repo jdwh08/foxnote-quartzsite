@@ -3,7 +3,7 @@ aliases:
   - Neural Network
 tags:
   - ds/ml/nn
-edited: 2025-09-03T19:36
+edited: 2025-09-28T22:54
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -16,24 +16,26 @@ Very loosely inspired by biological brains, though not quite the same.
 ---
 # Notes:
 
-### Formal Definition of Neurons
+## Formal Definition of Neurons
 Formally, we can calculate this as
-$$a=\sum_i^{M}w_ix_i$$
-where a is our pre-activation, and then apply
-$$y=f(a)$$
+$$z=\sum_i^{M}w_ix_i$$
+where $z$ is our pre-activation, and then apply
+$$a=f(z)$$
 where $f(a)$ is our [[Activation Function]].
 
 Scaling this up, we can say the neural network has the form
 $$f(X) = \beta_0 + \sum_{k=1}^K \beta_k g(w_{k0} + \sum_{j=1}^p w_{kj} X_j)$$
 where we see our $g$ as activation functions and our $\beta$s as per-neuron weights.
 
-### What is it Good For?
+## What is it Good For?
 - Complex input data (vision, sound, language, ...)
-- Noisy data
+- Noisy data.
 - Long training times are okay. Inference is fast.
-- Interpretability doesn't matter very much
+- Interpretability doesn't matter very much.
 
-### [[ML Algorithm Bias]]
+Large ANNs act as a substitute for hand-crafted rules or more basic ML algorithms.
+
+## [[Model Bias]]
 - **Restriction Bias**: If complex enough, almost nothing. 
 	- A **linear** set of inputs where we learn planes for each neuron. The combination of neurons then have non-linear functions allowing representation of almost any function.
 	- Can represent any continuous or arbitrary function if given enough nodes and layers. E.g., see [[Perceptron#Perceptron Function Representation]].
@@ -45,7 +47,7 @@ where we see our $g$ as activation functions and our $\beta$s as per-neuron weig
 	- Thus, well-trained ANNs prefer "low complexity": if we have the same value(s), prefer the less complex solution.
 
 
-### Structures for Neural Networks
+## Architectures for Neural Networks
 #### [[Perceptron]]
 The simplest example of an Artificial Neural Network: the activation function is a simple threshold (or at most a [[Sigmoid Function]]).
 
@@ -55,16 +57,12 @@ Can be trained with the perceptron rule, but more robustly [[Gradient Descent]] 
 An extension of perceptrons into multiple layers.
 
 #### [[Deep Learning]]
-
-##### [[Convolutional Neural Network]]
-
-##### [[Recurrent Neural Network]]
+###### [[Convolutional Neural Network]]
+###### [[Recurrent Neural Network]]
 
 
-### Training Mechanisms for Neural Networks
+## [[Neural Network Training]]
 
-- [[Gradient Descent]] and [[Stochastic Gradient Descent]] for optimizing weights for functions which have gradients
-- [[Genetic Algorithm]] for optimizing structures / architectures of Neural Networks? E.g., [[Weight Agnostic Neural Network]] which has weights fixed and updates structure alone.
 
 ---
 # Examples:
@@ -80,7 +78,7 @@ An extension of perceptrons into multiple layers.
 	- Output layer is 10 classes
 	- 235,146 total weights.
 	- Activations are [[ReLU]] except for HL2 which is [[Sigmoid Function]].
-- We find parameter estimates that minimize the negative [[Log Likelihood]]: $- \sum_{i=1}^n \sum_{m=0}^9 y_{im} \log(f_m(x_i))$, aka [[Cross Entropy]].
+- We find parameter estimates that minimize the negative [[Log Likelihood]]: $- \sum_{i=1}^n \sum_{m=0}^9 y_{im} \log(f_m(x_i))$, aka [[Log Loss]].
 
 ----
 # Source:

@@ -3,7 +3,7 @@ aliases:
   - KNN
 tags:
   - ds/ml/instance/knn
-edited: 2025-06-03T17:05
+edited: 2025-09-28T22:54
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -47,7 +47,7 @@ Assuming the data is pre-sorted (which takes $\log(N)$, ...)
 | KNN                        | 1 (store as [[ArrayList\|list]])                                                                                                                                           | $k+log(n)$ [[Binary Array Search]] followed by checking within some neighbourhood. | $N$ (save as [[ArrayList\|list]]) | 1               |
 | [[Linear Regression\|OLS]] | $N$ (yes we're doing [[Matrix Inverse]] which is $O(f^3)$ but remember that this is f for each coefficient not each datapoint; we just need to go through all the points). | 1                                                                                  | 1 (scales with features not data) | 1               |
 
-You'll note that in KNN we wait until needed (inference) to learn; thus it is #lazy
+You'll note that in KNN we wait until needed (inference) to learn; thus it is a [[Lazy Algorithm]].
 
 ### Hyperparameters
 
@@ -77,7 +77,7 @@ Instead of averages or modes, we could do something like a local [[Linear Regres
 	1. This is especially true when we have features which are not useful for predicting the values but contribute to distance.
 2. Interpretability
 
-### [[ML Algorithm Bias]]
+### [[Model Bias]]
 1. Locality -- points which are nearby are similar. 
 	1. Based on distance function. Captures the idea of "locality".
 	2. Your distance function is what encodes domain knowledge.

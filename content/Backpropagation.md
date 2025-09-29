@@ -2,7 +2,7 @@
 aliases:
 tags:
   - ds/ml/nn
-edited: 2025-09-03T20:13
+edited: 2025-09-28T22:54
 created: 2024-04-11T18:34
 ---
 # Definition:
@@ -13,7 +13,7 @@ Learning representations by back-propagating errors. (Rumelhart et al 1986)
 
 ----
 # Notes
-#### Assumptions
+### Assumptions
 1. Network has a fixed structure, a directed [[Graph]] (can have cycles).
 	1. Most common are [[Directed Acyclic Graph]] though.
 2. Learning is the same as optimizing the weights for each edge.
@@ -22,7 +22,7 @@ $$f(x_1, x_2) = \ln(x_1) + x_1 x_2 - \sin(x_2)$$
 
 ![[Backprop NN Graph.excalidraw.png.png]]
 
-#### Pseudocode
+### Pseudocode
 ```pseudocode
 Start with ANN with n_i inputs, n_h hidden, and n_o outputs.
 Initialize all weights to be small random.
@@ -50,13 +50,13 @@ This is similar to the methods in [[Gradient Descent]]. However, the update $\de
 
 We have some danger in [[Overfitting]] if we just minimize training error.
 
-#### [[ML Algorithm Bias]]
+### [[Model Bias]]
 - Our **representation bias** is all possible combinations of the weights.
 	- Continuous and differentiable
 - Our **preference bias** generally is to interpolate smoothly between data points.
 	- Hidden layers in a multi-layer perceptron often help determine useful intermediate representations to better learn the data.
 
-#### Backprop from Scratch:
+### Backprop from Scratch
 1. Suppose we want to find some relationship between $x$ and $y$. 
 	1. Assume this must be smooth and a polynomial of degree 5, i.e., $y(x) = k_0 + k_1 x + k_2 x^2 + k_3 x^3 + k_4 x^4 + k_5 x^5$.
 	2. We want to find the values $k_0 ... k_5$ that finds the "best" curve.
@@ -99,23 +99,67 @@ We have some danger in [[Overfitting]] if we just minimize training error.
 	3. **NUDGE $K$!**
 	4. **REPEAT!**
 
-#### Why No Local Optima Issues?
+### Issues
+##### Why No Local Optima Issues?
 - For small number of parameters, we can sometimes follow the gradient until we reach a local optima, and get stuck there.
-- As our model size gets larger, e.g., [[Deep Learning]], we increasingly find that points are [[Saddle Points]]
+- As our model size gets larger, e.g., [[Deep Learning]], we increasingly find that points are [[Saddle Points]].
 - **FOR US TO GET STUCK IN LOCAL MINIMA, WE NEED EVERY SINGLE PARAMETER TO BE IN A LOCAL MINIMA.** Otherwise, we'll be able to move the other weights to escape.
+- Our local minima that we find are "good enough."
 
-#### Modifications and Improvements to Backprop
-###### Momentum
-We could make update based partially on the prior update size:
-$$\Delta w_{@t}= \eta \delta x + \alpha w_{@t-1}$$
-(adding the $\alpha w$ momentum term) allowing us to keep moving past local optima and speed convergence.
+##### Other Issues
+- For [[Stochastic Gradient Descent]], noisy gradient estimates can have high variance.
+	- At [[Saddle Points]], we can often have gradient estimates near zero despite having some directions which can continue to minimize.
+	- To solve this, we can use **Momentum** or per-weight learning.
 
-###### Editing the Loss Function
-- To avoid overfitting, we can penalize the weights $w$ similar to in [[Ridge Regularization]].
-- We could also consider higher order optimization, e.g., for the gradient.
+### Modifications and Improvements to Backprop
+#### Editing the Loss Function
+- [[Regularization]] on the weights $w$ similar to in [[Ridge Regularization]].
 - We can use alternative loss functions like minimizing [[Cross Entropy]].
+- We can include momentum into our optimizer.
 
-#### Computation with [[Automatic Differentiation]]
+#### Using the [[Hessian]] and Pseudo-[[Newton-Raphson]]
+We can use the **second order** approximation!
+- [[Hessian]] is the second order [[Derivative]]
+- Provides measure of "curvature"
+- In theory, this allows us to jump straight to the minimum (i.e., where curve turns)
+- Use in a [[Taylor Series]] approximation.
+
+Example Types:
+- [[Newton-Raphson]]
+- [[BFGS]] and [[L-BFGS]]
+
+Issues:
+1. Hessian is complicated to calculate.
+2. We can approximate this with momentum well enough.
+
+###### Condition Number
+[[Hessian]] can also be used to find the [[Condition Number]], i.e., for some $\delta x$ how large is $\delta y$?
+- Compare the features with the lowest and highest [[Eigenvectors and Eigenvalues|eigenvalue]].
+- High condition number means **very different directions will given very different sizes**
+	- E.g., one direction optimizes very small step, the other needs huge step.
+	- We do not get good learning on directions taking small steps.
+
+#### Per-Parameter [[Optimizer]]s
+To solve parameters having different [[Gradient]] sizes, we can instead have a specific [[Learning Rate]] for each parameter!
+
+Examples
+- [[Adagrad Optimizer]]
+- [[RMSProp Optimizer]]
+- [[Adam Optimizer]] (and [[AdamW Optimizer]])
+- [[Muon Optimizer]]
+
+**Issues**:
+- More complicated algorithms.
+- Do not generalize quite as well as SGD + Momentum.
+- HOWEVER: [[Stochastic Gradient Descent|SGD]] + Momentum takes *a lot more tuning*.
+
+#### [[Learning Rate Scheduler]]
+Needed to dynamically adjust [[Learning Rate]] over time with decay.
+- Step Scheduler: divide by some factor every X epochs (sudden steps)
+- Exponential Scheduler: divide by some factor every epoch (smooth decay)
+- Cyclical Scheduler: cyclically increasing and decreasing learning rate; e.g., we can "pop" out of near-zero-grad regions at high learning rates.
+
+### Computation with [[Automatic Differentiation]]
 1. Input is our data and parameters
 2. Output is our final loss
 3. Scheduling is a [[Topological Sort]] over the [[Directed Acyclic Graph|DAG]] representation of the functions.
@@ -136,7 +180,7 @@ If the gradient flow cannot be computed, or is too small, then learning doesn't 
 - Output: $y \in \{-1,1\}^n$
 - Parameters: $w \in \mathbb{R}^n$
 - Model Form: $\hat{y} = p(y=1 | x) = \frac{1}{1+e^{-w^T x}}$ ([[Sigmoid Function]])
-- Loss: [[Cross Entropy]] with [[Ridge Regularization]]: $-\log(\hat{y}) + \frac{1}{2} \lambda ||w||_2^2$
+- Loss: [[Log Loss]] with [[Ridge Regularization]]: $-\log(\hat{y}) + \frac{1}{2} \lambda ||w||_2^2$
 
 Our compute graph is: $w^T x \rightarrow_u \sigma(u) \rightarrow_p -\log(p) \rightarrow_L$
 
@@ -156,6 +200,7 @@ NOTE: this is easy relatively speaking because the [[Logistic Function]] goes fr
 ### Sources:
 - [Backpropagation from Scratch](https://www.youtube.com/watch?v=SmZmBKc7Lrs)
 - (Rumelhart, Hinton, and Williams, 1986)
-- Mitchell 1997
+- Mitchell Machine Learning
 - [Why don't we get stuck in local optima?](https://www.youtube.com/watch?v=NrO20Jb-hy0) 
 - GaTech DL
+- Goodfellow Deep Learning

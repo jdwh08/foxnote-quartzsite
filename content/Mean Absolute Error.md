@@ -1,8 +1,9 @@
 ---
 aliases:
+  - MAE
 tags:
   - ds/ml/loss_function
-edited: 2025-09-03T19:46
+edited: 2025-09-28T19:06
 created: 2024-03-19T22:06
 ---
 # Definition:

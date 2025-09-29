@@ -3,7 +3,7 @@ aliases:
 tags:
   - ds/ml
   - cs/dsa/optimizers
-edited: 2025-08-27T23:36
+edited: 2025-09-06T15:09
 created: 2024-04-04T22:45
 ---
 # Definition:
@@ -39,6 +39,39 @@ Technically we are no longer guaranteed to converge.
 3. In practice these are pretty good and close to the global optima.
 	1. This is because most places are [[Saddle Points]] and thus there is still a way to manipulate some $w$ to further reduce loss and not get stuck.
 
+### With Momentum
+To solve us potentially getting stuck in low-gradient areas, we can use "momentum"
+
+#### Momentum
+We could make update based partially on the prior update size.
+
+$$v_i = \beta v_{i-1} + \frac{\partial \mathcal{L}}{\partial w_{i-1}}$$
+$$w_i = w_{i-1} - \alpha v_{i}$$
+We calculate the [[Velocity]] of the gradient and update accordingly.
+- Velocity acts as a [[Exponential Moving Average]], where we update prior terms by $\beta$
+- $\beta$ acts like a [[Discount Rate]].
+
+If we imagine this to be like Physics, we can track the [[Velocity]] of our gradient descent.
+Forces that act on us include...
+1. The actual [[Gradient]] (e.g., the slope of the slippery surface that we slide down)
+2. [[Discount Rate]] $\beta$ reduces our velocity like viscous drag.
+
+##### Nesterov Momentum
+A variation on momentum where we...
+1. Assume the [[Velocity]] from above is mostly correct so
+2. We jump straight to where the velocity says we go
+$$\hat{w}_{i-1} = w_{i-1} + \beta v_{i-1}$$
+3. And then use this new position of the weights to do the update
+$$v_i = \beta v_{i-1} + \frac{\partial \mathcal{L}}{\partial \hat{w}_{i-1}}$$
+$$w_i = w_{i-1} - \alpha v_{i}$$
+
+This can ... kinda help converge faster sometimes. 
+If our velocity is a good estimate, e.g., a convex function.
+
 ---
 # Examples:
 Examples
+
+---
+# Source:
+Goodfellow Deep Learning

@@ -3,11 +3,11 @@ aliases:
 tags:
   - ds/nlp
   - ds/ml/bayesian
-edited: 2025-06-12T19:15
+edited: 2025-09-10T22:25
 created: 2024-04-04T23:15
 ---
 ## Definition:
-[[Supervised Machine Learning]] method using [[Bayes' Rule]], and assuming that all features are [[Independent Events|Independent]].
+[[Supervised Machine Learning]] method using [[Bayes' Rule]], and assuming that all features are [[Independent|Independent]].
 
 ---
 ## Notes:

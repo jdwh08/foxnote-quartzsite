@@ -3,7 +3,7 @@ aliases:
 tags:
   - math/calculus
   - math/linear_algebra
-edited: 2025-08-31T17:56
+edited: 2025-09-28T20:53
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -27,8 +27,6 @@ There are two types: **Numerator Notation** and **Denominator Notation**.
 
 - Typically we will use whatever makes the shapes consistent and work out.
 - Generally we default to Numerator Notation.
-
-
 
 ### Rules
 ##### Binary Operators

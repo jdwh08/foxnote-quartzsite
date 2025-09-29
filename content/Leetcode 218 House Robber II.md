@@ -1,18 +1,15 @@
 ---
-aliases:
+aliases: 
 tags:
   - cs/leetcode/medium
   - cs/dsa/dp
-edited: 2025-08-30T19:13
+edited: 2025-09-23T15:56
 created: 2025-07-23T18:42:00
 ---
 # Problem:
 You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed. All houses at this place are **arranged in a circle.** That means the first house is the neighbor of the last one. Meanwhile, adjacent houses have a security system connected, and **it will automatically contact the police if two adjacent houses were broken into on the same night**.
 
 Given an integer array `nums` representing the amount of money of each house, return _the maximum amount of money you can rob tonight **without alerting the police**_.
-
-NOTE: 
-- Basically [[Leetcode 198 House Robber]] except now we have a circle of houses, so there is "wrap-around" neighbours from index $0$ to $len-1$.
 
 #### Bounds
 - `1 <= nums.length <= 100`
@@ -31,7 +28,9 @@ Explanation:
 
 ---
 # Notes:
-Notes
+
+- Basically [[Leetcode 198 House Robber]] except now we have a circle of houses, so there is "wrap-around" neighbours from index $0$ to $len-1$.
+
 
 ---
 # Attempts:

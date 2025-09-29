@@ -1,9 +1,9 @@
 ---
-aliases: 
+aliases:
 tags:
   - ds/ml
   - cs/dsa/optimizers
-edited: 2025-06-12T19:45
+edited: 2025-09-28T22:54
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -41,13 +41,13 @@ This is basically random [[Beam Search]].
 A method of combining from parents to create new options.
 
 1. **One-Point Crossover**: Pick some random point to divide on, and have all attributes before and after come from one of the parents.
-	1. [[ML Algorithm Bias]]: 
+	1. [[Model Bias]]: 
 		1. Position matters (things together belong together)
 		2. There is some way to optimize this by dividing the attributes into subspaces.
 2. **N-Point Crossover**: Pick $N$ random points to divide on, and have all attributes within the section come from one or the other parent.
 3. **Uniform Crossover**: For each possible attribute, randomly decide which of the parents this comes from.
 	1. NOTE: This is the biological one acting at the Gene Level.
-	2. [[ML Algorithm Bias]]: We assume there is some way to optimize this by dividing the attributes into subspaces
+	2. [[Model Bias]]: We assume there is some way to optimize this by dividing the attributes into subspaces
 4. **Point Mutation**: Randomly change a value at some point.
 
 ### Fitness Function

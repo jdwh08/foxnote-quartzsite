@@ -2,7 +2,7 @@
 aliases: 
 tags:
   - ds/ml/trees
-edited: 2025-02-16T20:05
+edited: 2025-09-23T16:16
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -28,7 +28,7 @@ $$\min \sum_{m=1}^{|T|} \sum_{x_i \in R_m} (y_i - \hat{y}_{R_m})^2 + \alpha |T|$
 - Branches are pruned in a very predictable fashion, so it's easy to get the best subtrees as a function of $\alpha$.
 
 ### `Pseudcode` for Regression Trees with Pruning
-1. Create a tree using recursive binary splitting, e.g., [[ID3 (Decision Tree Algorithm)]].
+1. Create a tree using recursive binary splitting, e.g., [[ID3]].
 2. Use cost-complexity pruning to get the sequence of best subtrees based on $\alpha$.
 3. Use [[K-Fold Cross Validation]] to choose the best $\alpha$.
 4. Return the pruned tree that corresponds to the best $\alpha$.

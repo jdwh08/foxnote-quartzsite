@@ -2,7 +2,7 @@
 aliases:
 tags:
   - ds/ml/theory
-edited: 2025-08-28T20:17
+edited: 2025-09-26T13:28
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -22,10 +22,12 @@ E.g., "a string of points in a 2D plane". We can then move along the string.
 
 - If this holds, we can do a [[Change of Basis]] and use the manifold as our way to represent the data!
 
+- We can approximate this manifold with a model that learns [[Latent Space]], e.g., [[Autoencoder]].
+
 ---
 # Examples:
 Examples
 
 ----
 # Source:
-Source
+Goodfellow Deep Learning
