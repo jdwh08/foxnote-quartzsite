@@ -45,8 +45,11 @@ function Process-MarkdownFile {
     # Process Excalidraw references
     $content = $content -replace '\.excalidraw\b', '.excalidraw.png'
     
+    # # Process Obsidian image references to markdown format
+    # $content = $content -replace '!\[\[([^\]]*)\]\]', '![]($1)'
+    
     # Process image references to use relative paths
-    $content = $content -replace '!\[([^\]]*)\]\(([^)]*_Media[^)]*)\)', '![$1]($2)'
+    # $content = $content -replace '!\[([^\]]*)\]\(([^)]*_Media[^)]*)\)', '![$1]($2)'
     
     # Write back to file
     $content | Set-Content $FilePath -NoNewline
@@ -110,10 +113,12 @@ Write-Step "Setting up temporary directory..."
 if (!(Test-Path $WindowsTempDir)) {
     New-Item -ItemType Directory -Path $WindowsTempDir -Force | Out-Null
     Write-Success "Created temporary directory"
-} elseif (Test-Path "$WindowsTempDir\*") {
+}
+elseif (Test-Path "$WindowsTempDir\*") {
     Remove-Item -Path "$WindowsTempDir\*" -Recurse -Force -ErrorAction Stop
     Write-Success "Cleaned existing temporary directory"
-} else {
+}
+else {
     Write-Success "Using empty temporary directory"
 }
 
@@ -121,7 +126,8 @@ Write-Step "Copying files to temporary location..."
 try {
     Copy-Item -Path "$WindowsSourceDir\*" -Destination $WindowsTempDir -Recurse -Force -ErrorAction Stop
     Write-Success "Files copied to temporary location"
-} catch {
+}
+catch {
     Write-Error "Failed to copy files: $_"
     exit 1
 }
@@ -152,10 +158,12 @@ if (Test-Path $WindowsMediaDir) {
             Copy-Item -Path $file.FullName -Destination $targetPath -Force
         }
         Write-Success "Media files copied to temporary directory"
-    } else {
+    }
+    else {
         Write-Info "No media files found to copy"
     }
-} else {
+}
+else {
     Write-Info "No _Media directory found in source"
 }
 
@@ -185,11 +193,13 @@ if ($PSVersion -ge 7) {
             # Process the file
             Process-MarkdownFile -FilePath $_.FullName
         } -ErrorAction Stop
-    } catch {
+    }
+    catch {
         Write-Error "Error during parallel processing: $_"
         exit 1
     }
-} else {
+}
+else {
     # PowerShell 5.1 - Use jobs for parallel processing
     Write-Info "Using PowerShell jobs for parallel processing"
     
@@ -251,7 +261,8 @@ if ($PSVersion -ge 7) {
         
         # Clean up jobs
         $jobs | Remove-Job -Force
-    } catch {
+    }
+    catch {
         Write-Progress -Activity "Processing Files" -Completed
         Write-Error "Error during parallel processing: $_"
         Get-Job | Remove-Job -Force -ErrorAction SilentlyContinue
@@ -268,7 +279,8 @@ try {
         $excalidrawFiles | Remove-Item -Force
         Write-Info "Removed $($excalidrawFiles.Count) Excalidraw markdown files"
     }
-} catch {
+}
+catch {
     Write-Warning "Failed to clean up some Excalidraw files: $_"
 }
 
@@ -277,14 +289,16 @@ try {
     # Ensure Quartz content directory exists and is empty
     if (!(Test-Path $WindowsQuartzContentDir)) {
         New-Item -ItemType Directory -Path $WindowsQuartzContentDir -Force | Out-Null
-    } else {
+    }
+    else {
         Remove-Item -Path "$WindowsQuartzContentDir\*" -Recurse -Force
     }
 
     # Move processed files to Quartz content directory
     Copy-Item -Path "$WindowsTempDir\*" -Destination $WindowsQuartzContentDir -Recurse -Force
     Write-Success "Files moved to Quartz content directory"
-} catch {
+}
+catch {
     Write-Error "Failed to move files to Quartz content directory: $_"
     exit 1
 }

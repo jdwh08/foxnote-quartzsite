@@ -141,9 +141,11 @@ find "$DIRECTORY" -type f -name "*.md" -print0 | parallel -0 -j "$CORES" '
         }
         
         function process_images(line) {
-            # Process image references to use relative paths
-            gsub(/!\[([^\]]*)\]\(([^)]*_Media[^)]*)\)/, "![\\1](\\2)", line)
-            return line
+            # # Process Obsidian image references to markdown format
+            # gsub(/!\[\[([^\]]*)\]\]/, "![](\\1)", line)
+            # # Process image references to use relative paths
+            # gsub(/!\[([^\]]*)\]\(([^)]*_Media[^)]*)\)/, "![\\1](\\2)", line)
+            # return line
         }
         
         NR == 1 && /^---$/ {
@@ -188,11 +190,13 @@ find "$DIRECTORY" -type f -print0 | parallel -0 -j "$CORES" '
 '
 log_success "Paths cleaned up"
 
-# Final step: Copy to Quartz content directory
-log_step "Copying processed files to Quartz content directory..."
-mkdir -p "$QUARTZ_CONTENT_DIR"
-cp -r "$TEMP_EXPORT_DIR"/* "$QUARTZ_CONTENT_DIR"
-log_success "Files copied to Quartz content directory"
+# Final step: Copy to Quartz content directory if specified differently
+if [ "$QUARTZ_CONTENT_DIR" != "$SOURCE_DIR/content" ]; then
+    log_step "Copying processed files to Quartz content directory..."
+    mkdir -p "$QUARTZ_CONTENT_DIR"
+    cp -r "$TEMP_EXPORT_DIR"/* "$QUARTZ_CONTENT_DIR"
+    log_success "Files copied to Quartz content directory"
+fi
 
 # Build and deploy
 log_step "Building Quartz site..."

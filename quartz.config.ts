@@ -18,7 +18,7 @@ const config: QuartzConfig = {
     analytics: null,
     locale: "en-US",
     baseUrl: "jdwh08.github.io/foxnote-quartzsite",
-    ignorePatterns: ["^PRIVATE", "_ObsidianTemplates", ".obsidian", ".trash"],
+    ignorePatterns: ["**/^PRIVATE", "**/_ObsidianTemplates", "**/.obsidian", "**/.trash"],
     defaultDateType: "created",
     generateSocialImages: false,
     theme: {

@@ -1,4 +1,6 @@
 .quartz-cache
 content/.trash/*
 content/!!!*
-public/
+content/^PRIVATE/
+content/_ObsidianTemplates/
+content/_Calendar/*
