@@ -1,11 +1,11 @@
 #! /bin/bash
 
 # Configuration parameters
-SOURCE_DIR="${SOURCE_DIR:-/c/Users/jdwh0/Obsidian/Lavafox}"                    # Source directory (default: Lavafox vault)
+SOURCE_DIR="${SOURCE_DIR:-/c/Users/jdwh0/Obsidian/Lavafox}"                            # Source directory (default: Lavafox vault)
 EXCALIDRAW_DIR="${EXCALIDRAW_DIR:-/c/Users/jdwh0/Obsidian/Lavafox/_Media/Excalidraw}"  # Directory containing Excalidraw files
-TEMP_EXPORT_DIR="${TEMP_EXPORT_DIR:-/c/Users/jdwh0/Obsidian/temp}"            # Temporary export directory
-QUARTZ_PROJECT_DIR="${QUARTZ_PROJECT_DIR:-/c/Users/jdwh0/Obsidian/quartzsite}" # Quartz project root directory
-QUARTZ_CONTENT_DIR="${QUARTZ_CONTENT_DIR:-$QUARTZ_PROJECT_DIR/content}"       # Final output directory for Quartz
+TEMP_EXPORT_DIR="${TEMP_EXPORT_DIR:-/c/Users/jdwh0/Obsidian/temp}"                     # Temporary export directory
+QUARTZ_PROJECT_DIR="${QUARTZ_PROJECT_DIR:-/c/Users/jdwh0/Obsidian/quartzsite}"         # Quartz project root directory
+QUARTZ_CONTENT_DIR="${QUARTZ_CONTENT_DIR:-$QUARTZ_PROJECT_DIR/content}"                # Final output directory for Quartz
 
 # Convert Windows paths to Unix-style for WSL compatibility
 SOURCE_DIR=$(echo "$SOURCE_DIR" | sed 's/\\/\//g')
@@ -67,6 +67,33 @@ log_step "Copying files to temporary location..."
 cp -r -p "$SOURCE_DIR"/* "$TEMP_EXPORT_DIR"
 log_success "Files copied to temporary location"
 
+# Copy media files to temporary directory
+log_step "Copying media files..."
+MEDIA_DIR="$SOURCE_DIR/_Media"
+
+if [ -d "$MEDIA_DIR" ]; then
+    # Copy all media files (images, videos, etc.) to temp directory
+    media_files=$(find "$MEDIA_DIR" -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" -o -name "*.gif" -o -name "*.webp" -o -name "*.svg" -o -name "*.mp4" -o -name "*.webm" -o -name "*.ogg" -o -name "*.pdf" \) 2>/dev/null | wc -l)
+    
+    if [ "$media_files" -gt 0 ]; then
+        log_info "Found $media_files media files to copy"
+        # Copy files preserving directory structure
+        find "$MEDIA_DIR" -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" -o -name "*.gif" -o -name "*.webp" -o -name "*.svg" -o -name "*.mp4" -o -name "*.webm" -o -name "*.ogg" -o -name "*.pdf" \) -exec sh -c '
+            for file; do
+                rel_path="${file#$MEDIA_DIR/}"
+                target_dir="$TEMP_EXPORT_DIR/$(dirname "$rel_path")"
+                mkdir -p "$target_dir"
+                cp "$file" "$TEMP_EXPORT_DIR/$rel_path"
+            done
+        ' sh {} +
+        log_success "Media files copied to temporary directory"
+    else
+        log_info "No media files found to copy"
+    fi
+else
+    log_info "No _Media directory found in source"
+fi
+
 # Directory containing the files for processing
 DIRECTORY="$TEMP_EXPORT_DIR"
 
@@ -113,6 +140,12 @@ find "$DIRECTORY" -type f -name "*.md" -print0 | parallel -0 -j "$CORES" '
             return line
         }
         
+        function process_images(line) {
+            # Process image references to use relative paths
+            gsub(/!\[([^\]]*)\]\(([^)]*_Media[^)]*)\)/, "![\\1](\\2)", line)
+            return line
+        }
+        
         NR == 1 && /^---$/ {
             FRONT_MATTER = 1
             print
@@ -129,6 +162,7 @@ find "$DIRECTORY" -type f -name "*.md" -print0 | parallel -0 -j "$CORES" '
         {
             if (!FRONT_MATTER || P) {
                 $0 = process_equations($0)
+                $0 = process_images($0)
                 print $0 "  "
             } else {
                 print
@@ -154,13 +188,11 @@ find "$DIRECTORY" -type f -print0 | parallel -0 -j "$CORES" '
 '
 log_success "Paths cleaned up"
 
-# Final step: Copy to Quartz content directory if specified differently
-if [ "$QUARTZ_CONTENT_DIR" != "$SOURCE_DIR/content" ]; then
-    log_step "Copying processed files to Quartz content directory..."
-    mkdir -p "$QUARTZ_CONTENT_DIR"
-    cp -r "$TEMP_EXPORT_DIR"/* "$QUARTZ_CONTENT_DIR"
-    log_success "Files copied to Quartz content directory"
-fi
+# Final step: Copy to Quartz content directory
+log_step "Copying processed files to Quartz content directory..."
+mkdir -p "$QUARTZ_CONTENT_DIR"
+cp -r "$TEMP_EXPORT_DIR"/* "$QUARTZ_CONTENT_DIR"
+log_success "Files copied to Quartz content directory"
 
 # Build and deploy
 log_step "Building Quartz site..."

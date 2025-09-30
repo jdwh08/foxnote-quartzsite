@@ -4,7 +4,7 @@ aliases:
 tags:
   - ds/ml/nn/cnn
   - todo/breakup
-edited: 2025-09-28T22:42
+edited: 2025-09-29T17:34
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -22,6 +22,7 @@ Architectural design intended for image-based tasks.
 - For images, we believe features are **local spatially**, i.e., small patches of nearby images are good enough to get features like edges, colours, motifs (corners, etc).
 - **Local features are combined together**, i.e., we do not randomly have corners appear nowhere; they are combined to make a larger object.
 - **Local features can appear anywhere**, i.e., not tied to specific locations in an image!
+- **Receptive Field** is the area that a given kernel can "see" from the original image.
 
 - [[Convolution]] is multiplying matrix elements and then adding results.
 	- Input is only a $K_1 \times K_2$ patch called **receptive field**
@@ -185,6 +186,12 @@ $$\frac{\partial \mathcal{L}}{\partial x@(r,c)} = \sum_{a=0}^{k_1-1} \sum_{b=0}^
 ## Data Augmentation
 To ensure CNNs learn well, we can take each input (e.g., image), and then distort it slightly while still being recognizable (e.g., scale, rotate, flip, shear, etc.)
 - Acts similar to [[Ridge Regularization]]?
+- Prevents [[Adversarial Model Attack]]
+
+## [[Model Bias]]
+- Shape vs Texture Bias. IMAGENET trained CNNs are biased towards texture (Geirhos 2018)
+	- E.g., if we use the shape of a cat but the texture of an elephant, CNN will predict elephant but humans predict cat.
+	- Stronger models [[ResNet]] more biased towards texture than weaker ones [[AlexNet]]
 
 ---
 # Examples:

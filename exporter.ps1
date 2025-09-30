@@ -45,6 +45,9 @@ function Process-MarkdownFile {
     # Process Excalidraw references
     $content = $content -replace '\.excalidraw\b', '.excalidraw.png'
     
+    # Process image references to use relative paths
+    $content = $content -replace '!\[([^\]]*)\]\(([^)]*_Media[^)]*)\)', '![$1]($2)'
+    
     # Write back to file
     $content | Set-Content $FilePath -NoNewline
     
@@ -121,6 +124,39 @@ try {
 } catch {
     Write-Error "Failed to copy files: $_"
     exit 1
+}
+
+Write-Step "Copying media files..."
+# Copy media files to Quartz content directory
+$WindowsMediaDir = Join-Path $WindowsSourceDir "_Media"
+
+if (Test-Path $WindowsMediaDir) {
+    # Copy all media files (images, videos, etc.) to temp directory first
+    $mediaFiles = Get-ChildItem -Path $WindowsMediaDir -Recurse -File | Where-Object { 
+        $_.Extension -match '\.(png|jpg|jpeg|gif|webp|svg|mp4|webm|ogg|pdf)$' 
+    }
+    
+    if ($mediaFiles.Count -gt 0) {
+        Write-Info "Found $($mediaFiles.Count) media files to copy"
+        foreach ($file in $mediaFiles) {
+            $relativePath = $file.FullName.Substring($WindowsMediaDir.Length + 1)
+            $targetPath = Join-Path $WindowsTempDir $relativePath
+            $targetDir = Split-Path $targetPath -Parent
+            
+            # Create target directory if it doesn't exist
+            if (!(Test-Path $targetDir)) {
+                New-Item -ItemType Directory -Path $targetDir -Force | Out-Null
+            }
+            
+            # Copy file preserving directory structure
+            Copy-Item -Path $file.FullName -Destination $targetPath -Force
+        }
+        Write-Success "Media files copied to temporary directory"
+    } else {
+        Write-Info "No media files found to copy"
+    }
+} else {
+    Write-Info "No _Media directory found in source"
 }
 
 Write-Step "Processing files in parallel..."

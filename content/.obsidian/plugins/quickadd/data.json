@@ -102,7 +102,35 @@
         "chooseFromSubfolders": false
       },
       "appendLink": false,
-      "openFile": false,
+      "openFile": true,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "mode": "default",
+        "focus": true
+      },
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": false
+    },
+    {
+      "id": "12db603f-3efc-4b9f-97ef-77a40440b1c6",
+      "name": "Note 📝",
+      "type": "Template",
+      "command": true,
+      "templatePath": "_ObsidianTemplates/_BasicNote.md",
+      "fileNameFormat": {
+        "enabled": false,
+        "format": ""
+      },
+      "folder": {
+        "enabled": false,
+        "folders": [],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFile": true,
       "fileOpening": {
         "location": "tab",
         "direction": "vertical",

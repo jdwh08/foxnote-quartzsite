@@ -1,8 +1,8 @@
 ---
-aliases: 
+aliases:
 tags:
   - ds/ml/nn
-edited: 2025-09-20T13:23
+edited: 2025-09-30T10:25
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -132,6 +132,7 @@ This is the dominant view.
 	- Adding momentum to get out of holes.
 - [[Adagrad Optimizer]], [[RMSProp Optimizer]] for estimating the [[Hessian]] in a Pseudo-[[Newton-Raphson]] method.
 - [[Adam Optimizer]], [[AdamW Optimizer]] for adding momentum to the Psuedo-Newton stuff above.
+- [[Lion Optimizer]]
 - [[Muon Optimizer]]
 
 ##### Architecture / Structure Based
