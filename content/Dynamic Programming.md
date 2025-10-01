@@ -3,7 +3,7 @@ aliases:
   - DP
 tags:
   - cs/dsa/dp
-edited: 2025-09-27T18:41
+edited: 2025-09-30T19:34
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -83,7 +83,7 @@ DP can collapse a variable if the transitions for that variables don't affect or
 # Examples:
 
 ## Fibonacci
-![[Fibonacci DP.excalidraw.png.png]]
+![[Fibonacci DP.png]]
 
 ```python
 # basic recursion

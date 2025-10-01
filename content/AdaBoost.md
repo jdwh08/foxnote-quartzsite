@@ -1,8 +1,8 @@
 ---
-aliases: 
+aliases:
 tags:
   - ds/ml/trees
-edited: 2025-07-26T18:34
+edited: 2025-09-30T19:34
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -28,7 +28,7 @@ $$\underset{\alpha}{\arg\min}\ L_t=\sum_i^N L_t({F_{t-1}(x_i)+\alpha \hat{f}(x_i
 3. Determine the weight of the tree based on its performance.
 	1. Obtain the [[Classification Error Rate]], but weighted for each sample: $CERw=\frac{1}{N} \sum_i^N w_i*\mathbb{1}(y_i \neq \hat{y_i})$
 	2. Calculate the "Amount of Say": $1/2 * log\left(\frac{1-CERw + \epsilon}{CERw + \epsilon}\right)$. The better the classification, the higher the amount of say. Random gets zero. Bad gets negative weight.
-	3.  ![[Adaboost_Amount_of_Say.excalidraw.png.svg|454x420]] 
+	3.  ![[Adaboost_Amount_of_Say.png|454x420]] 
 4. Adjust the sample weights for the new tree.
 	1. Incorrect: $w_{i}(t+1)=w_i(t) \times e^{\text{Amount of Say}}$. This increases with AoS.
 	2. Correct: $w_{i}(t+1)=w_i(t) \times e^{-\text{Amount of Say}}$. This decreases with AoS.

@@ -4,7 +4,7 @@ aliases:
 tags:
   - ds/ml/nn/cnn
   - todo/breakup
-edited: 2025-09-29T17:34
+edited: 2025-09-30T19:34
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -27,7 +27,7 @@ Architectural design intended for image-based tasks.
 - [[Convolution]] is multiplying matrix elements and then adding results.
 	- Input is only a $K_1 \times K_2$ patch called **receptive field**
 	- Reduces parameters needed to $(K_1 \times K_2 + 1) * N_{output}$
-![[Convolution.excalidraw.png.png|265x358]]
+![[Convolution.png|265x358]]
 - Convolutions will represent specific *local features*.
 	- We can share the same local feature extractor across the entire image! I.e., $N_{output}$ is less than full.
 - If the image matches the convolution well, it will have a high value!

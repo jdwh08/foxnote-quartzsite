@@ -42,8 +42,8 @@ function Process-MarkdownFile {
     # Read file content
     $content = Get-Content $FilePath -Raw
     
-    # Process Excalidraw references
-    $content = $content -replace '\.excalidraw\b', '.excalidraw.png'
+    # Process Excalidraw references - convert .excalidraw.png to .png
+    $content = $content -replace '\.excalidraw\.png\b', '.png'
     
     # # Process Obsidian image references to markdown format
     # $content = $content -replace '!\[\[([^\]]*)\]\]', '![]($1)'
@@ -167,6 +167,22 @@ else {
     Write-Info "No _Media directory found in source"
 }
 
+Write-Step "Renaming Excalidraw image files..."
+# Rename .excalidraw.png files to .png
+$excalidrawImageFiles = Get-ChildItem -Path $WindowsTempDir -Filter "*.excalidraw.png" -Recurse -File
+if ($excalidrawImageFiles.Count -gt 0) {
+    Write-Info "Found $($excalidrawImageFiles.Count) Excalidraw image files to rename"
+    foreach ($file in $excalidrawImageFiles) {
+        $newName = $file.Name -replace '\.excalidraw\.png$', '.png'
+        Rename-Item -Path $file.FullName -NewName $newName -Force
+        Write-Info "Renamed: $($file.Name) -> $newName"
+    }
+    Write-Success "Excalidraw image files renamed"
+}
+else {
+    Write-Info "No Excalidraw image files found to rename"
+}
+
 Write-Step "Processing files in parallel..."
 # Get all markdown files
 $markdownFiles = Get-ChildItem -Path $WindowsTempDir -Filter "*.md" -Recurse -File
@@ -217,8 +233,8 @@ else {
             # Read file content
             $content = Get-Content $FilePath -Raw
             
-            # Process Excalidraw references
-            $content = $content -replace '\.excalidraw\b', '.excalidraw.png'
+            # Process Excalidraw references - convert .excalidraw.png to .png
+            $content = $content -replace '\.excalidraw\.png\b', '.png'
             
             # Write back to file
             $content | Set-Content $FilePath -NoNewline
@@ -251,7 +267,7 @@ else {
         
         # Wait for all jobs to complete and collect results
         foreach ($job in $jobs) {
-            $result = $job | Wait-Job | Receive-Job -ErrorAction Stop
+            $job | Wait-Job | Receive-Job -ErrorAction Stop | Out-Null
             if ($job.State -eq 'Failed') {
                 throw "Job failed: $($job.ChildJobs[0].JobStateInfo.Reason.Message)"
             }

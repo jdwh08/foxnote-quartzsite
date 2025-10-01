@@ -1,9 +1,9 @@
 ---
-aliases: 
+aliases:
 tags:
   - ds/ml
   - stats
-edited: 2025-02-16T16:25
+edited: 2025-09-30T19:34
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -17,7 +17,7 @@ To get a good MSE, we need both low (squared) bias and low variance.
 - Thus, there is often a tradeoff that occurs between bias and variance. This drives [[Overfitting]].
 - The best theoretically would be the variance of the [[Statistical Learning|Irreducible Error]].
 
-![[Bias-Variance.excalidraw.png.svg]]
+![[Bias-Variance.png]]
 
 ---
 # Notes:

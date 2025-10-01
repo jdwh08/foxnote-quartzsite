@@ -3,7 +3,7 @@
   "addRibbonIcon": true,
   "promptUser": true,
   "promptForBigFiles": true,
-  "attachmentsExtensions": ".jpg|.jpeg|.png|.gif|.svg|.pdf",
+  "attachmentsExtensions": ".jpg|.jpeg|.excalidraw.png|.gif|.svg|.pdf",
   "defaultOperation": "trash",
   "expiredAttribute": "expires",
   "expiredDateFormat": "YYYY-MM-DD",

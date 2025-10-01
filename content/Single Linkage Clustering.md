@@ -1,8 +1,8 @@
 ---
-aliases: 
+aliases:
 tags:
   - ds/ml/cluster
-edited: 2025-07-27T14:41
+edited: 2025-09-30T19:34
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -22,7 +22,7 @@ Formally, this is a [[Hierarchical Agglomerative Clustering]] method.
 	1. Each time you run it, you combine two clusters into one.
 	2. NOTE: once data points are in the same cluster, their inter-cluster distance is ZERO. Don't forget this!
 
-![[Single Linkage Clustering.excalidraw.png.png]]
+![[Single Linkage Clustering.png]]
 We can also draw this as a [[Tree]] where we gradually merge everything into becoming the root node.
 
 #### Properties

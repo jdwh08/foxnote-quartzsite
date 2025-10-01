@@ -5,7 +5,7 @@ tags:
   - math/linear_algebra
   - ds/ml/featureeng
   - ds/dimension_reduction
-edited: 2025-09-26T13:41
+edited: 2025-09-30T19:41
 created: 2024-03-26T21:39
 ---
 ### Definition:
@@ -47,7 +47,7 @@ We assume that $X$ is drawn from some underlying statistical distribution (typic
 	- To keep the most information possible, we want to be sure to use a vector $u$ whose variance is large so it captures more variation in the higher-dimensional space.
 	- $Proj_{u_1}(x_i) = u_1^T x_i u$, where $u_1^T x_i$ is the [[Dot Product]] written out as [[Matrix Product]], and $u$ is the vector that controls the direction.
 
-![[PCA.excalidraw.png.svg|600x100%]]
+![[PCA.png]]
 
 Anyway... here's the procedure:
 - Calculate the mean row: $\bar{x} = \frac{1}{n} \sum \limits_{i=1}^n x_i$

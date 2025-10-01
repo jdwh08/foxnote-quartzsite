@@ -3,7 +3,7 @@ aliases:
   - RNN
 tags:
   - ds/ml/nn/rnn
-edited: 2025-09-03T21:09
+edited: 2025-09-30T19:34
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -30,7 +30,7 @@ $$A_{lk} = g(w_{k0} + \sum_{j=1}^p w_{kj} X_{lj} + \sum_{s=1}^K u_{ks} A_{l-1, s
 $$O_L=\beta_0 + \sum_{k=1}^K \beta_k A_{lk}$$
 - where $\beta$ is the weight for each layer's activation.
 
-![[RNN.excalidraw.png.png]]
+![[RNN.png]]
 
 
 Loss function is usually [[Mean Squared Error|MSE]] for the final output $O_L$ against the true $Y$. We ignore all the intermediate output predictions.

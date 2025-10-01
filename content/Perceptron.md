@@ -3,7 +3,7 @@ aliases:
   - Feed Forward Neural Network
 tags:
   - ds/ml/nn
-edited: 2025-09-28T22:54
+edited: 2025-09-30T19:34
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -32,7 +32,7 @@ In a **Perceptron** (oldest ANN), the activation function is some threshold whic
 		- XOR is basically OR minus AND.
 		- Set the weight on $x_1$ AND $x_2$ to be negative and overpower the $w_1, w_2$ positive weights.
 
-![[Perceptron_XOR.excalidraw.png.png]]
+![[Perceptron_XOR.png]]
 
 - Any bounded [[Continuous Function]] can be represented with arbitrarily small error by stitching together neurons representing each piece within one hidden layer. (Cybenko 1989, Hornik et al 1989)
 - Any Arbitrary Function can be represented with at least two hidden layers (Cybenko 1989); this is the [[Universal Approximation Theorem]]**.

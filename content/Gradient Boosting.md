@@ -1,8 +1,8 @@
 ---
-aliases: 
+aliases:
 tags:
   - ds/ml
-edited: 2025-07-26T14:15
+edited: 2025-09-30T17:45
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -19,7 +19,7 @@ A type of [[Boosting]] which *directly* predicts the [[Residuals]] or errors fro
 	2. Scale the new tree by some [[Learning Rate]] $\lambda$ to prevent us from [[Overfitting]] immediately.
 	3. Combine the new tree with the prior initial guess and tree(s).
 		1. $F_{t+1}=F_{t}+\lambda f_t(x)$
-	4. Update our prediction target to the new pseudo-residuals: $y_{🎯t+1} = y_{🎯t} - \lambda * f_t(x)$
+	4. Update our prediction target to the new pseudo-residuals: $y_{t+1} = y_{t} - \lambda * f_t(x)$
 ##### Key Parameters:
 1. Number of trees $T$. Can [[Overfitting|Overfit]] if too large.
 2. [[Learning Rate]] $\lambda$, typically $0.01$ or $0.001$
@@ -36,7 +36,7 @@ A type of [[Boosting]] which *directly* predicts the [[Residuals]] or errors fro
 	3. Combine the new tree with the prior initial guess and tree(s).
 		1. $F_{t+1}=F_{t}+\lambda f_t(x)$
 	4. Get the new pseudo-residuals using [[Logistic Function]] for probability.
-	5. Update our prediction target to the new pseudo-residuals: $y_{🎯t+1} = y_{🎯t} - \lambda * f_t(x)$
+	5. Update our prediction target to the new pseudo-residuals: $y_{t+1} = y_{t} - \lambda * f_t(x)$
 
 #### Why it Works:
 - Taking small steps with $\lambda$ towards predicting residuals slowly approximates [[Gradient Descent]].

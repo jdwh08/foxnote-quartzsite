@@ -3,7 +3,7 @@ aliases:
   - Gaussian Distribution
 tags:
   - stats/distributions
-edited: 2025-02-15T20:24
+edited: 2025-09-30T19:34
 created: 2024-03-04T20:57
 ---
 ### Definition:
@@ -25,7 +25,7 @@ What are these values?
 You can look up the probability tables for the normal distribution CDF!
 For example, consider this one-tailed distribution: $\Phi(z)=P(Z<z)$ 
 
-![[Normal_Distribution_Z.excalidraw.png.svg]]
+![[Normal_Distribution_Z.png]]
 
 | [[Z-Score]] | x.x0   | x.x1   | x.x2   | x.x3   | x.x4   | x.x5   | x.x6   | x.x7   | x.x8   | x.x9   |
 | ----------- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |

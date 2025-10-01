@@ -15199,7 +15199,7 @@ const IMAGE_EXTENSIONS = Object.freeze(new Set([
     ".tif",
     ".tiff",
     ".gif",
-    ".png",
+    ".excalidraw.png",
     ".apng",
     ".avif",
     ".jpg",

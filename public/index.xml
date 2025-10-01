@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>🦊 Jonathan&#039;s FoxNotes</title>
+      <link>https://jdwh08.github.io/foxnote-quartzsite</link>
+      <description>Last 10 notes on 🦊 Jonathan&#039;s FoxNotes</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>Tree_XOR</title>
+    <link>https://jdwh08.github.io/foxnote-quartzsite/_Media/Tree_XOR</link>
+    <guid>https://jdwh08.github.io/foxnote-quartzsite/_Media/Tree_XOR</guid>
+    <description><![CDATA[ ⚠ Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ]]></description>
+    <pubDate>Tue, 30 Sep 2025 20:57:27 GMT</pubDate>
+  </item><item>
+    <title>Perceptron Rule</title>
+    <link>https://jdwh08.github.io/foxnote-quartzsite/_Media/Perceptron-Rule</link>
+    <guid>https://jdwh08.github.io/foxnote-quartzsite/_Media/Perceptron-Rule</guid>
+    <description><![CDATA[ ⚠ Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ]]></description>
+    <pubDate>Tue, 30 Sep 2025 20:57:27 GMT</pubDate>
+  </item><item>
+    <title>LinkedList</title>
+    <link>https://jdwh08.github.io/foxnote-quartzsite/_Media/LinkedList</link>
+    <guid>https://jdwh08.github.io/foxnote-quartzsite/_Media/LinkedList</guid>
+    <description><![CDATA[ ⚠ Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ]]></description>
+    <pubDate>Tue, 30 Sep 2025 20:57:27 GMT</pubDate>
+  </item><item>
+    <title>ETA System Design Uber 2022</title>
+    <link>https://jdwh08.github.io/foxnote-quartzsite/_Media/ETA-System-Design-Uber-2022</link>
+    <guid>https://jdwh08.github.io/foxnote-quartzsite/_Media/ETA-System-Design-Uber-2022</guid>
+    <description><![CDATA[ ⚠ Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ]]></description>
+    <pubDate>Tue, 30 Sep 2025 20:57:27 GMT</pubDate>
+  </item><item>
+    <title>Boosting_Classification_PseudoResid.excaldraw</title>
+    <link>https://jdwh08.github.io/foxnote-quartzsite/_Media/Boosting_Classification_PseudoResid.excaldraw</link>
+    <guid>https://jdwh08.github.io/foxnote-quartzsite/_Media/Boosting_Classification_PseudoResid.excaldraw</guid>
+    <description><![CDATA[ ⚠ Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ]]></description>
+    <pubDate>Tue, 30 Sep 2025 20:57:27 GMT</pubDate>
+  </item><item>
+    <title>!!!Sampling</title>
+    <link>https://jdwh08.github.io/foxnote-quartzsite/!!!Sampling</link>
+    <guid>https://jdwh08.github.io/foxnote-quartzsite/!!!Sampling</guid>
+    <description><![CDATA[ Rejection Sampling Importance sampling MCMC Gibbs Metropolis Hastings. ]]></description>
+    <pubDate>Thu, 21 Aug 2025 15:05:00 GMT</pubDate>
+  </item><item>
+    <title>!!!System Design in an Hour</title>
+    <link>https://jdwh08.github.io/foxnote-quartzsite/!!!System-Design-in-an-Hour</link>
+    <guid>https://jdwh08.github.io/foxnote-quartzsite/!!!System-Design-in-an-Hour</guid>
+    <description><![CDATA[ www.youtube.com/watch. ]]></description>
+    <pubDate>Fri, 08 Aug 2025 02:48:00 GMT</pubDate>
+  </item><item>
+    <title>Leetcode 1 Two Sum</title>
+    <link>https://jdwh08.github.io/foxnote-quartzsite/Leetcode-1-Two-Sum</link>
+    <guid>https://jdwh08.github.io/foxnote-quartzsite/Leetcode-1-Two-Sum</guid>
+    <description><![CDATA[ Problem: Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. ]]></description>
+    <pubDate>Wed, 23 Jul 2025 23:42:00 GMT</pubDate>
+  </item><item>
+    <title>Leetcode 100 Same Binary Tree</title>
+    <link>https://jdwh08.github.io/foxnote-quartzsite/Leetcode-100-Same-Binary-Tree</link>
+    <guid>https://jdwh08.github.io/foxnote-quartzsite/Leetcode-100-Same-Binary-Tree</guid>
+    <description><![CDATA[ Problem: You are given two Binary Tree. Determine whether they are equal in both shape and structure. ]]></description>
+    <pubDate>Wed, 23 Jul 2025 23:42:00 GMT</pubDate>
+  </item><item>
+    <title>Leetcode 102 Binary Tree Level Order</title>
+    <link>https://jdwh08.github.io/foxnote-quartzsite/Leetcode-102-Binary-Tree-Level-Order</link>
+    <guid>https://jdwh08.github.io/foxnote-quartzsite/Leetcode-102-Binary-Tree-Level-Order</guid>
+    <description><![CDATA[ Problem: Given the root of a Binary Tree, return the level order traversal of its nodes’ values. (i.e., from left to right, level by level). ]]></description>
+    <pubDate>Wed, 23 Jul 2025 23:42:00 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>

@@ -1,8 +1,8 @@
 ---
-aliases: 
+aliases:
 tags:
   - ds/ml/rl
-edited: 2025-07-19T21:23
+edited: 2025-09-30T19:34
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -97,7 +97,7 @@ And... oh crap, this is a [[Bellman Equation]].
 
 ## Possible RL Components
 
-![[RL Components.excalidraw.png.png]]
+![[RL Components.png]]
 
 #### Policy:
 Converts states $s$ into actions $a$. This is our goal.

@@ -4,13 +4,13 @@ aliases:
   - list
 tags:
   - cs/dsa/array
-edited: 2025-08-13T21:35
+edited: 2025-09-30T19:34
 created: 2024-03-19T22:06
 ---
 # Definition:
 We combine the properties of indexing from [[Array]] and the ability to add/remove values from [[Linked List]].
 
-![[ArrayList.excalidraw.png.svg]]
+![[ArrayList.png]]
 
 We have an [[Array]] as the backing data structure, and save the current `length` and backing array's `capacity` as variables.
 

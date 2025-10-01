@@ -1,15 +1,15 @@
 ---
-aliases: 
+aliases:
 tags:
   - econ/game_theory/strategy
-edited: 2025-07-19T18:56
+edited: 2025-09-30T19:34
 created: 2024-03-19T22:06
 ---
 # Definition:
 
 A strategy for [[Game Theory]] in repeated games, e.g., [[Prisoner's Dilemma Repeated]], where we cooperate if both players played the same action, otherwise defect.
 
-![[Game Theory Pavlov.excalidraw.png.png]]
+![[Game Theory Pavlov.png]]
 
 ---
 # Notes:

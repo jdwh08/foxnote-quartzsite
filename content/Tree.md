@@ -1,8 +1,8 @@
 ---
-aliases: 
+aliases:
 tags:
   - cs/dsa/tree
-edited: 2025-07-27T15:23
+edited: 2025-09-30T19:34
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -10,7 +10,7 @@ A data structure consisting nodes which connect to each other.
 - Similar to [[Linked List]], but each node can have multiple connections
 - Similar to [[Graph]], but there cannot be any [[Cycles]] for connections
 
-![[Tree.excalidraw.png.png]]
+![[Tree.png]]
 
 ---
 # Notes:

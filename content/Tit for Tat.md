@@ -1,8 +1,8 @@
 ---
-aliases: 
+aliases:
 tags:
   - econ/game_theory/strategy
-edited: 2025-07-19T22:18
+edited: 2025-09-30T19:34
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -12,7 +12,7 @@ A [[Game Theory]] strategy for in repeated games, e.g., [[Prisoner's Dilemma Rep
 1. Cooperate on first round.
 2. Copy the other player's last move.
 
-![[Tit for Tat.excalidraw.png.png]]
+![[Tit for Tat.png]]
 
 ---
 # Notes:

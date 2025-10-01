@@ -2,7 +2,7 @@
 aliases:
 tags:
   - ds/ml/nn
-edited: 2025-09-28T22:54
+edited: 2025-09-30T19:34
 created: 2024-04-11T18:34
 ---
 # Definition:
@@ -20,7 +20,7 @@ Learning representations by back-propagating errors. (Rumelhart et al 1986)
 
 $$f(x_1, x_2) = \ln(x_1) + x_1 x_2 - \sin(x_2)$$
 
-![[Backprop NN Graph.excalidraw.png.png]]
+![[Backprop NN Graph.png]]
 
 ### Pseudocode
 ```pseudocode

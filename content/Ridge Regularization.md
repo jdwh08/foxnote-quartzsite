@@ -1,9 +1,9 @@
 ---
-aliases: 
+aliases:
 tags:
   - stats
   - ds/ml/regularization
-edited: 2025-09-15T14:54
+edited: 2025-09-30T19:34
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -15,7 +15,7 @@ where $L(w)$ is the original [[Loss Function]] and $\lambda$ controls the penalt
 ---
 # Notes:
 Our squared penalty term increases the cost for parameters which are large.
-![[Ridge_Regularization.excalidraw.png.svg]]
+![[Ridge_Regularization.png]]
 
 Unlike [[Lasso Regularization]], ridge tends to shrink parameters but not set them to zero.
 This is because our [[Loss Function]] penalty is still smooth, so there is no kink where a parameter has value 0.

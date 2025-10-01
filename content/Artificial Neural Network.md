@@ -3,13 +3,13 @@ aliases:
   - Neural Network
 tags:
   - ds/ml/nn
-edited: 2025-09-28T22:54
+edited: 2025-09-30T19:34
 created: 2024-03-19T22:06
 ---
 # Definition:
 A ML model which consists of "neurons" that take in various inputs as a weighted [[Linear Combination]], and apply a nonlinear transformation function to feed to other neurons.
 
-![[Artificial Neural Network.excalidraw.png.png]]
+![[Artificial Neural Network.png]]
 
 Very loosely inspired by biological brains, though not quite the same. 
 

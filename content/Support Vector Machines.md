@@ -3,7 +3,7 @@ aliases:
   - SVM
 tags:
   - ds/ml/svm
-edited: 2025-08-24T19:15
+edited: 2025-09-30T19:34
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -27,7 +27,7 @@ $$\hat{y}=w^T x + b$$
 - where $\hat{y} \in \{-1, 1\}$ is the prediction (Binary [[Classification]])
 - where $w$ is the weights on the features and $b$ is the intercept for the hyperplane.
 - The ideal model should have prediction $+1$ for the first positive classes it encounters, and $-1$ for the first negative class it encounters.
-![[SVM.excalidraw.png.png]]
+![[SVM.png]]
 $$w'(x_1 - x_2)=2 \rightarrow \frac{w'}{||w||}(x_1-x_2)=\frac{2}{
 ||w||}$$
 Because $w$ is the parameters of the hyperplane, the $w$ vector is perpendicular to the hyperplane. We [[Vector Projection|project]] $x_1 - x_2$ onto the $w$ vector; both are in the same direction so this is the vector's length.
@@ -84,7 +84,7 @@ We require the data to be linearly separable, i.e., can be cleanly divided by a 
 	- We've exploited the **similar in direction** to become circle-like!
 - The kernel encodes the domain knowledge for the function.
 
-![[Kernel Trick Circle.excalidraw.png.png|338x442]]
+![[Kernel Trick Circle.png|338x442]]
 
 After the [[Kernel Trick]], we can rewrite the problem to be 
 $$\max w(\lambda) = \sum_i\lambda_i -1/2 \sum_{ij} \lambda_i\ \lambda_j\ y_i\ y_j\ K(x_i, x_j)$$

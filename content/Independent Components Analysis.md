@@ -4,14 +4,14 @@ aliases:
 tags:
   - ds/ml/featureeng
   - ds/dimension_reduction
-edited: 2025-09-10T22:25
+edited: 2025-09-30T19:34
 created: 2024-03-19T22:06
 ---
 # Definition:
 
 A type of feature engineering which uses [[Mutual Information]] to do [[Feature Selection]].
 
-![[Independent Components Analysis.excalidraw.png.png]]
+![[Independent Components Analysis.png]]
 
 ---
 # Notes:

@@ -6,6 +6,7 @@ EXCALIDRAW_DIR="${EXCALIDRAW_DIR:-/c/Users/jdwh0/Obsidian/Lavafox/_Media/Excalid
 TEMP_EXPORT_DIR="${TEMP_EXPORT_DIR:-/c/Users/jdwh0/Obsidian/temp}"                     # Temporary export directory
 QUARTZ_PROJECT_DIR="${QUARTZ_PROJECT_DIR:-/c/Users/jdwh0/Obsidian/quartzsite}"         # Quartz project root directory
 QUARTZ_CONTENT_DIR="${QUARTZ_CONTENT_DIR:-$QUARTZ_PROJECT_DIR/content}"                # Final output directory for Quartz
+CACHE_DIR="${CACHE_DIR:-$TEMP_EXPORT_DIR/.cache}"                                      # Cache directory for change detection
 
 # Convert Windows paths to Unix-style for WSL compatibility
 SOURCE_DIR=$(echo "$SOURCE_DIR" | sed 's/\\/\//g')
@@ -13,6 +14,7 @@ EXCALIDRAW_DIR=$(echo "$EXCALIDRAW_DIR" | sed 's/\\/\//g')
 TEMP_EXPORT_DIR=$(echo "$TEMP_EXPORT_DIR" | sed 's/\\/\//g')
 QUARTZ_PROJECT_DIR=$(echo "$QUARTZ_PROJECT_DIR" | sed 's/\\/\//g')
 QUARTZ_CONTENT_DIR=$(echo "$QUARTZ_CONTENT_DIR" | sed 's/\\/\//g')
+CACHE_DIR=$(echo "$CACHE_DIR" | sed 's/\\/\//g')
 
 # Logging function with different levels
 log_info() {
@@ -29,6 +31,86 @@ log_success() {
 
 log_error() {
     echo -e "\033[0;31m[ERROR]\033[0m $1" >&2
+}
+
+# Change detection functions
+get_file_hash() {
+    local file="$1"
+    if [ -f "$file" ]; then
+        # Use md5sum if available, otherwise fall back to cksum
+        if command -v md5sum >/dev/null 2>&1; then
+            md5sum "$file" | cut -d' ' -f1
+        elif command -v cksum >/dev/null 2>&1; then
+            cksum "$file" | cut -d' ' -f1
+        else
+            # Fallback to file size and modification time
+            stat -c "%s-%Y" "$file" 2>/dev/null || stat -f "%z-%m" "$file"
+        fi
+    else
+        echo "FILE_NOT_FOUND"
+    fi
+}
+
+get_file_timestamp() {
+    local file="$1"
+    if [ -f "$file" ]; then
+        stat -c "%Y" "$file" 2>/dev/null || stat -f "%m" "$file"
+    else
+        echo "0"
+    fi
+}
+
+is_file_changed() {
+    local source_file="$1"
+    local cache_file="$2"
+    local relative_path="$3"
+    
+    # If cache doesn't exist, file has changed
+    if [ ! -f "$cache_file" ]; then
+        return 0  # Changed
+    fi
+    
+    # Read cached data
+    local cached_hash=$(head -n1 "$cache_file" 2>/dev/null || echo "")
+    local cached_timestamp=$(head -n2 "$cache_file" | tail -n1 2>/dev/null || echo "0")
+    
+    # Get current file data
+    local current_hash=$(get_file_hash "$source_file")
+    local current_timestamp=$(get_file_timestamp "$source_file")
+    
+    # If file doesn't exist anymore, it has changed
+    if [ "$current_hash" = "FILE_NOT_FOUND" ]; then
+        return 0  # Changed
+    fi
+    
+    # Compare timestamps first (faster)
+    if [ "$current_timestamp" != "$cached_timestamp" ]; then
+        return 0  # Changed
+    fi
+    
+    # If timestamps match, compare hashes for content changes
+    if [ "$current_hash" != "$cached_hash" ]; then
+        return 0  # Changed
+    fi
+    
+    return 1  # Not changed
+}
+
+update_file_cache() {
+    local source_file="$1"
+    local cache_file="$2"
+    local relative_path="$3"
+    
+    # Create cache directory if it doesn't exist
+    mkdir -p "$(dirname "$cache_file")"
+    
+    # Write current file data to cache
+    {
+        get_file_hash "$source_file"
+        get_file_timestamp "$source_file"
+        echo "$relative_path"
+        date '+%Y-%m-%d %H:%M:%S'
+    } > "$cache_file"
 }
 
 # Error handling
@@ -60,39 +142,43 @@ log_success "Quartz project validated"
 log_step "Preparing temporary export directory..."
 rm -rf "$TEMP_EXPORT_DIR"
 mkdir -p "$TEMP_EXPORT_DIR"
+mkdir -p "$CACHE_DIR"
 log_success "Temporary directory ready"
 
-# Copy files to temporary location
+# Copy files to temporary location (with change detection)
 log_step "Copying files to temporary location..."
-cp -r -p "$SOURCE_DIR"/* "$TEMP_EXPORT_DIR"
-log_success "Files copied to temporary location"
+COPIED_COUNT=0
+SKIPPED_COUNT=0
 
-# Copy media files to temporary directory
-log_step "Copying media files..."
-MEDIA_DIR="$SOURCE_DIR/_Media"
-
-if [ -d "$MEDIA_DIR" ]; then
-    # Copy all media files (images, videos, etc.) to temp directory
-    media_files=$(find "$MEDIA_DIR" -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" -o -name "*.gif" -o -name "*.webp" -o -name "*.svg" -o -name "*.mp4" -o -name "*.webm" -o -name "*.ogg" -o -name "*.pdf" \) 2>/dev/null | wc -l)
+# Find all files in source directory
+find "$SOURCE_DIR" -type f \( -name "*.md" -o -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" -o -name "*.gif" -o -name "*.webp" -o -name "*.svg" -o -name "*.mp4" -o -name "*.webm" -o -name "*.ogg" -o -name "*.pdf" \) | while read -r source_file; do
+    # Calculate relative path
+    relative_path="${source_file#$SOURCE_DIR/}"
+    target_file="$TEMP_EXPORT_DIR/$relative_path"
+    cache_file="$CACHE_DIR/$relative_path.cache"
     
-    if [ "$media_files" -gt 0 ]; then
-        log_info "Found $media_files media files to copy"
-        # Copy files preserving directory structure
-        find "$MEDIA_DIR" -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" -o -name "*.gif" -o -name "*.webp" -o -name "*.svg" -o -name "*.mp4" -o -name "*.webm" -o -name "*.ogg" -o -name "*.pdf" \) -exec sh -c '
-            for file; do
-                rel_path="${file#$MEDIA_DIR/}"
-                target_dir="$TEMP_EXPORT_DIR/$(dirname "$rel_path")"
-                mkdir -p "$target_dir"
-                cp "$file" "$TEMP_EXPORT_DIR/$rel_path"
-            done
-        ' sh {} +
-        log_success "Media files copied to temporary directory"
+    # Check if file has changed
+    if is_file_changed "$source_file" "$cache_file" "$relative_path"; then
+        # Create target directory
+        mkdir -p "$(dirname "$target_file")"
+        
+        # Copy file
+        cp -p "$source_file" "$target_file"
+        
+        # Update cache
+        update_file_cache "$source_file" "$cache_file" "$relative_path"
+        
+        echo "COPIED: $relative_path"
     else
-        log_info "No media files found to copy"
+        echo "SKIPPED: $relative_path"
     fi
-else
-    log_info "No _Media directory found in source"
-fi
+done
+
+# Count results
+COPIED_COUNT=$(find "$TEMP_EXPORT_DIR" -type f | wc -l)
+log_success "Files processed: $COPIED_COUNT copied, $SKIPPED_COUNT skipped"
+
+# Media files are now handled in the main file copying loop above
 
 # Directory containing the files for processing
 DIRECTORY="$TEMP_EXPORT_DIR"
@@ -102,14 +188,28 @@ CORES=$(nproc 2>/dev/null || sysctl -n hw.ncpu 2>/dev/null || echo 4)
 export CORES
 
 log_step "Processing Excalidraw references..."
-# Use parallel for Excalidraw processing
+# First, rename .excalidraw.png files to .png
+find "$DIRECTORY" -name "*.excalidraw.png" -type f | while read -r file; do
+    if [ -f "$file" ]; then
+        # Get the directory and base name without .excalidraw.png
+        dir=$(dirname "$file")
+        basename=$(basename "$file" .excalidraw.png)
+        new_name="$dir/$basename.png"
+        
+        # Rename the file
+        mv "$file" "$new_name"
+        log_info "Renamed: $(basename "$file") -> $(basename "$new_name")"
+    fi
+done
+
+# Use parallel for Excalidraw processing in markdown files
 find "$DIRECTORY" -type f -print0 | parallel -0 -j "$CORES" '
     file={}
     if [ -f "$file" ]; then
         # Store the original modification date
         original_date=$(stat -c %y "$file" 2>/dev/null || stat -f "%Sm" "$file")
-        # Process the file
-        sed "s/.excalidraw/.excalidraw.png/g" "$file" > "$file.tmp"
+        # Process the file - convert .excalidraw.png references to .png
+        sed "s/\.excalidraw\.png/\.png/g" "$file" > "$file.tmp"
         mv "$file.tmp" "$file"
         touch -d "$original_date" "$file" 2>/dev/null || touch -t $(date -r "$original_date" "+%Y%m%d%H%M.%S") "$file"
     fi
@@ -141,11 +241,11 @@ find "$DIRECTORY" -type f -name "*.md" -print0 | parallel -0 -j "$CORES" '
         }
         
         function process_images(line) {
-            # # Process Obsidian image references to markdown format
-            # gsub(/!\[\[([^\]]*)\]\]/, "![](\\1)", line)
-            # # Process image references to use relative paths
+            # Process Obsidian image references to markdown format
+            gsub(/!\[\[([^\]]*\.excalidraw)\.png\]\]/, "![[\\1.png]]", line)
+            # Process image references to use relative paths
             # gsub(/!\[([^\]]*)\]\(([^)]*_Media[^)]*)\)/, "![\\1](\\2)", line)
-            # return line
+            return line
         }
         
         NR == 1 && /^---$/ {

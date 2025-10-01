@@ -3,7 +3,7 @@ aliases:
 tags:
   - cs/dsa/optimizers
   - math/calculus
-edited: 2025-09-06T14:39
+edited: 2025-09-30T19:34
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -18,7 +18,7 @@ $$x_{t+1} = x_{t} - \frac{f(x_t)}{f'(x_t)}$$
 Given some function $f\ \mathbb{R} \rightarrow \mathbb{R}$, we can approximate it at some point $x$ with a [[Tangent]] line:
 $$f(x) \approx f(x_t) + f'(x_t)(x-x_t)$$
 
-![[Newton-Raphson.excalidraw.png.png]]
+![[Newton-Raphson.png]]
 
 Solve for $x$ in that function to get our approximation.
 Repeat.

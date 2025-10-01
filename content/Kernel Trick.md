@@ -1,8 +1,8 @@
 ---
-aliases: 
+aliases:
 tags:
   - ds/ml/svm
-edited: 2025-07-26T14:09
+edited: 2025-09-30T19:34
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -39,7 +39,7 @@ For the math to be guaranteed to work, the kernel must act like a [[Distance Mea
 - Notice how this is a Circle!
 - We've exploited the **similar in direction** to become circle-like!
 - This was also carefully chosen so that it is still the [[Dot Product]].
-![[Kernel Trick Circle.excalidraw.png.png|369x482]]
+![[Kernel Trick Circle.png|369x482]]
 
 ----
 # Source:
