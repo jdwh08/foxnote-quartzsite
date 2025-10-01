@@ -9,7 +9,11 @@ created: 2024-03-19T22:06
 # Definition:
 [[Instance Based Learning]] system which predicts values by looking at the closest $k$ values to the existing point.
 
-Formally, given some value $K$ and prediction point $x_0$, we identify the $K$ observations closest to $x_0$ (hence $\mathcal{N}_0$), and then for [[Regression]] estimate $$f(x_0)=\frac{1}{K} \sum_{x_i \in \mathcal{N}_0} ^ K y_i$$
+Formally, given some value $K$ and prediction point $x_0$, we identify the $K$ observations closest to $x_0$ (hence $\mathcal{N}_0$), and then for [[Regression]] estimate 
+
+f(x_0)=\frac{1}{K} \sum_{x_i \in \mathcal{N}_0} ^ K y_i$
+
+
 (or, for [[Classification]], estimate with the mode.)
 
 ---

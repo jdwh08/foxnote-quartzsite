@@ -18,33 +18,53 @@ A more general form of the [[Eigenvalue Decomposition]] for non-square matrices.
 
 ### Formal Definition
 Starting with a $n*m$ matrix $X$:
-$$\begin{bmatrix}
+
+
+\begin{bmatrix}
 | & | & ... & |\\
 x_1 & x_2 & ... & x_m\\
 | & | & ... & |
-\end{bmatrix}$$
+\end{bmatrix}$
+
+
 We'd like to decompose this into the following form:
-$$X=U\ \Sigma \ V^T$$
+
+
+X=U\ \Sigma \ V^T$
+
+
 Where $U, V^T$ are [[Orthogonal Matrices]], and $\Sigma$ is a [[Diagonal Matrix]].
-$$U = \begin{bmatrix}
+
+
+U = \begin{bmatrix}
 | & | & ... & |\\
 u_1 & u_2 & ... & u_n\\
 | & | & ... & |
-\end{bmatrix}$$
-$$\Sigma = \begin{bmatrix}
+\end{bmatrix}$
+
+
+
+
+\Sigma = \begin{bmatrix}
 \sigma_1 & & & \\
  & \sigma_2 & & \\
  & & ... & \\
  & & & \sigma_m \\
  0 & 0 & ... & 0 \\
  | & | & ... & |
-\end{bmatrix}$$
-$$V^T = \begin{bmatrix}
+\end{bmatrix}$
+
+
+
+
+V^T = \begin{bmatrix}
 - & - & v_1^T & - \\
 - & - & v_2^T & - \\
 - & - & ... & - \\
 - & - & v_m^T & - 
-\end{bmatrix}$$
+\end{bmatrix}$
+
+
 
 $U$ is the Left Singular Vectors, $V$ is the Right Singular Vectors, and $\sigma$'s are the Singular Values.
 
@@ -77,12 +97,16 @@ How do we reduce matrices using SVD when $n >>> m$ or $m >>> n$, e.g., big diffe
 
 ### [[Correlation (Pearson)|Correlation]] Interpretation
 Consider $X^T X$. Because we assume that $X$ is a matrix where each column represents an element and each row represents a feature, we assume that features >>> observations, or $n >>> m$, i.e., it is tall and skinny. Thus, $X^T X$ is $m*n \times n*m \rightarrow m\times m$ matrix, which is smaller. 
-The first column is multiplied out as $$\begin{bmatrix} 
+The first column is multiplied out as 
+
+\begin{bmatrix} 
 x_1^T x_1 \\
 x_2^T x_1 \\
 ... \\
 x_m^T x_1
-\end{bmatrix}$$
+\end{bmatrix}$
+
+
 And this repeats for all columns until you reach $x_m^T x_m$, where each one of these is basically the inner product of the vectors $x_i^T x_j = <x_i, x_j>$. This can be thought of as **[[Correlation Matrix]]**.
 - Remember that each one of the columns represents an observation? (e.g., a face?) Thus, taking the [[Dot Product]] between the two matrices calculates their cosine similarity. **Larger values for inner products thus represent more similar**.
 	- The inner products also means it's a [[Positive Semidefinite Matrix]], so it has non-negative and real [[Eigenvectors and Eigenvalues|Eigenvalues]].

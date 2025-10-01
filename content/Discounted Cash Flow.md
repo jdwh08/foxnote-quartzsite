@@ -11,7 +11,11 @@ created: 2024-03-19T22:06
 A model of valuation based on intrinsic cash flows.
 
 We use [[Time Value of Money|Discounting]] for interest rates:
-$$PV = FV/(1+r)^i$$
+
+
+PV = FV/(1+r)^i$
+
+
 
 ---
 # Notes:

@@ -8,9 +8,17 @@ created: 2024-03-02T19:32
 ---
 ### Definition:
 Independent [[Sample Space and Events|events]] do not "affect each other" in probability.
-$$P(A \cap B) = P(A) \times P(B)$$
+
+
+P(A \cap B) = P(A) \times P(B)$
+
+
 This means their [[Joint Probability]] is just the product of the [[Marginal Probability|Marginal Probabilities]]:
-$$p(x,y)=p_X(x)*p_Y(y)$$
+
+
+p(x,y)=p_X(x)*p_Y(y)$
+
+
 because $p_x(x)=p_{X|Y}(x|y)$ for all $y \in \mathcal{Y}$, and same for $x$.
 
 ---
@@ -18,7 +26,11 @@ because $p_x(x)=p_{X|Y}(x|y)$ for all $y \in \mathcal{Y}$, and same for $x$.
 Independent events can't be [[Disjoint Events]] because Disjoint Events prevent each other from having probability.
 
 We can also test for independence IFF the [[Joint Probability]] can be written as the product of a function of x and a function of y, and their supports are independent: 
-$$f(x,y) = g(x)*h(y); g(x)\geq0; h(x)\geq0$$
+
+
+f(x,y) = g(x)*h(y); g(x)\geq0; h(x)\geq0$
+
+
 
 Independence also means that a their [[Expected Value]]s are independent too! $E(XY)=E(X)E(Y)$.
 

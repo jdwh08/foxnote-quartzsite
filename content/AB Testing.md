@@ -113,7 +113,11 @@ Example Metrics:
 	1. E.g., if we need to have a high confidence, detect a small effect size, and have a tiny baseline rate, we need a huge sample.
 	2. Convert sample size into rough estimate for the **amount of time to run test**.
 
-	RULE OF THUMB (for `0.05, 0.8, 1% diff`): $$n \approx 16 \sigma^2 / \Delta^2$$
+	RULE OF THUMB (for `0.05, 0.8, 1% diff`): 
+
+n \approx 16 \sigma^2 / \Delta^2$
+
+
 4. Determine the duration of the experiment.
 	1. Based on traffic volume and 
 	2. Ideally 1-2 weeks. 

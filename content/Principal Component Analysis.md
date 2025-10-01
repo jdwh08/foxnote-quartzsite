@@ -37,11 +37,15 @@ Uses the [[Singular Value Decomposition]] to do [[Feature Selection]] linearly. 
 
 ### Math:
 Suppose we have some matrix $X$ where each *row* is an observation (differs from SVD literature). 
-$$X = \begin{bmatrix}
+
+
+X = \begin{bmatrix}
 - & - & x_1 & - & - \\
 - & - & ... & - & - \\
 - & - & x_n & - & - \\
-\end{bmatrix}$$
+\end{bmatrix}$
+
+
 We assume that $X$ is drawn from some underlying statistical distribution (typically [[Normal Distribution]] with zero mean). **This is how PCA and SVD differ.**
 - Finds a line through the origin that best fits the data (like [[Linear Regression|OLS]]). This is analogous to finding the line that maximizes distance from the [[Vector Projection]] onto the line.
 	- To keep the most information possible, we want to be sure to use a vector $u$ whose variance is large so it captures more variation in the higher-dimensional space.
@@ -52,11 +56,15 @@ We assume that $X$ is drawn from some underlying statistical distribution (typic
 Anyway... here's the procedure:
 - Calculate the mean row: $\bar{x} = \frac{1}{n} \sum \limits_{i=1}^n x_i$
 - Build out an "Average Matrix": 
-$$\bar{X} = \begin{bmatrix}
+
+
+\bar{X} = \begin{bmatrix}
 - & - & \bar{x} & - & - \\
 - & - & ... & - & - \\
 - & - & \bar{x} & - & - \\
-\end{bmatrix}$$
+\end{bmatrix}$
+
+
 - Calculate $B = X - \bar{X}$. ("Mean center the data"). This does not change relative positions for each observation.
 	- The analogue for this is the "[[Expected Value|Mean]] of the projections".
 	- If we **don't do this**, then we probably will end up with the biggest component(s) that just talk about how to go to the origin.

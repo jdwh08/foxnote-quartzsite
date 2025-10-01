@@ -10,7 +10,11 @@ created: 2024-03-19T22:06
 # Definition:
 A measure of how different a [[Point Estimator]]'s [[Expected Value]] is compared to the true value of the parameter.
 
-$$Bias_{\theta}[\hat{\theta}]=E_{x|\theta}[\hat{\theta}] - \theta= E_{x|\theta}[\hat{\theta} - \theta] $$
+
+
+Bias_{\theta}[\hat{\theta}]=E_{x|\theta}[\hat{\theta}] - \theta= E_{x|\theta}[\hat{\theta} - \theta] $
+
+
 
 An **unbiased estimator** has a bias of zero.
 

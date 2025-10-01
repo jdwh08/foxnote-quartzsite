@@ -12,7 +12,7 @@ A strategy for [[Game Theory]] in repeated games, e.g., [[Prisoner's Dilemma Rep
 > "Dead Man's Switch"
 > GRUDGER
 
-![[Grim Trigger Game Theory.png|340x296]]
+![[Grim Trigger Game Theory.excalidraw.png|340x296]]
 
 ---
 # Notes:

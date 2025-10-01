@@ -18,10 +18,18 @@ The opposite is a [[Concave Function]].
 ### Formal Definitions
 
 We can use [[Jensen's Inequality]] to properly define this:
-$$f \left(\lambda x + (1-\lambda)y \right) \le \lambda f(x) + (1-\lambda) f(y)$$
+
+
+f \left(\lambda x + (1-\lambda)y \right) \le \lambda f(x) + (1-\lambda) f(y)$
+
+
 
 We can also write this in terms of the [[Gradient]], aka, as a [[Tangent]] line or plane:
-$$f(x) \ge f(y) + \nabla f(y) * (x-y)$$
+
+
+f(x) \ge f(y) + \nabla f(y) * (x-y)$
+
+
 
 ###### Tiny Proof of Tangent Version
 1. Fix $y$ to be some point.

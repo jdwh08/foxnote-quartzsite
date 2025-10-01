@@ -9,7 +9,11 @@ created: 2024-03-19T22:06
 # Definition:
 An approximation of [[Normal Distribution]] around a point.
 
-$$e^{-\frac{1}{\sigma^2} ||W-x||^2}$$
+
+
+e^{-\frac{1}{\sigma^2} ||W-x||^2}$
+
+
 
 ---
 # Notes:

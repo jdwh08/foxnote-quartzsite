@@ -4,3 +4,4 @@ content/!!!*
 content/^PRIVATE/
 content/_ObsidianTemplates/
 content/_Calendar/*
+content/.cache/*

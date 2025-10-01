@@ -9,11 +9,15 @@ created: 2024-03-19T22:06
 # Definition:
 A type of [[Artificial Neural Network]] where the [[Activation Function]] is a binary threshold value.
 - Originally: one layer of computation. We get $a=\sum w_i x_i$ and 
-$$f(a)=
+
+
+f(a)=
 \begin{cases}
 1,\text{ if } a \le 0 \\
 0,\text{ if } a > 0
-\end{cases}$$
+\end{cases}$
+
+
 - Note that the pre-activation is a [[Linear Combination]], so by definition each Perceptron unit learns a dividing [[Hyperplane]] in space. 
 
 ---
@@ -80,11 +84,27 @@ Initialize weights to be small random values.
 - Random values help to help introduce variability and avoid the same local minima in different runs
 - Small weights suggest less complexity and thus less overfitting.
 
-$$a=\sum w_i x_i;\ \hat{y} = \mathbb{1}(a\ge0)$$
+
+
+a=\sum w_i x_i;\ \hat{y} = \mathbb{1}(a\ge0)$
+
+
 Let's use [[Mean Squared Error]].
-$$E(w)=1/2 \sum_{x,y \in D} (y-a)^2$$
-$$\frac{\partial E}{\partial w_i} = \sum_{x,y \in D}(y-a)*-x_i$$
-$$\Delta w_i = \eta (y-a)x_i$$
+
+
+E(w)=1/2 \sum_{x,y \in D} (y-a)^2$
+
+
+
+
+\frac{\partial E}{\partial w_i} = \sum_{x,y \in D}(y-a)*-x_i$
+
+
+
+
+\Delta w_i = \eta (y-a)x_i$
+
+
 This does NOT require data to be linearly separable, but only has guarantees at the limit.
 
 Note that the perceptron's indicator function $\hat{y} = \mathbb{1}(a\ge0)$ is NOT DIFFERENTIABLE! Therefore, to really do the full calculus on it, we need to use a differentiable [[Activation Function]], like [[Sigmoid Function]].

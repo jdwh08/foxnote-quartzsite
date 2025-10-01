@@ -8,7 +8,11 @@ created: 2024-03-19T22:06
 # Definition:
 A [[Technical Analysis]] indicator that dynamically adjusts the above/below lines based on the [[Simple Moving Average (technical analysis)]] and [[Standard Deviation]] of the price.
 
-$$BB = SMA \pm 2\sigma$$
+
+
+BB = SMA \pm 2\sigma$
+
+
 ```python
 bb[t] = (p[t] - sma[t]) / 2 * std[t]
 ```

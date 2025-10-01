@@ -10,7 +10,11 @@ created: 2024-03-19T22:06
 # Definition:
 A [[Weight Initialization]] method tuned particularly for [[ReLU]] style activation functions.
 
-$$\sim N \left( 0, \sqrt{2/n_{in}} \right)$$
+
+
+\sim N \left( 0, \sqrt{2/n_{in}} \right)$
+
+
 
 ---
 # Notes:

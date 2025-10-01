@@ -32,13 +32,21 @@ There are two types: **Numerator Notation** and **Denominator Notation**.
 ##### Binary Operators
 Stuff that takes two values (or functions), e.g., $+, -, *, /, \max, \min, ...$:
 - Suppose we have two function/values, $f(\textbf{w})$ and $g(\textbf{x})$, which are combined together with one of the above represented by $\blacksquare$:
-$$\begin{bmatrix} y_0 \\ y_1 \\ y_2 \\ \vdots \end{bmatrix} = \begin{bmatrix} f_0(\textbf{w}) \blacksquare g_0(\textbf{x}) \\ f_1(\textbf{w}) \blacksquare g_1(\textbf{x}) \\ f_2(\textbf{w}) \blacksquare g_2(\textbf{x}) \\ \vdots \end{bmatrix}$$
+
+
+\begin{bmatrix} y_0 \\ y_1 \\ y_2 \\ \vdots \end{bmatrix} = \begin{bmatrix} f_0(\textbf{w}) \blacksquare g_0(\textbf{x}) \\ f_1(\textbf{w}) \blacksquare g_1(\textbf{x}) \\ f_2(\textbf{w}) \blacksquare g_2(\textbf{x}) \\ \vdots \end{bmatrix}$
+
+
 
 We can then take the derivative [[Gradient]] within each $y$ row, i.e., the [[Jacobian]]:
-$$J_w = \frac{\partial y}{\partial w} = \begin{bmatrix} \partial/\partial w_0 \left[ f_0(\textbf{w}) \blacksquare g_0(\textbf{x}) \right] & \partial/\partial w_1 \left[ f_0(\textbf{w}) \blacksquare g_0(\textbf{x}) \right] & ... \\
+
+
+J_w = \frac{\partial y}{\partial w} = \begin{bmatrix} \partial/\partial w_0 \left[ f_0(\textbf{w}) \blacksquare g_0(\textbf{x}) \right] & \partial/\partial w_1 \left[ f_0(\textbf{w}) \blacksquare g_0(\textbf{x}) \right] & ... \\
 \partial/\partial w_0 \left[f_1(\textbf{w}) \blacksquare g_1(\textbf{x}) \right] & \partial/\partial w_1 \left[f_1(\textbf{w}) \blacksquare g_1(\textbf{x}) \right] & ...\\
 \partial/\partial w_0 \left[f_2(\textbf{w}) \blacksquare g_2(\textbf{x}) \right] & \partial/\partial w_1 \left[f_2(\textbf{w}) \blacksquare g_2(\textbf{x}) \right] & ...\\
-\vdots & \vdots & \ddots \end{bmatrix}$$
+\vdots & \vdots & \ddots \end{bmatrix}$
+
+
 
 This is in **Numerator Notation** since our $f_0$ is in row $0$ as opposed to column 0.
 

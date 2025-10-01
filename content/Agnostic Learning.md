@@ -21,10 +21,18 @@ Differs from [[Probably Approximately Correct Learning|PAC Learning]] in that we
 #### Required Data Complexity:
 
 **Hoefferding Bounds**: If training error is measured over some set $D$ containing $m$ randomly chosen examples, then...
-$$P(error_D(h)>error_D(h) + \epsilon) \le e^{-2 m \epsilon^2}$$
+
+
+P(error_D(h)>error_D(h) + \epsilon) \le e^{-2 m \epsilon^2}$
+
+
 
 This means that
-$$m\ge\frac{1}{2\epsilon^2}(\ln|H|+\ln \frac{1}{\delta})$$
+
+
+m\ge\frac{1}{2\epsilon^2}(\ln|H|+\ln \frac{1}{\delta})$
+
+
 Which is worse than in [[Haussler's Theorem]] for [[Probably Approximately Correct Learning|PAC Learning]] (note the $2\epsilon^2$ and $\epsilon \le 0.5$)
 
 ---

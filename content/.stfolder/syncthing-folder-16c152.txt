@@ -1,5 +1,0 @@
-# This directory is a Syncthing folder marker.
-# Do not delete.
-
-folderID: rheho-fkv9z
-created: 2025-02-22T12:46:07-06:00

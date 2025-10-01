@@ -27,7 +27,9 @@ Notes
 ---
 ### Examples:
 Consider the basic building block: Matrix Multiplication.
-$$AB=
+
+
+AB=
 \begin{bmatrix}
     a_{11} & a_{12} & \dots  & a_{1n} \\
     a_{21} & a_{22} & \dots  & a_{2n} \\
@@ -40,13 +42,19 @@ $$AB=
     \vdots & \vdots & \ddots & \vdots \\
     b_{n1} & b_{n2} & \dots  & b_{nn}
 \end{bmatrix}
-$$
+$
+
+
 This is a [[Big O]] of $O(n^3)$, because as we increase the size of the matrix from $n\times n$ to $(n+1) \times (n+1)$, the number of operations increases by $n^3$. We need some way to reduce this!
 Volker Strassen's $AB$ method gives $O(n^{2.8704})$. We have since reduced it to around $O(n^{2.4})$, but it has plateaued.
 - The goal for BLAS/LAPACK software systems (see below) is to break down matrix problems into using highly optimized general matrix multiplication functions over other methods.
 
 Suppose we want to have a **[[Least Squares]]**. Given some matrix $A$ which is $m\times n, n <\!< m$, and a target vector $\vec{b}$ which is dimension $m$, we want to find $x$ to minimize this.
-$$\underset{x}{\arg \min} \ ||Ax-b||_2$$
+
+
+\underset{x}{\arg \min} \ ||Ax-b||_2$
+
+
 We want to find $x$ in a relatively fast way, so $O(mn^2)$. (Having the square be on $n$ is better because it's smaller.) See [[Randomized Linear Algebra]] for an even fast approach if we tolerate some error $\epsilon$.
 
 **Other Approaches for Speed**

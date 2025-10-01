@@ -10,7 +10,11 @@ created: 2024-03-19T22:06
 A method of "mixing" two [[Matrix]] together.
 
 Given two matrix $x$ and a Kernel Matrix $k$ of size $(k_1, k_2)$:
-$$f(r, c) = (x*k)@(r,c) = \sum_{a=0}^{k_1-1} \sum_{b=0}^{k_2-1} x@(r+a, c+b)\cdot k@(a,b)$$
+
+
+f(r, c) = (x*k)@(r,c) = \sum_{a=0}^{k_1-1} \sum_{b=0}^{k_2-1} x@(r+a, c+b)\cdot k@(a,b)$
+
+
 
 ---
 # Notes:

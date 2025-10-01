@@ -18,7 +18,11 @@ A type of [[Artificial Neural Network|Neural Network]] used for learning sequent
 - Process inputs one-at-a-time:
 	- Take in input $X_i$ and prior hidden layer activation $A_{i-1}$ to calculate the new hidden layer value $A_i$
 	
-$$A_{lk} = g(w_{k0} + \sum_{j=1}^p w_{kj} X_{lj} + \sum_{s=1}^K u_{ks} A_{l-1, s})$$
+
+
+A_{lk} = g(w_{k0} + \sum_{j=1}^p w_{kj} X_{lj} + \sum_{s=1}^K u_{ks} A_{l-1, s})$
+
+
 - where g is our [[Activation Function]]
 - $w_{kj}$ are **shared weights** for the new input data $X_L$ in layer $l$. 
 	- Full matrix dimension: $K \times (p+1)$ where $p = |X_L|$ dimension.
@@ -27,7 +31,11 @@ $$A_{lk} = g(w_{k0} + \sum_{j=1}^p w_{kj} X_{lj} + \sum_{s=1}^K u_{ks} A_{l-1, s
 
 - Finally, take all the hidden layer values $A_1 ... A_L$ and use them to make  predictions $\hat{Y}_L$
 
-$$O_L=\beta_0 + \sum_{k=1}^K \beta_k A_{lk}$$
+
+
+O_L=\beta_0 + \sum_{k=1}^K \beta_k A_{lk}$
+
+
 - where $\beta$ is the weight for each layer's activation.
 
 ![[RNN.png]]

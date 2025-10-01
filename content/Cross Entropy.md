@@ -11,10 +11,18 @@ Measures performance of classification models whose output is a [[Probability]].
 Increases as the predicted probability diverges from the actual label.
 
 For discrete probability distributions $p, q$ which have the same [[Support (math)|Support]] $\mathcal{X}$,
-$$\sum_{x\in \mathcal{X}} p(x) * log(q(x))$$
+
+
+\sum_{x\in \mathcal{X}} p(x) * log(q(x))$
+
+
 
 And for continuous distributions, we can have
-$$\int_{\mathcal{X}} P(x) log(Q(x)) dx = E_p[-log(Q)]$$
+
+
+\int_{\mathcal{X}} P(x) log(Q(x)) dx = E_p[-log(Q)]$
+
+
 
 ---
 # Notes:

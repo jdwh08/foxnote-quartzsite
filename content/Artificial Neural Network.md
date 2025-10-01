@@ -18,13 +18,25 @@ Very loosely inspired by biological brains, though not quite the same.
 
 ## Formal Definition of Neurons
 Formally, we can calculate this as
-$$z=\sum_i^{M}w_ix_i$$
+
+
+z=\sum_i^{M}w_ix_i$
+
+
 where $z$ is our pre-activation, and then apply
-$$a=f(z)$$
+
+
+a=f(z)$
+
+
 where $f(a)$ is our [[Activation Function]].
 
 Scaling this up, we can say the neural network has the form
-$$f(X) = \beta_0 + \sum_{k=1}^K \beta_k g(w_{k0} + \sum_{j=1}^p w_{kj} X_j)$$
+
+
+f(X) = \beta_0 + \sum_{k=1}^K \beta_k g(w_{k0} + \sum_{j=1}^p w_{kj} X_j)$
+
+
 where we see our $g$ as activation functions and our $\beta$s as per-neuron weights.
 
 ## What is it Good For?

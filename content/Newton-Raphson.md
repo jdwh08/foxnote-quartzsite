@@ -9,14 +9,22 @@ created: 2024-03-19T22:06
 # Definition:
 A method to find the zero values of a function in the reals $\mathbb{R}$, by picking an initial guess and then repeatedly solving:
 
-$$x_{t+1} = x_{t} - \frac{f(x_t)}{f'(x_t)}$$
+
+
+x_{t+1} = x_{t} - \frac{f(x_t)}{f'(x_t)}$
+
+
 
 ---
 # Notes:
 
 ### Intuition:
 Given some function $f\ \mathbb{R} \rightarrow \mathbb{R}$, we can approximate it at some point $x$ with a [[Tangent]] line:
-$$f(x) \approx f(x_t) + f'(x_t)(x-x_t)$$
+
+
+f(x) \approx f(x_t) + f'(x_t)(x-x_t)$
+
+
 
 ![[Newton-Raphson.png]]
 
@@ -25,14 +33,26 @@ Repeat.
 
 ### Multivariate Case
 
-$$\hat{x}_{t+1} = x_t - J^{-1} f(x)$$
+
+
+\hat{x}_{t+1} = x_t - J^{-1} f(x)$
+
+
 where $J^{-1}$ is the [[Jacobian]] and $f(x)$ is the original function.
 
 #### As an [[Optimizer]]
 We want to find where the [[Gradient]] is zero, i.e., our function $f(x) = \nabla$. Thus,
 
-$$f(x) \approx f(x_0) + (x-x_0)^T\nabla_x + 1/2 (x-x_0)^T H (x-x_0)$$
-$$\hat{x}=x_0-H^{-1}_{@x_0} \nabla_{@x_0}$$
+
+
+f(x) \approx f(x_0) + (x-x_0)^T\nabla_x + 1/2 (x-x_0)^T H (x-x_0)$
+
+
+
+
+\hat{x}=x_0-H^{-1}_{@x_0} \nabla_{@x_0}$
+
+
 Where $H^{-1}$ is the [[Matrix Inverse]] of the [[Hessian]] and $\nabla$ is the [[Gradient]].
 
 ### Issues

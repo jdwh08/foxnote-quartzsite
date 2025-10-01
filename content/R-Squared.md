@@ -11,7 +11,11 @@ created: 2024-03-19T22:06
 # Definition:
 The fraction of total [[Variance]] explained by the model. Ranges between 0 and 1.
 
-$$R^2=\frac{TSS-RSS}{TSS}$$
+
+
+R^2=\frac{TSS-RSS}{TSS}$
+
+
 where $RSS$ is the [[Residual Sum of Squares]], and $TSS$ is the [[Total Sum of Squares]] $\sum_i^n (y_i-\bar{y})^2$.
 
 ---

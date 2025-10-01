@@ -10,7 +10,11 @@ created: 2024-03-19T22:06
 # Definition:
 [[Loss Function]] for a [[Regression]] problem on a dataset.
 
-$$MSE(\theta) = \frac{1}{N} \sum_{i=1}^{N}(y_i-\hat{f}(x_i\ ;\ \theta))^2$$
+
+
+MSE(\theta) = \frac{1}{N} \sum_{i=1}^{N}(y_i-\hat{f}(x_i\ ;\ \theta))^2$
+
+
 
 ---
 # Notes:

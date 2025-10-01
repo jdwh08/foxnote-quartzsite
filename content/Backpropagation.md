@@ -18,7 +18,11 @@ Learning representations by back-propagating errors. (Rumelhart et al 1986)
 	1. Most common are [[Directed Acyclic Graph]] though.
 2. Learning is the same as optimizing the weights for each edge.
 
-$$f(x_1, x_2) = \ln(x_1) + x_1 x_2 - \sin(x_2)$$
+
+
+f(x_1, x_2) = \ln(x_1) + x_1 x_2 - \sin(x_2)$
+
+
 
 ![[Backprop NN Graph.png]]
 

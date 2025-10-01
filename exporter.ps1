@@ -1,4 +1,4 @@
-# PowerShell wrapper for the exporter script
+# PowerShell wrapper for the exporter script with change detection
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
@@ -30,6 +30,107 @@ function Write-Info {
     Write-Host "[INFO] $Message" -ForegroundColor Blue
 }
 
+# Change detection functions
+function Get-FileHash {
+    param([string]$FilePath)
+    
+    if (Test-Path $FilePath) {
+        try {
+            $fileStream = [System.IO.File]::OpenRead($FilePath)
+            $hasher = [System.Security.Cryptography.MD5]::Create()
+            $hashBytes = $hasher.ComputeHash($fileStream)
+            $fileStream.Close()
+            $hasher.Dispose()
+            return [System.BitConverter]::ToString($hashBytes) -replace '-', ''
+        }
+        catch {
+            # Fallback to file size and modification time
+            $fileInfo = Get-Item $FilePath
+            return "$($fileInfo.Length)-$($fileInfo.LastWriteTime.Ticks)"
+        }
+    }
+    return "FILE_NOT_FOUND"
+}
+
+function Test-FileChanged {
+    param(
+        [string]$SourceFile,
+        [string]$CacheFile,
+        [string]$RelativePath
+    )
+    
+    # If cache doesn't exist, file has changed
+    if (-not (Test-Path $CacheFile)) {
+        return $true
+    }
+    
+    try {
+        # Read cached data
+        $cacheContent = Get-Content $CacheFile -ErrorAction SilentlyContinue
+        if ($cacheContent.Count -lt 2) {
+            return $true
+        }
+        
+        $cachedHash = $cacheContent[0]
+        $cachedTimestamp = $cacheContent[1]
+        
+        # Get current file data
+        $currentHash = Get-FileHash $SourceFile
+        $currentTimestamp = if (Test-Path $SourceFile) { (Get-Item $SourceFile).LastWriteTime.Ticks.ToString() } else { "0" }
+        
+        # If file doesn't exist anymore, it has changed
+        if ($currentHash -eq "FILE_NOT_FOUND") {
+            return $true
+        }
+        
+        # Compare timestamps first (faster)
+        if ($currentTimestamp -ne $cachedTimestamp) {
+            return $true
+        }
+        
+        # If timestamps match, compare hashes for content changes
+        if ($currentHash -ne $cachedHash) {
+            return $true
+        }
+        
+        return $false
+    }
+    catch {
+        # If there's any error reading cache, assume file has changed
+        return $true
+    }
+}
+
+function Update-FileCache {
+    param(
+        [string]$SourceFile,
+        [string]$CacheFile,
+        [string]$RelativePath
+    )
+    
+    try {
+        # Create cache directory if it doesn't exist
+        $cacheDir = Split-Path $CacheFile -Parent
+        if (-not (Test-Path $cacheDir)) {
+            New-Item -ItemType Directory -Path $cacheDir -Force | Out-Null
+        }
+        
+        # Write current file data to cache
+        $currentHash = Get-FileHash $SourceFile
+        $currentTimestamp = if (Test-Path $SourceFile) { (Get-Item $SourceFile).LastWriteTime.Ticks.ToString() } else { "0" }
+        
+        @(
+            $currentHash
+            $currentTimestamp
+            $RelativePath
+            (Get-Date -Format "yyyy-MM-dd HH:mm:ss")
+        ) | Set-Content $CacheFile -Encoding UTF8
+    }
+    catch {
+        Write-Warning "Failed to update cache for $($RelativePath): $_"
+    }
+}
+
 function Process-MarkdownFile {
     param(
         [Parameter(Mandatory)]
@@ -45,11 +146,11 @@ function Process-MarkdownFile {
     # Process Excalidraw references - convert .excalidraw.png to .png
     $content = $content -replace '\.excalidraw\.png\b', '.png'
     
-    # # Process Obsidian image references to markdown format
-    # $content = $content -replace '!\[\[([^\]]*)\]\]', '![]($1)'
+    # Process equations - convert inline $$ to block format
+    $content = $content -replace '\$\$([^$]+)\$\$', "`n`n$$`$1`$$`n`n"
     
-    # Process image references to use relative paths
-    # $content = $content -replace '!\[([^\]]*)\]\(([^)]*_Media[^)]*)\)', '![$1]($2)'
+    # Process Obsidian image references
+    $content = $content -replace '!\[\[([^\]]*\.excalidraw)\.png\]\]', '![[$1.png]]'
     
     # Write back to file
     $content | Set-Content $FilePath -NoNewline
@@ -81,6 +182,7 @@ $WindowsExcalidrawDir = "C:\Users\jdwh0\Obsidian\Lavafox\_Media\Excalidraw"
 $WindowsTempDir = "C:\Users\jdwh0\Obsidian\temp"
 $WindowsQuartzDir = "C:\Users\jdwh0\Obsidian\quartzsite"
 $WindowsQuartzContentDir = Join-Path $WindowsQuartzDir "content"
+$WindowsCacheDir = Join-Path $WindowsTempDir ".cache"
 
 # Verify Windows paths exist
 if (!(Test-Path $WindowsSourceDir)) {
@@ -122,50 +224,55 @@ else {
     Write-Success "Using empty temporary directory"
 }
 
-Write-Step "Copying files to temporary location..."
-try {
-    Copy-Item -Path "$WindowsSourceDir\*" -Destination $WindowsTempDir -Recurse -Force -ErrorAction Stop
-    Write-Success "Files copied to temporary location"
-}
-catch {
-    Write-Error "Failed to copy files: $_"
-    exit 1
+# Create cache directory
+if (!(Test-Path $WindowsCacheDir)) {
+    New-Item -ItemType Directory -Path $WindowsCacheDir -Force | Out-Null
+    Write-Success "Created cache directory"
 }
 
-Write-Step "Copying media files..."
-# Copy media files to Quartz content directory
-$WindowsMediaDir = Join-Path $WindowsSourceDir "_Media"
+Write-Step "Copying files to temporary location (with change detection)..."
+$copiedCount = 0
+$skippedCount = 0
 
-if (Test-Path $WindowsMediaDir) {
-    # Copy all media files (images, videos, etc.) to temp directory first
-    $mediaFiles = Get-ChildItem -Path $WindowsMediaDir -Recurse -File | Where-Object { 
-        $_.Extension -match '\.(png|jpg|jpeg|gif|webp|svg|mp4|webm|ogg|pdf)$' 
-    }
+# Get all files that need to be processed
+$allFiles = Get-ChildItem -Path $WindowsSourceDir -Recurse -File | Where-Object { 
+    $_.Extension -match '\.(md|png|jpg|jpeg|gif|webp|svg|mp4|webm|ogg|pdf)$' 
+}
+
+Write-Info "Found $($allFiles.Count) files to check"
+
+foreach ($sourceFile in $allFiles) {
+    # Calculate relative path
+    $relativePath = $sourceFile.FullName.Substring($WindowsSourceDir.Length + 1)
+    $targetFile = Join-Path $WindowsTempDir $relativePath
+    $cacheFile = Join-Path $WindowsCacheDir "$relativePath.cache"
     
-    if ($mediaFiles.Count -gt 0) {
-        Write-Info "Found $($mediaFiles.Count) media files to copy"
-        foreach ($file in $mediaFiles) {
-            $relativePath = $file.FullName.Substring($WindowsMediaDir.Length + 1)
-            $targetPath = Join-Path $WindowsTempDir $relativePath
-            $targetDir = Split-Path $targetPath -Parent
-            
-            # Create target directory if it doesn't exist
-            if (!(Test-Path $targetDir)) {
-                New-Item -ItemType Directory -Path $targetDir -Force | Out-Null
-            }
-            
-            # Copy file preserving directory structure
-            Copy-Item -Path $file.FullName -Destination $targetPath -Force
+    # Check if file has changed
+    if (Test-FileChanged $sourceFile.FullName $cacheFile $relativePath) {
+        # Create target directory
+        $targetDir = Split-Path $targetFile -Parent
+        if (!(Test-Path $targetDir)) {
+            New-Item -ItemType Directory -Path $targetDir -Force | Out-Null
         }
-        Write-Success "Media files copied to temporary directory"
+        
+        # Copy file
+        Copy-Item -Path $sourceFile.FullName -Destination $targetFile -Force
+        
+        # Update cache
+        Update-FileCache $sourceFile.FullName $cacheFile $relativePath
+        
+        Write-Info "COPIED: $relativePath"
+        $copiedCount++
     }
     else {
-        Write-Info "No media files found to copy"
+        Write-Info "SKIPPED: $relativePath"
+        $skippedCount++
     }
 }
-else {
-    Write-Info "No _Media directory found in source"
-}
+
+Write-Success "Files processed: $copiedCount copied, $skippedCount skipped"
+
+# Media files are now handled in the main file copying loop above
 
 Write-Step "Renaming Excalidraw image files..."
 # Rename .excalidraw.png files to .png
@@ -183,110 +290,57 @@ else {
     Write-Info "No Excalidraw image files found to rename"
 }
 
-Write-Step "Processing files in parallel..."
-# Get all markdown files
+Write-Step "Processing files (only changed files)..."
+# Get all markdown files and check which ones need processing
 $markdownFiles = Get-ChildItem -Path $WindowsTempDir -Filter "*.md" -Recurse -File
 if ($markdownFiles.Count -eq 0) {
     Write-Warning "No markdown files found to process"
     exit 0
 }
-Write-Info "Found $($markdownFiles.Count) markdown files to process"
 
-# Calculate number of cores (leave one core free for system)
-$maxThreads = [Math]::Max(1, (Get-CimInstance Win32_ComputerSystem).NumberOfLogicalProcessors - 1)
-Write-Info "Using $maxThreads threads for parallel processing"
+$processedCount = 0
+$skippedCount = 0
 
-# Check PowerShell version for parallel processing method
-$PSVersion = $PSVersionTable.PSVersion.Major
-if ($PSVersion -ge 7) {
-    # PowerShell 7+ - Use native parallel processing
-    Write-Info "Using PowerShell 7+ parallel processing"
-    try {
-        $markdownFiles | ForEach-Object -ThrottleLimit $maxThreads -Parallel {
-            # Import the Process-MarkdownFile function into this parallel scope
-            ${function:Process-MarkdownFile} = $using:MyInvocation.MyCommand.ScriptBlock.Module.ExportedFunctions['Process-MarkdownFile'].ScriptBlock
-            
-            # Process the file
-            Process-MarkdownFile -FilePath $_.FullName
-        } -ErrorAction Stop
-    }
-    catch {
-        Write-Error "Error during parallel processing: $_"
-        exit 1
-    }
-}
-else {
-    # PowerShell 5.1 - Use jobs for parallel processing
-    Write-Info "Using PowerShell jobs for parallel processing"
+foreach ($file in $markdownFiles) {
+    # Calculate relative path for cache lookup
+    $relativePath = $file.FullName.Substring($WindowsTempDir.Length + 1)
+    $cacheFile = Join-Path $WindowsCacheDir "$relativePath.cache"
     
-    # Create a script block for processing
-    $scriptBlock = {
-        param($filePath)
-        
-        # Define the Process-MarkdownFile function in this scope
-        function Process-MarkdownFile {
-            param([string]$FilePath)
-            
-            # Store original timestamp
-            $originalTimestamp = (Get-Item $FilePath).LastWriteTime
-            
-            # Read file content
-            $content = Get-Content $FilePath -Raw
-            
-            # Process Excalidraw references - convert .excalidraw.png to .png
-            $content = $content -replace '\.excalidraw\.png\b', '.png'
-            
-            # Write back to file
-            $content | Set-Content $FilePath -NoNewline
-            
-            # Restore timestamp
-            (Get-Item $FilePath).LastWriteTime = $originalTimestamp
-        }
-        
-        # Process the file
-        Process-MarkdownFile -FilePath $filePath
-    }
+    # Check if this file was recently copied (indicating it needs processing)
+    $needsProcessing = $false
     
-    try {
-        # Start jobs for each file
-        $jobs = @()
-        foreach ($file in $markdownFiles) {
-            # Check running job count
-            $runningJobs = @(Get-Job -State Running -ErrorAction SilentlyContinue)
-            while ($runningJobs.Count -ge $maxThreads) {
-                Start-Sleep -Milliseconds 100
-                $runningJobs = @(Get-Job -State Running -ErrorAction SilentlyContinue)
-            }
-            
-            # Start new job
-            $jobs += Start-Job -ScriptBlock $scriptBlock -ArgumentList $file.FullName
-            Write-Progress -Activity "Processing Files" -Status "Processing $($jobs.Count) of $($markdownFiles.Count)" -PercentComplete (($jobs.Count / $markdownFiles.Count) * 100)
+    if (Test-Path $cacheFile) {
+        # Check if the cache was updated recently (within last few seconds)
+        $cacheAge = (Get-Date) - (Get-Item $cacheFile).LastWriteTime
+        if ($cacheAge.TotalSeconds -lt 10) {
+            # File was recently copied, needs processing
+            $needsProcessing = $true
         }
-        
-        Write-Progress -Activity "Processing Files" -Status "Waiting for jobs to complete..." -PercentComplete 99
-        
-        # Wait for all jobs to complete and collect results
-        foreach ($job in $jobs) {
-            $job | Wait-Job | Receive-Job -ErrorAction Stop | Out-Null
-            if ($job.State -eq 'Failed') {
-                throw "Job failed: $($job.ChildJobs[0].JobStateInfo.Reason.Message)"
+        else {
+            # File is old, check if it needs processing by looking for patterns
+            $content = Get-Content $file.FullName -Raw -ErrorAction SilentlyContinue
+            if ($content -match '(\$\$[^$]*\$\$|!\[\[.*\.excalidraw\.png\]\])') {
+                $needsProcessing = $true
             }
         }
-        
-        Write-Progress -Activity "Processing Files" -Completed
-        
-        # Clean up jobs
-        $jobs | Remove-Job -Force
     }
-    catch {
-        Write-Progress -Activity "Processing Files" -Completed
-        Write-Error "Error during parallel processing: $_"
-        Get-Job | Remove-Job -Force -ErrorAction SilentlyContinue
-        exit 1
+    else {
+        # No cache, process the file
+        $needsProcessing = $true
+    }
+    
+    if ($needsProcessing) {
+        Process-MarkdownFile -FilePath $file.FullName
+        Write-Info "PROCESSED: $relativePath"
+        $processedCount++
+    }
+    else {
+        Write-Info "SKIPPED: $relativePath"
+        $skippedCount++
     }
 }
 
-Write-Success "File processing completed"
+Write-Success "File processing completed: $processedCount processed, $skippedCount skipped"
 
 Write-Step "Cleaning up Excalidraw files..."
 try {

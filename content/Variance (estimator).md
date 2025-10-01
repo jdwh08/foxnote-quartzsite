@@ -9,7 +9,11 @@ created: 2024-03-19T22:06
 The [[Variance]] applied to estimators: 
 How much would our estimator $\hat{\theta}$ change if we trained it on a different dataset? 
 
-$$Var(\hat{\theta})=E[(\hat{\theta}-E[\hat{\theta}])^2]$$
+
+
+Var(\hat{\theta})=E[(\hat{\theta}-E[\hat{\theta}])^2]$
+
+
 
 ---
 # Notes:

@@ -8,7 +8,11 @@ created: 2024-03-19T22:06
 # Definition:
 Given some [[Point Estimator]] without [[Bias (estimator)]], its [[Variance (estimator)]] **cannot** be lower than the inverse of the [[Fisher Information Matrix]].
 
-$$Var(\hat{\theta}) \ge \mathcal{I}(\theta)^{-1}$$
+
+
+Var(\hat{\theta}) \ge \mathcal{I}(\theta)^{-1}$
+
+
 
 ---
 # Notes:

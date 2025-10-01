@@ -17,12 +17,20 @@ A type of [[Artificial Neural Network]] layer which performs normalization on th
 2. Calculate the [[Sample Mean]] and [[Sample Variance]] for each feature dimension.
 3. Normalize the data using [[Z-Score]]-like transform (with some $\epsilon$ to avoid div0)
 
-$$\hat{a} = \frac{a - \bar{a}}{\sqrt{\sigma_a^2 + \epsilon}}$$
+
+
+\hat{a} = \frac{a - \bar{a}}{\sqrt{\sigma_a^2 + \epsilon}}$
+
+
 
 We can also have it learn some $\gamma, \beta$ for shift and scale, i.e., run it through a tiny [[Linear Regression]]. 
 - Notice with the right values this can perfectly undo the [[Z-Score]]-like transformation
 
-$$\hat{a} = \gamma \frac{a - \bar{a}}{\sqrt{\sigma_a^2 + \epsilon}} + \beta$$
+
+
+\hat{a} = \gamma \frac{a - \bar{a}}{\sqrt{\sigma_a^2 + \epsilon}} + \beta$
+
+
 
 Standard notation has slope be $\gamma$ and intercept be $\beta$. This kills me.
 

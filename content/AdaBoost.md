@@ -9,9 +9,17 @@ created: 2024-03-19T22:06
 A [[Boosting|boosting]] ML model for [[Classification]], based around [[Decision Trees]].
 
 Formally, we have some boosting algorithm:
-$$F_T=\sum_{t=1}^T f_t(x)$$
+
+
+F_T=\sum_{t=1}^T f_t(x)$
+
+
 where for each tree we train, we do:
-$$\underset{\alpha}{\arg\min}\ L_t=\sum_i^N L_t({F_{t-1}(x_i)+\alpha \hat{f}(x_i)})$$
+
+
+\underset{\alpha}{\arg\min}\ L_t=\sum_i^N L_t({F_{t-1}(x_i)+\alpha \hat{f}(x_i)})$
+
+
 
 ---
 # Notes:

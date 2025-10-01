@@ -9,7 +9,11 @@ created: 2024-03-19T22:06
 Kinda inverse of [[Probability]]: from data, get parameters.
 
 Given the dataset; we guess some parameters $\hat{\theta}$ for our model $f$. We then ask what the "probability" of seeing that data would be given our parameters.
-$$P(y\ |\ f(x, \theta))$$
+
+
+P(y\ |\ f(x, \theta))$
+
+
 
 
 ---

@@ -47,22 +47,42 @@ If we know the noise in the labels is [[Normal Distribution|normally distributed
 - Normal distribution is smooth and reasonable approximation to a lot of noise, e.g., due to [[Central Limit Theorem (Lindeberg-Levy)|CLT]]
 - $d=f(x)+\epsilon$, $\epsilon \sim N(0, \sigma^2)$ and [[Independent and Identically Distributed|IID]]
 
-$$h_{MLE} = \underset{h \in H}{\arg\max}\ \Pi_{i=1}^m \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{1}{2}(\frac{d-f(x)}{\sigma})^2}$$
 
-$$= \underset{h \in H}{\arg\max} \sum_{i=1}^m \ln\left(\frac{1}{\sqrt{2\pi\sigma^2}}\right)-\frac{1}{2}(\frac{d-f(x)}{\sigma})^2$$
 
-$$= \underset{h \in H}{\arg\max} \sum_{i=1}^m -\frac{1}{2}(\frac{d-\mu}{\sigma})^2 \rightarrow \min \sum_{i=1}^m(d-f(x))^2$$
+h_{MLE} = \underset{h \in H}{\arg\max}\ \Pi_{i=1}^m \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{1}{2}(\frac{d-f(x)}{\sigma})^2}$
+
+
+
+
+
+= \underset{h \in H}{\arg\max} \sum_{i=1}^m \ln\left(\frac{1}{\sqrt{2\pi\sigma^2}}\right)-\frac{1}{2}(\frac{d-f(x)}{\sigma})^2$
+
+
+
+
+
+= \underset{h \in H}{\arg\max} \sum_{i=1}^m -\frac{1}{2}(\frac{d-\mu}{\sigma})^2 \rightarrow \min \sum_{i=1}^m(d-f(x))^2$
+
+
 
 - Bayesian justification for all the MSE stuff. Doesn't work for other noise
 
 ### Predicting Probabilities with Cross Entropy
 Suppose we have some binary classification and we want to learn the probability that $f(x)=1$. We also assume [[Independent]] for our hypothesis.
 
-$$P(D|h) = \Pi_{i}^m P(x_i, d_i |h) \rightarrow \Pi_{i=1}^m h(x_i)^{d_i}(1-h(x_i))^{1-d_i}$$
+
+
+P(D|h) = \Pi_{i}^m P(x_i, d_i |h) \rightarrow \Pi_{i=1}^m h(x_i)^{d_i}(1-h(x_i))^{1-d_i}$
+
+
 We can group together all of the elements $i$ which have the same $x$ value.
 Ideally our hypothesis $h(x)=1$ if $d=1$ and vice versa.
 Taking the [[Maximum Likelihood Estimation|MLE]] forces us to do 
-$$\arg\max \sum d_i \ln(h(x)) + (1-d_i) \ln(1-h(x))$$
+
+
+\arg\max \sum d_i \ln(h(x)) + (1-d_i) \ln(1-h(x))$
+
+
 which is the justification for [[Cross Entropy]]!
 
 

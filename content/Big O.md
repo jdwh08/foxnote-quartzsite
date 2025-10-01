@@ -10,7 +10,11 @@ Generally categorizes an algorithm based on the input.
 As your input grows, how fast does compute or memory grow?
 
 Formally:
-$$f(n) = O(g(n)) \text{ iff } \exists\  c, k \ s.t.\ 0\le f(n) \le c*g(n) \ \forall \ n \ge k$$
+
+
+f(n) = O(g(n)) \text{ iff } \exists\  c, k \ s.t.\ 0\le f(n) \le c*g(n) \ \forall \ n \ge k$
+
+
 
 ---
 ### Notes:

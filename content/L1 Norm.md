@@ -9,7 +9,11 @@ created: 2024-03-19T22:06
 ---
 # Definition:
 A [[Norm]] built around the Absolute Value or Manhattan Distance
-$$||\textbf{x}||_1 = \sum_i^N abs(x_i)$$
+
+
+||\textbf{x}||_1 = \sum_i^N abs(x_i)$
+
+
 
 ---
 # Notes:

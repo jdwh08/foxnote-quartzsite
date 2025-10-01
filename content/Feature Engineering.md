@@ -14,7 +14,11 @@ When we remove features, that is the [[Feature Selection]] problem.
 # Notes:
 
 More formally...
-$$X \sim \mathbb{F}^N \rightarrow \mathbb{F}^M$$ where typically $M < N$ (reduce the [[Curse of Dimensionality]]).
+
+
+X \sim \mathbb{F}^N \rightarrow \mathbb{F}^M$
+
+ where typically $M < N$ (reduce the [[Curse of Dimensionality]]).
 
 ---
 # Examples:

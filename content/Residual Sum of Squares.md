@@ -10,7 +10,11 @@ created: 2024-03-19T22:06
 # Definition:
 The sum of the squared [[Residuals]]:
 
-$$RSS=\sum_i^N(y_i - \hat{y}_i)^2$$
+
+
+RSS=\sum_i^N(y_i - \hat{y}_i)^2$
+
+
 
 ---
 # Notes:

@@ -19,11 +19,15 @@ Statistical tool used to check whether the data support a particular idea.
 $\alpha$ is the probability of a false positive/rejection of $H_0$, aka a **Type I Error**
 $\beta$ is the probability of a false negative/fail to reject $H_0$, aka a **Type II Error**
 **Power** is the probability of true positive rejection, aka $1-\beta$ . 
-$$\begin{bmatrix}
+
+
+\begin{bmatrix}
 \text{ } & H_0 \text{ true} & H_a \text{ true} \\
 \text{Reject }H_0 & \alpha & 1-\beta \text{ / power} \\
 \text{Fail Reject} & 1-\alpha & \beta \\
-\end{bmatrix}$$
+\end{bmatrix}$
+
+
 
 **Link to [[Confidence Interval]]**
 Confidence Intervals use the same methodology, but instead of testing if some hypothesis is true, they create an estimate of the lower and upper bounds.

@@ -10,10 +10,18 @@ created: 2024-03-04T20:57
 A typical symmetric, bell-shaped distribution.
 
 A [[Random Variable]] X is normally distributed with [[Expected Value|mean]] $\mu$ and [[Variance|variance]] $\sigma^2$ if it has a [[Probability Density Function|PDF]] of
-$$f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}$$
+
+
+f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}$
+
+
 
 which gives it a [[Cumulative Distribution Function|CDF]] of
-$$\Phi(z) = \int_{-\infty}^{z} e^{\frac{-u^2}{2}}du$$
+
+
+\Phi(z) = \int_{-\infty}^{z} e^{\frac{-u^2}{2}}du$
+
+
 
 What are these values?
 - $\mu$ is the population mean

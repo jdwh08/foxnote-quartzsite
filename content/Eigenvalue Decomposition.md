@@ -8,7 +8,11 @@ created: 2024-03-19T22:06
 # Definition:
 A type of [[Matrix Decomposition]] which breaks matrices down into [[Eigenvectors and Eigenvalues]], i.e., a set of vectors which keep their direction after the linear transformation.
 
-$$A=V\ \text{diag}(\lambda) \ V^{-1}$$
+
+
+A=V\ \text{diag}(\lambda) \ V^{-1}$
+
+
 
 ---
 # Notes:

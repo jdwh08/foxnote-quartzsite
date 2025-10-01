@@ -8,7 +8,11 @@ created: 2024-03-19T22:06
 # Definition:
 The [[Entropy (information theory)]] of two [[Random Variable]]s at the same time.
 
-$$H(x,y)= -\sum p(x,y) \log p(x,y)$$
+
+
+H(x,y)= -\sum p(x,y) \log p(x,y)$
+
+
 
 Like [[Joint Probability]] but applied to [[Entropy (information theory)]]
 

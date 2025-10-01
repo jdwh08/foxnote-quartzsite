@@ -19,8 +19,16 @@ Prediction [[Accuracy]] depends on two things:
 	- $\epsilon > 0$ because...
 		- [[Omitted Variables Bias]]: we have some $X$ that we don't know but are useful for prediction $y$
 
-$$E(Y-\hat{Y})^2 = E[f(X)+\epsilon-\hat{f}(X)]^2 = [f(X)-\hat{f}(x)]^2 + Var(\epsilon)$$
-$$\text{where }Var(\epsilon)\text{ is irreducible.}$$
+
+
+E(Y-\hat{Y})^2 = E[f(X)+\epsilon-\hat{f}(X)]^2 = [f(X)-\hat{f}(x)]^2 + Var(\epsilon)$
+
+
+
+
+\text{where }Var(\epsilon)\text{ is irreducible.}$
+
+
 
 ---
 # Examples:

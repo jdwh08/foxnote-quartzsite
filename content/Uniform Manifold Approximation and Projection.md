@@ -59,7 +59,11 @@ Starting with some high dimensional data, move the points around in lower-dimens
 
 
 **Formula** for calculating low-dimensionality similarity scores using the [[t-Distribution]]:
-$$\frac{1}{1+\alpha d^{2\beta}}$$
+
+
+\frac{1}{1+\alpha d^{2\beta}}$
+
+
 where $d$ is low-dimensional distance and $\alpha, \beta$ are parameters that control how tight the points should be. (UMAP uses: $\alpha=1.577$, $\beta=0.8951$; t-SNE uses 1 & 1)
 
 

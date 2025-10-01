@@ -11,7 +11,11 @@ If a random experiment is repeated independently more and more times, the averag
 
 Formally: Given repeated samples of a [[Independent and Identically Distributed]] [[Random Variable]], the sample [[Expected Value]] should converge to the true population mean.
 
-$$\bar{X_n} = \frac{X_1+...+X_n}{n} \rightarrow \mu \text{ as } n\rightarrow \infty$$
+
+
+\bar{X_n} = \frac{X_1+...+X_n}{n} \rightarrow \mu \text{ as } n\rightarrow \infty$
+
+
 
 ---
 ### Notes:

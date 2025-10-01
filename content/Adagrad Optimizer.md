@@ -22,11 +22,19 @@ We use the statistics on the [[Gradient]] to determine how to reduce [[Learning 
 ### Algorithm
 1. Obtain a gradient accumulator. This is just the cumulative squared [[Gradient]]
 
-$$G_i = G_{i-1} + \left( \frac{\partial \mathcal{L}}{\partial w_{i-1}} \right)^2$$
+
+
+G_i = G_{i-1} + \left( \frac{\partial \mathcal{L}}{\partial w_{i-1}} \right)^2$
+
+
 
 2. When updating weights, we divide our [[Learning Rate]] by the square root of the [[Gradient]].
 
-$$w_{i} = w_{i-1} - \frac{\lambda}{\sqrt{G_i + \epsilon}} \frac{\partial \mathcal{L}}{\partial w_{i-1}}$$
+
+
+w_{i} = w_{i-1} - \frac{\lambda}{\sqrt{G_i + \epsilon}} \frac{\partial \mathcal{L}}{\partial w_{i-1}}$
+
+
 
 NOTE: essentially dividing [[Learning Rate]] $\lambda$ by the [[L2 Norm]] of the [[Gradient]] over time.
 - High gradient stuff gets a larger division penalty

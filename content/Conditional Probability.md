@@ -13,11 +13,19 @@ $P(A|B) = \frac{P(A\cap B)}{P(B)}$ if $P(B) > 0$.
 There are other ways to calculate this though, e.g., figuring out how B changed the [[Sample Space and Events|sample space]].
 
 For [[Random Variable]]s:
-$$p_{X|Y}(x|y)=\frac{P(X=x, Y=y)}{P(Y=y)}=\frac{P(x,y)}{P(y)}$$
+
+
+p_{X|Y}(x|y)=\frac{P(X=x, Y=y)}{P(Y=y)}=\frac{P(x,y)}{P(y)}$
+
+
 - Because this is a probability across $P(Y=y)$, each value of $y$ must have it satisfy the conditions to be a probability (i.e., sum up to 1).
 
 The same is true for distributions, i.e., [[Joint Probability]] over [[Marginal Probability]]:
-$$f_{X|Y}(x|y) = \frac{f(x,y)}{f_Y(y)}$$
+
+
+f_{X|Y}(x|y) = \frac{f(x,y)}{f_Y(y)}$
+
+
 
 ---
 ### Notes:

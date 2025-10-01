@@ -20,10 +20,18 @@ However, **SARSA is "[[On Policy Reinforcement Learning]]"**, i.e., Q-Value for 
 ### Theory from [[Markov Decision Process]]
 - We can calculate our [[Utility]] for a state $S$ from
 	- Where $R$ is reward, $\gamma$ is discount factor, $S'$ is new states given best action, we sum across transition probability times new state utility
-$$U(s) = R(s) + \gamma \max_{a} \sum_{s'} T(sas') U(s')$$
+
+
+U(s) = R(s) + \gamma \max_{a} \sum_{s'} T(sas') U(s')$
+
+
 
 - Instead of [[Utility]] based on state, we can instead use a **Q-Function** like in [[Q-Learning]].
-$$Q(s,a) = Q(s,a) + \alpha * \left[ R(s,a) + \gamma Q(s',a') - Q(s,a) \right]$$
+
+
+Q(s,a) = Q(s,a) + \alpha * \left[ R(s,a) + \gamma Q(s',a') - Q(s,a) \right]$
+
+
 - This calculates the value **for some state S and action A**
 	- We have a learning rate $\alpha$ that controls how much new info is valued.
 	- Notice the $\gamma Q(s',a') - Q(s,a)$ is basically tracking how different our new Q is compared to the current estimate, i.e., [[Temporal Difference Learning]] with $TD(0)$

@@ -7,8 +7,16 @@ created: 2024-03-02T19:54
 ---
 ### Definition:
 Given $p(x | y)$, a function to determine $p(y|x)$ for [[Conditional Probability]].
-$$p(Y|X) = \frac{P(X|Y)P(Y)}{P(X)}$$
-$$= \frac{P(X|Y)*P(Y)}{P(Y)*P(X|Y)+P(Y^c)*P(X|Y^c)}$$
+
+
+p(Y|X) = \frac{P(X|Y)P(Y)}{P(X)}$
+
+
+
+
+= \frac{P(X|Y)*P(Y)}{P(Y)*P(X|Y)+P(Y^c)*P(X|Y^c)}$
+
+
 (it makes more sense to draw a tree diagram than to actually remember this formula though!)
 
 ---

@@ -12,7 +12,11 @@ The average level of "information" / "surprise" / "uncertainty" for a [[Random V
 
 Suppose we have a [[Random Variable]] X which takes values in $\mathcal{X}$, with some [[Probability Density Function|Probability Distribution]]. Then, entropy is the sum of $p*logp$ over all values of $\mathcal{X}$:
 
-$$H(X) := -\sum_{x}^{\mathcal{X}} p(x) * \log p(x)$$
+
+
+H(X) := -\sum_{x}^{\mathcal{X}} p(x) * \log p(x)$
+
+
 
 ---
 # Notes:

@@ -12,7 +12,11 @@ created: 2024-03-20T15:40
 # Definition:
 Measures the difference between two probability distributions over the same variable.
 
-$$D_{KL}(p(x)||q(x)) = \sum\limits_{x \in X} p(x) \log \left(\frac{p(x)}{q(x)} \right)$$
+
+
+D_{KL}(p(x)||q(x)) = \sum\limits_{x \in X} p(x) \log \left(\frac{p(x)}{q(x)} \right)$
+
+
 
 When probability in $p$ is big but $q$ is small, then there is a large divergence. When probability in $p$ is small but $q$ is big, there is a smaller divergence.
 

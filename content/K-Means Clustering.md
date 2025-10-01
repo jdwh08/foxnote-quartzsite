@@ -33,8 +33,16 @@ created: 2024-03-19T22:06
 
 ### Proof as [[Optimizer|Optimization]]
 Suppose we have $P^t(x)$ which are the clusters, $C_i^t$ are the points in the cluster $P(i)$, and the center of each cluster.
-$$P^t(x) = \underset{i}{\arg\min} ||x-\text{center}_i^{t-1}||_2^2$$ (assign to closest center using distance)
-$$\text{center}_i^t = \sum_{y \in C_i^t}^t=\frac{y}{|c_i|}$$
+
+
+P^t(x) = \underset{i}{\arg\min} ||x-\text{center}_i^{t-1}||_2^2$
+
+ (assign to closest center using distance)
+
+
+\text{center}_i^t = \sum_{y \in C_i^t}^t=\frac{y}{|c_i|}$
+
+
 
 - Our configuration is the centers of each cluster
 - Our scores are the [[Mean Squared Error]] between the center and each point in the cluster.

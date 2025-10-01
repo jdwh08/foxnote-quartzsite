@@ -188,45 +188,82 @@ CORES=$(nproc 2>/dev/null || sysctl -n hw.ncpu 2>/dev/null || echo 4)
 export CORES
 
 log_step "Processing Excalidraw references..."
-# First, rename .excalidraw.png files to .png
-find "$DIRECTORY" -name "*.excalidraw.png" -type f | while read -r file; do
+# First, rename .excalidraw.png files to .png (only if they exist)
+if find "$DIRECTORY" -name "*.excalidraw.png" -type f | grep -q .; then
+    find "$DIRECTORY" -name "*.excalidraw.png" -type f | while read -r file; do
+        if [ -f "$file" ]; then
+            # Get the directory and base name without .excalidraw.png
+            dir=$(dirname "$file")
+            basename=$(basename "$file" .excalidraw.png)
+            new_name="$dir/$basename.png"
+            
+            # Rename the file
+            mv "$file" "$new_name"
+            log_info "Renamed: $(basename "$file") -> $(basename "$new_name")"
+        fi
+    done
+fi
+
+# Process only changed markdown files for Excalidraw references
+PROCESSED_FILES=0
+find "$DIRECTORY" -type f -name "*.md" | while read -r file; do
     if [ -f "$file" ]; then
-        # Get the directory and base name without .excalidraw.png
-        dir=$(dirname "$file")
-        basename=$(basename "$file" .excalidraw.png)
-        new_name="$dir/$basename.png"
-        
-        # Rename the file
-        mv "$file" "$new_name"
-        log_info "Renamed: $(basename "$file") -> $(basename "$new_name")"
+        # Check if file needs processing by looking for .excalidraw.png references
+        if grep -q "\.excalidraw\.png" "$file" 2>/dev/null; then
+            # Store the original modification date
+            original_date=$(stat -c %y "$file" 2>/dev/null || stat -f "%Sm" "$file")
+            # Process the file - convert .excalidraw.png references to .png
+            sed "s/\.excalidraw\.png/\.png/g" "$file" > "$file.tmp"
+            mv "$file.tmp" "$file"
+            touch -d "$original_date" "$file" 2>/dev/null || touch -t $(date -r "$original_date" "+%Y%m%d%H%M.%S") "$file"
+            echo "PROCESSED: $file"
+        fi
     fi
 done
 
-# Use parallel for Excalidraw processing in markdown files
-find "$DIRECTORY" -type f -print0 | parallel -0 -j "$CORES" '
-    file={}
-    if [ -f "$file" ]; then
-        # Store the original modification date
-        original_date=$(stat -c %y "$file" 2>/dev/null || stat -f "%Sm" "$file")
-        # Process the file - convert .excalidraw.png references to .png
-        sed "s/\.excalidraw\.png/\.png/g" "$file" > "$file.tmp"
-        mv "$file.tmp" "$file"
-        touch -d "$original_date" "$file" 2>/dev/null || touch -t $(date -r "$original_date" "+%Y%m%d%H%M.%S") "$file"
-    fi
-'
-find "$TEMP_EXPORT_DIR" -name "*.excalidraw.md" -type f -delete
+# Clean up .excalidraw.md files
+find "$TEMP_EXPORT_DIR" -name "*.excalidraw.md" -type f -delete 2>/dev/null || true
 log_success "Excalidraw references processed"
 
 log_step "Processing markdown files..."
-# Process markdown files in parallel
-find "$DIRECTORY" -type f -name "*.md" -print0 | parallel -0 -j "$CORES" '
-    file={}
+# Process only changed markdown files
+PROCESSED_MD_COUNT=0
+SKIPPED_MD_COUNT=0
+
+# Find all markdown files and check which ones need processing
+find "$DIRECTORY" -type f -name "*.md" | while read -r file; do
     if [ -f "$file" ]; then
+        # Calculate relative path for cache lookup
+        relative_path="${file#$DIRECTORY/}"
+        cache_file="$CACHE_DIR/$relative_path.cache"
+        
+        # Check if this file was recently copied (indicating it needs processing)
+        if [ -f "$cache_file" ]; then
+            # Check if the cache was updated recently (within last few seconds)
+            cache_age=$(($(date +%s) - $(stat -c %Y "$cache_file" 2>/dev/null || stat -f "%m" "$cache_file")))
+            if [ "$cache_age" -lt 10 ]; then
+                # File was recently copied, needs processing
+                echo "PROCESS: $file"
+            else
+                # File is old, check if it needs processing by looking for patterns
+                if grep -q -E '(\$\$[^$]*\$\$|!\[\[.*\.excalidraw\.png\]\])' "$file" 2>/dev/null; then
+                    echo "PROCESS: $file"
+                else
+                    echo "SKIP: $file"
+                fi
+            fi
+        else
+            # No cache, process the file
+            echo "PROCESS: $file"
+        fi
+    fi
+done | while read -r action file; do
+    if [ "$action" = "PROCESS" ] && [ -f "$file" ]; then
         # Store the original modification date
         original_date=$(stat -c %y "$file" 2>/dev/null || stat -f "%Sm" "$file")
         
         # Process the file with awk, handling both front matter and equations
-        awk -v RS="" -v ORS="\n\n" -v FRONT_MATTER=0 -v P=0 '"'"'
+        awk -v RS="" -v ORS="\n\n" -v FRONT_MATTER=0 -v P=0 '
         function process_equations(line,    equation, before_eq, after_eq) {
             while (match(line, /\$\$[^$]*\$\$/)) {
                 equation = substr(line, RSTART+2, RLENGTH-4)
@@ -269,25 +306,29 @@ find "$DIRECTORY" -type f -name "*.md" -print0 | parallel -0 -j "$CORES" '
             } else {
                 print
             }
-        }'"'"' "$file" > "$file.tmp"
+        }' "$file" > "$file.tmp"
         
         mv "$file.tmp" "$file"
         touch -d "$original_date" "$file" 2>/dev/null || touch -t $(date -r "$original_date" "+%Y%m%d%H%M.%S") "$file"
+        echo "PROCESSED: $file"
+    elif [ "$action" = "SKIP" ]; then
+        echo "SKIPPED: $file"
     fi
-'
+done
+
 log_success "Markdown files processed"
 
 log_step "Cleaning up paths..."
-# Clean up paths in parallel
-find "$DIRECTORY" -type f -print0 | parallel -0 -j "$CORES" '
-    file={}
-    if [ -f "$file" ]; then
+# Clean up paths only in files that contain "Public/" references
+find "$DIRECTORY" -type f | while read -r file; do
+    if [ -f "$file" ] && grep -q "Public/" "$file" 2>/dev/null; then
         original_date=$(stat -c %y "$file" 2>/dev/null || stat -f "%Sm" "$file")
         sed "s/Public\///g" "$file" > "$file.tmp"
         mv "$file.tmp" "$file"
         touch -d "$original_date" "$file" 2>/dev/null || touch -t $(date -r "$original_date" "+%Y%m%d%H%M.%S") "$file"
+        echo "CLEANED: $file"
     fi
-'
+done
 log_success "Paths cleaned up"
 
 # Final step: Copy to Quartz content directory if specified differently
