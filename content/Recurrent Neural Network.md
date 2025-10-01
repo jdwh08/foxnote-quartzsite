@@ -20,7 +20,7 @@ A type of [[Artificial Neural Network|Neural Network]] used for learning sequent
 	
 
 
-A_{lk} = g(w_{k0} + \sum_{j=1}^p w_{kj} X_{lj} + \sum_{s=1}^K u_{ks} A_{l-1, s})$
+..A_{lk} = g(w_{k0} + \sum_{j=1}^p w_{kj} X_{lj} + \sum_{s=1}^K u_{ks} A_{l-1, s})$
 
 
 - where g is our [[Activation Function]]
@@ -33,12 +33,12 @@ A_{lk} = g(w_{k0} + \sum_{j=1}^p w_{kj} X_{lj} + \sum_{s=1}^K u_{ks} A_{l-1, s})
 
 
 
-O_L=\beta_0 + \sum_{k=1}^K \beta_k A_{lk}$
+..O_L=\beta_0 + \sum_{k=1}^K \beta_k A_{lk}$
 
 
 - where $\beta$ is the weight for each layer's activation.
 
-![[RNN.png]]
+![[_Media/Excalidraw/RNN.png]]
 
 
 Loss function is usually [[Mean Squared Error|MSE]] for the final output $O_L$ against the true $Y$. We ignore all the intermediate output predictions.

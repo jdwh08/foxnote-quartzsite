@@ -10,7 +10,7 @@ A data structure consisting nodes which connect to each other.
 - Similar to [[Linked List]], but each node can have multiple connections
 - Similar to [[Graph]], but there cannot be any [[Cycles]] for connections
 
-![[Tree.png]]
+![[_Media/Excalidraw/Tree.png]]
 
 ---
 # Notes:

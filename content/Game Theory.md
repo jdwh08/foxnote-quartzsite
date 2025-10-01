@@ -49,7 +49,7 @@ Ways to do this:
 **Deterministic**: All actions will always lead to specific state (no randomness).
 **Perfect Information**: Both players know exactly what state and actions they are in.
 
-![[Game Theory Basic Game.png]]
+![[_Media/Excalidraw/Game Theory Basic Game.png]]
 
 Reward Matrix for each strategy:
 
@@ -73,7 +73,7 @@ Nash Equilibria is (LR, MR) with payoffs +3/-3.
 Two player zero sum finite *nondeterministic* perfect information game!
 We assume payoffs are based on [[Expected Value]].
 
-![[Game Theory Simple Nondeterministic Game.png]]
+![[_Media/Excalidraw/Game Theory Simple Nondeterministic Game.png]]
 
 | A / B | L                        | R                     |
 | ----- | ------------------------ | --------------------- |
@@ -119,10 +119,10 @@ Instead, we now need to have **mixed** strategies.
 	- We can thus [[Minimax]] over the probabilities!
 	- Note that in other games, minimax optimal strategy is a corner solution (e.g., $p=0, 1$ i.e., a pure strategy)
 
-![[Game Theory Hidden Info Payoffs.png]]
+![[_Media/Excalidraw/Game Theory Hidden Info Payoffs.png]]
 
 ## Prisoner's Dilemma Game
-![[Prisoner's Dilemma#Definition]]
+![[_Media/Excalidraw/Prisoner's Dilemma#Definition]]
 
 ## [[Prisoner's Dilemma Repeated]] (Finite)
 Suppose we repeatedly play $K < \infty$ Prisoner's Dilemma games.

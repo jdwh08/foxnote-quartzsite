@@ -12,7 +12,7 @@ A measure of how different a [[Point Estimator]]'s [[Expected Value]] is compare
 
 
 
-Bias_{\theta}[\hat{\theta}]=E_{x|\theta}[\hat{\theta}] - \theta= E_{x|\theta}[\hat{\theta} - \theta] $
+..Bias_{\theta}[\hat{\theta}]=E_{x|\theta}[\hat{\theta}] - \theta= E_{x|\theta}[\hat{\theta} - \theta] $
 
 
 

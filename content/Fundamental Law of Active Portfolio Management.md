@@ -11,7 +11,7 @@ A theory regarding active portfolio management.
 Richard Grinhold's Fundamental Law:
 
 
-perf = skill * \sqrt{breadth}$
+..perf = skill * \sqrt{breadth}$
 
 
 
@@ -20,13 +20,13 @@ perf = skill * \sqrt{breadth}$
 Performance over time is measured via Information Ratio.
 
 
-perf=r_p(t)=\beta r_m(t) + \alpha_p(t)$
+..perf=r_p(t)=\beta r_m(t) + \alpha_p(t)$
 
 
 where we are using the [[Capital Asset Pricing Model|CAPM]] to model returns. We can back out the [[Sharpe Ratio]] of the $\alpha$ component:
 
 
-IR=\frac{mean(\alpha_p(t))}{stdev(\alpha_p(t))}$
+..IR=\frac{mean(\alpha_p(t))}{stdev(\alpha_p(t))}$
 
 
 and we calculate this via alpha over time.
@@ -37,7 +37,7 @@ Breadth is the number of trading opportunities per year. A benchmark buy-and-hol
 
 
 
-IR=IC*\sqrt{Breadth}$
+..IR=IC*\sqrt{Breadth}$
 
 
 Note that often breadth is easy to improve, while skill is hard to. However, breadth grows slowly.

@@ -13,7 +13,7 @@ Formally: Given repeated samples of a [[Independent and Identically Distributed]
 
 
 
-\bar{X_n} = \frac{X_1+...+X_n}{n} \rightarrow \mu \text{ as } n\rightarrow \infty$
+..\bar{X_n} = \frac{X_1+...+X_n}{n} \rightarrow \mu \text{ as } n\rightarrow \infty$
 
 
 

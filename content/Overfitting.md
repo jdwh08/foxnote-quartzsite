@@ -10,7 +10,7 @@ created: 2024-03-19T22:06
 # Definition:
 When a [[Machine Learning]] model performs very well in the training set at the expense of performing on the generalized problem.
 
-![[Overfitting.png|378x308]]
+![[_Media/Excalidraw/Overfitting.png|378x308]]
 
 ---
 # Notes:

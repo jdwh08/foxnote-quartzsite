@@ -24,7 +24,7 @@ We use the statistics on the [[Gradient]] to determine how to reduce [[Learning 
 
 
 
-G_i = G_{i-1} + \left( \frac{\partial \mathcal{L}}{\partial w_{i-1}} \right)^2$
+..G_i = G_{i-1} + \left( \frac{\partial \mathcal{L}}{\partial w_{i-1}} \right)^2$
 
 
 
@@ -32,7 +32,7 @@ G_i = G_{i-1} + \left( \frac{\partial \mathcal{L}}{\partial w_{i-1}} \right)^2$
 
 
 
-w_{i} = w_{i-1} - \frac{\lambda}{\sqrt{G_i + \epsilon}} \frac{\partial \mathcal{L}}{\partial w_{i-1}}$
+..w_{i} = w_{i-1} - \frac{\lambda}{\sqrt{G_i + \epsilon}} \frac{\partial \mathcal{L}}{\partial w_{i-1}}$
 
 
 

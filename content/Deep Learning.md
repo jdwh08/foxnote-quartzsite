@@ -39,7 +39,7 @@ Generally outperforms other approaches when given enough data and compute: [[The
 	- We see how the deep bit grows at best exponentially, while the shallow bit grows squared. (Note: these are upper bounds because of dead neurons, etc.)
 
 
-N_r \le \left(\frac{D}{I} +1 \right)^{D_i (L-1)} \left( (D^2 + D+2)/2\right)$
+..N_r \le \left(\frac{D}{I} +1 \right)^{D_i (L-1)} \left( (D^2 + D+2)/2\right)$
 
  
 #### Other Architecture

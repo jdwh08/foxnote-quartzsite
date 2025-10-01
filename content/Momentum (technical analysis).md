@@ -10,7 +10,7 @@ A [[Technical Analysis]] indicator based on changes in price over time.
 
 
 
-\text{simple momentum}_t = p_t / p_{t-n} - 1$
+..\text{simple momentum}_t = p_t / p_{t-n} - 1$
 
 
 ```python

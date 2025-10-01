@@ -68,7 +68,7 @@ delete(v):
 	- More specifically, it's $O(h)$, where $h$ is the height of the tree.
 
 At best, our tree is perfectly balanced and thus the height is $O(\log(N))$. However, we could have a terribly balanced tree like:
-![[Imbalanced Binary Tree.png]]
+![[_Media/Excalidraw/Imbalanced Binary Tree.png]]
 E.g., try searching for 12 here!
 
 Thus, we have a preference for trees which can balance themselves.

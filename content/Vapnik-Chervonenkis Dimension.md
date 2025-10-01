@@ -25,7 +25,7 @@ It's typically the same as the number of parameters.
 If VC dimension is finite, then it satisfies [[Haussler's Theorem]] extension and thus the ML model is [[Probably Approximately Correct Learning|PAC Learnable]].
 
 
-m \ge \frac{1}{\epsilon} \left(8 * VC(H)*\log_2(13/\epsilon) + 4 \log_2(2/\delta) \right)$
+..m \ge \frac{1}{\epsilon} \left(8 * VC(H)*\log_2(13/\epsilon) + 4 \log_2(2/\delta) \right)$
 
 
 

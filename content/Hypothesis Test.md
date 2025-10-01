@@ -21,7 +21,7 @@ $\beta$ is the probability of a false negative/fail to reject $H_0$, aka a **Typ
 **Power** is the probability of true positive rejection, aka $1-\beta$ . 
 
 
-\begin{bmatrix}
+..\begin{bmatrix}
 \text{ } & H_0 \text{ true} & H_a \text{ true} \\
 \text{Reject }H_0 & \alpha & 1-\beta \text{ / power} \\
 \text{Fail Reject} & 1-\alpha & \beta \\

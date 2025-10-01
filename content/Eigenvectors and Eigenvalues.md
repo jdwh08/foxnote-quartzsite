@@ -44,7 +44,7 @@ You can have cases where eigenvalues and thus eigenvectors are repeated (see exa
 Suppose we have some square matrix 
 
 
-A = \begin{bmatrix} 0 & 1 \\
+..A = \begin{bmatrix} 0 & 1 \\
 -2 & -3
 \end{bmatrix}$
 
@@ -58,7 +58,7 @@ We need to find $A \vec{x}=\lambda \vec{x} = \lambda I^{n\times n} \vec{x}$. Sub
 We can thus calculate $A-\lambda I:$
 
 
-A - \lambda I= \begin{bmatrix} 0 & 1 \\
+..A - \lambda I= \begin{bmatrix} 0 & 1 \\
 -2 & -3
 \end{bmatrix} - 
 \begin{bmatrix} \lambda & 0 \\
@@ -78,7 +78,7 @@ These are our **eigenvalues**.
 
 Consider $\lambda=-1$ as our eigenvalue. Go back to $A\vec{x}=\lambda \vec{x}$, and solve [[Ax=0]] so 
 
-\begin{bmatrix} 0 & 1 \\
+..\begin{bmatrix} 0 & 1 \\
 -2 & -3
 \end{bmatrix} 
 \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = -1 \begin{bmatrix} x_1 \\ x_2 \end{bmatrix}$
@@ -89,7 +89,7 @@ This gives the equations $x_2 = -x_1$ and $-2x_1 - 3x_2 = -x_2$. Both of these e
 **Imaginary Eigenvalues**
 Suppose we have some 90 degree rotation matrix. NOTE: there are no vectors other than $\vec{0}$ which preserve their direction, so there should be no eigenvectors. 
 
-Q = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}$
+..Q = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}$
 
 The [[Matrix Trace]] is $0+0=0=\lambda_1 + \lambda_2$, and the [[Matrix Determinant]] is $0*0-(-1*1)=1=\lambda_1\lambda_2$. We see that this polynomial shouldn't be possible...
 - $det(Q-\lambda I) = \lambda^2 + 1 = 0$, so eigenvalues are $i, -i$. Uh oh, [[Complex Numbers]] since this is a complex conjugate pair.
@@ -99,14 +99,14 @@ The [[Matrix Trace]] is $0+0=0=\lambda_1 + \lambda_2$, and the [[Matrix Determin
 **Repeated Eigenvalues**
 Consider the eigenvectors/values of 
 
-R = \begin{bmatrix} 3 & 1 \\ 0 & 3 \end{bmatrix}$
+..R = \begin{bmatrix} 3 & 1 \\ 0 & 3 \end{bmatrix}$
 
 which is a [[Triangular Matrix]]. In these cases we can "read the eigenvalues" right off the diagonal, since the values which add to 6 and multiply to 9 are literally right there man.
 Thus, we have a repeated eigenvalue: $\lambda = 3,3$.
 
 What happens to the eigenvectors? Consider $(R-\lambda I)\vec{x} = \vec{0}$. We see that 
 
-R-\lambda I = 
+..R-\lambda I = 
 \begin{bmatrix} 0 & 1 \\ 0 & 0\end{bmatrix} \rightarrow 
 \begin{bmatrix} 0 & 1 \\ 0 & 0\end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} 0 \\ 0\end{bmatrix}$
 

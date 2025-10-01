@@ -25,16 +25,16 @@ Suppose we have some **Linearly Separable** data (i.e., can split perfectly usin
 Support Vector Machines classify things linearly:
 
 
-\hat{y}=w^T x + b$
+..\hat{y}=w^T x + b$
 
 
 - where $\hat{y} \in \{-1, 1\}$ is the prediction (Binary [[Classification]])
 - where $w$ is the weights on the features and $b$ is the intercept for the hyperplane.
 - The ideal model should have prediction $+1$ for the first positive classes it encounters, and $-1$ for the first negative class it encounters.
-![[SVM.png]]
+![[_Media/Excalidraw/SVM.png]]
 
 
-w'(x_1 - x_2)=2 \rightarrow \frac{w'}{||w||}(x_1-x_2)=\frac{2}{
+..w'(x_1 - x_2)=2 \rightarrow \frac{w'}{||w||}(x_1-x_2)=\frac{2}{
 ||w||}$
 
 
@@ -46,7 +46,7 @@ We maximize the margin using with $w$ subject to classifying the points correctl
 How do we write this condition for classifying points? In binary, this is easy:
 
 
-\hat{y}_i (w' x_i + b) \ge 1\ \forall\ i$
+..\hat{y}_i (w' x_i + b) \ge 1\ \forall\ i$
 
 
 
@@ -55,7 +55,7 @@ For a multiclass SVM, our loss function of "maximizing the margin" essentially b
 
 
 
-L_i = \sum_{j \neq y_i} 
+..L_i = \sum_{j \neq y_i} 
 	\begin{cases}
 	0 & \text{if } f(x_i) \ge f(x_j) + 1\\
 	f(x_j) - f(x_i) + 1 & \text{if better score than label}
@@ -68,43 +68,43 @@ also known as the [[Hinge Loss]]
 #### Derivation
 
 
-\max_w \frac{2}{||w||} + \lambda_i \left[\hat{y}_i (w' x_i + b) \ge 1\right]\ \forall\ i$
+..\max_w \frac{2}{||w||} + \lambda_i \left[\hat{y}_i (w' x_i + b) \ge 1\right]\ \forall\ i$
 
 
 This is actually kinda hard; so instead we try to solve this problem instead:
 
 
-\min_w \frac{1}{2} w'w - \sum_i \lambda_i \left[\hat{y}_i (w' x_i + b) - 1\right]$
+..\min_w \frac{1}{2} w'w - \sum_i \lambda_i \left[\hat{y}_i (w' x_i + b) - 1\right]$
 
 
 because [[Matrix Norm]] is always positive; it's the reciprocal in the top; and squaring is monotonic. We can thus flip this from max to min and put the $||w|| \sim w'w$
 - This turns it into a [[Quadratic Programming]] problem, which is much easier and has known techniques to solve! But... we have to convert it once again to be in the standard form for this. Uh oh.
 
 
-L(w, b, \lambda) = \frac{1}{2} w'w - \sum_i \lambda_i \left[\hat{y}_i (w' x_i + b) - 1\right]$
+..L(w, b, \lambda) = \frac{1}{2} w'w - \sum_i \lambda_i \left[\hat{y}_i (w' x_i + b) - 1\right]$
 
 
 
 
-\frac{\partial L}{\partial w} = w - \sum_i \lambda_i y_i x_i = 0$
+..\frac{\partial L}{\partial w} = w - \sum_i \lambda_i y_i x_i = 0$
 
 
 
 
-\frac{\partial L}{\partial b} = -\sum_i \lambda_i y_i =0$
+..\frac{\partial L}{\partial b} = -\sum_i \lambda_i y_i =0$
 
 
 - Under the [[KKT Conditions]]. (Remember [[Lagrange Multipliers]] from Econ? :P)
 - Stuff these back into the original [[Lagrange Multipliers]] problem
 
 
-L(w,b,\lambda)=\frac{1}{2} w'w - \sum \lambda ywx - b \sum \lambda y + \sum \lambda$
+..L(w,b,\lambda)=\frac{1}{2} w'w - \sum \lambda ywx - b \sum \lambda y + \sum \lambda$
 
 
 - Simplify! This is doing the [[Vector Dual]] version of the problem. 
 
 
-\max w(\lambda) = \sum_i\lambda_i -1/2 \sum_{ij} \lambda_i\ \lambda_j\ y_i\ y_j\ x_i' x_j * K(x_i, x_j)$
+..\max w(\lambda) = \sum_i\lambda_i -1/2 \sum_{ij} \lambda_i\ \lambda_j\ y_i\ y_j\ x_i' x_j * K(x_i, x_j)$
 
 
 - such that $\lambda_i \ge 0; \sum_i \lambda_i y_i = 0$. K is the optional kernel for the [[Kernel Trick]].
@@ -128,12 +128,12 @@ We require the data to be linearly separable, i.e., can be cleanly divided by a 
 	- We've exploited the **similar in direction** to become circle-like!
 - The kernel encodes the domain knowledge for the function.
 
-![[Kernel Trick Circle.png|338x442]]
+![[_Media/Excalidraw/Kernel Trick Circle.png|338x442]]
 
 After the [[Kernel Trick]], we can rewrite the problem to be 
 
 
-\max w(\lambda) = \sum_i\lambda_i -1/2 \sum_{ij} \lambda_i\ \lambda_j\ y_i\ y_j\ K(x_i, x_j)$
+..\max w(\lambda) = \sum_i\lambda_i -1/2 \sum_{ij} \lambda_i\ \lambda_j\ y_i\ y_j\ K(x_i, x_j)$
 
 
 

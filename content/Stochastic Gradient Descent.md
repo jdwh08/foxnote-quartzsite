@@ -17,13 +17,13 @@ A variant of [[Gradient Descent]] where we conduct gradient descent using a smal
 If we have some [[Loss Function]] which is additive, e.g., [[Log Likelihood]] ($L=\log p(y|x,w)$):
 
 
-J(\textbf{w}) = \mathbb{E}_{\textbf{x}, y \sim \hat{p}} L(\textbf{x}, y, \textbf{w}) = -\frac{1}{n} \sum_{i}^n L(\textbf{x}_i, y_i, w)$
+..J(\textbf{w}) = \mathbb{E}_{\textbf{x}, y \sim \hat{p}} L(\textbf{x}, y, \textbf{w}) = -\frac{1}{n} \sum_{i}^n L(\textbf{x}_i, y_i, w)$
 
 
 We can then get the [[Gradient]] for [[Gradient Descent]] of the [[Jacobian]]:
 
 
-\nabla J(\textbf{w}) = \frac{1}{n} \sum_{i}^n \nabla_{w} L(x, y, w)$
+..\nabla J(\textbf{w}) = \frac{1}{n} \sum_{i}^n \nabla_{w} L(x, y, w)$
 
 
 but note that we don't have to have $n$ be the same as the data size for this to still be valid!
@@ -31,7 +31,7 @@ but note that we don't have to have $n$ be the same as the data size for this to
 Take samples randomly from [[Uniform Distribution]], and do [[Gradient Descent]] on that small batch.
 
 
-w' = w - \eta \nabla$
+..w' = w - \eta \nabla$
 
 
 

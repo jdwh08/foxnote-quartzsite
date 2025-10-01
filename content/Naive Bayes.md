@@ -19,7 +19,7 @@ When it comes to #ds/nlp this is a quick and dirty method, but surprisingly effe
 
 
 
-\hat{y} = \underset{k\in\{1...K\}}{\arg\max} \ p(C_k)*\prod\limits_{i=1}^np(x_i|C_k)$
+..\hat{y} = \underset{k\in\{1...K\}}{\arg\max} \ p(C_k)*\prod\limits_{i=1}^np(x_i|C_k)$
 
 
 
@@ -28,20 +28,20 @@ Suppose we need to get the category that item $i$ is in category $C_k$, given th
 Using [[Bayes' Rule]], we can decompose this as
 
 
-p(C_k | \textbf{x}) = \frac{p(C_k)p(\textbf{x}|C_k)}{p(\textbf{x})} =\frac{p(x_1...x_n,C_k)}{p(\textbf{x})} = \frac{p(x_1 | x_2...x_n,C_k)p(x_2|x_3...x_n, C_k)...}{p(\textbf{x})}$
+..p(C_k | \textbf{x}) = \frac{p(C_k)p(\textbf{x}|C_k)}{p(\textbf{x})} =\frac{p(x_1...x_n,C_k)}{p(\textbf{x})} = \frac{p(x_1 | x_2...x_n,C_k)p(x_2|x_3...x_n, C_k)...}{p(\textbf{x})}$
 
 
 which is a *huge mess*!
 We can make the naive assumption that all features are [[Conditional Independence]], which helps us simplify $p(x_i|x_{i+1}...x_n, C_k) = p(x_i | C_k)$. Thus, we can rewrite this to be
 
 
-p(C_k|\textbf{x}) = p(C_k) * \prod\limits_{i=1}^n p(x_i|C_k)$
+..p(C_k|\textbf{x}) = p(C_k) * \prod\limits_{i=1}^n p(x_i|C_k)$
 
 
 Finally, we can turn this into a classifier by finding the class with the highest probability, i.e.,
 
 
-\hat{y} = \underset{k\in\{1...K\}}{\arg\max} \ p(C_k)*\prod\limits_{i=1}^np(x_i|C_k)$
+..\hat{y} = \underset{k\in\{1...K\}}{\arg\max} \ p(C_k)*\prod\limits_{i=1}^np(x_i|C_k)$
 
 
 
@@ -61,6 +61,6 @@ Suppose we have some #ds/nlp sentiment analysis, where we have a feature of word
 The Naive Bayes Function for inferencing a new tweet:
 
 
-\prod\limits_{i=1}^{m} \frac{p(w|+)}{p(w|-)}$
+..\prod\limits_{i=1}^{m} \frac{p(w|+)}{p(w|-)}$
 
  

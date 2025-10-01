@@ -9,7 +9,7 @@ created: 2024-03-19T22:06
 
 Methods of going through a tree using [[Recursion]]
 
-![[Tree Traversal.png]]
+![[_Media/Excalidraw/Tree Traversal.png]]
 
 ---
 # Notes:

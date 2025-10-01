@@ -9,7 +9,7 @@ created: 2024-03-19T22:06
 How to discount future money to account for [[Opportunity Cost]], like [[Interest Rates]].
 
 
-PV=1/(1+DR)^t$
+..PV=1/(1+DR)^t$
 
 
 where $DR$ is the discount rate (e.g., 10% per year) which is based on risk.

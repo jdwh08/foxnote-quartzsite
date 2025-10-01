@@ -9,7 +9,7 @@ created: 2024-03-19T22:06
 # Definition:
 Given a [[Graph]], finds the shortest path between any two nodes.
 
-![[Dijkstras Algorithm.png]]
+![[_Media/Excalidraw/Dijkstras Algorithm.png]]
 
 ---
 # Notes:

@@ -9,7 +9,7 @@ created: 2024-03-19T22:06
 
 A type of [[Tree]] where each node can have at most two children.
 
-![[Binary Tree.png]]
+![[_Media/Excalidraw/Binary Tree.png]]
 
 ---
 # Notes:

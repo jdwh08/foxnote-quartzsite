@@ -39,7 +39,7 @@ Uses the [[Singular Value Decomposition]] to do [[Feature Selection]] linearly. 
 Suppose we have some matrix $X$ where each *row* is an observation (differs from SVD literature). 
 
 
-X = \begin{bmatrix}
+..X = \begin{bmatrix}
 - & - & x_1 & - & - \\
 - & - & ... & - & - \\
 - & - & x_n & - & - \\
@@ -51,14 +51,14 @@ We assume that $X$ is drawn from some underlying statistical distribution (typic
 	- To keep the most information possible, we want to be sure to use a vector $u$ whose variance is large so it captures more variation in the higher-dimensional space.
 	- $Proj_{u_1}(x_i) = u_1^T x_i u$, where $u_1^T x_i$ is the [[Dot Product]] written out as [[Matrix Product]], and $u$ is the vector that controls the direction.
 
-![[PCA.png]]
+![[_Media/Excalidraw/PCA.png]]
 
 Anyway... here's the procedure:
 - Calculate the mean row: $\bar{x} = \frac{1}{n} \sum \limits_{i=1}^n x_i$
 - Build out an "Average Matrix": 
 
 
-\bar{X} = \begin{bmatrix}
+..\bar{X} = \begin{bmatrix}
 - & - & \bar{x} & - & - \\
 - & - & ... & - & - \\
 - & - & \bar{x} & - & - \\
@@ -106,7 +106,7 @@ Anyway... here's the procedure:
 ---
 # Example:
 
-![[Independent Components Analysis#Face Identification]]
+![[_Media/Excalidraw/Independent Components Analysis#Face Identification]]
 PCA, by comparison, will find **brightness**, then the "average face". This is **LOCAL**.
 
 ---

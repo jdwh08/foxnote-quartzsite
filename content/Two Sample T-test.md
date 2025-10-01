@@ -10,7 +10,7 @@ A test to see whether the population means between two samples are statistically
 
 
 
-t=\frac{\bar{X}_B - \bar{X}_A}{\sqrt{S_B^2/n_B + S_A^2/n_A}} \sim t_{n-2}$
+..t=\frac{\bar{X}_B - \bar{X}_A}{\sqrt{S_B^2/n_B + S_A^2/n_A}} \sim t_{n-2}$
 
 
 

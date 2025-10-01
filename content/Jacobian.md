@@ -11,7 +11,7 @@ A matrix that stores the [[Partial Derivative]] of a set of functions that goes 
 
 
 
-J(x) = \begin{bmatrix} 
+..J(x) = \begin{bmatrix} 
 \frac{\partial f_1}{\partial x_1} & \frac{\partial f_1}{\partial x_2} & ... & \frac{\partial f_1}{\partial x_n} \\
 \frac{\partial f_2}{\partial x_1} & \frac{\partial f_2}{\partial x_2} & ... & \frac{\partial f_2}{\partial x_n} \\
 \vdots & \vdots & \ddots & \vdots \\
@@ -27,7 +27,7 @@ Often confused with [[Gradient]], which is a special case with one function goin
 
 
 
-J(x) = \begin{bmatrix} \nabla f_1(x) \\ \nabla f_2(x) \\ \vdots\end{bmatrix}$
+..J(x) = \begin{bmatrix} \nabla f_1(x) \\ \nabla f_2(x) \\ \vdots\end{bmatrix}$
 
 
 
@@ -41,21 +41,21 @@ This is basically
 ### Examples:
 Suppose we have function: 
 
-f(x,y) = \begin{bmatrix} 2x+y^3 \\ -13x + e^y \end{bmatrix}$
+..f(x,y) = \begin{bmatrix} 2x+y^3 \\ -13x + e^y \end{bmatrix}$
 
 Notice how this function is $\mathbb{R}^2 \rightarrow \mathbb{R}^2$.
 
 Let's break this up into two scalar functions, and calculate gradients individually:
 
-f_1(x,y) = 2x+y^3,\ \  f_2(x,y)=-13x+e^y$
+..f_1(x,y) = 2x+y^3,\ \  f_2(x,y)=-13x+e^y$
 
  Now, we'll get the gradients separately.
 
-\nabla f_1 = \begin{bmatrix} 2 \\ 3y^2 \end{bmatrix}, \ \ \nabla f_2 = \begin{bmatrix} -13 \\ e^y \end{bmatrix}$
+..\nabla f_1 = \begin{bmatrix} 2 \\ 3y^2 \end{bmatrix}, \ \ \nabla f_2 = \begin{bmatrix} -13 \\ e^y \end{bmatrix}$
 
  Finally, we'll assemble these partials into a Jacobian. 
 
-J = \begin{bmatrix} 
+..J = \begin{bmatrix} 
  & \partial x & \partial y \\ 
 \partial f_1 & 2 & 3y^2 \\
 \partial f_2 & -13 & e^y

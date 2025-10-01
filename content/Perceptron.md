@@ -11,7 +11,7 @@ A type of [[Artificial Neural Network]] where the [[Activation Function]] is a b
 - Originally: one layer of computation. We get $a=\sum w_i x_i$ and 
 
 
-f(a)=
+..f(a)=
 \begin{cases}
 1,\text{ if } a \le 0 \\
 0,\text{ if } a > 0
@@ -36,7 +36,7 @@ In a **Perceptron** (oldest ANN), the activation function is some threshold whic
 		- XOR is basically OR minus AND.
 		- Set the weight on $x_1$ AND $x_2$ to be negative and overpower the $w_1, w_2$ positive weights.
 
-![[Perceptron_XOR.png]]
+![[_Media/Excalidraw/Perceptron_XOR.png]]
 
 - Any bounded [[Continuous Function]] can be represented with arbitrarily small error by stitching together neurons representing each piece within one hidden layer. (Cybenko 1989, Hornik et al 1989)
 - Any Arbitrary Function can be represented with at least two hidden layers (Cybenko 1989); this is the [[Universal Approximation Theorem]]**.
@@ -61,7 +61,7 @@ We can now add additional **Hidden Nodes** in the middle going between inputs an
 ##### Perceptron Rule
 Takes advantage of the thresholding for a perceptron to figure out how to linearly separate the $y$ values using a half-plane.
 
-![[Perceptron Rule.png|231x213]]
+![[_Media/Excalidraw/Perceptron Rule.png|231x213]]
 
 **If data is linearly separable, perceptron rule will find it in finite time!**
 - Minsky and Papert, 1969. Also requires learning rate $\eta$ isn't too large.
@@ -86,23 +86,23 @@ Initialize weights to be small random values.
 
 
 
-a=\sum w_i x_i;\ \hat{y} = \mathbb{1}(a\ge0)$
+..a=\sum w_i x_i;\ \hat{y} = \mathbb{1}(a\ge0)$
 
 
 Let's use [[Mean Squared Error]].
 
 
-E(w)=1/2 \sum_{x,y \in D} (y-a)^2$
+..E(w)=1/2 \sum_{x,y \in D} (y-a)^2$
 
 
 
 
-\frac{\partial E}{\partial w_i} = \sum_{x,y \in D}(y-a)*-x_i$
+..\frac{\partial E}{\partial w_i} = \sum_{x,y \in D}(y-a)*-x_i$
 
 
 
 
-\Delta w_i = \eta (y-a)x_i$
+..\Delta w_i = \eta (y-a)x_i$
 
 
 This does NOT require data to be linearly separable, but only has guarantees at the limit.

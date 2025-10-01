@@ -17,7 +17,7 @@ In [[Supervised Machine Learning]], reasons why we can't perfectly predict outpu
 Consider [[Conditional Probability]] distribution for [[Classification]]:
 
 
-p(y=c\ |\ \boldsymbol{x;\theta}) = f_c(\boldsymbol{x; \theta})$
+..p(y=c\ |\ \boldsymbol{x;\theta}) = f_c(\boldsymbol{x; \theta})$
 
 
 where $f_c: \mathcal{X} \rightarrow [0,1]^C$ maps inputs to a probability distribution for each label C.
@@ -32,18 +32,18 @@ Thus, we often return log-probabilities and convert them using [[Softmax]]:
 Consider [[Mean Squared Error]] for [[Regression]], with a [[Normal Distribution]] as the uncertainty
 
 
-p(y|x;\theta) = \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(y-\mu)^2}{2\pi\sigma^2}}$
+..p(y|x;\theta) = \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(y-\mu)^2}{2\pi\sigma^2}}$
 
 
 Then, consider our [[Maximum Likelihood Estimation]] using the [[Log Likelihood]] approach:
 
 
-NLL(\theta)=-\frac{1}{N} \left(\sum_{n=1}^{N}\log \frac{1}{\sqrt{2\pi\sigma^2}}\exp(-\frac{(y_n-f(x_n; \theta))^2}{2\pi\sigma^2})\right)$
+..NLL(\theta)=-\frac{1}{N} \left(\sum_{n=1}^{N}\log \frac{1}{\sqrt{2\pi\sigma^2}}\exp(-\frac{(y_n-f(x_n; \theta))^2}{2\pi\sigma^2})\right)$
 
 
 
 
-NLL(\theta)\approx-\frac{1}{N}\left(\sum\text{blah}*(y_n-f(x_n;\theta)^2)\right)=\frac{1}{2\pi\sigma^2}MSE(\theta)$
+..NLL(\theta)\approx-\frac{1}{N}\left(\sum\text{blah}*(y_n-f(x_n;\theta)^2)\right)=\frac{1}{2\pi\sigma^2}MSE(\theta)$
 
 
 

@@ -11,7 +11,7 @@ How much would our estimator $\hat{\theta}$ change if we trained it on a differe
 
 
 
-Var(\hat{\theta})=E[(\hat{\theta}-E[\hat{\theta}])^2]$
+..Var(\hat{\theta})=E[(\hat{\theta}-E[\hat{\theta}])^2]$
 
 
 

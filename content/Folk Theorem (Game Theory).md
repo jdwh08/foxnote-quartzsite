@@ -39,7 +39,7 @@ Corollary: If you CAN'T do this, it's actually [[Zero Sum Game]].
 # Examples:
 [[Prisoner's Dilemma Repeated]]: We see the Folk Profile in Grey.
 
-![[Repeated Prisoner's Dilemma Folk Theorem.png]]
+![[_Media/Excalidraw/Repeated Prisoner's Dilemma Folk Theorem.png]]
 
 
 ----

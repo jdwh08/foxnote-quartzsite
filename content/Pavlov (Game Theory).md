@@ -9,7 +9,7 @@ created: 2024-03-19T22:06
 
 A strategy for [[Game Theory]] in repeated games, e.g., [[Prisoner's Dilemma Repeated]], where we cooperate if both players played the same action, otherwise defect.
 
-![[Game Theory Pavlov.png]]
+![[_Media/Excalidraw/Game Theory Pavlov.png]]
 
 ---
 # Notes:

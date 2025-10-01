@@ -10,7 +10,7 @@ Whether a [[Point Estimator]] approaches the true parameter as the sample size a
 
 
 
-p \lim_{n \rightarrow \infty} \hat{\theta}_m=\theta$
+..p \lim_{n \rightarrow \infty} \hat{\theta}_m=\theta$
 
 
 

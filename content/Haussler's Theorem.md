@@ -12,14 +12,14 @@ Determines the amount of data needed to remove possible models which have high e
 
 
 
-m \ge \frac{1}{\epsilon} \left(\ln |H| + \ln \frac{1}{\delta} \right)$
+..m \ge \frac{1}{\epsilon} \left(\ln |H| + \ln \frac{1}{\delta} \right)$
 
 
 for if $|H|$ hypothesis space is finite
 
 
 
-m \ge \frac{1}{\epsilon} \left(8 * VC(H)*\log_2(13/\epsilon) + 4 \log_2(2/\delta) \right)$
+..m \ge \frac{1}{\epsilon} \left(8 * VC(H)*\log_2(13/\epsilon) + 4 \log_2(2/\delta) \right)$
 
 
 for if $|H|$ hypothesis space is infinite, using the [[Vapnik-Chervonenkis Dimension|VC Dimension]].
@@ -54,7 +54,7 @@ What's the probability that at least one of the hypotheses $h...h_k$ are still c
 
 
 
-m \ge \frac{1}{\epsilon} \left(\ln |H| + \ln \frac{1}{\delta} \right)$
+..m \ge \frac{1}{\epsilon} \left(\ln |H| + \ln \frac{1}{\delta} \right)$
 
 
 
@@ -66,7 +66,7 @@ Suppose $H = C = \{ h(x) = x_i \}$, i.e., we have 10-bit input and the true [[Da
 - $\epsilon=0.1$, $\delta=0.2$, $D \sim Unif$
 
 
-m \ge 1/0.1 * (\ln(10) + \ln(1/0.2))=39.12$
+..m \ge 1/0.1 * (\ln(10) + \ln(1/0.2))=39.12$
 
 
 Even though the input space is $2^{10}$. 

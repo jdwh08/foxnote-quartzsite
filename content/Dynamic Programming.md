@@ -83,7 +83,7 @@ DP can collapse a variable if the transitions for that variables don't affect or
 # Examples:
 
 ## Fibonacci
-![[Fibonacci DP.png]]
+![[_Media/Excalidraw/Fibonacci DP.png]]
 
 ```python
 # basic recursion

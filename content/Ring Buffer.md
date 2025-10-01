@@ -8,7 +8,7 @@ created: 2024-03-19T22:06
 # Definition:
 Similar to an [[ArrayList]], but we have specific indices for `head` and `tail`. This means that head does NOT have to be at index 0!
 
-![[RingBuffer.png]]
+![[_Media/Excalidraw/RingBuffer.png]]
 
 ---
 # Notes:

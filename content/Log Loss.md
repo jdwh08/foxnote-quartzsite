@@ -10,7 +10,7 @@ created: 2024-03-19T22:06
 A type of [[Loss Function]] mainly for [[Classification]] which is derived from [[Cross Entropy]].
 
 
-\mathcal{L} =-\frac{1}{N}\sum_{c}^{N} y_c \log(\hat{y})$
+..\mathcal{L} =-\frac{1}{N}\sum_{c}^{N} y_c \log(\hat{y})$
 
 
 
@@ -21,13 +21,13 @@ A type of [[Loss Function]] mainly for [[Classification]] which is derived from 
 For binary classification treating as a [[Bernoulli Trial|Bernoulli]], we get
 
 
-=-(y log(p) + (1-y) log(1-p))$
+..=-(y log(p) + (1-y) log(1-p))$
 
 
 We can also vectorize this:
 
 
--y^T\log(p)-(1-y)^T\log(1-h)$
+..-y^T\log(p)-(1-y)^T\log(1-h)$
 
 
 
@@ -36,7 +36,7 @@ We can also vectorize this:
 - To fix, we can add class-specific weights $\alpha_c$.
 
 
-\mathcal{L}(y, \hat{y}) = -\frac{1}{N} \sum_c \alpha_c \cdot y_c \log(\hat{y})$
+..\mathcal{L}(y, \hat{y}) = -\frac{1}{N} \sum_c \alpha_c \cdot y_c \log(\hat{y})$
 
 
 
@@ -66,7 +66,7 @@ We can also vectorize this:
 - When used with the [[Softmax]], we get our [[Gradient]] [[Jacobian]] in terms of [[Softmax]] $s$ as:
 
 
-\frac{\partial L}{\partial a_{output}} = a_{output} - y_{onehot}$
+..\frac{\partial L}{\partial a_{output}} = a_{output} - y_{onehot}$
 
 
 

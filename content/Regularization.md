@@ -22,7 +22,7 @@ This is also impacted by the [[No Free Lunch Theorem]], i.e., there is no univer
 Add some **penalty** for complexity into the [[Loss Function]]:
 
 
-\tilde{L}(\theta; X; y) = L(\theta; X; y) + \lambda \Omega(\theta)$
+..\tilde{L}(\theta; X; y) = L(\theta; X; y) + \lambda \Omega(\theta)$
 
 
 - [[Lasso Regularization]] $+\lambda ||w||_1 \rightarrow \nabla \lambda + \text{sign}(w)$

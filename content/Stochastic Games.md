@@ -38,7 +38,7 @@ We can kinda do [[Q-Learning]] for this(?).
 This is known as **Minimax-Q**
 
 
-Q(s, [a,b]) = R_i(s, [a,b]) + \gamma \sum_{s'} T(s, [a,b], s') \times \underset{a', b'}{\text{minimax}}\left(Q(s', [a',b']\right)$
+..Q(s, [a,b]) = R_i(s, [a,b]) + \gamma \sum_{s'} T(s, [a,b], s') \times \underset{a', b'}{\text{minimax}}\left(Q(s', [a',b']\right)$
 
 
 Note that [[Minimax]] here assumes the worst possible future actions from the other player.
@@ -59,7 +59,7 @@ Minimax no longer makes sense because the other player might have different rewa
 
 
 
-Q(s, [a,b]) = R_i(s, [a,b]) + \gamma \sum_{s'} T(s, [a,b], s') \times \underset{a', b'}{\text{Nash}}\left(Q(s', [a',b']\right)$
+..Q(s, [a,b]) = R_i(s, [a,b]) + \gamma \sum_{s'} T(s, [a,b], s') \times \underset{a', b'}{\text{Nash}}\left(Q(s', [a',b']\right)$
 
 
 

@@ -13,7 +13,7 @@ The [[Standard Error]] of the [[Residuals]] in a [[Linear Regression]].
 
 
 
-RSE=\sqrt{\frac{1}{n-p-1}RSS}=\sqrt{\frac{1}{n-p-1}(y_i-\hat{y}_i)^2}$
+..RSE=\sqrt{\frac{1}{n-p-1}RSS}=\sqrt{\frac{1}{n-p-1}(y_i-\hat{y}_i)^2}$
 
 
 

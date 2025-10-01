@@ -13,7 +13,7 @@ The [[Probability Density Function]] is $p(x|\mu) = \delta({x-\mu})$.
 
 With the empirical being 
 
-p(x|\mathcal{D}=\{x...x\})=1/N*\sum_{n=1}^N{\delta(x-x_n)}$
+..p(x|\mathcal{D}=\{x...x\})=1/N*\sum_{n=1}^N{\delta(x-x_n)}$
 
 
 i.e., a Dirac Delta for each data point.

@@ -18,13 +18,13 @@ Suppose I have a parameter I want to optimize, $\theta$, and a function $L(X,W)$
 We can calculate the [[Gradient]] of the loss function:
 
 
-\nabla = \frac{1}{n} X^T(h-y)$
+..\nabla = \frac{1}{n} X^T(h-y)$
 
 
 to identify the direction to minimize the loss, and then update the parameter theta by taking a step in that direction with size $\alpha$, which is the hyperparameter learning rate.
 
 
-w_{t=1} = w_{t=0} - \alpha \nabla $
+..w_{t=1} = w_{t=0} - \alpha \nabla $
 
 
 Finally, we update the loss again to see if it is good enough.
@@ -37,7 +37,7 @@ Sometimes we will use a small subset of the data (a *batch*) to do gradient desc
 
 
 
-L= \frac{1}{M} \sum L \left(f(x_i, W), y_i \right)$
+..L= \frac{1}{M} \sum L \left(f(x_i, W), y_i \right)$
 
 
 
@@ -59,12 +59,12 @@ We could make update based partially on the prior update size.
 
 
 
-v_i = \beta v_{i-1} + \frac{\partial \mathcal{L}}{\partial w_{i-1}}$
+..v_i = \beta v_{i-1} + \frac{\partial \mathcal{L}}{\partial w_{i-1}}$
 
 
 
 
-w_i = w_{i-1} - \alpha v_{i}$
+..w_i = w_{i-1} - \alpha v_{i}$
 
 
 We calculate the [[Velocity]] of the gradient and update accordingly.
@@ -82,18 +82,18 @@ A variation on momentum where we...
 2. We jump straight to where the velocity says we go
 
 
-\hat{w}_{i-1} = w_{i-1} + \beta v_{i-1}$
+..\hat{w}_{i-1} = w_{i-1} + \beta v_{i-1}$
 
 
 3. And then use this new position of the weights to do the update
 
 
-v_i = \beta v_{i-1} + \frac{\partial \mathcal{L}}{\partial \hat{w}_{i-1}}$
+..v_i = \beta v_{i-1} + \frac{\partial \mathcal{L}}{\partial \hat{w}_{i-1}}$
 
 
 
 
-w_i = w_{i-1} - \alpha v_{i}$
+..w_i = w_{i-1} - \alpha v_{i}$
 
 
 

@@ -10,7 +10,7 @@ A [[Matrix]] whose elements across the main diagonal are [[Complex Conjugate]].
 
 
 
-\begin{bmatrix}
+..\begin{bmatrix}
 0 & a-bi & c-di \\
 a+bi & 1 & e-fi \\
 c+di & e+fi & 2 \\

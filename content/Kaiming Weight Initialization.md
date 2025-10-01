@@ -12,7 +12,7 @@ A [[Weight Initialization]] method tuned particularly for [[ReLU]] style activat
 
 
 
-\sim N \left( 0, \sqrt{2/n_{in}} \right)$
+..\sim N \left( 0, \sqrt{2/n_{in}} \right)$
 
 
 

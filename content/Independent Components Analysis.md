@@ -11,7 +11,7 @@ created: 2024-03-19T22:06
 
 A type of feature engineering which uses [[Mutual Information]] to do [[Feature Selection]].
 
-![[Independent Components Analysis.png]]
+![[_Media/Excalidraw/Independent Components Analysis.png]]
 
 ---
 # Notes:

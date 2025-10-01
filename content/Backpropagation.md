@@ -20,11 +20,11 @@ Learning representations by back-propagating errors. (Rumelhart et al 1986)
 
 
 
-f(x_1, x_2) = \ln(x_1) + x_1 x_2 - \sin(x_2)$
+..f(x_1, x_2) = \ln(x_1) + x_1 x_2 - \sin(x_2)$
 
 
 
-![[Backprop NN Graph.png]]
+![[_Media/Excalidraw/Backprop NN Graph.png]]
 
 ### Pseudocode
 ```pseudocode

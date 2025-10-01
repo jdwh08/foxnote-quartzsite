@@ -17,7 +17,7 @@ We can also think of this as the combination of multiple [[Vector]] columns.
 
 
 
-\textit{\textbf{A}}= \begin{bmatrix} a_{1,1} & a_{1,2} & ... \\ a_{2,1} & a_{2,2} & ... \\ \vdots & \vdots & \ddots\end{bmatrix}$
+..\textit{\textbf{A}}= \begin{bmatrix} a_{1,1} & a_{1,2} & ... \\ a_{2,1} & a_{2,2} & ... \\ \vdots & \vdots & \ddots\end{bmatrix}$
 
 
 

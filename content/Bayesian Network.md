@@ -24,7 +24,7 @@ Suppose we want to know if the grass is going to be wet.
 This happens if the sprinkler is on, or if it rained.
 The sprinkler rarely turns on if it rains.
 
-![[Bayesian Network.png]]
+![[_Media/Excalidraw/Bayesian Network.png]]
 - Note that Grass Species is [[Conditional Independence]] from these.
 
 ----

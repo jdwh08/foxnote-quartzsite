@@ -9,7 +9,7 @@ created: 2024-03-19T22:06
 A [[Norm]] for [[Matrix]] built around the element-wise squared sums which are then square-rooted, aka square root of the [[Matrix Trace]].
 
 
-||A||_F = \sqrt{\sum_{i,j} A_{ij}^2} = \sqrt{Tr(AA^T)}$
+..||A||_F = \sqrt{\sum_{i,j} A_{ij}^2} = \sqrt{Tr(AA^T)}$
 
 
 

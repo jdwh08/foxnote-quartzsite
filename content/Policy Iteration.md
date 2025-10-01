@@ -19,14 +19,14 @@ Solving a [[Bellman Equation]] for [[Reinforcement Learning]] by repeatedly re-c
 
 
 
-U_t(s) = \sum_a \pi(a|s) \sum_{s'} T(sas')\left[R(s,a)+\gamma U(s') \right]$
+..U_t(s) = \sum_a \pi(a|s) \sum_{s'} T(sas')\left[R(s,a)+\gamma U(s') \right]$
 
 
 2. **Policy Improvement**: Update the policy to account for the new utilities. 
 
 
 
-\pi(a|s)=\underset{a}{\arg\max} \sum_{s'} T(sas')\left[ R(s,a) + \gamma U(s') \right]$
+..\pi(a|s)=\underset{a}{\arg\max} \sum_{s'} T(sas')\left[ R(s,a) + \gamma U(s') \right]$
 
 
 

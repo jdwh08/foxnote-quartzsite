@@ -20,7 +20,7 @@ Test that population means are the same for multiple populations under [[Normal 
 Test whether a [[Linear Regression]] fits the data well
 
 
-F_{linreg}=\frac{(TSS-RSS)/p}{RSS/(n-p-1)} = \frac{\sigma^2}{\sigma^2} \text{ under } H_0 \text{ else } > 1$
+..F_{linreg}=\frac{(TSS-RSS)/p}{RSS/(n-p-1)} = \frac{\sigma^2}{\sigma^2} \text{ under } H_0 \text{ else } > 1$
 
  using the [[Total Sum of Squares]], [[Residual Sum of Squares]], number of samples $n$, and number of features $p$. 
 
@@ -29,7 +29,7 @@ Test whether a [[Linear Regression]] with fewer features is better than a linreg
 
 
 
-F_{linreg}=\frac{(RSS_0-RSS)/q}{RSS/(n-p-1)} = \frac{\sigma^2}{\sigma^2} \text{ under } H_0 \text{ else } > 1$
+..F_{linreg}=\frac{(RSS_0-RSS)/q}{RSS/(n-p-1)} = \frac{\sigma^2}{\sigma^2} \text{ under } H_0 \text{ else } > 1$
 
 
 - Note that our $H_0$ is testing that some of the coefficients $\beta_{i \in (q_1,\ q_2, ...)}=0$ and should not be included.

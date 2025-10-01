@@ -19,7 +19,7 @@ Under the $H_0$, we would expect $np_0$ successes instead.
 The binomial formula gives the probabilities $P(X=k) = \binom{n}{k} p^k(1-p)^{n-k}$, thus we can directly calculate our one-sided $p$-value for $p < p_0$ as 
 
 
-\sum\limits_{i=0}^k P(X=i)=\sum\limits_{i=0}^k\binom{n}{i} p^k(1-p)^{n-k}$
+..\sum\limits_{i=0}^k P(X=i)=\sum\limits_{i=0}^k\binom{n}{i} p^k(1-p)^{n-k}$
 
 
 (i.e., sum up all possible numbers of successes as extreme or more extreme than $k$. Flip this to be from $k$ to $n$ for $p>p_0$).
@@ -30,7 +30,7 @@ If $p_0=0.5$, then the distribution is symmetric and we can double the $p$-value
 Otherwise, we must calculate all events $\mathcal{I}$ whose probability of occurring is less than or equal to $P(X=k)$, i.e., $\mathcal{I} = \{i: P(X=i) \leq P(X=k)\}$. Then, we calculate the Binomial probability for each of these events:
 
 
-\sum\limits_{i \in \mathcal{I}}P(X=i)=\sum\limits_{i \in \mathcal{I}}\binom{n}{i} p^k(1-p)^{n-k}$
+..\sum\limits_{i \in \mathcal{I}}P(X=i)=\sum\limits_{i \in \mathcal{I}}\binom{n}{i} p^k(1-p)^{n-k}$
 
 
 
@@ -47,7 +47,7 @@ Since $p < \alpha$, we reject $H_0$. The data suggests that the die is biased to
 If $n p_0$ and $n(1-p_0)$ are both big enough (>5) for a Binomial Distribution to be approximated by a [[Normal Distribution]], we can use a [[Z-Test]] instead.
 
 
-Z = \frac{k-np}{\sqrt{np(1-p)}} = \frac{\hat{p} - p_0}{\sqrt{p_0(1-p_0)/n}} \sim N(0,1)$
+..Z = \frac{k-np}{\sqrt{np(1-p)}} = \frac{\hat{p} - p_0}{\sqrt{p_0(1-p_0)/n}} \sim N(0,1)$
 
 
 

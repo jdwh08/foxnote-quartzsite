@@ -11,7 +11,7 @@ A measure about how much a variable tells you about another variable.
 
 
 
-I(x,y)=I(y,x) = H(Y) - H(X|Y)=\sum_{x\in X} \sum_{y \in Y} p(x, y) \log \left[ \frac{p(x, y)}{p(x)p(y)} \right]$
+..I(x,y)=I(y,x) = H(Y) - H(X|Y)=\sum_{x\in X} \sum_{y \in Y} p(x, y) \log \left[ \frac{p(x, y)}{p(x)p(y)} \right]$
 
 
 
@@ -30,7 +30,7 @@ Related to [[Entropy (information theory)]]. Measures how much the surprise of o
 Mutual Information is a special case of [[Kullback-Leibler Divergence]]:
 
 
-D\left(p(x,y)\ ||\ P(x)P(y)\right) = \int p(x,y) \log \left( \frac{p(x,y)}{p(x) p(y)} \right)$
+..D\left(p(x,y)\ ||\ P(x)P(y)\right) = \int p(x,y) \log \left( \frac{p(x,y)}{p(x) p(y)} \right)$
 
 
 - I.e., a measure of the difference between [[Joint Probability]] and individual probabilities. These are the same iff [[Independent|independent]].

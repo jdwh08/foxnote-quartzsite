@@ -27,7 +27,7 @@ Architectural design intended for image-based tasks.
 - [[Convolution]] is multiplying matrix elements and then adding results.
 	- Input is only a $K_1 \times K_2$ patch called **receptive field**
 	- Reduces parameters needed to $(K_1 \times K_2 + 1) * N_{output}$
-![[Convolution.png|265x358]]
+![[_Media/Excalidraw/Convolution.png|265x358]]
 - Convolutions will represent specific *local features*.
 	- We can share the same local feature extractor across the entire image! I.e., $N_{output}$ is less than full.
 - If the image matches the convolution well, it will have a high value!
@@ -48,7 +48,7 @@ Architectural design intended for image-based tasks.
 Practically speaking, this gives the following result for each cell:
 
 
-y_{r,c} = \sum_{a=0}^{k_r-1} \sum_{b=0}^{k_c-1} w_{a,b} \times x_{r \cdot s+a-p, c \cdot s + b - p}$
+..y_{r,c} = \sum_{a=0}^{k_r-1} \sum_{b=0}^{k_c-1} w_{a,b} \times x_{r \cdot s+a-p, c \cdot s + b - p}$
 
 
 
@@ -166,7 +166,7 @@ How do we derive the [[Gradient]] of a convolution?
 Our [[Cross Correlation]] is thus:
 
 
-f(r, c) = (x*k)@(r,c) = \sum_{a=0}^{k_1-1} \sum_{b=0}^{k_2-1} x@(r+a, c+b)\cdot k@(a,b)$
+..f(r, c) = (x*k)@(r,c) = \sum_{a=0}^{k_1-1} \sum_{b=0}^{k_2-1} x@(r+a, c+b)\cdot k@(a,b)$
 
 
 ##### Kernel
@@ -177,7 +177,7 @@ f(r, c) = (x*k)@(r,c) = \sum_{a=0}^{k_1-1} \sum_{b=0}^{k_2-1} x@(r+a, c+b)\cdot 
 
 
 
-\frac{\partial \mathcal{L}}{\partial k@(a,b)} = \sum_{r=0}^{H-1} \sum_{c=0}^{W-1} x@(r+a, c+b) \cdot \frac{\partial \mathcal{L}}{\partial y@(r,c)}$
+..\frac{\partial \mathcal{L}}{\partial k@(a,b)} = \sum_{r=0}^{H-1} \sum_{c=0}^{W-1} x@(r+a, c+b) \cdot \frac{\partial \mathcal{L}}{\partial y@(r,c)}$
 
 
 - Notice that this equation is essentially a [[Cross Correlation]] between the upstream gradient $\frac{\partial \mathcal{L}}{\partial y}$ and the input image $x$!
@@ -195,7 +195,7 @@ This becomes the upstream gradient for the prior layer.
 
 
 
-\frac{\partial \mathcal{L}}{\partial x@(r,c)} = \sum_{a=0}^{k_1-1} \sum_{b=0}^{k_2-1} \frac{\partial \mathcal{L}}{\partial y@(r-a, c-b)} \cdot k(a,b)$
+..\frac{\partial \mathcal{L}}{\partial x@(r,c)} = \sum_{a=0}^{k_1-1} \sum_{b=0}^{k_2-1} \frac{\partial \mathcal{L}}{\partial y@(r-a, c-b)} \cdot k(a,b)$
 
 
 
@@ -215,7 +215,7 @@ To ensure CNNs learn well, we can take each input (e.g., image), and then distor
 ### Example Kernel
 
 
-K = \begin{bmatrix} 
+..K = \begin{bmatrix} 
 -1 & 0 & 1 \\
 -2 & 0 & 2 \\
 -1 & 0 & 1 \\

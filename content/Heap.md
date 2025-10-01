@@ -14,7 +14,7 @@ created: 2024-03-19T22:06
 	- You need to rebuild the tree each time you change
 	- Traversal doesn't matter much.
 
-![[Heap.png]]
+![[_Media/Excalidraw/Heap.png]]
 
 ---
 # Notes:

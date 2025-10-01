@@ -29,7 +29,7 @@ This is the "most generic" of all data structures.
 
 ### Implementation Types
 
-![[Graph Example.png]]
+![[_Media/Excalidraw/Graph Example.png]]
 #### Adjacency List
 - This is the most common
 - We have a list of all nodes, and then a list of the nodes with connections.

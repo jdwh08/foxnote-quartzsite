@@ -19,7 +19,7 @@ A type of [[Artificial Neural Network]] layer which performs normalization on th
 
 
 
-\hat{a} = \frac{a - \bar{a}}{\sqrt{\sigma_a^2 + \epsilon}}$
+..\hat{a} = \frac{a - \bar{a}}{\sqrt{\sigma_a^2 + \epsilon}}$
 
 
 
@@ -28,7 +28,7 @@ We can also have it learn some $\gamma, \beta$ for shift and scale, i.e., run it
 
 
 
-\hat{a} = \gamma \frac{a - \bar{a}}{\sqrt{\sigma_a^2 + \epsilon}} + \beta$
+..\hat{a} = \gamma \frac{a - \bar{a}}{\sqrt{\sigma_a^2 + \epsilon}} + \beta$
 
 
 

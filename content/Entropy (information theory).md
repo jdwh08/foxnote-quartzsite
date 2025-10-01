@@ -14,7 +14,7 @@ Suppose we have a [[Random Variable]] X which takes values in $\mathcal{X}$, wit
 
 
 
-H(X) := -\sum_{x}^{\mathcal{X}} p(x) * \log p(x)$
+..H(X) := -\sum_{x}^{\mathcal{X}} p(x) * \log p(x)$
 
 
 

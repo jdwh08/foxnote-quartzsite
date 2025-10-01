@@ -9,7 +9,7 @@ created: 2024-03-19T22:06
 A [[Derivative Rules|derivative rule]] for taking the [[Derivative]] of nested functions $y=f(g(x))$.
 
 
-\frac{dy}{dx} = \frac{df}{dg}*\frac{dg}{dx}$
+..\frac{dy}{dx} = \frac{df}{dg}*\frac{dg}{dx}$
 
 
 
@@ -26,7 +26,7 @@ A nice shorthand for remembering this particularly for [[Matrix Calculus]] is:
 ### For [[Matrix Calculus]]
 
 
-\frac{\partial}{\partial \textbf{x}} f(g(\textbf{x})) = 
+..\frac{\partial}{\partial \textbf{x}} f(g(\textbf{x})) = 
 \begin{bmatrix} 
 \partial f_1 / \partial g_1 & \partial f_1 / \partial g_2 & ... & \partial f_1 / \partial g_k\\
 \partial f_2 / \partial g_1 & \partial f_2 / \partial g_2 & ... & \partial f_2 / \partial g_k\\
@@ -57,7 +57,7 @@ which exactly lines up with the chain rule for single variables.
 ### A Basic Chain Rule
 
 
-y = f (x) = \log(\sin(x^3)^2)$
+..y = f (x) = \log(\sin(x^3)^2)$
 
 
 We do placeholders:
@@ -75,19 +75,19 @@ We compute derivatives
 We combine and substitute
 
 
-dy/dx = 1/u_3 * 2(u_2) * \cos(u_1) * 3x^2$
+..dy/dx = 1/u_3 * 2(u_2) * \cos(u_1) * 3x^2$
 
 
 
 
-dy/dx = \frac{2\sin(x^3) * \cos(x^3) * 3x^2}{\sin(x^3)^2} = \frac{6x^2 \cos(x^3)}{\sin(x^3)}$
+..dy/dx = \frac{2\sin(x^3) * \cos(x^3) * 3x^2}{\sin(x^3)^2} = \frac{6x^2 \cos(x^3)}{\sin(x^3)}$
 
 
 
 ### Multivariate Input Functions
 
 
-f(x) = \sin(x + x^2)$
+..f(x) = \sin(x + x^2)$
 
 
 - $u_0 = \sin(u_1)$
@@ -104,14 +104,14 @@ Partials:
 
 
 
-\partial f / \partial x = \cos(u_1) * (1+2x) = \cos(x+x^2)*(1+2x)$
+..\partial f / \partial x = \cos(u_1) * (1+2x) = \cos(x+x^2)*(1+2x)$
 
 
 
 ### Vector Chain Rule with [[Jacobian]]
 
 
-\begin{bmatrix} y_1 \\ y_2 \end{bmatrix} = \begin{bmatrix} f_1(x) \\ f_2(x) \end{bmatrix} = \begin{bmatrix} \ln(x^2) \\ \sin(3x) \end{bmatrix}$
+..\begin{bmatrix} y_1 \\ y_2 \end{bmatrix} = \begin{bmatrix} f_1(x) \\ f_2(x) \end{bmatrix} = \begin{bmatrix} \ln(x^2) \\ \sin(3x) \end{bmatrix}$
 
 
 

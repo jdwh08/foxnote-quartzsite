@@ -11,7 +11,7 @@ The hyperbolic tangent, i.e., the sin/cos for the unit [[Hyperbola]] instead of 
 
 
 
-\tanh(x) = \sinh(x) / \cosh(x)$
+..\tanh(x) = \sinh(x) / \cosh(x)$
 
 
 

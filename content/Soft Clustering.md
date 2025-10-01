@@ -24,13 +24,13 @@ A type of [[Clustering]] which assumes some [[Data Generating Process]] and assi
 Probability for belonging in some cluster $j$:
 
 
-E[z_{ij}] = \frac{P(x=x_i | \mu=\mu_j)}{\sum_j P}$
+..E[z_{ij}] = \frac{P(x=x_i | \mu=\mu_j)}{\sum_j P}$
 
 
 Means for the clusters given probability:
 
 
-\mu_{ij}=\frac{\sum_i E[z_{ij}] * x_i}{\sum_i E[z_{ij}]}$
+..\mu_{ij}=\frac{\sum_i E[z_{ij}] * x_i}{\sum_i E[z_{ij}]}$
 
 
 We get the probabilities, then assign clusters, then get the probabilities, etc. and repeat in the [[Expectation Maximization Algorithm|EM Algorithm]].

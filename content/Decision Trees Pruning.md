@@ -22,7 +22,7 @@ Metric for determining which splits to prune.
 
 
 
-\min \sum_{m=1}^{|T|} \sum_{x_i \in R_m} (y_i - \hat{y}_{R_m})^2 + \alpha |T|$
+..\min \sum_{m=1}^{|T|} \sum_{x_i \in R_m} (y_i - \hat{y}_{R_m})^2 + \alpha |T|$
 
 
 - $|T|$ is the number of [[Leaf Node]]s in the tree

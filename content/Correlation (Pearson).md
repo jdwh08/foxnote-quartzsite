@@ -11,7 +11,7 @@ The strength of the linear relationship between two [[Random Variable]]s. Their 
 
 
 
-r \text{ or }\rho_{x,y} = \frac{Cov(x,y)}{\sqrt{Var(x)Var(y)}}=\frac{\sum((x_i-\hat{x})(y_i-\hat{y}))}{\sqrt{\sum(x_i-\bar{x})^2 * \sum(y_i-\bar{y})^2}}$
+..r \text{ or }\rho_{x,y} = \frac{Cov(x,y)}{\sqrt{Var(x)Var(y)}}=\frac{\sum((x_i-\hat{x})(y_i-\hat{y}))}{\sqrt{\sum(x_i-\bar{x})^2 * \sum(y_i-\bar{y})^2}}$
 
 
 

@@ -11,7 +11,7 @@ The matrix of second [[Partial Derivative]] for some function $f$ going from $\m
 
 
 
-H(x) = \begin{bmatrix} 
+..H(x) = \begin{bmatrix} 
 \frac{\partial f_1}{\partial x_1^2} & \frac{\partial f_1}{\partial x_1 \partial x_2} & ... & \frac{\partial f_1}{\partial x_1 \partial x_n} \\
 \frac{\partial f_2}{\partial x_2 \partial x_1} & \frac{\partial f_2}{\partial x_2^2} & ... & \frac{\partial f_2}{\partial x_2 \partial x_n} \\
 \vdots & \vdots & \ddots & \vdots \\
@@ -28,7 +28,7 @@ H(x) = \begin{bmatrix}
 - Equivalent to the Transpose of the [[Jacobian]] of the [[Gradient]].
 
 
-H(f(x)) = J \left(\nabla f(x) \right)^T$
+..H(f(x)) = J \left(\nabla f(x) \right)^T$
 
 
 
@@ -48,12 +48,12 @@ H(f(x)) = J \left(\nabla f(x) \right)^T$
 - Useful as a second-order optimizer like in [[Newton-Raphson]] method. We can create a second-order [[Taylor Series]] expansion. Note that $x_0$ here is the current point. If we have a [[Learning Rate]], then the new point $x = x_0-\epsilon \nabla$
 
 
-f(x) \approx f(x_0) + (x-x_0)^T\nabla_x + 1/2 (x-x_0)^T H (x-x_0)$
+..f(x) \approx f(x_0) + (x-x_0)^T\nabla_x + 1/2 (x-x_0)^T H (x-x_0)$
 
 
 
 
-f(x) \approx f(x_0) - \epsilon \nabla_x^T \nabla_x + 1/2 \epsilon^2 \nabla_x^T H_x \nabla_x$
+..f(x) \approx f(x_0) - \epsilon \nabla_x^T \nabla_x + 1/2 \epsilon^2 \nabla_x^T H_x \nabla_x$
 
 
 

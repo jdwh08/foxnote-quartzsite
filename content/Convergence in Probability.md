@@ -10,7 +10,7 @@ As the sample size increases, the probability of a value being larger than some 
 
 
 
-P(|\hat{\theta_n} - \theta| > \epsilon) \rightarrow 0 \text{ as } n \rightarrow \infty$
+..P(|\hat{\theta_n} - \theta| > \epsilon) \rightarrow 0 \text{ as } n \rightarrow \infty$
 
 
 

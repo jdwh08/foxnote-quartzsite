@@ -17,7 +17,7 @@ Company valuation comes in different forms.
 
 ---
 # Notes:
-![[{57419EDF-1364-4990-8D9B-E7A84950EAE8}.png]]
+![[_Media/Excalidraw/{57419EDF-1364-4990-8D9B-E7A84950EAE8}.png]]
 
 A number of fundamental trading strategies exist where we correct differences between the company's "true" value and its current stock price.
 

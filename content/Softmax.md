@@ -13,7 +13,7 @@ A [[Differentiable Function]] which approximates the $\arg \max$.
 Often used to get output probabilities for [[Classification]] in [[Artificial Neural Network|Neural Network]].
 
 
-\text{softmax}(z_c)=\frac{e^{z_c}}{\sum_{c'=1}^{C}e^{z_c'}} \forall c \in C \approx P(Y=c|Z=z)$
+..\text{softmax}(z_c)=\frac{e^{z_c}}{\sum_{c'=1}^{C}e^{z_c'}} \forall c \in C \approx P(Y=c|Z=z)$
 
 
 
@@ -31,7 +31,7 @@ We have softmax as $s_i = \frac{e^{x_i}}{\sum e^{x_i}}$. Taking the first deriva
 
 
 
-
+..
 \nabla = \begin{bmatrix}
 s_1 (1 - s_1) & -s_2 s_1 & ... \\
 - s_1 s_2 & s_2 (1 - s_2) & ... \\
@@ -45,7 +45,7 @@ $
 When combined with [[Cross Entropy]], we get the final result that our loss gradient is:
 
 
-\frac{\partial L}{\partial a_{output}} = a_{output} - y_{onehot}$
+..\frac{\partial L}{\partial a_{output}} = a_{output} - y_{onehot}$
 
 
 

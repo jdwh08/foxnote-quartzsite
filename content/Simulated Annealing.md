@@ -25,7 +25,7 @@ Name is inspired by metallurgy --  high strength steel requires repeated heating
 
 
 
-P(x, x_t, T) = \begin{cases}
+..P(x, x_t, T) = \begin{cases}
 1 & f(x_t) \ge f(x) \\
 e^{\frac{f(x_t)-f(x)}{T}} & f(x_t) < f(x)
 \end{cases}

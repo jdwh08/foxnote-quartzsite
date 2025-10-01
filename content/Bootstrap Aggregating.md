@@ -17,7 +17,7 @@ A type of [[Ensemble (Machine Learning)]] which combines many of the same weak l
 or more formally,
 
 
-\hat{f}_\text{bag}(x)=1/B\sum_{b=1}^B \hat{f}^{*\text{bootstrap}}(x)$
+..\hat{f}_\text{bag}(x)=1/B\sum_{b=1}^B \hat{f}^{*\text{bootstrap}}(x)$
 
 
 

@@ -22,7 +22,7 @@ Formally, this is a [[Hierarchical Agglomerative Clustering]] method.
 	1. Each time you run it, you combine two clusters into one.
 	2. NOTE: once data points are in the same cluster, their inter-cluster distance is ZERO. Don't forget this!
 
-![[Single Linkage Clustering.png]]
+![[_Media/Excalidraw/Single Linkage Clustering.png]]
 We can also draw this as a [[Tree]] where we gradually merge everything into becoming the root node.
 
 #### Properties

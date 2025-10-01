@@ -13,7 +13,7 @@ Suppose we measure risk as [[Standard Deviation]] of returns. Each asset has dif
 Given asset expected returns, volatility, covariance, and target return, provides the optimal weights for each asset in the portfolio.
 
 We can plot these combinations for all target returns:
-![[Portfolio Efficient Frontier.png]]
+![[_Media/Excalidraw/Portfolio Efficient Frontier.png]]
 
 ---
 # Notes:

@@ -13,7 +13,7 @@ A generalization of [[Variance]] to multiple varaibles.
 
 
 
-cov_{x,y} = E[(X-E[X])(Y-E[Y])]=E[XY]-E[X]E[Y]=\frac{\sum\limits_{i} (x_i-\hat{x})(y_i-\hat{y})}{N-1}$
+..cov_{x,y} = E[(X-E[X])(Y-E[Y])]=E[XY]-E[X]E[Y]=\frac{\sum\limits_{i} (x_i-\hat{x})(y_i-\hat{y})}{N-1}$
 
 
 

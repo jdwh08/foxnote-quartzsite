@@ -20,7 +20,7 @@ A more general form of the [[Eigenvalue Decomposition]] for non-square matrices.
 Starting with a $n*m$ matrix $X$:
 
 
-\begin{bmatrix}
+..\begin{bmatrix}
 | & | & ... & |\\
 x_1 & x_2 & ... & x_m\\
 | & | & ... & |
@@ -30,13 +30,13 @@ x_1 & x_2 & ... & x_m\\
 We'd like to decompose this into the following form:
 
 
-X=U\ \Sigma \ V^T$
+..X=U\ \Sigma \ V^T$
 
 
 Where $U, V^T$ are [[Orthogonal Matrices]], and $\Sigma$ is a [[Diagonal Matrix]].
 
 
-U = \begin{bmatrix}
+..U = \begin{bmatrix}
 | & | & ... & |\\
 u_1 & u_2 & ... & u_n\\
 | & | & ... & |
@@ -45,7 +45,7 @@ u_1 & u_2 & ... & u_n\\
 
 
 
-\Sigma = \begin{bmatrix}
+..\Sigma = \begin{bmatrix}
 \sigma_1 & & & \\
  & \sigma_2 & & \\
  & & ... & \\
@@ -57,7 +57,7 @@ u_1 & u_2 & ... & u_n\\
 
 
 
-V^T = \begin{bmatrix}
+..V^T = \begin{bmatrix}
 - & - & v_1^T & - \\
 - & - & v_2^T & - \\
 - & - & ... & - \\
@@ -99,7 +99,7 @@ How do we reduce matrices using SVD when $n >>> m$ or $m >>> n$, e.g., big diffe
 Consider $X^T X$. Because we assume that $X$ is a matrix where each column represents an element and each row represents a feature, we assume that features >>> observations, or $n >>> m$, i.e., it is tall and skinny. Thus, $X^T X$ is $m*n \times n*m \rightarrow m\times m$ matrix, which is smaller. 
 The first column is multiplied out as 
 
-\begin{bmatrix} 
+..\begin{bmatrix} 
 x_1^T x_1 \\
 x_2^T x_1 \\
 ... \\

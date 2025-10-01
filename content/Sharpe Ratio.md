@@ -11,14 +11,14 @@ created: 2024-03-19T22:06
 A classic measure of risk-adjusted returns.
 
 
-\text{Sharpe}=\frac{R_p - R_f}{\sigma_p}$
+..\text{Sharpe}=\frac{R_p - R_f}{\sigma_p}$
 
 
 
 Formally, the Ex-Ante definition (using expected)
 
 
-S = \frac{E[R_p - R_f]}{std(R_p - R_f)}$
+..S = \frac{E[R_p - R_f]}{std(R_p - R_f)}$
 
 
 

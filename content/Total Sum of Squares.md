@@ -9,7 +9,7 @@ created: 2024-03-19T22:06
 The total amount of variation in the target variable $Y$.
 
 
-TSS=\sum_i^n (y_i-\bar{y})^2$
+..TSS=\sum_i^n (y_i-\bar{y})^2$
 
 
 

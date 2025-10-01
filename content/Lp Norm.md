@@ -9,7 +9,7 @@ A [[Norm]] which is a generalization of [[L1 Norm]], [[L2 Norm]], etc.
 
 
 
-||x||_p := \left(\sum_i abs(x_i)^{p}\right)^{1/p}$
+..||x||_p := \left(\sum_i abs(x_i)^{p}\right)^{1/p}$
 
 
 

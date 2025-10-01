@@ -10,7 +10,7 @@ created: 2024-03-19T22:06
 Consider the [[Capital Asset Pricing Model|CAPM]]:
 
 
-r_i=\beta_i r_m + \alpha_i$
+..r_i=\beta_i r_m + \alpha_i$
 
 
 

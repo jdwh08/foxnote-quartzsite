@@ -18,7 +18,7 @@ Malicious adversary: goal is to give you the worst possible score, e.g., as if t
 # Examples:
 
 **Battle of the Sexes**
-![[Battle of the Sexes#Definition]]
+![[_Media/Excalidraw/Battle of the Sexes#Definition]]
 
 Suppose we have Pure Strategy Games.
 - If P1 picks B, P2 picks B

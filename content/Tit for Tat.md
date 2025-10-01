@@ -12,7 +12,7 @@ A [[Game Theory]] strategy for in repeated games, e.g., [[Prisoner's Dilemma Rep
 1. Cooperate on first round.
 2. Copy the other player's last move.
 
-![[Tit for Tat.png]]
+![[_Media/Excalidraw/Tit for Tat.png]]
 
 ---
 # Notes:

@@ -32,7 +32,7 @@ Based on [[Uncertainty (Supervised ML)]], we see that for regression maximizing 
 Constant Value Derivation shows we minimize [[Residual Sum of Squares|Sum of Squared Residuals]] when using the expected value.:
 
 
-f(x)=c; E[c]=\sum_{i=1}^n (y_i-c)^2; \frac{\partial E}{\partial c}=\sum_{i=1}^n 2(y_i-c)\times-1 =0; y_i=c$
+..f(x)=c; E[c]=\sum_{i=1}^n (y_i-c)^2; \frac{\partial E}{\partial c}=\sum_{i=1}^n 2(y_i-c)\times-1 =0; y_i=c$
 
 
 
@@ -40,7 +40,7 @@ Suppose we want to do regression of the form $c_0 + c_1 x + c_2 x + c_3 x + ... 
 We can convert this into matrices:
 
 
-\begin{bmatrix}
+..\begin{bmatrix}
 1 & x_0 & x_0^2 & ... \\
 1 & x_1 & x_1^2 & ... \\
 1 & x_2 & x_2^2 & ... \\

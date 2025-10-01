@@ -7,7 +7,7 @@ created: 2024-03-19T22:06
 ---
 # Definition:
 
-![[LinkedList.svg]]
+![[_Media/Excalidraw/LinkedList.svg]]
 
 A storage type based around nodes which hold attributes and links to other nodes.
 Getting data requires traversing through the links.

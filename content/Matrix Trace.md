@@ -10,7 +10,7 @@ The sum of the diagonal values of a [[Matrix]].
 
 
 
-TR(A) = \sum_i A_{i,i}$
+..TR(A) = \sum_i A_{i,i}$
 
 
 

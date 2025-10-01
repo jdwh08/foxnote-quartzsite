@@ -14,7 +14,7 @@ More formally, given two [[Random Variable]]s X, Y on the same [[Sample Space an
 A Joint Probability distribution is similar:
 
 
-p(\textbf{X})=p(x_1, x_2, ..., x_d)$
+..p(\textbf{X})=p(x_1, x_2, ..., x_d)$
 
 
 
@@ -31,7 +31,7 @@ The joint distribution has the most information, so given a Joint Distribution w
 Function $\mathbb{R}^2 \rightarrow [0,1]$ so that
 
 
-P[(X,Y) \in A] = \int\int\limits_A f(x,y) \ dx\ dy$
+..P[(X,Y) \in A] = \int\int\limits_A f(x,y) \ dx\ dy$
 
 
 E.g., if A is a 2d rectangle where $x\in[a,b], y\in[c,d]$, then the bounds on the integrals are $\int\limits_{c}^{d} \int\limits_{a}^{b} f(x,y)\ dx\ dy$.

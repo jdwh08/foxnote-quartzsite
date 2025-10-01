@@ -10,12 +10,12 @@ A measure of the effect size / difference of mean of two groups.
 
 
 
-d=\frac{\bar{x}_1 - \bar{x}_2}{s}$
+..d=\frac{\bar{x}_1 - \bar{x}_2}{s}$
 
 
 
 
-s=\text{pooled sd}=\sqrt{\frac{(n_1-1) s_1^2+(n_2-1)s_2^2}{n_1+n_2-2}}$
+..s=\text{pooled sd}=\sqrt{\frac{(n_1-1) s_1^2+(n_2-1)s_2^2}{n_1+n_2-2}}$
 
 
 

@@ -12,7 +12,7 @@ The [[Partial Derivative]] of a function going from $\mathbb{R}^n \rightarrow \m
 
 
 
-\nabla = \begin{bmatrix} \frac{\partial f}{\partial x_1} & \frac{\partial f}{\partial x_2} & ... & \frac{\partial f}{\partial x_n} \end{bmatrix}$
+..\nabla = \begin{bmatrix} \frac{\partial f}{\partial x_1} & \frac{\partial f}{\partial x_2} & ... & \frac{\partial f}{\partial x_n} \end{bmatrix}$
 
 
 

@@ -11,7 +11,7 @@ The [[Entropy (information theory)]] of one variable given another.
 
 
 
-H(Y|X) = -\sum p(x,y) \log p(y|x) = H(X,Y)-H(X)$
+..H(Y|X) = -\sum p(x,y) \log p(y|x) = H(X,Y)-H(X)$
 
 
 Like [[Conditional Probability]] but applied to [[Entropy (information theory)]]

@@ -11,7 +11,7 @@ The product of two [[Matrix]].
 
 
 
-A^{(m \times n)}B^{(n \times o)} =C^{(m \times o)}$
+..A^{(m \times n)}B^{(n \times o)} =C^{(m \times o)}$
 
 
 

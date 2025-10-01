@@ -35,12 +35,12 @@ created: 2024-03-19T22:06
 Suppose we have $P^t(x)$ which are the clusters, $C_i^t$ are the points in the cluster $P(i)$, and the center of each cluster.
 
 
-P^t(x) = \underset{i}{\arg\min} ||x-\text{center}_i^{t-1}||_2^2$
+..P^t(x) = \underset{i}{\arg\min} ||x-\text{center}_i^{t-1}||_2^2$
 
  (assign to closest center using distance)
 
 
-\text{center}_i^t = \sum_{y \in C_i^t}^t=\frac{y}{|c_i|}$
+..\text{center}_i^t = \sum_{y \in C_i^t}^t=\frac{y}{|c_i|}$
 
 
 

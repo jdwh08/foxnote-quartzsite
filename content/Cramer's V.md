@@ -12,7 +12,7 @@ Formally, a standardized effect size for the [[Chi Square Test]] for independenc
 
 
 
-V=\sqrt{\frac{\chi^2/n}{\min(k-1, r-1)}}$
+..V=\sqrt{\frac{\chi^2/n}{\min(k-1, r-1)}}$
 
 
 

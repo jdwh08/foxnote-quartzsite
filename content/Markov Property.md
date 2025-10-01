@@ -25,7 +25,7 @@ Our probability space has a [[Stochastic Process]] going from state to state $(S
 Process has Markov Property if $\forall$ states $A\in \mathcal{\hat{S}}$ and times $s, t \in I$ where $s<t$...
 
 
-P(X_t \in A | \mathcal{F}_\mathcal{\hat{s}}) = P(X_t \in A | X_\mathcal{\hat{s}})$
+..P(X_t \in A | \mathcal{F}_\mathcal{\hat{s}}) = P(X_t \in A | X_\mathcal{\hat{s}})$
 
 
 i..e, probabilities for $X_t$ depend only on the present state $X_s$, not any of the prior  information in the filtration $\mathcal{F}_s$.
@@ -33,7 +33,7 @@ i..e, probabilities for $X_t$ depend only on the present state $X_s$, not any of
 #### Discrete Case
 
 
-P(X_{n+1} = x_{n+1} | X_1=x_1, X_2=x_2, ... X_n = x_n) = P(X_{n+1}=x_{n+1} | X_n=x_n)\ \forall\ n \in I$
+..P(X_{n+1} = x_{n+1} | X_1=x_1, X_2=x_2, ... X_n = x_n) = P(X_{n+1}=x_{n+1} | X_n=x_n)\ \forall\ n \in I$
 
 
 

@@ -14,7 +14,7 @@ Measures the difference between two probability distributions over the same vari
 
 
 
-D_{KL}(p(x)||q(x)) = \sum\limits_{x \in X} p(x) \log \left(\frac{p(x)}{q(x)} \right)$
+..D_{KL}(p(x)||q(x)) = \sum\limits_{x \in X} p(x) \log \left(\frac{p(x)}{q(x)} \right)$
 
 
 

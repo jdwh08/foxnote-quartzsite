@@ -87,10 +87,10 @@ QLoRA & Guanaco (33B, MT-6.88):
 
 ### **OPEN MODELS: GENERATION 3, Getting RLHF to Work**
 - RLHF Objective
-![[Stanford Transformers-20240418191455516.webp]]
+![[_Media/Excalidraw/Stanford Transformers-20240418191455516.webp]]
 - How do we get a good reward function? How do we optimize the reward?
 	- NOTE: This is a very RL-based method.
-![[Stanford Transformers-20240418191550719.webp]]
+![[_Media/Excalidraw/Stanford Transformers-20240418191550719.webp]]
 - We learn a "preference model"
 	- Bradley-Terry Model: Reward is proportional to probability that correct is chosen over any other. From econ. !?
 
@@ -105,7 +105,7 @@ QLoRA & Guanaco (33B, MT-6.88):
 
 **DPO vs RL (PPO, Reinforce, ...)**
 - Learning RL environment?
-![[Stanford Transformers-20240418191902959.webp]]
+![[_Media/Excalidraw/Stanford Transformers-20240418191902959.webp]]
 
 **Zephyr $\beta$**:
 - Building on Mistral7b. First big model for DPO!

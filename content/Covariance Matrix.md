@@ -12,7 +12,7 @@ A square matrix which captures the [[Covariance]] and [[Variance]] between the v
 Consider some variables $A, B, C, ...$ and consider a matrix whose elements are as follows:
 
 
-\begin{bmatrix}
+..\begin{bmatrix}
  & A & B & C & ... \\
 A & cov(a,a) & cov(a,b) & cov(a,c) & ... \\
 B & cov(b,a) & cov(b,b) & cov(b,c) & ... \\

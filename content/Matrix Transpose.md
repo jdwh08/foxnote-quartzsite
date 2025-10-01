@@ -10,7 +10,7 @@ An operation which flips the rows and columns of a [[Matrix]] across the main di
 
 
 
-(A^T)_{i,j} = A_{j,i}$
+..(A^T)_{i,j} = A_{j,i}$
 
 
 

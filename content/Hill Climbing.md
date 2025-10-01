@@ -12,7 +12,7 @@ An [[Optimizer]] which gradually guesses within some area until things stop impr
 
 With Random Restarts, becomes a [[Randomized Optimization]] algorithm.
 
-![[Hill Climbing.png]]
+![[_Media/Excalidraw/Hill Climbing.png]]
 
 Note: This is an [[Multi-armed Bandit|Exploit]] only [[Greedy Algorithm]] which only tries to improve.
 

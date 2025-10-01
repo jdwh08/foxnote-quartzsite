@@ -12,7 +12,7 @@ i.e., the [[Matrix Product]] against the [[Matrix Transpose]] is the [[Identity 
 
 
 
-A^TA = AA^T = I$
+..A^TA = AA^T = I$
 
 
 

@@ -37,7 +37,7 @@ A form of [[Unsupervised Machine Learning]].
 	- E.g., cluster all points to form $n/2$ clusters. 
 	- (this doesn't have richness)
 
-![[Clustering Impossibility Theorem#Definition]]
+![[_Media/Excalidraw/Clustering Impossibility Theorem#Definition]]
 
 In practice, people decide what they want from clustering. 
 

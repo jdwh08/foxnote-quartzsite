@@ -9,7 +9,7 @@ created: 2024-03-19T22:06
 A matrix $A^{-1}$ such that the [[Matrix Product]] with the original [[Matrix]] results in the [[Identity Matrix]]. 
 
 
-AA^{-1} = I \ \text{(left)}\ \ \ |\ \ \ A^{-1}A = I\ \text{(right)}$
+..AA^{-1} = I \ \text{(left)}\ \ \ |\ \ \ A^{-1}A = I\ \text{(right)}$
 
 
 

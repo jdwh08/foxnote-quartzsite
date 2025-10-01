@@ -23,7 +23,7 @@ Now consider the area/volume of a "unit square" with length 1 per each [[Basis]]
 For a 2x2 matrix:
 
 
-\begin{bmatrix}
+..\begin{bmatrix}
 a &b \\
 c &d
 \end{bmatrix}$
@@ -34,7 +34,7 @@ We have the determinant as $ad-bc$.
 For a 3x3 matrix:
 
 
-\begin{bmatrix}
+..\begin{bmatrix}
 a &b &c\\
 d &e &f\\
 g&h&i

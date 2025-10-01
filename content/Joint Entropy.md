@@ -10,7 +10,7 @@ The [[Entropy (information theory)]] of two [[Random Variable]]s at the same tim
 
 
 
-H(x,y)= -\sum p(x,y) \log p(x,y)$
+..H(x,y)= -\sum p(x,y) \log p(x,y)$
 
 
 

@@ -115,7 +115,7 @@ Example Metrics:
 
 	RULE OF THUMB (for `0.05, 0.8, 1% diff`): 
 
-n \approx 16 \sigma^2 / \Delta^2$
+..n \approx 16 \sigma^2 / \Delta^2$
 
 
 4. Determine the duration of the experiment.

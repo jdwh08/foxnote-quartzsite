@@ -19,7 +19,7 @@ Suppose there are $N$ players with strategies $S_1, ..., S_N$.
 
 
 
-\forall i \in N, s_i^* = \underset{s_i}{\arg\max}\ U_i(s_1^*, ..., s_i, ... s_n^*)$
+..\forall i \in N, s_i^* = \underset{s_i}{\arg\max}\ U_i(s_1^*, ..., s_i, ... s_n^*)$
 
 
 

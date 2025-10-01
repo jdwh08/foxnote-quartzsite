@@ -51,7 +51,7 @@ Uber's Empirical Observations:
 1. Deliveries and rideshare have different residuals
 2. Residuals have strong [[Skew]] with long left(!) tail. 
 
-![[ETA System Design Uber 2022.png]]
+![[_Media/Excalidraw/ETA System Design Uber 2022.png]]
 
 ### Model Training
 

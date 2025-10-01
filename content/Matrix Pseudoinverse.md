@@ -26,7 +26,7 @@ This can be Over- or Under- determined when we have more or fewer equations than
 Formally speaking, the Moore-Penrose Psuedoinverse is 
 
 
-A^+ = \lim (A^TA+\alpha I)^{-1} A^T = \lim A^T (AA^T+\alpha I)$
+..A^+ = \lim (A^TA+\alpha I)^{-1} A^T = \lim A^T (AA^T+\alpha I)$
 
 
 ### Properties
@@ -61,7 +61,7 @@ We solve this $A^+$ with the [[Singular Value Decomposition]]. Stable & practica
 Suppose we have the following [[Diagonal Matrix]]:
 
 
-A = \begin{bmatrix} 
+..A = \begin{bmatrix} 
 2 & 0 \\
 0 & 1 \\
 \end{bmatrix}$
@@ -73,7 +73,7 @@ This means that $\Sigma^{-1}$ is the reciprocal of the diagonal values (off diag
 
 
 
-\Sigma^{-1} = \begin{bmatrix} 
+..\Sigma^{-1} = \begin{bmatrix} 
 1/2 & 0 \\
 0 & 1 \\
 \end{bmatrix} = A^{-1}$

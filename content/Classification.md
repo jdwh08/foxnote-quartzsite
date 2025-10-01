@@ -31,21 +31,21 @@ Now, let's get our success metrics:
 **Misclassification Rate**:
 
 
-\mathcal{L}(\theta) = \frac{1}{N} \sum_{n=1}^{N} \mathbb{I}(y_n \neq f(x_n; \theta))$
+..\mathcal{L}(\theta) = \frac{1}{N} \sum_{n=1}^{N} \mathbb{I}(y_n \neq f(x_n; \theta))$
 
 
 i.e., the fraction of wrongly classified values.
 - Assumes all errors are equal (no weights). A [[Loss Function]] might be used instead $\mathcal{l}(y_n, f(x_n; \theta))$
 
 
-\mathcal{L}(\theta) = \frac{1}{N} \sum_{n=1}^{N} \mathcal{l}(y_n, f(x_n; \theta))$
+..\mathcal{L}(\theta) = \frac{1}{N} \sum_{n=1}^{N} \mathcal{l}(y_n, f(x_n; \theta))$
 
 
 
 To train our classifier, we can find the value that minimizes the loss:
 
 
-\hat{\theta} = \underset{\theta}{\arg\min} \frac{1}{N} \sum_{n=1}^N l(y_n, f(\boldsymbol{x_n}; \boldsymbol{\theta}))$
+..\hat{\theta} = \underset{\theta}{\arg\min} \frac{1}{N} \sum_{n=1}^N l(y_n, f(\boldsymbol{x_n}; \boldsymbol{\theta}))$
 
 
 Note that we want to be sure that it generalizes beyond just the training dataset.

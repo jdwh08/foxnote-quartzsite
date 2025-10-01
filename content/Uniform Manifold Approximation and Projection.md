@@ -21,7 +21,7 @@ Starting with some high dimensional data, move the points around in lower-dimens
 2. Then consider the number of high dimensional neighbours (typically 15, including self).
 3. Take $log_2(neighbours)$ to calculate a curve for the similarity scores. The curve is set up so the sum of y-coordinate for the nearest neighbours adds up to $log_2(neighbours)$.
 
-![[UMAP_Dimension.png|600x100%]]
+![[_Media/Excalidraw/UMAP_Dimension.png|600x100%]]
 
 - Notice how the similarity scores are computed for each point? This means that A-B similarity can be different from B-A. This is "averaged" out.
 - Forcing the similarities to equal a constant $log_2(neighbours)$ also means each point will have some point with higher similarity scores.
@@ -61,7 +61,7 @@ Starting with some high dimensional data, move the points around in lower-dimens
 **Formula** for calculating low-dimensionality similarity scores using the [[t-Distribution]]:
 
 
-\frac{1}{1+\alpha d^{2\beta}}$
+..\frac{1}{1+\alpha d^{2\beta}}$
 
 
 where $d$ is low-dimensional distance and $\alpha, \beta$ are parameters that control how tight the points should be. (UMAP uses: $\alpha=1.577$, $\beta=0.8951$; t-SNE uses 1 & 1)

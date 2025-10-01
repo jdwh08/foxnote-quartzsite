@@ -7,7 +7,7 @@ created: 2024-03-19T22:06
 ---
 # Definition:
 A data structure which has a "last in, last out" property.
-![[Stack.png]]
+![[_Media/Excalidraw/Stack.png]]
 
 The opposite of a [[Queue]].
 Note that we only add and remove from the HEAD now!

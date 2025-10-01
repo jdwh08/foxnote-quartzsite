@@ -10,7 +10,7 @@ Given some [[Point Estimator]] without [[Bias (estimator)]], its [[Variance (est
 
 
 
-Var(\hat{\theta}) \ge \mathcal{I}(\theta)^{-1}$
+..Var(\hat{\theta}) \ge \mathcal{I}(\theta)^{-1}$
 
 
 

@@ -12,7 +12,7 @@ The sum of the squared [[Residuals]]:
 
 
 
-RSS=\sum_i^N(y_i - \hat{y}_i)^2$
+..RSS=\sum_i^N(y_i - \hat{y}_i)^2$
 
 
 

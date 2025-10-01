@@ -19,7 +19,7 @@ You can think of this as the theoretically best model we can do
 ### Algorithm
 
 
-\underset{v_j \in V}{\arg\max} \sum_h^H P(v_j|h)\times P(h_i|D)$
+..\underset{v_j \in V}{\arg\max} \sum_h^H P(v_j|h)\times P(h_i|D)$
 
 
 - Maximize the value over all possible hypothesis models

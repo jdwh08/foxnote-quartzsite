@@ -12,14 +12,14 @@ A typical symmetric, bell-shaped distribution.
 A [[Random Variable]] X is normally distributed with [[Expected Value|mean]] $\mu$ and [[Variance|variance]] $\sigma^2$ if it has a [[Probability Density Function|PDF]] of
 
 
-f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}$
+..f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}$
 
 
 
 which gives it a [[Cumulative Distribution Function|CDF]] of
 
 
-\Phi(z) = \int_{-\infty}^{z} e^{\frac{-u^2}{2}}du$
+..\Phi(z) = \int_{-\infty}^{z} e^{\frac{-u^2}{2}}du$
 
 
 
@@ -33,7 +33,7 @@ What are these values?
 You can look up the probability tables for the normal distribution CDF!
 For example, consider this one-tailed distribution: $\Phi(z)=P(Z<z)$ 
 
-![[Normal_Distribution_Z.png]]
+![[_Media/Excalidraw/Normal_Distribution_Z.png]]
 
 | [[Z-Score]] | x.x0   | x.x1   | x.x2   | x.x3   | x.x4   | x.x5   | x.x6   | x.x7   | x.x8   | x.x9   |
 | ----------- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |

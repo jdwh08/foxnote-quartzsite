@@ -51,7 +51,7 @@ def get_bolliger_bands(
 ##### Daily Returns
 
 
-r =\frac{p_{t} - p_{t-1}}{p_{t-1}} = \frac{p_{t}}{p_{t-1}}-1$
+..r =\frac{p_{t} - p_{t-1}}{p_{t-1}} = \frac{p_{t}}{p_{t-1}}-1$
 
 
 (NOTE: yes, this is just the change over time)
@@ -74,7 +74,7 @@ def compute_daily_returns(
 ##### Cumulative Returns
 
 
-cumret(0,t)=p_t/p_0 - 1$
+..cumret(0,t)=p_t/p_0 - 1$
 
 
 (NOTE: yes, this is just the change over a period)

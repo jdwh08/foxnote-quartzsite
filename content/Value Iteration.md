@@ -21,7 +21,7 @@ Solving a [[Bellman Equation]] for [[Reinforcement Learning]] by repeatedly re-c
 
 
 
-\hat{U}(s)=\max_a \sum_{s'} T(sas') \left[ R(s,a) + \gamma \hat{U}_t(s') \right]$
+..\hat{U}(s)=\max_a \sum_{s'} T(sas') \left[ R(s,a) + \gamma \hat{U}_t(s') \right]$
 
 
 ###### Convergence

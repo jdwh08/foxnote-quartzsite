@@ -13,7 +13,7 @@ A method to undo the [[Chain Rule]] for [[Integration]] by splitting the integra
 
 
 
-\int u\ dv = uv - \int v\ du$
+..\int u\ dv = uv - \int v\ du$
 
 
 

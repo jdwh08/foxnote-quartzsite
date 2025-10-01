@@ -10,7 +10,7 @@ created: 2024-03-19T22:06
 # Definition:
 A type of [[Tree]] based [[Data Structures and Algorithms|Data Structures]] which focuses on efficiently storing prefixes.
 
-![[Trie.png]]
+![[_Media/Excalidraw/Trie.png]]
 
 ---
 # Notes:

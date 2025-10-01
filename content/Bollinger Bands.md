@@ -10,7 +10,7 @@ A [[Technical Analysis]] indicator that dynamically adjusts the above/below line
 
 
 
-BB = SMA \pm 2\sigma$
+..BB = SMA \pm 2\sigma$
 
 
 ```python

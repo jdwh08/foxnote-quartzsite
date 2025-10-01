@@ -21,12 +21,12 @@ Prediction [[Accuracy]] depends on two things:
 
 
 
-E(Y-\hat{Y})^2 = E[f(X)+\epsilon-\hat{f}(X)]^2 = [f(X)-\hat{f}(x)]^2 + Var(\epsilon)$
+..E(Y-\hat{Y})^2 = E[f(X)+\epsilon-\hat{f}(X)]^2 = [f(X)-\hat{f}(x)]^2 + Var(\epsilon)$
 
 
 
 
-\text{where }Var(\epsilon)\text{ is irreducible.}$
+..\text{where }Var(\epsilon)\text{ is irreducible.}$
 
 
 

@@ -10,7 +10,7 @@ A type of [[Matrix Decomposition]] which breaks matrices down into [[Eigenvector
 
 
 
-A=V\ \text{diag}(\lambda) \ V^{-1}$
+..A=V\ \text{diag}(\lambda) \ V^{-1}$
 
 
 

@@ -12,7 +12,7 @@ created: 2024-03-19T22:06
 
 
 
-MSE(\theta) = \frac{1}{N} \sum_{i=1}^{N}(y_i-\hat{f}(x_i\ ;\ \theta))^2$
+..MSE(\theta) = \frac{1}{N} \sum_{i=1}^{N}(y_i-\hat{f}(x_i\ ;\ \theta))^2$
 
 
 

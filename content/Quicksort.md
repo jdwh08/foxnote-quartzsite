@@ -11,7 +11,7 @@ A [[Sorting Algorithm]] which takes advantage of [[Divide and Conquer]] to sort 
 ---
 # Notes:
 
-![[Quicksort.png]]
+![[_Media/Excalidraw/Quicksort.png]]
 
 1. Get a pivot value $p$.
 2. Any element which is less than the pivot is moved to the left front.

@@ -8,7 +8,7 @@ created: 2024-03-19T22:06
 # Definition:
 A specific type of [[Linked List]], with the property "LAST IN, FIRST OUT".
 
-![[Queue.png]]
+![[_Media/Excalidraw/Queue.png]]
 
 The opposite of a [[Stack]].
 

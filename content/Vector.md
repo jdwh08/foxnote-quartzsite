@@ -21,7 +21,7 @@ We can also think of this as a specialized [[Matrix]] with one column. This mean
 
 
 
-\textbf{\textit{x}} = \begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ \vdots \end{bmatrix} = \begin{bmatrix} 3 \\ 5 \\ 7 \\ \vdots \end{bmatrix}$
+..\textbf{\textit{x}} = \begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ \vdots \end{bmatrix} = \begin{bmatrix} 3 \\ 5 \\ 7 \\ \vdots \end{bmatrix}$
 
 
 

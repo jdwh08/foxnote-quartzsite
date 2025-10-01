@@ -11,7 +11,7 @@ created: 2024-03-19T22:06
 
 Formally, given some value $K$ and prediction point $x_0$, we identify the $K$ observations closest to $x_0$ (hence $\mathcal{N}_0$), and then for [[Regression]] estimate 
 
-f(x_0)=\frac{1}{K} \sum_{x_i \in \mathcal{N}_0} ^ K y_i$
+..f(x_0)=\frac{1}{K} \sum_{x_i \in \mathcal{N}_0} ^ K y_i$
 
 
 (or, for [[Classification]], estimate with the mode.)

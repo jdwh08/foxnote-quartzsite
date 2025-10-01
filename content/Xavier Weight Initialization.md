@@ -11,7 +11,7 @@ A method used to set starting weights for an [[Artificial Neural Network]] which
 
 
 
-\sim \mathcal{U} \left(-\sqrt{\frac{6}{n_{in}+n_{out}}}, +\sqrt{\frac{6}{n_{in}+n_{out}}} \right)$
+..\sim \mathcal{U} \left(-\sqrt{\frac{6}{n_{in}+n_{out}}}, +\sqrt{\frac{6}{n_{in}+n_{out}}} \right)$
 
 
 
@@ -20,7 +20,7 @@ i.e., a [[Uniform Distribution]] based on [[Fan In]] and [[Fan Out]].
 Alternative: with a [[Normal Distribution]]
 
 
-\sim \mathcal{N} \left(0, \frac{2}{n_{in} + n_{out}} \right)$
+..\sim \mathcal{N} \left(0, \frac{2}{n_{in} + n_{out}} \right)$
 
 
 
@@ -47,7 +47,7 @@ Let's impose the following criteria:
 **Forward pass**: [[Dot Product]]. Note we assume weights and inputs are [[Independent]].
 
 
-y=\sum wx \rightarrow Var(y) = Var \left(\sum_i^{N_{in}} wx \right) = nVar(wx) = n Var(w) Var(x)$
+..y=\sum wx \rightarrow Var(y) = Var \left(\sum_i^{N_{in}} wx \right) = nVar(wx) = n Var(w) Var(x)$
 
 
 Thus, to keep $Var(y) = Var(x)$, we need to have $Var(w) = 1/n_{in}$.
@@ -55,7 +55,7 @@ Thus, to keep $Var(y) = Var(x)$, we need to have $Var(w) = 1/n_{in}$.
 **Backwards pass**: Suppose we have some future layer gradient $\delta^{l+1}_j$. Then,
 
 
-\delta_j^l = \sum_{j}^{n_{out}} w_j \delta_j^{l+1} \rightarrow Var \left(\sum_i^{N_{out}} w\delta^{l+1} \right) = nVar(w\delta^{l+1}) = n Var(w) Var(\delta^{l+1})$
+..\delta_j^l = \sum_{j}^{n_{out}} w_j \delta_j^{l+1} \rightarrow Var \left(\sum_i^{N_{out}} w\delta^{l+1} \right) = nVar(w\delta^{l+1}) = n Var(w) Var(\delta^{l+1})$
 
 
 Thus, to keep $Var(\delta^l) = Var(\delta^{l+1}) = 1$, we must have $Var(w) = 1/n_{out}$.
@@ -63,7 +63,7 @@ Thus, to keep $Var(\delta^l) = Var(\delta^{l+1}) = 1$, we must have $Var(w) = 1/
 To compromise between the two, we use the [[Harmonic Mean]].
 
 
-Var(W) = \frac{2}{n_{in} + n_{out}}$
+..Var(W) = \frac{2}{n_{in} + n_{out}}$
 
 
 If we use a [[Uniform Distribution]], our [[Variance]] is $1/12(b-a)^2$. We need it to be symmetrical, i.e., $b=-a$ so this becomes $1/3 a^2 = \frac{2}{n_{in} + n_{out}} \rightarrow a = \sqrt{\frac{6}{n_{in} + n_{out}}}$ 
@@ -76,7 +76,7 @@ Technically invented first. A special case where [[Fan In]] and [[Fan Out]] are 
 Reasonable approximate results using the [[Normal Distribution]] and [[Fan In]]:
 
 
-N(0,1) * \sqrt{1/(2n_j)}$
+..N(0,1) * \sqrt{1/(2n_j)}$
 
 
 Note that the $2n_j$ is for [[ReLU]], while we use $n_j$ for [[Sigmoid Function|sigmoid]]-style.

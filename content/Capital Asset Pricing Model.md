@@ -12,7 +12,7 @@ created: 2024-03-19T22:06
 The returns of any asset $i$ can be determined by a [[Linear Regression]] against the "Market [[Portfolio (Finance)|Portfolio]]" of all assets held at [[Market Cap]] weights:
 
 
-r_i(t)=\beta_i * r_m(t) + \alpha_i(t)$
+..r_i(t)=\beta_i * r_m(t) + \alpha_i(t)$
 
 
 i.e., the asset return is some [[Beta (Finance)]] times the market portfolio, plus some residual [[Alpha (Finance)]].
@@ -20,7 +20,7 @@ i.e., the asset return is some [[Beta (Finance)]] times the market portfolio, pl
 Or at the portfolio level:
 
 
-r_p(t) = \sum_i w_i(\beta_i r_m(t) + \alpha_i(t)) = \beta_p r_m(t) + \sum_i w_i \alpha_i(t)$
+..r_p(t) = \sum_i w_i(\beta_i r_m(t) + \alpha_i(t)) = \beta_p r_m(t) + \sum_i w_i \alpha_i(t)$
 
 
 

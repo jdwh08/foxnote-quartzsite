@@ -10,7 +10,7 @@ A smooth, [[Differentiable Function|differentiable]] version of the $\max$ funct
 
 
 
-LSP = \log \left( \sum_{i=0}^{n} e^{x_i} \right)$
+..LSP = \log \left( \sum_{i=0}^{n} e^{x_i} \right)$
 
 
 

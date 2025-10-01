@@ -39,7 +39,7 @@ For the math to be guaranteed to work, the kernel must act like a [[Distance Mea
 - Notice how this is a Circle!
 - We've exploited the **similar in direction** to become circle-like!
 - This was also carefully chosen so that it is still the [[Dot Product]].
-![[Kernel Trick Circle.png|369x482]]
+![[_Media/Excalidraw/Kernel Trick Circle.png|369x482]]
 
 ----
 # Source:

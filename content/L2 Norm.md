@@ -11,7 +11,7 @@ created: 2024-03-19T22:06
 A [[Norm]] for [[Vector]] based around Euclidean Distance:
 
 
-||\mathbf{x}||_2 := \sqrt{\sum_i^nx_i^2}$
+..||\mathbf{x}||_2 := \sqrt{\sum_i^nx_i^2}$
 
 
 (the square root of the sum of squares).

@@ -35,7 +35,7 @@ Decision trees partition the feature space into continuous "regions" which are u
 #### How Decision Trees Work
 Decision trees work because they do a good job expressing the space:
 
-![[Tree_XOR.svg]]
+![[_Media/Excalidraw/Tree_XOR.svg]]
 
 This can generalize to many different functions, e.g., n-OR (ANY), or n-AND (ALL), or n-XOR (Parity), etc.
 - (you can imagine that the tree for n-ANY is a long snake A->B->C->D... where if any variable is True, we return true, and at the end of the snake we return false)
@@ -87,8 +87,8 @@ Thus, our training algorithm needs to be very sparse or good at [[Decision Trees
 
 ----
 #### Implementation
-![[Decision Trees-20250125112828343.webp]]
-![[Decision Trees-20250125112841281.webp]]
+![[_Media/Excalidraw/Decision Trees-20250125112828343.webp]]
+![[_Media/Excalidraw/Decision Trees-20250125112841281.webp]]
 Okay, this is very Georgia Tech #ds/ml/ML4T only, but...
 - We use a numpy array with recursion to represent the tree.
 - Each node has its id on the left, its splitting feature, the split value, and the relative positions for data that goes into the left and right node.

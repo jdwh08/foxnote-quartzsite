@@ -20,7 +20,7 @@ The function which gets the [[Probability]] of a [[Random Variable]] being in so
 
 
 
-p(x) = \underset{\epsilon \rightarrow0}{\lim \frac{1}{\epsilon}} P(x_0 \le x \le x_0 + \epsilon)$
+..p(x) = \underset{\epsilon \rightarrow0}{\lim \frac{1}{\epsilon}} P(x_0 \le x \le x_0 + \epsilon)$
 
 
 

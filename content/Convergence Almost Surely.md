@@ -11,7 +11,7 @@ The [[Probability]] that some sequence $X_n$ approaches some value $x$ approache
 
 
 
-P(\underset{n\rightarrow\infty}{\lim} X_n=x)=1$
+..P(\underset{n\rightarrow\infty}{\lim} X_n=x)=1$
 
 
 
@@ -20,7 +20,7 @@ P(\underset{n\rightarrow\infty}{\lim} X_n=x)=1$
 I.e., situations in [[Probability Space]]: For all possible outcomes, $X_n$ approaches some X.
 
 
-P\left(\omega \in \Omega: \lim_{n\rightarrow\infty} X_n(\omega) = X(\omega)\right)=1$
+..P\left(\omega \in \Omega: \lim_{n\rightarrow\infty} X_n(\omega) = X(\omega)\right)=1$
 
 
 

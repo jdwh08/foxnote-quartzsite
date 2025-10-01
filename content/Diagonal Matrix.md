@@ -10,7 +10,7 @@ A [[Matrix]] which only has values along the main diagonal, with everything else
 
 
 
-D =\begin{bmatrix} 
+..D =\begin{bmatrix} 
 x_1 & 0 & 0 & ... \\
 0 & x_2 & 0 & ... \\
 0 & 0 & x_3 & ... \\

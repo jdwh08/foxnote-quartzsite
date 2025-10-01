@@ -15,7 +15,7 @@ Has effect of making parameters sparse, i.e., $\beta=0$.
 ---
 # Notes:
 Our absolute value penalty term increases the cost for parameters which are large.
-![[Lasso_Regularization.png]]
+![[_Media/Excalidraw/Lasso_Regularization.png]]
 
 Unlike [[Ridge Regularization]], lasso tends to set values to zero.
 This is because our [[Loss Function]] penalty has large kink corners where our parameters are zero. This tends to make the optimal solutions corner solutions.
@@ -28,13 +28,13 @@ For [[Multicollinearity]], will set one of the $\beta$ to be zero.
 Suppose we have some model with parameters **w** and [[Loss Function]] e.g., the [[Mean Squared Error]]: 
 
 
-L(\mathbf{w}) = 1/2 \sum_i^N (y_i - \hat{f}(x_i, \mathbf{w}))^2$
+..L(\mathbf{w}) = 1/2 \sum_i^N (y_i - \hat{f}(x_i, \mathbf{w}))^2$
 
 
 We might want to add [[L1 Norm]] [[Regularization]] to avoid parameters from getting too large. Thus, we can add a regularization term which penalizes the **w**:
 
 
-L(\mathbf{w}) = 1/2\ \sum_i^N (y_i - \hat{f}(x_i, \mathbf{w}))^2 + \frac{\lambda}{2} ||\mathbf{w}||_1^2$
+..L(\mathbf{w}) = 1/2\ \sum_i^N (y_i - \hat{f}(x_i, \mathbf{w}))^2 + \frac{\lambda}{2} ||\mathbf{w}||_1^2$
 
 
 where $||\mathbf{w}||_1^2$ is the [[L1 Norm]]: $= abs(w_0) + abs(w_1) + abs(w_2) + ...$
