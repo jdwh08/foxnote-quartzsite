@@ -3,7 +3,7 @@ aliases:
 tags:
   - finance
   - ds/ml/ML4T
-edited: 2025-09-30T19:34
+edited: 2025-09-30T21:59
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -17,7 +17,7 @@ Company valuation comes in different forms.
 
 ---
 # Notes:
-![[_Media/Excalidraw/{57419EDF-1364-4990-8D9B-E7A84950EAE8}.png]]
+![[{57419EDF-1364-4990-8D9B-E7A84950EAE8}.png]]
 
 A number of fundamental trading strategies exist where we correct differences between the company's "true" value and its current stock price.
 

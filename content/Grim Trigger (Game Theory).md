@@ -3,7 +3,7 @@ aliases:
   - GRUDGER
 tags:
   - econ/game_theory/strategy
-edited: 2025-09-30T19:34
+edited: 2025-09-30T21:59
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -12,7 +12,7 @@ A strategy for [[Game Theory]] in repeated games, e.g., [[Prisoner's Dilemma Rep
 > "Dead Man's Switch"
 > GRUDGER
 
-![[_Media/Excalidraw/Grim Trigger Game Theory.png|340x296]]
+![[Grim Trigger Game Theory.png|340x296]]
 
 ---
 # Notes:

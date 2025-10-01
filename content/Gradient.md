@@ -10,11 +10,7 @@ created: 2024-03-19T22:06
 
 The [[Partial Derivative]] of a function going from $\mathbb{R}^n \rightarrow \mathbb{R}^1$ for each of its $n$ inputs.
 
-
-
-..\nabla = \begin{bmatrix} \frac{\partial f}{\partial x_1} & \frac{\partial f}{\partial x_2} & ... & \frac{\partial f}{\partial x_n} \end{bmatrix}$
-
-
+$$\nabla = \begin{bmatrix} \frac{\partial f}{\partial x_1} & \frac{\partial f}{\partial x_2} & ... & \frac{\partial f}{\partial x_n} \end{bmatrix}$$
 
 ---
 # Notes:

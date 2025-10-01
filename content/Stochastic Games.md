@@ -36,11 +36,7 @@ We can kinda do [[Q-Learning]] for this(?).
 
 #### For [[Zero Sum Game]]s
 This is known as **Minimax-Q**
-
-
-..Q(s, [a,b]) = R_i(s, [a,b]) + \gamma \sum_{s'} T(s, [a,b], s') \times \underset{a', b'}{\text{minimax}}\left(Q(s', [a',b']\right)$
-
-
+$$Q(s, [a,b]) = R_i(s, [a,b]) + \gamma \sum_{s'} T(s, [a,b], s') \times \underset{a', b'}{\text{minimax}}\left(Q(s', [a',b']\right)$$
 Note that [[Minimax]] here assumes the worst possible future actions from the other player.
 
 For [[Zero Sum Game]], things that work include...
@@ -57,11 +53,7 @@ Things that don't work for this...
 Minimax no longer makes sense because the other player might have different rewards.
 - Instead, we can compute the [[Nash Equilibrium]] to make **Nash-Q**
 
-
-
-..Q(s, [a,b]) = R_i(s, [a,b]) + \gamma \sum_{s'} T(s, [a,b], s') \times \underset{a', b'}{\text{Nash}}\left(Q(s', [a',b']\right)$
-
-
+$$Q(s, [a,b]) = R_i(s, [a,b]) + \gamma \sum_{s'} T(s, [a,b], s') \times \underset{a', b'}{\text{Nash}}\left(Q(s', [a',b']\right)$$
 
 Alas, this sucks monkey biscuits.
 - [[Value Iteration]] doesn't work.

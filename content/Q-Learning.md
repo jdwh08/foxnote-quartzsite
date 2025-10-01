@@ -11,11 +11,7 @@ A model-free learner approach for [[Reinforcement Learning]].
 Given empirical data, builds up policy using a "Q-Function". Q-function tracks the final value of taking action $a$ at state $s$ for all actions and states. Values stored in a Q-Table $Q(s, a)$. 
 
 We get the policy by picking the best value at each state:
-
-
-..\pi^*(s) = \underset{a}{\arg\max}\ Q(s,a)$
-
-
+$$\pi^*(s) = \underset{a}{\arg\max}\ Q(s,a)$$
 
 Note that this Q-value includes both immediate **and future** reward (discounted).
 
@@ -49,18 +45,10 @@ Then, theoretically guaranteed to *eventually* find the best policy!
 ### Theory from [[Markov Decision Process]]
 - We can calculate our [[Utility]] for a state $S$ from
 	- Where $R$ is reward, $\gamma$ is discount factor, $S'$ is new states given best action, we sum across transition probability times new state utility
-
-
-..U(s) = R(s) + \gamma \max_{a} \sum_{s'} T(sas') U(s')$
-
-
+$$U(s) = R(s) + \gamma \max_{a} \sum_{s'} T(sas') U(s')$$
 
 - Instead of [[Utility]] based on state, we can instead use a **Q-Function**
-
-
-..Q(s,a) = Q(s,a) + \alpha \left[ R(s, a) + \gamma \underset{a'}{\max} Q(s', a') - Q(s,a)\right]$
-
-
+$$Q(s,a) = Q(s,a) + \alpha \left[ R(s, a) + \gamma \underset{a'}{\max} Q(s', a') - Q(s,a)\right]$$
 - This calculates the value **for some state S and action A**.
 - **After forcing action** $A$, we then consider all future states $s'$ and then **return to most optimal known action(s)** $a'$
 - Note that we need some way to estimate our transition function $\hat{T}(sas')$

@@ -18,11 +18,7 @@ The function which gets the [[Probability]] of some specific value $x$ in a [[Pr
 
 The function which gets the [[Probability]] of a [[Random Variable]] being in some tiny band in a [[Probability Distribution]]. 
 
-
-
-..p(x) = \underset{\epsilon \rightarrow0}{\lim \frac{1}{\epsilon}} P(x_0 \le x \le x_0 + \epsilon)$
-
-
+$$p(x) = \underset{\epsilon \rightarrow0}{\lim \frac{1}{\epsilon}} P(x_0 \le x \le x_0 + \epsilon)$$
 
 **Properties of the PDF:**
 1. It must always be nonnegative for all X.

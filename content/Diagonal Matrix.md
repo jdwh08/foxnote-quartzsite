@@ -8,16 +8,12 @@ created: 2024-03-19T22:06
 # Definition:
 A [[Matrix]] which only has values along the main diagonal, with everything else being zero.
 
-
-
-..D =\begin{bmatrix} 
+$$D =\begin{bmatrix} 
 x_1 & 0 & 0 & ... \\
 0 & x_2 & 0 & ... \\
 0 & 0 & x_3 & ... \\
 \vdots & \vdots & \vdots & \ddots
-\end{bmatrix}$
-
-
+\end{bmatrix}$$
 
 ---
 # Notes:

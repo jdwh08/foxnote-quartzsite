@@ -17,11 +17,7 @@ The "natural result" in [[Game Theory]] if all players behave optimally, i.e., *
 Suppose there are $N$ players with strategies $S_1, ..., S_N$.
 - $(s_1^*, s_2^*, ... s_N^*)$ are a Nash Equilibrium IFF
 
-
-
-..\forall i \in N, s_i^* = \underset{s_i}{\arg\max}\ U_i(s_1^*, ..., s_i, ... s_n^*)$
-
-
+$$\forall i \in N, s_i^* = \underset{s_i}{\arg\max}\ U_i(s_1^*, ..., s_i, ... s_n^*)$$
 
 I.e., no player cannot improve on their [[Utility]] by picking some other strategy.
 

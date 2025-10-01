@@ -154,8 +154,18 @@ SKIPPED_COUNT=0
 find "$SOURCE_DIR" -type f \( -name "*.md" -o -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" -o -name "*.gif" -o -name "*.webp" -o -name "*.svg" -o -name "*.mp4" -o -name "*.webm" -o -name "*.ogg" -o -name "*.pdf" \) | while read -r source_file; do
     # Calculate relative path
     relative_path="${source_file#$SOURCE_DIR/}"
-    target_file="$TEMP_EXPORT_DIR/$relative_path"
-    cache_file="$CACHE_DIR/$relative_path.cache"
+    
+    # Check if this is a media file that should go to _Media folder
+    if echo "$relative_path" | grep -q "^_Media/"; then
+        # For media files, flatten the structure to go directly to _Media
+        filename=$(basename "$relative_path")
+        target_file="$TEMP_EXPORT_DIR/_Media/$filename"
+        cache_file="$CACHE_DIR/_Media/$filename.cache"
+    else
+        # For regular files, maintain directory structure
+        target_file="$TEMP_EXPORT_DIR/$relative_path"
+        cache_file="$CACHE_DIR/$relative_path.cache"
+    fi
     
     # Check if file has changed
     if is_file_changed "$source_file" "$cache_file" "$relative_path"; then
@@ -246,7 +256,7 @@ find "$DIRECTORY" -type f -name "*.md" | while read -r file; do
                 echo "PROCESS: $file"
             else
                 # File is old, check if it needs processing by looking for patterns
-                if grep -q -E '(\$\$[^$]*\$\$|!\[\[.*\.excalidraw\.png\]\])' "$file" 2>/dev/null; then
+                if grep -q -E '(\$\$[^$]*\$\$|!\[\[.*\.excalidraw\.png\]\]|!\[\[_Media/Excalidraw/)' "$file" 2>/dev/null; then
                     echo "PROCESS: $file"
                 else
                     echo "SKIP: $file"
@@ -280,6 +290,9 @@ done | while read -r action file; do
         function process_images(line) {
             # Process Obsidian image references to markdown format
             gsub(/!\[\[([^\]]*\.excalidraw)\.png\]\]/, "![[\\1.png]]", line)
+            # Flatten _Media paths - convert _Media/Excalidraw/filename to _Media/filename
+            gsub(/!\[\[_Media\/Excalidraw\/([^/\]]+)\]\]/, "![[_Media/\\1]]", line)
+            gsub(/!\[\[_Media\/Excalidraw\/([^/\]]+\.png)\]\]/, "![[_Media/\\1]]", line)
             # Process image references to use relative paths
             # gsub(/!\[([^\]]*)\]\(([^)]*_Media[^)]*)\)/, "![\\1](\\2)", line)
             return line

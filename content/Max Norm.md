@@ -8,11 +8,7 @@ created: 2024-03-19T22:06
 ---
 # Definition:
 A [[Matrix Norm]] built around the maximum absolute values:
-
-
-..||x||_{\infty} = \max_i |x_i|$
-
-
+$$||x||_{\infty} = \max_i |x_i|$$
 
 ---
 # Notes:

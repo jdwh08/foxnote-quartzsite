@@ -1,13 +1,13 @@
 ---
-aliases: 
+aliases:
 tags:
   - cs/dsa/linked_list
-edited: 2025-08-01T18:07
+edited: 2025-09-30T21:59
 created: 2024-03-19T22:06
 ---
 # Definition:
 
-![[_Media/Excalidraw/LinkedList.svg]]
+![[LinkedList.svg]]
 
 A storage type based around nodes which hold attributes and links to other nodes.
 Getting data requires traversing through the links.

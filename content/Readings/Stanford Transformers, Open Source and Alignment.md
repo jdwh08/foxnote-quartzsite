@@ -1,10 +1,10 @@
 ---
-aliases: 
+aliases:
 tags:
   - ds/ml/nn/transformers
   - ds/ml
   - readings
-edited: 2025-02-15T16:37
+edited: 2025-09-30T21:59
 created: 2024-04-18T18:48
 ---
 ### Definition:
@@ -87,10 +87,10 @@ QLoRA & Guanaco (33B, MT-6.88):
 
 ### **OPEN MODELS: GENERATION 3, Getting RLHF to Work**
 - RLHF Objective
-![[_Media/Excalidraw/Stanford Transformers-20240418191455516.webp]]
+![[Stanford Transformers-20240418191455516.webp]]
 - How do we get a good reward function? How do we optimize the reward?
 	- NOTE: This is a very RL-based method.
-![[_Media/Excalidraw/Stanford Transformers-20240418191550719.webp]]
+![[Stanford Transformers-20240418191550719.webp]]
 - We learn a "preference model"
 	- Bradley-Terry Model: Reward is proportional to probability that correct is chosen over any other. From econ. !?
 
@@ -105,7 +105,7 @@ QLoRA & Guanaco (33B, MT-6.88):
 
 **DPO vs RL (PPO, Reinforce, ...)**
 - Learning RL environment?
-![[_Media/Excalidraw/Stanford Transformers-20240418191902959.webp]]
+![[Stanford Transformers-20240418191902959.webp]]
 
 **Zephyr $\beta$**:
 - Building on Mistral7b. First big model for DPO!

@@ -20,11 +20,7 @@ Metric for determining which splits to prune.
 2. For each $\alpha$, there is some subtree $T \subset T_0$ which makes the resulting **prediction + leaf node** size as small as possible. We choose this subtree.
 	1. This is similar to [[Lasso Regularization]]'s penalty for new features.
 
-
-
-..\min \sum_{m=1}^{|T|} \sum_{x_i \in R_m} (y_i - \hat{y}_{R_m})^2 + \alpha |T|$
-
-
+$$\min \sum_{m=1}^{|T|} \sum_{x_i \in R_m} (y_i - \hat{y}_{R_m})^2 + \alpha |T|$$
 - $|T|$ is the number of [[Leaf Node]]s in the tree
 - Recall each leaf node corresponds to some region in the feature space $R_m$ that was partitioned.
 - For each observation $x_i$ in that region, we get the loss plus $\alpha * |T|$, where $\alpha$ is the weight for additional leaf nodes.

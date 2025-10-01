@@ -2,7 +2,7 @@
 aliases:
 tags:
   - ds/ml/rl
-edited: 2025-09-30T19:34
+edited: 2025-09-30T21:59
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -76,36 +76,16 @@ Rewards in the future should be worth less than rewards now.
 
 ### From Assumptions to [[Bellman Equation]]
 For a infinite horizon with constant utility preferences and hyperbolic discounting...
-
-
-..\pi^* = \underset{\pi}{\arg\max}\ E \left[ \sum_{t=0}^{\infty} \gamma^t R(s_t) | \pi \right]$
-
-
+$$\pi^* = \underset{\pi}{\arg\max}\ E \left[ \sum_{t=0}^{\infty} \gamma^t R(s_t) | \pi \right]$$
 Policy utility is the expected value of rewards over time (**the long term**)
-
-
-..U^*(s) = E \left[ \sum_{t=0}^{\infty} \gamma^t R(s_t) | \pi \right]$
-
-
+$$U^*(s) = E \left[ \sum_{t=0}^{\infty} \gamma^t R(s_t) | \pi \right]$$
 We can rewrite the policy to be
-
-
-..\pi^*(s) = \underset{a}{\arg\max} \sum_{s'} T(sas')\times U^*(s)$
-
-
+$$\pi^*(s) = \underset{a}{\arg\max} \sum_{s'} T(sas')\times U^*(s)$$
 We can also rewrite the optimal utility by unrolling to be
-
-
-..U(s) = R(s) + \gamma \max_a \sum_{a'} \pi(sas')\times U^*(s)$
-
-
+$$U(s) = R(s) + \gamma \max_a \sum_{a'} \pi(sas')\times U^*(s)$$
 
 Note that people typically will prefer keeping rewards together:
-
-
-..U(s) = \underset{a}{\max} \sum_{s'} T(s'|s,a)\left[R(s) + \gamma U(s')\right]$
-
-
+$$U(s) = \underset{a}{\max} \sum_{s'} T(s'|s,a)\left[R(s) + \gamma U(s')\right]$$
 
 And... oh crap, this is a [[Bellman Equation]].
 - Once we determine utilities for all states, we can determine the optimal policy.
@@ -117,7 +97,7 @@ And... oh crap, this is a [[Bellman Equation]].
 
 ## Possible RL Components
 
-![[_Media/Excalidraw/RL Components.png]]
+![[RL Components.png]]
 
 #### Policy:
 Converts states $s$ into actions $a$. This is our goal.

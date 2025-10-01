@@ -9,11 +9,7 @@ created: 2024-03-19T22:06
 # Definition:
 The product of two [[Matrix]]. 
 
-
-
-..A^{(m \times n)}B^{(n \times o)} =C^{(m \times o)}$
-
-
+$$A^{(m \times n)}B^{(n \times o)} =C^{(m \times o)}$$
 
 We preserve the outer dimensions (m and o), but the inner dimension (n) has to line up.
 

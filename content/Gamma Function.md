@@ -9,11 +9,7 @@ created: 2024-03-19T22:06
 # Definition:
 A generalization of the [[Factorial]] to decimals and [[Complex Numbers]].
 
-
-
-..\Gamma(x) = \int_{0}^{\infty} t^{x-1}e^{-t} dt\text{ if } x > 0$
-
-
+$$\Gamma(x) = \int_{0}^{\infty} t^{x-1}e^{-t} dt\text{ if } x > 0$$
 where $n! = \Gamma(n+1)$
 
 ---
@@ -52,11 +48,7 @@ To make this line up with $\Gamma(x)$,
 - set $x \rightarrow t$ (new var to replace $x$)
 - offset $x$ by $-1$ so that it is defined only on positive values.
 
-
-
-..\Gamma(x) = \int_0^{\infty} t^{x-1} e^{-t} dt$
-
-
+$$\Gamma(x) = \int_0^{\infty} t^{x-1} e^{-t} dt$$
 Note that once we're here it's very easy to prove this works by doing [[Integration by Parts]]. 
 
 ---

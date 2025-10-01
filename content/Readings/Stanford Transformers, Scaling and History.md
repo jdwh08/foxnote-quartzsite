@@ -4,7 +4,7 @@ tags:
   - "#ds/ml"
   - ds/ml/nn/transformers
   - readings
-edited: 2025-08-24T18:55
+edited: 2025-09-30T21:59
 created: 2024-04-11T18:33
 ---
 ### Notes:
@@ -97,7 +97,7 @@ What's the history of Transformers, to learn lessons for the future? Get a "unif
 - We can predict the acceleration downwards thanks to gravity.
 - Of course, in reality there are loads of dominant driving forces AND interactions between those forces.
 	- However, Hyung argues that there are actually not so many dominant driving forces.
-![[_Media/Excalidraw/Stanford Transformers History Class-20240411191327768.webp]]
+![[Stanford Transformers History Class-20240411191327768.webp]]
 - Moore's law is such a huge, long-lasting trend that it's a good idea to work with it.
 - Cost of compute is decreasing exponentially. Hyung argues this will dominate AI research.
 
@@ -126,23 +126,23 @@ Encoder Decoder:
 	- Take the dot product. 
 		- Bidrectional Self Attention: everything talks to everything
 		- Multi-Layer Perceptron
-![[_Media/Excalidraw/Stanford Transformers History Class-20240411192327377.webp]]
-![[_Media/Excalidraw/Stanford Transformers History Class-20240411192415569.webp]]
+![[Stanford Transformers History Class-20240411192327377.webp]]
+![[Stanford Transformers History Class-20240411192415569.webp]]
 - Causal self attention masks any connection to tokens afterwards
 - Output is a sequence
 - We then connect between encoder-decoder using CROSS ATTENTION
-![[_Media/Excalidraw/Stanford Transformers History Class-20240411192511738.webp]]
+![[Stanford Transformers History Class-20240411192511738.webp]]
 - All the outputs feed into the final attention mechanism.
 
 ENCODER ONLY
-![[_Media/Excalidraw/Stanford Transformers History Class-20240411192606504.webp]]
+![[Stanford Transformers History Class-20240411192606504.webp]]
 - Task specific layer is required for these
 - BERT had a GLUE benchmark (Sequence in, classification OUT task)
 	- There's an incentive to add structure to the problem to help solve the GLUE benchmark. "Give up generation" means the problem is simple (Seq $\rightarrow$ Classification)
 	- "BERT Engineers" would tweak structure to get performance on GLUE.
 
 DECODER ONLY
-![[_Media/Excalidraw/Stanford Transformers History Class-20240411192742348.webp]]
+![[Stanford Transformers History Class-20240411192742348.webp]]
 - A single stack, but it can generate stuff!
 - You can use this for supervised leraning.
 	- Concatenate the input with the target!
@@ -151,7 +151,7 @@ DECODER ONLY
 **Comparison: encoder-decoder vs decoder-only?**
 We can transform the more-structured ENCODER-DECODER into a DECODER-ONLY model.
 1. Share the cross-attention parameters between cross-attention and self attention.
-![[_Media/Excalidraw/Stanford Transformers History Class-20240411193021614.webp]]
+![[Stanford Transformers History Class-20240411193021614.webp]]
 2. Share parameters for input and target.
 3. Have output layer attend to only the top layer, instead of all layers of the network.
 4. Move from bidirectional attention to unidirectional.
@@ -171,7 +171,7 @@ Target element was assumed to attend to the full representation of the output
 Bidirectional attention for the input.
 - Anecdotal: at sufficient scale, bidirectionality doesn't seem to matter much. This was a nice trick to boost the score.
 - He thinks the bidirectionality makes it difficult for engineering at scale. At every turn in a multi-chat, the new input has to be re-encoded again and again!
-![[_Media/Excalidraw/Stanford Transformers History Class-20240411193951090.webp]]
+![[Stanford Transformers History Class-20240411193951090.webp]]
 
 TL;DR: computational scaling is the driving force behind computation. Imposing additional structure on the architecture should be questioned to see if it still is needed for performance at today's compute.
 

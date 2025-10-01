@@ -44,11 +44,7 @@ Contrast with [[Fundamental Analysis (finance)]]
 
 #### Normalization for [[Machine Learning]]
 If using [[Technical Analysis]], we probably want to normalize the data so that all the ranges are the same. We subtract from the [[Sample Mean]] and divide by the [[Sample Standard Deviation]].
-
-
-..norm = \frac{v - \bar{v}}{std(v)}$
-
-
+$$norm = \frac{v - \bar{v}}{std(v)}$$
 
 ----
 # Source:

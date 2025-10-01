@@ -17,11 +17,7 @@ You can think of this as the theoretically best model we can do
 - [[Ensemble (Machine Learning)]] of everything
 
 ### Algorithm
-
-
-..\underset{v_j \in V}{\arg\max} \sum_h^H P(v_j|h)\times P(h_i|D)$
-
-
+$$\underset{v_j \in V}{\arg\max} \sum_h^H P(v_j|h)\times P(h_i|D)$$
 - Maximize the value over all possible hypothesis models
 - Of the value given the model
 - Times the probability the model is true given the data

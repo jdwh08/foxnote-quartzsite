@@ -8,11 +8,7 @@ created: 2024-03-19T22:06
 # Definition:
 Whether a [[Point Estimator]] approaches the true parameter as the sample size approaches infinity.
 
-
-
-..p \lim_{n \rightarrow \infty} \hat{\theta}_m=\theta$
-
-
+$$p \lim_{n \rightarrow \infty} \hat{\theta}_m=\theta$$
 
 ---
 # Notes:

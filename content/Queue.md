@@ -2,13 +2,13 @@
 aliases:
 tags:
   - cs/dsa/queue
-edited: 2025-09-30T19:34
+edited: 2025-09-30T21:59
 created: 2024-03-19T22:06
 ---
 # Definition:
 A specific type of [[Linked List]], with the property "LAST IN, FIRST OUT".
 
-![[_Media/Excalidraw/Queue.png]]
+![[Queue.png]]
 
 The opposite of a [[Stack]].
 

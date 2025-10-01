@@ -18,11 +18,7 @@ A type of [[Autoencoder]] which learns a [[Probability Distribution]],
 ### Training
 Loss function consists of the [[Reconstruction Loss]] from the [[Autoencoder]], along with a [[Kullback-Leibler Divergence|KL Divergence]] to keep it close to a standard [[Normal Distribution]].
 
-
-
-..\mathcal{L}(\theta, \phi; x, z) = E_{q_{\phi} (z|x)}\left[ \log p_\theta(x|z) \right] - D_{KL}(q_\phi(z|x)\ ||\ p(z))$
-
-
+$$\mathcal{L}(\theta, \phi; x, z) = E_{q_{\phi} (z|x)}\left[ \log p_\theta(x|z) \right] - D_{KL}(q_\phi(z|x)\ ||\ p(z))$$
 
 - This is learning a [[Probability Distribution]] $E_{q_\phi}$, so we use the [[Expected Value]]. 
 - We also must do [[Random Sampling]] from the distribution to feed to our **decoder** 

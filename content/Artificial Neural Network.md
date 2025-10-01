@@ -3,13 +3,13 @@ aliases:
   - Neural Network
 tags:
   - ds/ml/nn
-edited: 2025-09-30T19:34
+edited: 2025-09-30T21:59
 created: 2024-03-19T22:06
 ---
 # Definition:
 A ML model which consists of "neurons" that take in various inputs as a weighted [[Linear Combination]], and apply a nonlinear transformation function to feed to other neurons.
 
-![[_Media/Excalidraw/Artificial Neural Network.png]]
+![[Artificial Neural Network.png]]
 
 Very loosely inspired by biological brains, though not quite the same. 
 
@@ -18,25 +18,13 @@ Very loosely inspired by biological brains, though not quite the same.
 
 ## Formal Definition of Neurons
 Formally, we can calculate this as
-
-
-..z=\sum_i^{M}w_ix_i$
-
-
+$$z=\sum_i^{M}w_ix_i$$
 where $z$ is our pre-activation, and then apply
-
-
-..a=f(z)$
-
-
+$$a=f(z)$$
 where $f(a)$ is our [[Activation Function]].
 
 Scaling this up, we can say the neural network has the form
-
-
-..f(X) = \beta_0 + \sum_{k=1}^K \beta_k g(w_{k0} + \sum_{j=1}^p w_{kj} X_j)$
-
-
+$$f(X) = \beta_0 + \sum_{k=1}^K \beta_k g(w_{k0} + \sum_{j=1}^p w_{kj} X_j)$$
 where we see our $g$ as activation functions and our $\beta$s as per-neuron weights.
 
 ## What is it Good For?

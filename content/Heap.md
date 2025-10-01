@@ -5,7 +5,7 @@ aliases:
   - Min Heap
 tags:
   - cs/dsa/heap
-edited: 2025-09-30T19:34
+edited: 2025-09-30T21:59
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -14,7 +14,7 @@ created: 2024-03-19T22:06
 	- You need to rebuild the tree each time you change
 	- Traversal doesn't matter much.
 
-![[_Media/Excalidraw/Heap.png]]
+![[Heap.png]]
 
 ---
 # Notes:

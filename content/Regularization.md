@@ -20,11 +20,7 @@ This is also impacted by the [[No Free Lunch Theorem]], i.e., there is no univer
 
 ### Parameter [[Norm]] Penalties
 Add some **penalty** for complexity into the [[Loss Function]]:
-
-
-..\tilde{L}(\theta; X; y) = L(\theta; X; y) + \lambda \Omega(\theta)$
-
-
+$$\tilde{L}(\theta; X; y) = L(\theta; X; y) + \lambda \Omega(\theta)$$
 - [[Lasso Regularization]] $+\lambda ||w||_1 \rightarrow \nabla \lambda + \text{sign}(w)$
 	- Approximating via [[Taylor Series]], $H(w-w*)$ and assuming it is [[Diagonal Matrix]] gives that our new $w$ is roughly $\text{sign}(w) \max(|w_i|-\lambda / H_{i,i}, 0)$.
 	- This is either 0 if our $w$ is too small OR gets shrunken a little bit.

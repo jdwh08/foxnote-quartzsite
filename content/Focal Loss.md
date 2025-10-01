@@ -7,11 +7,7 @@ created: 2024-03-19T22:06
 ---
 # Definition:
 A [[Loss Function]] based on [[Log Loss]] which takes into account performance on "difficult" observations $\gamma$ along with class-weighing $\alpha$.
-
-
-..\mathcal{L} = -\frac{1}{N} \sum \alpha_c (1-\hat{y}_c)^\gamma \log(\hat{y})$
-
-
+$$\mathcal{L} = -\frac{1}{N} \sum \alpha_c (1-\hat{y}_c)^\gamma \log(\hat{y})$$
 
 ---
 # Notes:

@@ -147,10 +147,14 @@ function Process-MarkdownFile {
     $content = $content -replace '\.excalidraw\.png\b', '.png'
     
     # Process equations - convert inline $$ to block format
-    $content = $content -replace '\$\$([^$]+)\$\$', "`n`n$$`$1`$$`n`n"
+    # $content = $content -replace '\$\$([^$]+)\$\$', "`n`n$$`$1`$$`n`n"
     
-    # Process Obsidian image references
+    # Process Obsidian image references - convert .excalidraw.png to .png and flatten _Media paths
     $content = $content -replace '!\[\[([^\]]*\.excalidraw)\.png\]\]', '![[$1.png]]'
+    
+    # Flatten _Media paths - convert _Media/Excalidraw/filename to _Media/filename
+    $content = $content -replace '!\[\[_Media/Excalidraw/([^/\]]+)\]\]', '![[_Media/$1]]'
+    $content = $content -replace '!\[\[_Media/Excalidraw/([^/\]]+\.png)\]\]', '![[_Media/$1]]'
     
     # Write back to file
     $content | Set-Content $FilePath -NoNewline
@@ -244,8 +248,20 @@ Write-Info "Found $($allFiles.Count) files to check"
 foreach ($sourceFile in $allFiles) {
     # Calculate relative path
     $relativePath = $sourceFile.FullName.Substring($WindowsSourceDir.Length + 1)
-    $targetFile = Join-Path $WindowsTempDir $relativePath
-    $cacheFile = Join-Path $WindowsCacheDir "$relativePath.cache"
+    
+    # Check if this is a media file that should go to _Media folder
+    $isMediaFile = $relativePath -match '^_Media\\'
+    if ($isMediaFile) {
+        # For media files, flatten the structure to go directly to _Media
+        $fileName = Split-Path $relativePath -Leaf
+        $targetFile = Join-Path (Join-Path $WindowsTempDir "_Media") $fileName
+        $cacheFile = Join-Path (Join-Path $WindowsCacheDir "_Media") "$fileName.cache"
+    }
+    else {
+        # For regular files, maintain directory structure
+        $targetFile = Join-Path $WindowsTempDir $relativePath
+        $cacheFile = Join-Path $WindowsCacheDir "$relativePath.cache"
+    }
     
     # Check if file has changed
     if (Test-FileChanged $sourceFile.FullName $cacheFile $relativePath) {
@@ -319,7 +335,7 @@ foreach ($file in $markdownFiles) {
         else {
             # File is old, check if it needs processing by looking for patterns
             $content = Get-Content $file.FullName -Raw -ErrorAction SilentlyContinue
-            if ($content -match '(\$\$[^$]*\$\$|!\[\[.*\.excalidraw\.png\]\])') {
+            if ($content -match '(\$\$[^$]*\$\$|!\[\[.*\.excalidraw\.png\]\]|!\[\[_Media/Excalidraw/)') {
                 $needsProcessing = $true
             }
         }

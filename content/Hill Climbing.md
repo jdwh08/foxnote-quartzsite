@@ -4,7 +4,7 @@ aliases:
 tags:
   - cs/dsa
   - ds/ml/
-edited: 2025-09-30T19:34
+edited: 2025-09-30T21:59
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -12,7 +12,7 @@ An [[Optimizer]] which gradually guesses within some area until things stop impr
 
 With Random Restarts, becomes a [[Randomized Optimization]] algorithm.
 
-![[_Media/Excalidraw/Hill Climbing.png]]
+![[Hill Climbing.png]]
 
 Note: This is an [[Multi-armed Bandit|Exploit]] only [[Greedy Algorithm]] which only tries to improve.
 

@@ -17,33 +17,17 @@ When it comes to #ds/nlp this is a quick and dirty method, but surprisingly effe
 1. Assume that all features have [[Conditional Independence]], i.e., we can just multiply each attribute together to get the final probability.
 2. Get the value of
 
-
-
-..\hat{y} = \underset{k\in\{1...K\}}{\arg\max} \ p(C_k)*\prod\limits_{i=1}^np(x_i|C_k)$
-
-
+$$\hat{y} = \underset{k\in\{1...K\}}{\arg\max} \ p(C_k)*\prod\limits_{i=1}^np(x_i|C_k)$$
 
 ### Math Derivation
 Suppose we need to get the category that item $i$ is in category $C_k$, given the features $x_1...x_n$, i.e., finding $p(C_k | x_1...x_n)$.
 Using [[Bayes' Rule]], we can decompose this as
-
-
-..p(C_k | \textbf{x}) = \frac{p(C_k)p(\textbf{x}|C_k)}{p(\textbf{x})} =\frac{p(x_1...x_n,C_k)}{p(\textbf{x})} = \frac{p(x_1 | x_2...x_n,C_k)p(x_2|x_3...x_n, C_k)...}{p(\textbf{x})}$
-
-
+$$p(C_k | \textbf{x}) = \frac{p(C_k)p(\textbf{x}|C_k)}{p(\textbf{x})} =\frac{p(x_1...x_n,C_k)}{p(\textbf{x})} = \frac{p(x_1 | x_2...x_n,C_k)p(x_2|x_3...x_n, C_k)...}{p(\textbf{x})}$$
 which is a *huge mess*!
 We can make the naive assumption that all features are [[Conditional Independence]], which helps us simplify $p(x_i|x_{i+1}...x_n, C_k) = p(x_i | C_k)$. Thus, we can rewrite this to be
-
-
-..p(C_k|\textbf{x}) = p(C_k) * \prod\limits_{i=1}^n p(x_i|C_k)$
-
-
+$$p(C_k|\textbf{x}) = p(C_k) * \prod\limits_{i=1}^n p(x_i|C_k)$$
 Finally, we can turn this into a classifier by finding the class with the highest probability, i.e.,
-
-
-..\hat{y} = \underset{k\in\{1...K\}}{\arg\max} \ p(C_k)*\prod\limits_{i=1}^np(x_i|C_k)$
-
-
+$$\hat{y} = \underset{k\in\{1...K\}}{\arg\max} \ p(C_k)*\prod\limits_{i=1}^np(x_i|C_k)$$
 
 ### Small Sample Size
 This works if our sample sizes are large enough for us to estimate $p(x|C)$ well. If not, our simple ratio is actually has [[Bias (estimator)]], since it is very likely for us to observe $n_c=0$ and thus underestimate.
@@ -59,8 +43,4 @@ Suppose we have some #ds/nlp sentiment analysis, where we have a feature of word
 - Words which **do not show up in one class** are serious problems.
 
 The Naive Bayes Function for inferencing a new tweet:
-
-
-..\prod\limits_{i=1}^{m} \frac{p(w|+)}{p(w|-)}$
-
- 
+$$\prod\limits_{i=1}^{m} \frac{p(w|+)}{p(w|-)}$$ 

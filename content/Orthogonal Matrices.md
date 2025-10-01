@@ -10,11 +10,7 @@ A [[Matrix]] which has rows and columns that are [[Orthonormal Vectors]],
 
 i.e., the [[Matrix Product]] against the [[Matrix Transpose]] is the [[Identity Matrix]].
 
-
-
-..A^TA = AA^T = I$
-
-
+$$A^TA = AA^T = I$$
 
 ---
 # Notes:

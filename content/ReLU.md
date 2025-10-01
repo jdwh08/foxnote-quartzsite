@@ -8,11 +8,7 @@ created: 2024-03-19T22:06
 ---
 # Definition:
 An [[Activation Function]] which is zero for negative values and identity for positive values.
-
-
-..ReLU = \max(0, z)$
-
-
+$$ReLU = \max(0, z)$$
 
 ---
 # Notes:
@@ -22,14 +18,10 @@ Provides nice gradient flow as opposed to [[Sigmoid Function]]
 - Cheap to compute!
 - It doesn't have issues with vanishing/exploding gradients.
 ### [[Gradient]]:
-
-
-..\nabla ReLU = \begin{cases}
+$$\nabla ReLU = \begin{cases}
 	0 \text{ if } x \le 0 \\
 	1 \text{ if } x > 0
-\end{cases}$
-
-
+\end{cases}$$
 Technically there is a discontinuity but by convention this is set to zero.
 
 As a [[Jacobian]]: 

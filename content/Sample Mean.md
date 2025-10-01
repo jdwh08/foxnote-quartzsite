@@ -7,11 +7,7 @@ created: 2024-03-19T22:06
 ---
 # Definition:
 The average of the values from the sample:
-
-
-..s_x = \frac{1}{N} \sum_{i}^N x_i$
-
-
+$$s_x = \frac{1}{N} \sum_{i}^N x_i$$
 
 ---
 # Notes:

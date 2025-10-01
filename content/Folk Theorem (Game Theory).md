@@ -2,7 +2,7 @@
 aliases:
 tags:
   - econ/game_theory
-edited: 2025-09-30T19:34
+edited: 2025-09-30T21:59
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -39,7 +39,7 @@ Corollary: If you CAN'T do this, it's actually [[Zero Sum Game]].
 # Examples:
 [[Prisoner's Dilemma Repeated]]: We see the Folk Profile in Grey.
 
-![[_Media/Excalidraw/Repeated Prisoner's Dilemma Folk Theorem.png]]
+![[Repeated Prisoner's Dilemma Folk Theorem.png]]
 
 
 ----

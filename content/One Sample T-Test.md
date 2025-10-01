@@ -9,11 +9,7 @@ created: 2024-03-19T22:06
 A [[Hypothesis Test]] to see whether the population mean has a specific value $\mu_0$ in our null hypothesis.
 
 We calculate our test statistic
-
-
-..t=\frac{\bar{x}-\mu_0}{SE(\bar{x})}=\frac{\bar{x}-\mu_0}{s_x/\sqrt{n}} \sim t_{n-2}$
-
-
+$$t=\frac{\bar{x}-\mu_0}{SE(\bar{x})}=\frac{\bar{x}-\mu_0}{s_x/\sqrt{n}} \sim t_{n-2}$$
 
 ---
 # Notes:

@@ -23,15 +23,11 @@ Name is inspired by metallurgy --  high strength steel requires repeated heating
 	1. Sample new point $X_i$ in our neighbourhood $N(x)$
 	2. Jump to new sample with [[Probability]] given by an "acceptance function": $P(x, x_t, T)$
 
-
-
-..P(x, x_t, T) = \begin{cases}
+$$P(x, x_t, T) = \begin{cases}
 1 & f(x_t) \ge f(x) \\
 e^{\frac{f(x_t)-f(x)}{T}} & f(x_t) < f(x)
 \end{cases}
-$
-
-
+$$
 
 2. Decrease the temperature $T$ (create less randomness)
 

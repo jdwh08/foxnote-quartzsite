@@ -11,44 +11,24 @@ created: 2024-03-19T22:06
 # Definition:
 A [[Statistical Learning]] technique where we try to estimate our model's parameters $\theta$ using by maximizing the [[Likelihood]] based on the data.
 
-
-
-..\hat{\theta}_{MLE} = \underset{\theta}{\arg\max} \prod_{i=0}^{n} p(x_i| \theta)$
-
-
+$$\hat{\theta}_{MLE} = \underset{\theta}{\arg\max} \prod_{i=0}^{n} p(x_i| \theta)$$
 Often we actually use the min of the negative [[Log Likelihood]] instead because it's easier:
-
-
-..\hat{\theta}_{MLE} = \underset{\theta}{\arg\min} \frac{-1}{N} \sum_{n=1}^N 
-\log p(x_i| \theta)$
-
-
+$$\hat{\theta}_{MLE} = \underset{\theta}{\arg\min} \frac{-1}{N} \sum_{n=1}^N 
+\log p(x_i| \theta)$$
 
 ---
 # Notes:
 
 ### Method
 We set the negative log probability to be our [[Loss Function]], thus creating [[Log Likelihood]] (the [[Cross Entropy]] idea).
-
-
-..l(y, f(x, \theta)) = -log(p(y\ 
-|\ f(x, \theta)))$
-
-
+$$l(y, f(x, \theta)) = -log(p(y\ 
+|\ f(x, \theta)))$$
 We then get the negative log likelihood:
-
-
-..NLL(\theta) = \frac{-1}{N} \sum_{n=1}^N log(p(y\ 
-|\ f(x, \theta))$
-
-
+$$NLL(\theta) = \frac{-1}{N} \sum_{n=1}^N log(p(y\ 
+|\ f(x, \theta))$$
 and thus can find our maximum likelihood estimator:
-
-
-..\hat{\theta}_{MLE} = \underset{\theta}{\arg\min} \frac{-1}{N} \sum_{n=1}^N log(p(y\ 
-|\ f(x, \theta))$
-
-
+$$\hat{\theta}_{MLE} = \underset{\theta}{\arg\min} \frac{-1}{N} \sum_{n=1}^N log(p(y\ 
+|\ f(x, \theta))$$
 
 ### Required Conditions: "Regularity Conditions"
 1. Data is [[Independent and Identically Distributed|IID]] on some density.
@@ -82,11 +62,7 @@ and thus can find our maximum likelihood estimator:
 	- When we train our model $\hat{p}$, we are basically trying to minimize this divergence.
 	- Notice that the $p_{data}$ is fixed by the [[Data Generating Process]], so this just becomes the negative [[Log Likelihood]].
 
-
-
-..D_{KL} (p_{data} || \hat{p}) = \mathbb{E}_{x\sim p_{data}} \left[ \log p_{data}(x) - \log \hat{p}(x) \right]$
-
-
+$$D_{KL} (p_{data} || \hat{p}) = \mathbb{E}_{x\sim p_{data}} \left[ \log p_{data}(x) - \log \hat{p}(x) \right]$$
 
 - Provides a justification for many [[Loss Function]]s and other choices in [[Statistical Learning]]
 	- E.g., [[Mean Squared Error|MSE]]. See the Statistical Learning page for more.

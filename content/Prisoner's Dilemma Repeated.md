@@ -2,7 +2,7 @@
 aliases:
 tags:
   - econ/game_theory
-edited: 2025-09-30T19:34
+edited: 2025-09-30T21:59
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -14,7 +14,7 @@ Allows for examination of repeated strategies.
 ---
 # Notes:
 
-![[_Media/Excalidraw/Game Theory#Prisoner's Dilemma Game]]
+![[Game Theory#Prisoner's Dilemma Game]]
 
 ## Prisoner's Dilemma Game Iterated
 
@@ -27,14 +27,14 @@ Suppose both players repeatedly play this game, where there is probability $\gam
 - We need to create representations which allow for infinite
 
 ## Tit for Tat
-![[_Media/Excalidraw/Tit for Tat#Definition]]
+![[Tit for Tat#Definition]]
 
 - If we always cooperate against T4T, then we get $-1/(1-\gamma)$.
 - If we always defect against T4T, then we get $0+\frac{-6\gamma}{1-\gamma}$.
 - Breakeven when $\gamma=1/6$, i.e., cooperate above this, defect below.
 
 ## How do we compute the Best Response Strategy?
-![[_Media/Excalidraw/Prisoner's Dilemma FSM.png]]
+![[Prisoner's Dilemma FSM.png]]
 - We can model as a [[Markov Decision Process]] **if we ignore history**
 	- [[Policy Iteration]], [[Value Iteration]], etc.
 - Our possible choices are...
@@ -55,7 +55,7 @@ We see that our mutual best responses, i.e., [[Nash Equilibrium]] are D/D and T4
 - Folk Theorem is the possible payoffs for repeated prisoner's dilemma
 - What are the possible payoffs? They must be somewhere as a [[Linear Combination]] of probabilities of the four actual payoffs
 
-![[_Media/Excalidraw/Repeated Prisoner's Dilemma Folk Theorem.png]]
+![[Repeated Prisoner's Dilemma Folk Theorem.png]]
 
 - We see that the [[Minimax Profile]], i.e., the "best worst case", is defecting (from earlier analysis). This is true for both players.
 - Thus, the end result is $d,d$ and payoffs of -6, -6; the blue dot.

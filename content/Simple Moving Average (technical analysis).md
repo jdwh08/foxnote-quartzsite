@@ -8,11 +8,7 @@ created: 2024-03-19T22:06
 # Definition:
 A [[Technical Analysis]] indicator based around the [[Moving Average]], usually of prices.
 
-
-
-..sma(n,t) = \frac{1}{n} \sum_{i \in (n-t, t)}^n p_i$
-
-
+$$sma(n,t) = \frac{1}{n} \sum_{i \in (n-t, t)}^n p_i$$
 ```python
 sma = p[t-n:t].mean()
 ```

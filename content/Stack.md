@@ -2,12 +2,12 @@
 aliases:
 tags:
   - cs/dsa/stack
-edited: 2025-09-30T19:34
+edited: 2025-09-30T21:59
 created: 2024-03-19T22:06
 ---
 # Definition:
 A data structure which has a "last in, last out" property.
-![[_Media/Excalidraw/Stack.png]]
+![[Stack.png]]
 
 The opposite of a [[Queue]].
 Note that we only add and remove from the HEAD now!

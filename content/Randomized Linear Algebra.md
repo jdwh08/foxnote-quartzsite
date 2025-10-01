@@ -3,7 +3,7 @@ aliases:
 tags:
   - math/linear_algebra
   - cs
-edited: 2025-09-30T19:34
+edited: 2025-09-30T21:59
 created: 2024-04-08T19:33
 ---
 ### Definition:
@@ -23,11 +23,7 @@ With some high [[Probability]], taking a random summary of the data shrinks the 
 ---
 ### Examples:
 Suppose we want to have a **[[Least Squares]]**. Given some matrix $A$ which is $m\times n, n <\!< m$, and a target vector $\vec{b}$ which is dimension $m$, we want to find $x$ to minimize this.
-
-
-..\underset{x}{\arg \min} \ ||Ax-b||_2$
-
-
+$$\underset{x}{\arg \min} \ ||Ax-b||_2$$
 We want to find $x$ in a relatively fast way. [[Numerical Linear Algebra]] conventional methods solve this in $O(mn^2)$. (Having the square be on $n$ is better because it's smaller.) 
 
 Now suppose we can accept some small error $\epsilon$. Instead of solving this in $O(mn^2)$, we can solve this in $O(mn\log(1/\epsilon)+n^3)$ time.
@@ -39,23 +35,15 @@ Now suppose we can accept some small error $\epsilon$. Instead of solving this i
 1. Sample a random matrix $S$. Solve the least squares method, but we do some sampling so $A\rightarrow SA, b \rightarrow Sb$.
 2. We design $SA$ to have many fewer rows than $A$. (This might be analogous to stripping off the extra rows in an "Economy" [[Singular Value Decomposition]].) This creates a "sketch" of the problem.
 3. The sketch and solve problem has the following property with high probability:
-
-
-..x^*=\arg\min||Ax-b||_2,\ \tilde{x}=\arg\min||SAx-Sb||_2$
-
-
-
-
-..||A\tilde{x}-b||_2\approx |||Ax^*-b||_2$
-
-
+$$x^*=\arg\min||Ax-b||_2,\ \tilde{x}=\arg\min||SAx-Sb||_2$$
+$$||A\tilde{x}-b||_2\approx |||Ax^*-b||_2$$
 	and we can control the probabilities.  
 
 *Why does this work? Some intuition.*
 To solve the [[Least Squares]] problem, we at some point need to determine the [[Covariance Matrix]] of $A$.
 Now suppose we consider $SA$, where we use $S$ to sample using properly scaled random [[Normal Distribution]]s, with $d$ rows, and the same number of columns as $A$ has rows.
 
-![[_Media/Excalidraw/Random_LinAlg_Cov.png|100%x]]
+![[Random_LinAlg_Cov.png|100%x]]
 
 - This is still true if we attach $b$ or $Sb$ on the right side of the matrix (like $[A|b]$) to make an [[Augmented Matrix]]. Thus, everything that drives the simulated solution still works.
 - Uh technically this isn't quite right, and we're actually approximating "relative differences" as opposed to absolute differences? 

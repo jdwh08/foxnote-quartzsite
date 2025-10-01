@@ -2,7 +2,7 @@
 aliases:
 tags:
   - cs/dsa/sort
-edited: 2025-09-30T19:34
+edited: 2025-09-30T21:59
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -11,7 +11,7 @@ A [[Sorting Algorithm]] which takes advantage of [[Divide and Conquer]] to sort 
 ---
 # Notes:
 
-![[_Media/Excalidraw/Quicksort.png]]
+![[Quicksort.png]]
 
 1. Get a pivot value $p$.
 2. Any element which is less than the pivot is moved to the left front.

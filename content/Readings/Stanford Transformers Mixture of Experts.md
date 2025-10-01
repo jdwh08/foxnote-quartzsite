@@ -1,10 +1,10 @@
 ---
-aliases: 
+aliases:
 tags:
   - ds/ml
   - ds/nlp
   - readings
-edited: 2025-02-15T16:33
+edited: 2025-09-30T21:59
 created: 2024-04-25T18:32
 ---
 ### Definition:
@@ -12,21 +12,21 @@ Mixture of Experts.
 Albert Jiang, **Mistral AI**
 
 Mistral 7b:
-![[_Media/Excalidraw/Stanford Transformers-20240425183423844.webp|]]
+![[Stanford Transformers-20240425183423844.webp|]]
 - Grouped Query is a hybrid between multi head and multi query
 - Sliding window attention gives a short window for lower-level.
 
 PyTorch Single Transformer Layer:
-![[_Media/Excalidraw/Stanford Transformers-20240425183714082.webp]]
+![[Stanford Transformers-20240425183714082.webp]]
 Mistral 7b did well.
 
 Mixture of Experts
 - Not a new idea (Switch Transformers, Scaling to Trillion Parameter Models with Simple and Efficient Sparsity by Fedus et al 2022)
 - Mixture of Experts Layer (Outrageously Large Neural Networks: Sparsely Gated Mixture of experts Layer by Shazeer et al 2017)
-	- ![[_Media/Excalidraw/Stanford Transformers-20240425183843317.webp]]
+	- ![[Stanford Transformers-20240425183843317.webp]]
 	- Gating layer decides which expert to route to.
 
-![[_Media/Excalidraw/Stanford Transformers-20240425183904735.webp]]
+![[Stanford Transformers-20240425183904735.webp]]
 - 8x7B is a sparse mixture of experts near the cost-performance Pareto Frontier (sparsity and router means faster)
 	- Architecture is exactly the same as Mistral 7B as shown in the single layer.
 	- Instead of doing MLP on the latent representation, (r_LD = MLP(RMSNorm(h_LD))), you pick two experts and do it for them.
@@ -37,8 +37,8 @@ Mixture of Experts
 What does Mixture of Experts do to your MLPs?
 - Conventional wisdom is that MLP stores knowledge and attention stores reasoning.
 - Mixture of Experts should thus give you lots more knowledge store.
-![[_Media/Excalidraw/Stanford Transformers Mixture of Experts-20240425184143407.webp]]
-![[_Media/Excalidraw/Stanford Transformers Mixture of Experts-20240425184220371.webp]]
+![[Stanford Transformers Mixture of Experts-20240425184143407.webp]]
+![[Stanford Transformers Mixture of Experts-20240425184220371.webp]]
 
 Can you Mixture-of-Experts the attention mechanism for reasoning?
 - 2022 from Switch Transformers. Replace trainable QKV with switch layers.
@@ -72,7 +72,7 @@ How do we interpret SMoE models?
 Doman Specialization of Experts?
 - Looked at Pile Dataset (ArXiv, Github, PhilPapers, StackExchange, DM Math, Gutenberg, Abstracts, Wikipedia en)
 - Plotted layers 0, 15, 31 selection of experts.
-![[_Media/Excalidraw/Stanford Transformers Mixture of Experts-20240425185211930.webp]]
+![[Stanford Transformers Mixture of Experts-20240425185211930.webp]]
 - Level 0 is too low level for good specialization.
 - Layer15 expert 3 mainly shows up for DM maths. Maybe it's math heavy? Can't conclude for sure.
 - Layer 31: 0 and 2.

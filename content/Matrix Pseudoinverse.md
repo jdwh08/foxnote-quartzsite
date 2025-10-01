@@ -24,11 +24,7 @@ This can be Over- or Under- determined when we have more or fewer equations than
 	- We have a range of possible options. This finds one minimizing the $||x||_2$ norm.
 
 Formally speaking, the Moore-Penrose Psuedoinverse is 
-
-
-..A^+ = \lim (A^TA+\alpha I)^{-1} A^T = \lim A^T (AA^T+\alpha I)$
-
-
+$$A^+ = \lim (A^TA+\alpha I)^{-1} A^T = \lim A^T (AA^T+\alpha I)$$
 ### Properties
 
 ##### Penrose Properties
@@ -59,26 +55,18 @@ We solve this $A^+$ with the [[Singular Value Decomposition]]. Stable & practica
 
 ### Trivial Diagonal Matrix
 Suppose we have the following [[Diagonal Matrix]]:
-
-
-..A = \begin{bmatrix} 
+$$A = \begin{bmatrix} 
 2 & 0 \\
 0 & 1 \\
-\end{bmatrix}$
-
-
+\end{bmatrix}$$
 
 We can apply a [[Singular Value Decomposition|SVD]]! Note that because it's diagonal, our singular values are just the matrix, so $\Sigma=A$ and the SVD is $U \Sigma V = I A I$. 
 This means that $\Sigma^{-1}$ is the reciprocal of the diagonal values (off diagonals get turned to zero), thus
 
-
-
-..\Sigma^{-1} = \begin{bmatrix} 
+$$\Sigma^{-1} = \begin{bmatrix} 
 1/2 & 0 \\
 0 & 1 \\
-\end{bmatrix} = A^{-1}$
-
-
+\end{bmatrix} = A^{-1}$$
 
 ### Basic 2x2 Matrix
 

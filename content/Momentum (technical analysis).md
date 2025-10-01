@@ -8,11 +8,7 @@ created: 2024-03-19T22:06
 # Definition:
 A [[Technical Analysis]] indicator based on changes in price over time.
 
-
-
-..\text{simple momentum}_t = p_t / p_{t-n} - 1$
-
-
+$$\text{simple momentum}_t = p_t / p_{t-n} - 1$$
 ```python
 momentum = p[t] / p[t-1] - 1
 ```

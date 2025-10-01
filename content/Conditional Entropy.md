@@ -9,11 +9,7 @@ created: 2024-03-19T22:06
 
 The [[Entropy (information theory)]] of one variable given another.
 
-
-
-..H(Y|X) = -\sum p(x,y) \log p(y|x) = H(X,Y)-H(X)$
-
-
+$$H(Y|X) = -\sum p(x,y) \log p(y|x) = H(X,Y)-H(X)$$
 Like [[Conditional Probability]] but applied to [[Entropy (information theory)]]
 
 Note that if [[Independent|independent]], then $H(Y|X) = H(Y)$.

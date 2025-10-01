@@ -3,13 +3,13 @@ aliases:
 tags:
   - cs/dsa/greedy
   - cs/dsa/graph/path/dijkstra
-edited: 2025-09-30T19:34
+edited: 2025-09-30T21:59
 created: 2024-03-19T22:06
 ---
 # Definition:
 Given a [[Graph]], finds the shortest path between any two nodes.
 
-![[_Media/Excalidraw/Dijkstras Algorithm.png]]
+![[Dijkstras Algorithm.png]]
 
 ---
 # Notes:

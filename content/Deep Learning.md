@@ -37,11 +37,7 @@ Generally outperforms other approaches when given enough data and compute: [[The
 	- The number of regions grows quickly with respect to hidden layer dimension $D$ and number of layers $L$. Larger input space $I$ does mean fewer divisions.
 	- The bit with $(D^2 + D + 2)/2$ is the number of ways to divide a space with D lines.
 	- We see how the deep bit grows at best exponentially, while the shallow bit grows squared. (Note: these are upper bounds because of dead neurons, etc.)
-
-
-..N_r \le \left(\frac{D}{I} +1 \right)^{D_i (L-1)} \left( (D^2 + D+2)/2\right)$
-
- 
+$$N_r \le \left(\frac{D}{I} +1 \right)^{D_i (L-1)} \left( (D^2 + D+2)/2\right)$$ 
 #### Other Architecture
 1. Skip Connections - jump between layers, allowing gradient to flow.
 2. Sparse connections - depending on problem type, deliberately reduce some connections. E.g., [[Convolutional Neural Network|CNN]].

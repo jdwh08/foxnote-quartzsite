@@ -19,11 +19,7 @@ Solving a [[Bellman Equation]] for [[Reinforcement Learning]] by repeatedly re-c
 2. Update the utility value based on the action(s) and future states that we can take, along with their estimated utility values
 3. Repeat until convergence (no more significant changes in values).
 
-
-
-..\hat{U}(s)=\max_a \sum_{s'} T(sas') \left[ R(s,a) + \gamma \hat{U}_t(s') \right]$
-
-
+$$\hat{U}(s)=\max_a \sum_{s'} T(sas') \left[ R(s,a) + \gamma \hat{U}_t(s') \right]$$
 ###### Convergence
 With some requirements, Policy Evaluation is guaranteed to converge to the optimal value function $V^*$ and policy $\pi^*$, just like [[Policy Iteration]].
 - Finite states and actions

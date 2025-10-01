@@ -19,17 +19,9 @@ You have limitations on how much data can be collected.
 
 #### Formulas
 - Generic Normal Approximation with $\alpha$ critical value and $\beta$ [[Statistical Power]]
-
-
-..n \sim (Z_{1-\alpha/2} + Z_{1-\beta})^2$
-
-
+$$n \sim (Z_{1-\alpha/2} + Z_{1-\beta})^2$$
 - [[Two Sample T-Test]]: 
-
-
-..n=(z_{\alpha/2}+z_{\beta})^2 * \frac{\sigma_1^2 + \sigma_2^2}{(\mu_1 - \mu_2)^2}$
-
-
+$$n=(z_{\alpha/2}+z_{\beta})^2 * \frac{\sigma_1^2 + \sigma_2^2}{(\mu_1 - \mu_2)^2}$$
 
 ### [[Monte Carlo Simulation]]
 Instead of formulas, we can exploit [[Monte Carlo Simulation]] with the definition of power.

@@ -20,35 +20,15 @@ An [[Optimizer]] for the weights in a [[Artificial Neural Network|Neural Network
 
 ### Algorithm
 0. Obtain a momentum. This measures the baseline change of the weights. Ensure that  momentums @ start are not tiny values (causing instability):
-
-
-..v_i = \beta_0 v_{i-1} + (1-\beta_0) \frac{\partial \mathcal{L}}{\partial w_{i-1}}$
-
-
-
-
-..\hat{v}_i = \frac{v_i}{1-(\beta_0)^t}$
-
-
+$$v_i = \beta_0 v_{i-1} + (1-\beta_0) \frac{\partial \mathcal{L}}{\partial w_{i-1}}$$
+$$\hat{v}_i = \frac{v_i}{1-(\beta_0)^t}$$
 
 1. Obtain a gradient accumulator. This is just the cumulative squared [[Gradient]], with some $\beta$ to make a weighted sum. Ensure gradient-accumulators @ start are not tiny values:
-
-
-..G_i = \beta_1 G_{i-1} + (1-\beta_1) \left( \frac{\partial \mathcal{L}}{\partial w_{i-1}} \right)^2$
-
-
-
-
-..\hat{G}_i = \frac{G_i}{1-(\beta_1)^t}$
-
-
+$$G_i = \beta_1 G_{i-1} + (1-\beta_1) \left( \frac{\partial \mathcal{L}}{\partial w_{i-1}} \right)^2$$
+$$\hat{G}_i = \frac{G_i}{1-(\beta_1)^t}$$
 
 2. We use the momentum for update. We divide [[Learning Rate]] by the [[L2 Norm]] of gradient.
-
-
-..w_{i} = w_{i-1} - \frac{\alpha \hat{v}_i}{\sqrt{\hat{G}_i + \epsilon}}$
-
-
+$$w_{i} = w_{i-1} - \frac{\alpha \hat{v}_i}{\sqrt{\hat{G}_i + \epsilon}}$$
 
 NOTE: typically our [[Discount Rate]] for momentum $\beta_0$ is `0.9`, and the [[Discount Rate]] for the [[Gradient]] Accumulator $\beta_1$ is `0.999` .
 

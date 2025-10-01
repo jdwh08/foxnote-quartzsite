@@ -2,14 +2,14 @@
 aliases:
 tags:
   - cs/dsa/tree/binary
-edited: 2025-09-30T19:34
+edited: 2025-09-30T21:59
 created: 2024-03-19T22:06
 ---
 # Definition:
 
 A type of [[Tree]] where each node can have at most two children.
 
-![[_Media/Excalidraw/Binary Tree.png]]
+![[Binary Tree.png]]
 
 ---
 # Notes:

@@ -4,13 +4,13 @@ aliases:
   - Digital Tree
 tags:
   - cs/dsa/trie
-edited: 2025-09-30T19:34
+edited: 2025-09-30T21:59
 created: 2024-03-19T22:06
 ---
 # Definition:
 A type of [[Tree]] based [[Data Structures and Algorithms|Data Structures]] which focuses on efficiently storing prefixes.
 
-![[_Media/Excalidraw/Trie.png]]
+![[Trie.png]]
 
 ---
 # Notes:

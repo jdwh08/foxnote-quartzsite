@@ -2,7 +2,7 @@
 aliases:
 tags:
   - cs/dsa/graph
-edited: 2025-09-30T19:34
+edited: 2025-09-30T21:59
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -29,7 +29,7 @@ This is the "most generic" of all data structures.
 
 ### Implementation Types
 
-![[_Media/Excalidraw/Graph Example.png]]
+![[Graph Example.png]]
 #### Adjacency List
 - This is the most common
 - We have a list of all nodes, and then a list of the nodes with connections.

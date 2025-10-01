@@ -2,7 +2,7 @@
 aliases:
 tags:
   - ds/ml/bayesian
-edited: 2025-09-30T19:34
+edited: 2025-09-30T21:59
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -24,7 +24,7 @@ Suppose we want to know if the grass is going to be wet.
 This happens if the sprinkler is on, or if it rained.
 The sprinkler rarely turns on if it rains.
 
-![[_Media/Excalidraw/Bayesian Network.png]]
+![[Bayesian Network.png]]
 - Note that Grass Species is [[Conditional Independence]] from these.
 
 ----

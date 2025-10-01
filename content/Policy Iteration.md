@@ -17,18 +17,10 @@ Solving a [[Bellman Equation]] for [[Reinforcement Learning]] by repeatedly re-c
 1. **Policy Evaluation**: Get the policy $\pi$ (e.g., initial guess, or by maximizing utilities, etc.)
 	1. Calculate utilities $\hat{U}_t$ based on the policy $\pi$.
 
-
-
-..U_t(s) = \sum_a \pi(a|s) \sum_{s'} T(sas')\left[R(s,a)+\gamma U(s') \right]$
-
-
+$$U_t(s) = \sum_a \pi(a|s) \sum_{s'} T(sas')\left[R(s,a)+\gamma U(s') \right]$$
 2. **Policy Improvement**: Update the policy to account for the new utilities. 
 
-
-
-..\pi(a|s)=\underset{a}{\arg\max} \sum_{s'} T(sas')\left[ R(s,a) + \gamma U(s') \right]$
-
-
+$$\pi(a|s)=\underset{a}{\arg\max} \sum_{s'} T(sas')\left[ R(s,a) + \gamma U(s') \right]$$
 
 3. Repeat until convergence (no more changes in policy).
 

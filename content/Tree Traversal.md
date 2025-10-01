@@ -2,14 +2,14 @@
 aliases:
 tags:
   - cs/dsa/tree
-edited: 2025-09-30T19:34
+edited: 2025-09-30T21:59
 created: 2024-03-19T22:06
 ---
 # Definition:
 
 Methods of going through a tree using [[Recursion]]
 
-![[_Media/Excalidraw/Tree Traversal.png]]
+![[Tree Traversal.png]]
 
 ---
 # Notes:

@@ -8,11 +8,7 @@ created: 2025-01-05T22:14
 An [[Array]] that is sorted. LMAO.
 
 Okay, formally it has the property:
-
-
-..x_i \le x_{i+1}\ \forall \ i$
-
-
+$$x_i \le x_{i+1}\ \forall \ i$$
 
 ---
 ### Notes:

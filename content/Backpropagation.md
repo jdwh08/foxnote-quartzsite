@@ -2,7 +2,7 @@
 aliases:
 tags:
   - ds/ml/nn
-edited: 2025-09-30T19:34
+edited: 2025-09-30T21:59
 created: 2024-04-11T18:34
 ---
 # Definition:
@@ -18,13 +18,9 @@ Learning representations by back-propagating errors. (Rumelhart et al 1986)
 	1. Most common are [[Directed Acyclic Graph]] though.
 2. Learning is the same as optimizing the weights for each edge.
 
+$$f(x_1, x_2) = \ln(x_1) + x_1 x_2 - \sin(x_2)$$
 
-
-..f(x_1, x_2) = \ln(x_1) + x_1 x_2 - \sin(x_2)$
-
-
-
-![[_Media/Excalidraw/Backprop NN Graph.png]]
+![[Backprop NN Graph.png]]
 
 ### Pseudocode
 ```pseudocode

@@ -8,11 +8,7 @@ created: 2024-03-19T22:06
 # Definition:
 A smooth, [[Differentiable Function|differentiable]] version of the $\max$ function. 
 
-
-
-..LSP = \log \left( \sum_{i=0}^{n} e^{x_i} \right)$
-
-
+$$LSP = \log \left( \sum_{i=0}^{n} e^{x_i} \right)$$
 
 ---
 # Notes:

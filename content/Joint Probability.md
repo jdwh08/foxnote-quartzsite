@@ -12,11 +12,7 @@ More formally, given two [[Random Variable]]s X, Y on the same [[Sample Space an
  $p(x, y) = P(\{\omega \in S: X(\omega)=x, Y(\omega)=y\})$ for all pairs $(x,y) \in \mathcal{X}\times\mathcal{Y}$
 
 A Joint Probability distribution is similar:
-
-
-..p(\textbf{X})=p(x_1, x_2, ..., x_d)$
-
-
+$$p(\textbf{X})=p(x_1, x_2, ..., x_d)$$
 
 ---
 ### Notes:
@@ -29,11 +25,7 @@ The joint distribution has the most information, so given a Joint Distribution w
 
 **Joint Probability Density Function**
 Function $\mathbb{R}^2 \rightarrow [0,1]$ so that
-
-
-..P[(X,Y) \in A] = \int\int\limits_A f(x,y) \ dx\ dy$
-
-
+$$P[(X,Y) \in A] = \int\int\limits_A f(x,y) \ dx\ dy$$
 E.g., if A is a 2d rectangle where $x\in[a,b], y\in[c,d]$, then the bounds on the integrals are $\int\limits_{c}^{d} \int\limits_{a}^{b} f(x,y)\ dx\ dy$.
 - Must satisfy all the conditions for [[Probability]], i.e., non-negative, adds up to 1.
 - Given the joint PDF $p(x,y)$, we can get marginals by integrating over the other rv.

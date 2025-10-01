@@ -2,13 +2,13 @@
 aliases:
 tags:
   - cs/dsa/ringbuffer
-edited: 2025-09-30T19:34
+edited: 2025-09-30T21:59
 created: 2024-03-19T22:06
 ---
 # Definition:
 Similar to an [[ArrayList]], but we have specific indices for `head` and `tail`. This means that head does NOT have to be at index 0!
 
-![[_Media/Excalidraw/RingBuffer.png]]
+![[RingBuffer.png]]
 
 ---
 # Notes:

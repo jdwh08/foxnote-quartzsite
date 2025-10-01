@@ -2,7 +2,7 @@
 aliases: []
 tags:
   - econ/game_theory
-edited: 2025-07-19T17:42
+edited: 2025-09-30T21:59
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -18,7 +18,7 @@ Malicious adversary: goal is to give you the worst possible score, e.g., as if t
 # Examples:
 
 **Battle of the Sexes**
-![[_Media/Excalidraw/Battle of the Sexes#Definition]]
+![[Battle of the Sexes#Definition]]
 
 Suppose we have Pure Strategy Games.
 - If P1 picks B, P2 picks B

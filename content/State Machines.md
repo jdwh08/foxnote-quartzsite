@@ -2,7 +2,7 @@
 aliases: []
 tags:
   - math/discrete_math
-edited: 2025-09-30T19:34
+edited: 2025-09-30T21:59
 created: 2024-01-05T20:09
 ---
 ### Definition:
@@ -17,7 +17,7 @@ A state machine is a tool to model and analyze systems.
 ### Examples
 ##### A state graph of a counter bounded by 99: 
 
-![[_Media/Excalidraw/State_Machine_99Counter.png]]
+![[State_Machine_99Counter.png]]
 
 Here's a state machine that counts to 99, and then overflows afterwards. Overflow has a self-loop (so it will keep overflowing).
     -   Start state is 0.

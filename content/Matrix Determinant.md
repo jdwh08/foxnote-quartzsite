@@ -21,26 +21,18 @@ Now consider the area/volume of a "unit square" with length 1 per each [[Basis]]
 
 ### Formulas
 For a 2x2 matrix:
-
-
-..\begin{bmatrix}
+$$\begin{bmatrix}
 a &b \\
 c &d
-\end{bmatrix}$
-
-
+\end{bmatrix}$$
 We have the determinant as $ad-bc$.
 
 For a 3x3 matrix:
-
-
-..\begin{bmatrix}
+$$\begin{bmatrix}
 a &b &c\\
 d &e &f\\
 g&h&i
-\end{bmatrix}$
-
-
+\end{bmatrix}$$
 We have the determinant as $a * det(ei-fh) - b * det(di - fg) + c * det(dh-eg)$ using Sarrus' Rule.
 
 ---

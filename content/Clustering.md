@@ -3,7 +3,7 @@ aliases:
   - Impossibility Theorem for Clustering
 tags:
   - ds/ml/cluster
-edited: 2025-07-19T19:55
+edited: 2025-09-30T21:59
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -37,7 +37,7 @@ A form of [[Unsupervised Machine Learning]].
 	- E.g., cluster all points to form $n/2$ clusters. 
 	- (this doesn't have richness)
 
-![[_Media/Excalidraw/Clustering Impossibility Theorem#Definition]]
+![[Clustering Impossibility Theorem#Definition]]
 
 In practice, people decide what they want from clustering. 
 

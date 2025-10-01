@@ -3,7 +3,7 @@ aliases:
 tags:
   - cs/dsa/tree/binary
   - todo
-edited: 2025-09-30T19:34
+edited: 2025-09-30T21:59
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -18,7 +18,7 @@ Alternatives: [[Red-Black Tree]].
 Suppose we have the numbers 10, 20, 30.
 Depending on the order we insert them, we can arrive at the following cases:
 
-![[_Media/Excalidraw/AVL Tree.png]]
+![[AVL Tree.png]]
 
 Inserting a node into a [[Binary Search Tree|BST]] has four possible cases:
 - LL - We can actually make the tree shorter by "rotating".

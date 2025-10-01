@@ -2,7 +2,7 @@
 aliases:
 tags:
   - finance
-edited: 2025-09-30T19:34
+edited: 2025-09-30T21:59
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -13,7 +13,7 @@ Suppose we measure risk as [[Standard Deviation]] of returns. Each asset has dif
 Given asset expected returns, volatility, covariance, and target return, provides the optimal weights for each asset in the portfolio.
 
 We can plot these combinations for all target returns:
-![[_Media/Excalidraw/Portfolio Efficient Frontier.png]]
+![[Portfolio Efficient Frontier.png]]
 
 ---
 # Notes:

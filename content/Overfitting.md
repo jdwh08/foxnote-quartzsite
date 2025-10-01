@@ -4,13 +4,13 @@ aliases:
 tags:
   - ds
   - ds/ml
-edited: 2025-09-30T19:34
+edited: 2025-09-30T21:59
 created: 2024-03-19T22:06
 ---
 # Definition:
 When a [[Machine Learning]] model performs very well in the training set at the expense of performing on the generalized problem.
 
-![[_Media/Excalidraw/Overfitting.png|378x308]]
+![[Overfitting.png|378x308]]
 
 ---
 # Notes:

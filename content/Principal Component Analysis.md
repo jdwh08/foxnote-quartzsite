@@ -5,7 +5,7 @@ tags:
   - math/linear_algebra
   - ds/ml/featureeng
   - ds/dimension_reduction
-edited: 2025-09-30T19:41
+edited: 2025-09-30T21:59
 created: 2024-03-26T21:39
 ---
 ### Definition:
@@ -37,34 +37,26 @@ Uses the [[Singular Value Decomposition]] to do [[Feature Selection]] linearly. 
 
 ### Math:
 Suppose we have some matrix $X$ where each *row* is an observation (differs from SVD literature). 
-
-
-..X = \begin{bmatrix}
+$$X = \begin{bmatrix}
 - & - & x_1 & - & - \\
 - & - & ... & - & - \\
 - & - & x_n & - & - \\
-\end{bmatrix}$
-
-
+\end{bmatrix}$$
 We assume that $X$ is drawn from some underlying statistical distribution (typically [[Normal Distribution]] with zero mean). **This is how PCA and SVD differ.**
 - Finds a line through the origin that best fits the data (like [[Linear Regression|OLS]]). This is analogous to finding the line that maximizes distance from the [[Vector Projection]] onto the line.
 	- To keep the most information possible, we want to be sure to use a vector $u$ whose variance is large so it captures more variation in the higher-dimensional space.
 	- $Proj_{u_1}(x_i) = u_1^T x_i u$, where $u_1^T x_i$ is the [[Dot Product]] written out as [[Matrix Product]], and $u$ is the vector that controls the direction.
 
-![[_Media/Excalidraw/PCA.png]]
+![[PCA.png]]
 
 Anyway... here's the procedure:
 - Calculate the mean row: $\bar{x} = \frac{1}{n} \sum \limits_{i=1}^n x_i$
 - Build out an "Average Matrix": 
-
-
-..\bar{X} = \begin{bmatrix}
+$$\bar{X} = \begin{bmatrix}
 - & - & \bar{x} & - & - \\
 - & - & ... & - & - \\
 - & - & \bar{x} & - & - \\
-\end{bmatrix}$
-
-
+\end{bmatrix}$$
 - Calculate $B = X - \bar{X}$. ("Mean center the data"). This does not change relative positions for each observation.
 	- The analogue for this is the "[[Expected Value|Mean]] of the projections".
 	- If we **don't do this**, then we probably will end up with the biggest component(s) that just talk about how to go to the origin.
@@ -106,7 +98,7 @@ Anyway... here's the procedure:
 ---
 # Example:
 
-![[_Media/Excalidraw/Independent Components Analysis#Face Identification]]
+![[Independent Components Analysis#Face Identification]]
 PCA, by comparison, will find **brightness**, then the "average face". This is **LOCAL**.
 
 ---

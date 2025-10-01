@@ -15,11 +15,7 @@ A type of [[Ensemble (Machine Learning)]] which combines many of the same weak l
 3. Aggregate the model outputs together using the mean ([[Regression]]) or mode ([[Classification]])
 
 or more formally,
-
-
-..\hat{f}_\text{bag}(x)=1/B\sum_{b=1}^B \hat{f}^{*\text{bootstrap}}(x)$
-
-
+$$\hat{f}_\text{bag}(x)=1/B\sum_{b=1}^B \hat{f}^{*\text{bootstrap}}(x)$$
 
 ---
 # Notes:

@@ -2,7 +2,7 @@
 aliases:
 tags:
   - finance/options
-edited: 2025-09-30T19:34
+edited: 2025-09-30T21:59
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -32,12 +32,12 @@ A contract allowing the buyer...
 
 ### Options Profit or Loss
 For a long call option:
-![[_Media/Excalidraw/Long Call Profit.png]]
+![[Long Call Profit.png]]
 
 Note that we can also sell options, so we collect the premium but might have be forced to trade later.
 
 For a short put option:
-![[_Media/Excalidraw/Short Put Profit.png]]
+![[Short Put Profit.png]]
 
 ### Options Chain
 Shows the current expiration dates at the strike price.

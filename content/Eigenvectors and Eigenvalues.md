@@ -42,13 +42,9 @@ You can have cases where eigenvalues and thus eigenvectors are repeated (see exa
 ### Examples:
 **Normal Example**
 Suppose we have some square matrix 
-
-
-..A = \begin{bmatrix} 0 & 1 \\
+$$A = \begin{bmatrix} 0 & 1 \\
 -2 & -3
-\end{bmatrix}$
-
-
+\end{bmatrix}$$
 which we would like to calculate the eigenvectors and values of.
 
 We need to find $A \vec{x}=\lambda \vec{x} = \lambda I^{n\times n} \vec{x}$. Subtract, so $A\vec{x}-\lambda I \vec{x} = \vec{0}$, which is nice and easy to work with now. This gives us $(A-\lambda I) \vec{x} = \vec{0}$, and $\vec{x}\neq \vec{0}$, so by the Zero Product Property we know that $A-\lambda I$ has some value that equals zero.
@@ -56,9 +52,7 @@ We need to find $A \vec{x}=\lambda \vec{x} = \lambda I^{n\times n} \vec{x}$. Sub
 - In other words, $A-\lambda I$ is a [[Singular Matrix]] and non-invertible, hence $det=0$.
 
 We can thus calculate $A-\lambda I:$
-
-
-..A - \lambda I= \begin{bmatrix} 0 & 1 \\
+$$A - \lambda I= \begin{bmatrix} 0 & 1 \\
 -2 & -3
 \end{bmatrix} - 
 \begin{bmatrix} \lambda & 0 \\
@@ -66,9 +60,7 @@ We can thus calculate $A-\lambda I:$
 \end{bmatrix} = 
 \begin{bmatrix} -\lambda & 1 \\
 -2 & -3-\lambda
-\end{bmatrix}$
-
-
+\end{bmatrix}$$
 and this has [[Matrix Determinant]] of zero, so
 $-\lambda(-3-\lambda) - -2*1 = 0 \rightarrow \lambda^2 + 3\lambda + 2 = 0$. which is our "characteristic equation"
 - Notice how the Trace shows up as the middle term ($Tr(A)=-3$ vs $3\lambda$)
@@ -76,39 +68,23 @@ $-\lambda(-3-\lambda) - -2*1 = 0 \rightarrow \lambda^2 + 3\lambda + 2 = 0$. whic
 $\rightarrow \lambda =-1,-2$
 These are our **eigenvalues**.
 
-Consider $\lambda=-1$ as our eigenvalue. Go back to $A\vec{x}=\lambda \vec{x}$, and solve [[Ax=0]] so 
-
-..\begin{bmatrix} 0 & 1 \\
+Consider $\lambda=-1$ as our eigenvalue. Go back to $A\vec{x}=\lambda \vec{x}$, and solve [[Ax=0]] so $$\begin{bmatrix} 0 & 1 \\
 -2 & -3
 \end{bmatrix} 
-\begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = -1 \begin{bmatrix} x_1 \\ x_2 \end{bmatrix}$
-
-This gives the equations $x_2 = -x_1$ and $-2x_1 - 3x_2 = -x_2$. Both of these equations end up with $x_1=-x_2$, hence the associated **eigenvector**(s) is $x_1 * \begin{bmatrix} 1 \\ -1 \end{bmatrix}$ for any $x_1 \in \mathbb{R}$.
+\begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = -1 \begin{bmatrix} x_1 \\ x_2 \end{bmatrix}$$This gives the equations $x_2 = -x_1$ and $-2x_1 - 3x_2 = -x_2$. Both of these equations end up with $x_1=-x_2$, hence the associated **eigenvector**(s) is $x_1 * \begin{bmatrix} 1 \\ -1 \end{bmatrix}$ for any $x_1 \in \mathbb{R}$.
 
 
 **Imaginary Eigenvalues**
-Suppose we have some 90 degree rotation matrix. NOTE: there are no vectors other than $\vec{0}$ which preserve their direction, so there should be no eigenvectors. 
-
-..Q = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}$
-
-The [[Matrix Trace]] is $0+0=0=\lambda_1 + \lambda_2$, and the [[Matrix Determinant]] is $0*0-(-1*1)=1=\lambda_1\lambda_2$. We see that this polynomial shouldn't be possible...
+Suppose we have some 90 degree rotation matrix. NOTE: there are no vectors other than $\vec{0}$ which preserve their direction, so there should be no eigenvectors. $$Q = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}$$The [[Matrix Trace]] is $0+0=0=\lambda_1 + \lambda_2$, and the [[Matrix Determinant]] is $0*0-(-1*1)=1=\lambda_1\lambda_2$. We see that this polynomial shouldn't be possible...
 - $det(Q-\lambda I) = \lambda^2 + 1 = 0$, so eigenvalues are $i, -i$. Uh oh, [[Complex Numbers]] since this is a complex conjugate pair.
 - Notice how this matrix is the complete opposite of a [[Symmetric Matrix]], i.e., $Q^T=-Q$ not $Q$. The closer we get to symmetric matrix, the larger the real part of the eigenvalue.
 
 
 **Repeated Eigenvalues**
-Consider the eigenvectors/values of 
-
-..R = \begin{bmatrix} 3 & 1 \\ 0 & 3 \end{bmatrix}$
-
-which is a [[Triangular Matrix]]. In these cases we can "read the eigenvalues" right off the diagonal, since the values which add to 6 and multiply to 9 are literally right there man.
+Consider the eigenvectors/values of $$R = \begin{bmatrix} 3 & 1 \\ 0 & 3 \end{bmatrix}$$which is a [[Triangular Matrix]]. In these cases we can "read the eigenvalues" right off the diagonal, since the values which add to 6 and multiply to 9 are literally right there man.
 Thus, we have a repeated eigenvalue: $\lambda = 3,3$.
 
-What happens to the eigenvectors? Consider $(R-\lambda I)\vec{x} = \vec{0}$. We see that 
-
-..R-\lambda I = 
+What happens to the eigenvectors? Consider $(R-\lambda I)\vec{x} = \vec{0}$. We see that $$R-\lambda I = 
 \begin{bmatrix} 0 & 1 \\ 0 & 0\end{bmatrix} \rightarrow 
-\begin{bmatrix} 0 & 1 \\ 0 & 0\end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} 0 \\ 0\end{bmatrix}$
-
-so, we get our eigenvectors are... both $x_1 \begin{bmatrix} 1 \\ 0 \end{bmatrix}$ so there isn't a second one.
+\begin{bmatrix} 0 & 1 \\ 0 & 0\end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} 0 \\ 0\end{bmatrix}$$so, we get our eigenvectors are... both $x_1 \begin{bmatrix} 1 \\ 0 \end{bmatrix}$ so there isn't a second one.
 Hence, this is a "degenerative matrix" where the eigenvalues don't get all the information.

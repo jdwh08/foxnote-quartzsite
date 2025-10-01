@@ -4,7 +4,7 @@ aliases:
 tags:
   - ds/ml/nn/cnn
   - todo/breakup
-edited: 2025-09-30T19:34
+edited: 2025-09-30T21:59
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -27,7 +27,7 @@ Architectural design intended for image-based tasks.
 - [[Convolution]] is multiplying matrix elements and then adding results.
 	- Input is only a $K_1 \times K_2$ patch called **receptive field**
 	- Reduces parameters needed to $(K_1 \times K_2 + 1) * N_{output}$
-![[_Media/Excalidraw/Convolution.png|265x358]]
+![[Convolution.png|265x358]]
 - Convolutions will represent specific *local features*.
 	- We can share the same local feature extractor across the entire image! I.e., $N_{output}$ is less than full.
 - If the image matches the convolution well, it will have a high value!
@@ -46,11 +46,7 @@ Architectural design intended for image-based tasks.
 	3. Move the kernel along to the next value.
 
 Practically speaking, this gives the following result for each cell:
-
-
-..y_{r,c} = \sum_{a=0}^{k_r-1} \sum_{b=0}^{k_c-1} w_{a,b} \times x_{r \cdot s+a-p, c \cdot s + b - p}$
-
-
+$$y_{r,c} = \sum_{a=0}^{k_r-1} \sum_{b=0}^{k_c-1} w_{a,b} \times x_{r \cdot s+a-p, c \cdot s + b - p}$$
 
 NOTE: Convolution can be thought of as a single [[Matrix]], of the form $y=Ax$. 
 - We flatten $y$ and $x$ to be a single row-wise vector.
@@ -164,22 +160,14 @@ How do we derive the [[Gradient]] of a convolution?
 - Suppose we have 1 channel, one kernel, and add some padding to make the output shape the same.
 
 Our [[Cross Correlation]] is thus:
-
-
-..f(r, c) = (x*k)@(r,c) = \sum_{a=0}^{k_1-1} \sum_{b=0}^{k_2-1} x@(r+a, c+b)\cdot k@(a,b)$
-
-
+$$f(r, c) = (x*k)@(r,c) = \sum_{a=0}^{k_1-1} \sum_{b=0}^{k_2-1} x@(r+a, c+b)\cdot k@(a,b)$$
 ##### Kernel
 - Notice that each pixel-wise operation is just $xk$, so if we take $\frac{\partial y@(r,c)}{\partial k@(a, b)}$, we are simply getting the pixels $x@(r+a, c+b)$
 - Since we are applying the kernel repeatedly throughout the image, it affects **everything** in the output.
 	- Thus, we need to incorporate the gradients of ALL of the upstream gradients (pixels).
 	- Sum across all pixels in image thanks to the [[Chain Rule]].
 
-
-
-..\frac{\partial \mathcal{L}}{\partial k@(a,b)} = \sum_{r=0}^{H-1} \sum_{c=0}^{W-1} x@(r+a, c+b) \cdot \frac{\partial \mathcal{L}}{\partial y@(r,c)}$
-
-
+$$\frac{\partial \mathcal{L}}{\partial k@(a,b)} = \sum_{r=0}^{H-1} \sum_{c=0}^{W-1} x@(r+a, c+b) \cdot \frac{\partial \mathcal{L}}{\partial y@(r,c)}$$
 - Notice that this equation is essentially a [[Cross Correlation]] between the upstream gradient $\frac{\partial \mathcal{L}}{\partial y}$ and the input image $x$!
 	- Our upstream gradient basically functions as the kernel.
 	- We do this until the shape is correct.
@@ -193,11 +181,7 @@ This becomes the upstream gradient for the prior layer.
 - We slide the kernel from left-right, up-down. This means that us touching the pixel actually starts from the lower right corner and works its way down-up, right-left.
 - We must flip the kernel, making this a [[Convolution]] instead of a [[Cross Correlation]].
 
-
-
-..\frac{\partial \mathcal{L}}{\partial x@(r,c)} = \sum_{a=0}^{k_1-1} \sum_{b=0}^{k_2-1} \frac{\partial \mathcal{L}}{\partial y@(r-a, c-b)} \cdot k(a,b)$
-
-
+$$\frac{\partial \mathcal{L}}{\partial x@(r,c)} = \sum_{a=0}^{k_1-1} \sum_{b=0}^{k_2-1} \frac{\partial \mathcal{L}}{\partial y@(r-a, c-b)} \cdot k(a,b)$$
 
 ## Data Augmentation
 To ensure CNNs learn well, we can take each input (e.g., image), and then distort it slightly while still being recognizable (e.g., scale, rotate, flip, shear, etc.)
@@ -213,15 +197,11 @@ To ensure CNNs learn well, we can take each input (e.g., image), and then distor
 # Examples:
 
 ### Example Kernel
-
-
-..K = \begin{bmatrix} 
+$$K = \begin{bmatrix} 
 -1 & 0 & 1 \\
 -2 & 0 & 2 \\
 -1 & 0 & 1 \\
-\end{bmatrix}$
-
-
+\end{bmatrix}$$
 We can see this kernel prefers to have dark values on the left, and light values on the right; i.e., this is a left-right edge feature detector.
 
 ----

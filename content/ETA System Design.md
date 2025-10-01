@@ -2,7 +2,7 @@
 aliases:
 tags:
   - cs/sys/ml
-edited: 2025-09-30T19:34
+edited: 2025-09-30T21:59
 created: 2024-03-19T22:06
 ---
 # Definition:
@@ -51,7 +51,7 @@ Uber's Empirical Observations:
 1. Deliveries and rideshare have different residuals
 2. Residuals have strong [[Skew]] with long left(!) tail. 
 
-![[_Media/Excalidraw/ETA System Design Uber 2022.png]]
+![[ETA System Design Uber 2022.png]]
 
 ### Model Training
 
